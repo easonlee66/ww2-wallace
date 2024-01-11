@@ -1,0 +1,22 @@
+state={
+	id=914
+	name="STATE_914"
+
+	history={
+		owner = WAG
+		victory_points = {
+			1600 1 
+		}
+		add_core_of = IRQ
+		add_core_of = WAG
+
+	}
+
+	provinces={
+		1600 10106 
+	}
+	manpower=9720
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

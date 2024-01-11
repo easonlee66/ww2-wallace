@@ -1,0 +1,75 @@
+add_namespace = PRW
+
+country_event = {
+	id = PRW.1
+	title = PRW.1.t
+	desc = PRW.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = PRW.1.a
+		hidden_effect = {
+			start_civil_war = {
+				ideology = fascism
+				ruling_party = democratic
+				capital = 918
+				states = { 909 910 911 913 916 917 918 919 }
+				size = 0.5
+			}
+			random_other_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				set_stability = 0.9
+				set_war_support = 0.8
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.8
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+			set_capital = {
+				state = 915
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = WAG_civil_war_party
+				name = WAG_civil_war_party
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = WAG_civil_war_party
+				name = WAG_civil_war_party
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.4
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+		
+	}
+}

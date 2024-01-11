@@ -1,0 +1,26 @@
+state={
+	id=915
+	name="STATE_915"
+	history={
+		owner = WAG
+		victory_points = {
+			10804 1
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			air_base = 1
+			arms_factory = 1
+			supply_node = 1
+		}
+		add_core_of = IRQ
+		add_core_of = WAG
+	}
+	provinces={
+		10804 
+	}
+	manpower=118274
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=4.000
+}

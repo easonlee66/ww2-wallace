@@ -1,0 +1,21 @@
+add_namespace = DBG
+
+country_event = {
+	id = DBG.1
+	title = DBG.1.t
+	desc = DBG.1.d
+	is_triggered_only = yes
+	option = {
+		name = DBG.1.a
+		WAG_zhanwei  = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology=nazism
+					expire="1965.1.1"
+					id=-1
+				}
+				promote_leader = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+characters={
+	WAG_muhamd_ziang_wiking={
+		name=WAG_muhamd_ziang_wiking
+#		portraits={
+#			civilian={
+#				large="GFX_portrait_iraq_ghazi"
+#			}
+#		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+	WAG_sadam_wang_zaoyangk={
+		name=WAG_sadam_wang_zaoyangk
+		country_leader = {
+			ideology = despotism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+	WAG_salman_ritin_somin={
+		name=WAG_salman_ritin_somin
+		country_leader = {
+			ideology = socialism
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+	WAG_abudullah_an_komi={
+		name = WAG_abudullah_an_komi
+		country_leader = {
+			ideology = leninism
+			expire = "1965.1.1"
+			id=-1
+		}
+	}
+	WAG_zhanwei={
+		name = WAG_muhamd_ziang_wiking
+	}
+}

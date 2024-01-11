@@ -1,0 +1,19 @@
+state={
+	id=910
+	name="STATE_910"
+	history={
+		owner = WAG
+		victory_points = {
+			2013 1
+		}
+		add_core_of = SYR
+		add_core_of = WAG
+	}
+	provinces={
+		2013 
+	}
+	manpower=3240
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

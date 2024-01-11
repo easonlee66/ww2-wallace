@@ -1,0 +1,30 @@
+capital = 915
+
+oob="WAG_1936"
+
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.8
+
+set_technology = {
+	infantry_weapons = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 50 
+	neutrality = 10 #10%自民 2%保皇
+	communism = 20 #12%安 10%统革 8%农工 4%库共 2%其他小党
+	democratic = 20 #5%安 13%社民 14%瓦共 7%农工 6%库共 2%其他小党
+}
+
+recruit_character = WAG_muhamd_ziang_wiking
+recruit_character = WAG_sadam_wang_zaoyangk
+recruit_character = WAG_salman_ritin_somin
+recruit_character = WAG_abudullah_an_komi

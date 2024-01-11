@@ -1,0 +1,578 @@
+focus_tree={
+	id = wallace_focus
+	country={
+		factor=0
+		modifier={
+			add=10
+			tag=WAG
+		}
+	}
+	default=no
+	focus={
+		id=WAG_make_despotism
+		x=4
+		y=0
+		icon = GFX_goal_generic_demand_territory
+		mutually_exclusive={focus=WAG_oppisite_nazi }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = WAG_oppisite_nazi
+				}
+			}
+		}
+		cost=10
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do={
+			factor=10
+		}
+		available_if_capitulated=yes
+		completion_reward={
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+			add_stability = 0.3
+		}
+	}
+	focus={
+		id=WAG_oppisite_nazi
+		icon = GFX_focus_ger_oppose_hitler
+		x=18
+		y=0
+		mutually_exclusive={focus=WAG_make_despotism }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = WAG_make_despotism
+				}
+			}
+		}
+		cost=10
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do={
+			factor=7
+		}
+		available_if_capitulated=yes
+		completion_reward={
+			country_event = PRW.1
+		}
+	}
+	focus={
+		id=WAG_defend_new_country
+		icon = GFX_focus_generic_support_the_left_right
+		x=18
+		y=1
+		prerequisite={focus=WAG_oppisite_nazi}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.2
+			}
+			add_stability = 0.4
+			add_political_power = 10
+		}
+	}
+	focus={
+		id=WAG_declare_great_wallace
+		icon = GFX_goal_generic_forceful_treaty
+		x=11
+		y=2
+		prerequisite={focus=WAG_clear_against}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_social_democracy_road
+		icon = GFX_goal_support_democracy
+		x=16
+		y=2
+		prerequisite={focus=WAG_defend_new_country}
+		mutually_exclusive={focus=WAG_communism_road }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_communism_road
+		icon = GFX_goal_support_communism
+		x=20
+		y=2
+		prerequisite={focus=WAG_defend_new_country}
+		mutually_exclusive={focus=WAG_social_democracy_road }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_clear_against
+		x=8
+		y=1
+		icon = GFX_goal_support_fascism
+		prerequisite={focus=WAG_make_despotism}
+		mutually_exclusive={focus=WAG_befriend_royalist }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_reform_of_nazi
+		icon = GFX_goal_generic_more_territorial_claims
+		x=6
+		y=2
+		prerequisite={focus=WAG_clear_against}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_rebuild_the_nation
+		x=18
+		y=3
+		prerequisite={focus=WAG_social_democracy_road focus=WAG_communism_road }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_build_up_red_army
+		x=20
+		y=3
+		prerequisite={focus=WAG_communism_road}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_language_reform
+		icon = GFX_goal_generic_propaganda
+		x=5
+		y=3
+		prerequisite={focus=WAG_reform_of_nazi}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_demand_anatolia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x=13
+		y=3
+		prerequisite={focus=WAG_declare_great_wallace}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_demand_lower_kosui
+		icon = GFX_goal_generic_major_war
+		x=11
+		y=3
+		prerequisite={focus=WAG_declare_great_wallace}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_demand_mesopotamia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x=9
+		y=3
+		prerequisite={focus=WAG_declare_great_wallace}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_establish_great_wallace
+		icon = GFX_goal_demand_sudetenland
+		x=11
+		y=4
+		prerequisite={focus=WAG_demand_mesopotamia}
+		prerequisite={focus=WAG_demand_lower_kosui}
+		prerequisite={focus=WAG_demand_anatolia}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id17_
+		x=16
+		y=3
+		prerequisite={focus=WAG_social_democracy_road}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_industrial_effort
+		x=28
+		y=0
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id19_
+		x=7
+		y=3
+		prerequisite={focus=WAG_reform_of_nazi}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_befriend_royalist
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x=0
+		y=1
+		prerequisite={focus=WAG_make_despotism}
+		mutually_exclusive={focus=WAG_clear_against }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_first_two_year_half_plan
+		x=28
+		y=1
+		prerequisite={focus=WAG_industrial_effort}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_Mt.Iron_mining
+		x=26
+		y=2
+		prerequisite={focus=WAG_first_two_year_half_plan}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_bridge_over_kosui_river
+		x=28
+		y=2
+		prerequisite={focus=WAG_first_two_year_half_plan}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_kosui_hydropower_station
+		x=30
+		y=2
+		prerequisite={focus=WAG_first_two_year_half_plan}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_Mt.Iron_industry_centre
+		x=28
+		y=3
+		prerequisite={focus=WAG_Mt.Iron_mining}
+		prerequisite={focus=WAG_bridge_over_kosui_river}
+		prerequisite={focus=WAG_kosui_hydropower_station}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_mind_millitary
+		x=26
+		y=5
+		prerequisite={focus=WAG_second_two_year_half_plan}
+		mutually_exclusive={focus=WAG_mind_civilization }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_mind_civilization
+		x=30
+		y=5
+		prerequisite={focus=WAG_second_two_year_half_plan}
+		mutually_exclusive={focus=WAG_mind_millitary }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id4
+		x=26
+		y=6
+		prerequisite={focus=WAG_mind_millitary}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id6
+		x=30
+		y=6
+		prerequisite={focus=WAG_mind_civilization}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id7
+		x=28
+		y=6
+		prerequisite={focus=WAG_mind_millitary focus=WAG_mind_civilization }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id8
+		x=26
+		y=7
+		prerequisite={focus=default_id4}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=default_id9
+		x=30
+		y=7
+		prerequisite={focus=default_id6}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_second_two_year_half_plan
+		x=28
+		y=4
+		prerequisite={focus=WAG_Mt.Iron_industry_centre}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+}

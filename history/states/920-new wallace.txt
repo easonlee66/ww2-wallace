@@ -1,0 +1,22 @@
+state={
+	id=920
+	name="STATE_920"
+
+	history={
+		owner = WAG
+		victory_points = {
+			10811 1 
+		}
+		add_core_of = KUR
+		add_core_of = WAG
+
+	}
+
+	provinces={
+		7530 10811 12476 
+	}
+	manpower=32410
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=3.000
+}

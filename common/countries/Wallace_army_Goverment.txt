@@ -1,0 +1,6 @@
+#People Rebublics of Wallace
+
+graphical_culture = middle_eastern_gfx
+graphical_culture_2d = middle_eastern_2d
+
+color = rgb { 207 181 49 }

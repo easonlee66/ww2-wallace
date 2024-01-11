@@ -1,0 +1,19 @@
+state={
+	id=911
+	name="STATE_911"
+	history={
+		owner = WAG
+		victory_points = {
+			901 1
+		}
+		add_core_of = SYR
+		add_core_of = WAG
+	}
+	provinces={
+		901 
+	}
+	manpower=9720
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
