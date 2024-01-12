@@ -1,4 +1,5 @@
 focus_tree={
+	id = wallace_focus
 	country={
 		factor=0
 		modifier={
@@ -95,7 +96,8 @@ focus_tree={
 			add_stability=0.4
 			add_political_power=10
 			add_popularity={
-				
+				ideology = fascism
+				popularity = -0.3
 			}
 		}
 	}
