@@ -224,7 +224,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_demand_anatolia
-		icon=GFX_goal_generic_occupy_states_ongoing_war
+		icon=GFX_focus_attack_turkey
 		x=13
 		y=3
 		prerequisite={focus=WAG_declare_great_wallace}
@@ -241,7 +241,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_demand_lower_kosui
-		icon=GFX_goal_generic_major_war
+		icon=GFX_focus_attack_france
 		x=11
 		y=3
 		prerequisite={focus=WAG_declare_great_wallace}
