@@ -76,4 +76,6 @@ country_event = {
 
 country_event = {
 	id = PRW.2
+	title = PRW.2.t
+	desc = PRW.2.d
 }
