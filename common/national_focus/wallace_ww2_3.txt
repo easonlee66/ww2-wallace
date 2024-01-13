@@ -99,6 +99,10 @@ focus_tree={
 				ideology = fascism
 				popularity = -0.3
 			}
+			country_event = {
+				id = PRW.2
+				days = 10
+			}
 		}
 	}
 	focus={
@@ -310,6 +314,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_industrial_effort
+		icon=GFX_goal_generic_production
 		x=28
 		y=0
 		cost=10
@@ -360,6 +365,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_first_two_year_half_plan
+		icon=GFX_goal_generic_construct_civ_factory
 		x=28
 		y=1
 		prerequisite={focus=WAG_industrial_effort}
@@ -377,6 +383,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_Mt.Iron_mining
+		icon=GFX_goal_generic_construct_infrastructure
 		x=26
 		y=2
 		prerequisite={focus=WAG_first_two_year_half_plan}
@@ -393,6 +400,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_bridge_over_kosui_river
+		icon=GFX_goal_generic_construct_infrastructure
 		x=28
 		y=2
 		prerequisite={focus=WAG_first_two_year_half_plan}
@@ -409,6 +417,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_kosui_hydropower_station
+		icon=GFX_goal_generic_construct_infrastructure
 		x=30
 		y=2
 		prerequisite={focus=WAG_first_two_year_half_plan}
@@ -425,6 +434,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_Mt.Iron_industry_centre
+		icon=GFX_goal_generic_construct_civ_factory
 		x=28
 		y=3
 		prerequisite={focus=WAG_Mt.Iron_mining}
@@ -552,6 +562,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_second_two_year_half_plan
+		icon=GFX_goal_generic_production
 		x=28
 		y=4
 		prerequisite={focus=WAG_Mt.Iron_industry_centre}
