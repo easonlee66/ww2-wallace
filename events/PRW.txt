@@ -18,7 +18,7 @@ country_event = {
 			}
 			random_other_country = {
 				limit = {
-					original_tag = GER
+					original_tag = WAG
 					has_government = fascism
 				}
 				set_stability = 0.9
@@ -78,4 +78,70 @@ country_event = {
 	id = PRW.2
 	title = PRW.2.t
 	desc = PRW.2.d
+	is_triggered_only=yes
+
+	option={
+		name = PRW.2.a
+		trigger = {
+			NOT={
+				has_completed_focus = WAG_middle_road
+				has_completed_focus = WAG_social_democracy_road
+			}
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		add_political_power = 5
+		if = {
+			limit = { 
+				NOT={
+					has_completed_focus = WAG_communism_road
+				}
+			}
+			complete_national_focus = WAG_communism_road
+		}
+	}
+
+	option = {
+		name = PRW.2.b
+		trigger = {
+			NOT = {
+				has_completed_focus = WAG_middle_road
+				has_completed_focus = WAG_communism_road
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		add_political_power = 5
+		if = {
+			limit = { 
+				NOT = {
+					has_completed_focus = WAG_social_democracy_road
+				}
+			}
+			complete_national_focus = WAG_social_democracy_road
+		}
+	}
+
+	option = {
+		name = PRW.2.c
+		trigger = {
+			NOT = {
+				has_completed_focus = WAG_communism_road
+				has_completed_focus = WAG_social_democracy_road
+			}
+		}
+		add_political_power = 5
+		if = {
+			limit = { 
+				NOT = {
+					has_completed_focus = WAG_middle_road
+				}
+			}
+			complete_national_focus = WAG_middle_road
+		}
+	}
 }
