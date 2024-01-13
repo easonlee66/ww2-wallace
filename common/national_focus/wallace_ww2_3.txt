@@ -120,6 +120,49 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.3
+			FRA = {
+				set_variable = {
+					var = var:opinion@WAG
+					value = -100
+				}
+			}
+			ENG = {
+				set_variable = {
+					var = var:opinion@WAG
+					value = -100
+				}
+			}
+			IRQ = {
+				set_variable = {
+					var = var:opinion@WAG
+					value = -100
+				}
+			}
+			TUR = {
+				set_variable = {
+					var = var:opinion@WAG
+					value = -100
+				}
+			}
+			PER = {
+				add_to_variable = {
+					var = var:opinion@WAG
+					value = -50
+				}
+			}
+			SOV = {
+				add_to_variable = {
+					var = var:opinion@WAG
+					value = -50
+				}
+			}
+			SAU = {
+				add_to_variable = {
+					var = var:opinion@WAG
+					value = -50
+				}
+			}
 		}
 	}
 	focus={
@@ -237,6 +280,18 @@ focus_tree={
 			factor=1
 		}
 		available_if_capitulated=yes
+		available = {
+			TUR = {
+				controls_state = 350
+				controls_state = 344
+				controls_state = 352
+				controls_state = 353
+				controls_state = 800
+				controls_state = 348
+				controls_state = 798
+				controls_state = 349
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
@@ -254,10 +309,58 @@ focus_tree={
 			factor=1
 		}
 		available_if_capitulated=yes
+		available = {
+			FRA = {
+				controls_state = 553
+				controls_state = 554
+				controls_state = 680
+			}
+			NOT = {
+				FRA = {
+					is_in_faction_with = WAG
+				}
+			}
+		}
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					is_in_faction_with = WAG
+					has_war_with = ROOT
+					NOT = {
+						controls_state = 553
+						controls_state = 554
+						controls_state = 680
+					}
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
+		will_lead_to_war_with = FRA
 		completion_reward={
+			if = {
+				limit = {
+					country_exists = FRA
+					NOT = {
+						FRA = {
+							is_in_faction_with = WAG
+							has_capitulated = yes
+						}
+					}
+					NOT = {
+						has_war_with = FRA
+					}
+				}
+				create_wargoal = {
+					target = FRA
+					type = take_state_focus
+					expire = 0
+					generator = {553}
+				}
+			}
 		}
 	}
 	focus={
@@ -271,10 +374,52 @@ focus_tree={
 			factor=1
 		}
 		available_if_capitulated=yes
+		available = {
+			IRQ = {
+				controls_state = 291
+				controls_state = 675
+			}
+			NOT = {
+				IRQ = {
+					is_in_faction_with = WAG
+				}
+			}
+		}
+		bypass = {
+			IRQ = {
+				OR = {
+					exists = no
+					is_in_faction_with = WAG
+					has_war_with = ROOT
+					NOT = {
+						controls_state = 291
+						controls_state = 675
+					}
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
+		will_lead_to_war_with = IRQ
 		completion_reward={
+			if = {
+				limit = {
+					country_exists = IRQ
+					NOT = {
+						IRQ={is_in_faction_with = WAG}
+					}
+					NOT = {
+						has_war_with = IRQ
+					}
+				}
+				create_wargoal = {
+					target = IRQ
+					type = take_state_focus
+					generator = {291}
+					expire = 0
+				}
+			}
 		}
 	}
 	focus={
@@ -294,6 +439,19 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_state_core = 553
+			add_state_core = 554
+			add_state_core = 680
+			add_state_core = 350
+			add_state_core = 344
+			add_state_core = 352
+			add_state_core = 353
+			add_state_core = 800
+			add_state_core = 348
+			add_state_core = 798
+			add_state_core = 349
+			add_state_core = 675
+			add_state_core = 291
 		}
 	}
 	focus={
@@ -365,7 +523,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_first_two_year_half_plan
-		icon=GFX_goal_generic_construct_civ_factory
+		icon=GFX_goal_generic_construction
 		x=28
 		y=1
 		prerequisite={focus=WAG_industrial_effort}
@@ -383,7 +541,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_Mt.Iron_mining
-		icon=GFX_goal_generic_construct_infrastructure
+		icon=GFX_focus_generic_steel
 		x=26
 		y=2
 		prerequisite={focus=WAG_first_two_year_half_plan}
@@ -453,6 +611,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_mind_millitary
+		icon = GFX_goal_generic_construct_mil_factory
 		x=26
 		y=5
 		prerequisite={focus=WAG_second_two_year_half_plan}
@@ -470,6 +629,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_mind_civilization
+		icon = GFX_goal_generic_construct_civilian
 		x=30
 		y=5
 		prerequisite={focus=WAG_second_two_year_half_plan}
@@ -496,6 +656,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
 		}
@@ -511,6 +672,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
 		}
