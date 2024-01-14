@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_focus_attack_turkey"
-		textureFile = "gfx/interface/goals/focus_attack_turkey.dds"
-	}
-}
