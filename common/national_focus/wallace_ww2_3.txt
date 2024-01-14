@@ -291,11 +291,56 @@ focus_tree={
 				controls_state = 798
 				controls_state = 349
 			}
+			NOT = {
+				TUR = {
+					is_in_faction_with = WAG
+				}
+			}
+		}
+		bypass = {
+			TUR = {
+				OR = {
+					exists = no
+					is_in_faction_with = WAG
+					has_war_with = ROOT
+					NOT = {
+						controls_state = 350
+						controls_state = 344
+						controls_state = 352
+						controls_state = 353
+						controls_state = 800
+						controls_state = 348
+						controls_state = 798
+						controls_state = 349
+					}
+				}
+			}
 		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
+		will_lead_to_war_with = TUR
 		completion_reward={
+			if = {
+				limit = {
+					country_exists = TUR
+					NOT = {
+						FRA = {
+							is_in_faction_with = TUR
+							has_capitulated = yes
+						}
+					}
+					NOT = {
+						has_war_with = FRA
+					}
+				}
+				create_wargoal = {
+					target = FRA
+					type = take_state_focus
+					expire = 0
+					generator = {553}
+				}
+			}
 		}
 	}
 	focus={
