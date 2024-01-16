@@ -1,6 +1,6 @@
 characters={
-	WAG_muhamd_ziang_wiking={
-		name=WAG_muhamd_ziang_wiking
+	WAG_muhamd_ziang_wikau={
+		name=WAG_muhamd_ziang_wikau
 #		portraits={
 #			civilian={
 #				large="GFX_portrait_iraq_ghazi"
