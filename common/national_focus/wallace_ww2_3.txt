@@ -602,6 +602,11 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			owns_state = 916
+			controls_state = 916
+			has_tech = excavation2
+		}
 		available_if_capitulated=yes
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
