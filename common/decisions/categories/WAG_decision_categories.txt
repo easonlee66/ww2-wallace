@@ -1,0 +1,7 @@
+WAG_second_civil_war = {
+	icon = spr_the_inevitable_civil_war
+
+	allowed = {
+		original_tag = WAG
+	}
+}
