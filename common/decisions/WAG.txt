@@ -1,3 +1,11 @@
 WAG_second_civil_war = {
-	
+	WAG_military_plot_sd = {
+		icon = generic_ignite_civil_war
+		days_mission_timeout = 250
+		fire_only_once = yes
+		activation = {
+			
+		}
+	}
+	WAG_military_plot_cm = {}
 }
