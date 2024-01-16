@@ -606,6 +606,7 @@ focus_tree={
 			owns_state = 916
 			controls_state = 916
 			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		available_if_capitulated=yes
 		search_filters={
