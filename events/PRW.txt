@@ -8,14 +8,14 @@ country_event = {
 
 	option = {
 		name = PRW.1.a
+		start_civil_war = {
+			ideology = fascism
+			ruling_party = democratic
+			capital = 918
+			states = { 909 910 911 913 916 917 918 919 }
+			size = 0.5
+		}
 		hidden_effect = {
-			start_civil_war = {
-				ideology = fascism
-				ruling_party = democratic
-				capital = 918
-				states = { 909 910 911 913 916 917 918 919 }
-				size = 0.5
-			}
 			random_other_country = {
 				limit = {
 					original_tag = WAG
