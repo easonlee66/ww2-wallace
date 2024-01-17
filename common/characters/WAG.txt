@@ -37,6 +37,6 @@ characters={
 		}
 	}
 	WAG_zhanwei={
-		name = WAG_muhamd_ziang_wiking
+		name = WAG_muhamd_ziang_wikau
 	}
 }
