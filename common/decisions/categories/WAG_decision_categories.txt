@@ -5,3 +5,11 @@ WAG_second_civil_war = {
 		original_tag = WAG
 	}
 }
+
+WAG_first_two_year_half_plan = {
+	icon = generic_industry
+
+	allowed = {
+		original_tag = WAG
+	}
+}
