@@ -238,10 +238,10 @@ focus_tree={
 	}
 	focus={
 		id=WAG_take_WWFF_trust
-		icon = GFX_goal_generic_dangerous_deal
+		icon=GFX_goal_generic_dangerous_deal
 		x=20
-		y=3
-		prerequisite={focus=WAG_communism_road}
+		y=4
+		prerequisite={focus=WAG_train_WCYL}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -249,23 +249,6 @@ focus_tree={
 		available_if_capitulated=yes
 		search_filters={
 			FOCUS_FILTER_WAR_SUPPORT
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_language_reform
-		icon=GFX_goal_generic_propaganda
-		x=5
-		y=3
-		prerequisite={focus=WAG_reform_of_nazi}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -510,7 +493,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_emergency_power
-		icon = GFX_goal_generic_position_armies
+		icon=GFX_goal_generic_position_armies
 		x=16
 		y=3
 		prerequisite={focus=WAG_social_democracy_road}
@@ -547,22 +530,6 @@ focus_tree={
 				category=industry
 				category=construction_tech
 			}
-		}
-	}
-	focus={
-		id=default_id19_
-		x=7
-		y=3
-		prerequisite={focus=WAG_reform_of_nazi}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
 		}
 	}
 	focus={
@@ -744,9 +711,6 @@ focus_tree={
 			has_country_flag=WAG_complete_first_tyhp
 		}
 		available={
-			NOT={
-				has_country_flag=WAG_first_two_year_half_plan
-			}
 		}
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
@@ -767,12 +731,13 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
 	}
 	focus={
-		id=default_id1
+		id=default_id1__
 		x=18
 		y=3
 		prerequisite={focus=WAG_middle_road}
@@ -788,10 +753,10 @@ focus_tree={
 	}
 	focus={
 		id=WAG_train_WCYL
-		icon = GFX_goal_generic_more_territorial_claims
+		icon=GFX_goal_generic_more_territorial_claims
 		x=20
-		y=4
-		prerequisite={focus=WAG_take_WWFF_trust}
+		y=3
+		prerequisite={focus=WAG_communism_road}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -805,10 +770,10 @@ focus_tree={
 	}
 	focus={
 		id=WAG_take_arsenal
-		icon = GFX_goal_generic_small_arms
+		icon=GFX_goal_generic_small_arms
 		x=20
 		y=5
-		prerequisite={focus=WAG_train_WCYL}
+		prerequisite={focus=WAG_take_WWFF_trust}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -822,7 +787,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_the_communism_revolution
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon=GFX_focus_spr_the_anti_fascist_workers_revolution
 		x=20
 		y=6
 		prerequisite={focus=WAG_take_arsenal}
@@ -839,7 +804,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_support_from_the_right
-		icon = GFX_focus_generic_concessions
+		icon=GFX_focus_generic_concessions
 		x=16
 		y=4
 		prerequisite={focus=WAG_emergency_power}
@@ -856,7 +821,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_ensure_arsenal_safety
-		icon = GFX_goal_generic_military_sphere
+		icon=GFX_goal_generic_military_sphere
 		x=16
 		y=5
 		prerequisite={focus=WAG_support_from_the_right}
@@ -873,7 +838,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_defend_the_republics
-		icon = GFX_goal_generic_political_pressure
+		icon=GFX_goal_generic_political_pressure
 		x=16
 		y=6
 		prerequisite={focus=WAG_ensure_arsenal_safety}
