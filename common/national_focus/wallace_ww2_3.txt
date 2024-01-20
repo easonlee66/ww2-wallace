@@ -49,7 +49,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_oppisite_nazi
-		icon=GFX_focus_ger_oppose_hitler
+		icon=GFX_focus_generic_anti_fascist_diplomacy
 		x=18
 		y=0
 		mutually_exclusive={focus=WAG_make_despotism }
@@ -110,6 +110,19 @@ focus_tree={
 		icon=GFX_goal_generic_forceful_treaty
 		x=11
 		y=2
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_clear_against}
 		cost=10
 		ai_will_do={
@@ -206,6 +219,31 @@ focus_tree={
 		icon=GFX_goal_support_fascism
 		x=8
 		y=1
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = { has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				} }
+			}
+			NOT = {
+				has_completed_focus = WAG_befriend_royalist
+				has_completed_focus = WAG_oppisite_nazi
+			}
+		}
 		prerequisite={focus=WAG_make_despotism}
 		mutually_exclusive={focus=WAG_befriend_royalist }
 		cost=10
@@ -224,6 +262,19 @@ focus_tree={
 		icon=GFX_goal_generic_more_territorial_claims
 		x=6
 		y=2
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_clear_against}
 		cost=10
 		ai_will_do={
@@ -258,6 +309,19 @@ focus_tree={
 		icon=GFX_focus_attack_turkey
 		x=13
 		y=3
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_declare_great_wallace}
 		cost=10
 		ai_will_do={
@@ -334,6 +398,19 @@ focus_tree={
 		icon=GFX_focus_attack_france
 		x=11
 		y=3
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_declare_great_wallace}
 		cost=10
 		ai_will_do={
@@ -401,6 +478,19 @@ focus_tree={
 		icon=GFX_goal_generic_occupy_states_ongoing_war
 		x=9
 		y=3
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_declare_great_wallace}
 		cost=10
 		ai_will_do={
@@ -464,6 +554,19 @@ focus_tree={
 		icon=GFX_goal_demand_sudetenland
 		x=11
 		y=4
+		offset = {
+			x=-4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_demand_mesopotamia}
 		prerequisite={focus=WAG_demand_lower_kosui}
 		prerequisite={focus=WAG_demand_anatolia}
@@ -513,6 +616,35 @@ focus_tree={
 		icon=GFX_goal_generic_production
 		x=28
 		y=0
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -537,6 +669,31 @@ focus_tree={
 		icon=GFX_focus_ger_return_of_the_kaiser
 		x=0
 		y=1
+		offset = {
+			x=4
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_befriend_royalist
+				}
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = { has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				} }
+			}
+			NOT = {
+				has_completed_focus = WAG_clear_against
+				has_completed_focus = WAG_oppisite_nazi
+			}
+		}
 		prerequisite={focus=WAG_make_despotism}
 		mutually_exclusive={focus=WAG_clear_against }
 		cost=10
@@ -555,6 +712,35 @@ focus_tree={
 		icon=GFX_goal_generic_construction
 		x=28
 		y=1
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_industrial_effort}
 		cost=10
 		ai_will_do={
@@ -573,6 +759,35 @@ focus_tree={
 		icon=GFX_goal_generic_construct_civ_factory
 		x=28
 		y=2
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_first_two_year_half_plan}
 		cost=10
 		ai_will_do={
@@ -590,6 +805,35 @@ focus_tree={
 		icon=GFX_goal_generic_construct_mil_factory
 		x=26
 		y=4
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_second_two_year_half_plan}
 		cost=10
 		ai_will_do={
@@ -607,6 +851,35 @@ focus_tree={
 		icon=GFX_goal_generic_construct_civilian
 		x=30
 		y=4
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_second_two_year_half_plan}
 		cost=10
 		ai_will_do={
@@ -623,6 +896,35 @@ focus_tree={
 		id=default_id4
 		x=26
 		y=5
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_mind_millitary}
 		cost=10
 		ai_will_do={
@@ -639,6 +941,35 @@ focus_tree={
 		id=default_id6
 		x=30
 		y=5
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_mind_civilization}
 		cost=10
 		ai_will_do={
@@ -655,6 +986,35 @@ focus_tree={
 		id=default_id7
 		x=28
 		y=5
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_mind_millitary focus=WAG_mind_civilization }
 		cost=10
 		ai_will_do={
@@ -670,6 +1030,35 @@ focus_tree={
 		id=default_id8
 		x=26
 		y=6
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=default_id4}
 		cost=10
 		ai_will_do={
@@ -685,6 +1074,35 @@ focus_tree={
 		id=default_id9
 		x=30
 		y=6
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=default_id6}
 		cost=10
 		ai_will_do={
@@ -701,6 +1119,35 @@ focus_tree={
 		icon=GFX_goal_generic_production
 		x=28
 		y=3
+		offset = {
+			x=-10
+			y=0
+			trigger = {
+				AND={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+					has_completed_focus = WAG_make_despotism
+					NOT = {
+						has_completed_focus = WAG_clear_against
+					}
+				}
+			}
+		}
+		offset = {
+			x=-14
+			y=0
+			trigger = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = WAG_clear_against
+				}
+			}
+		}
 		prerequisite={focus=WAG_Mt.Iron_industry_centre}
 		cost=10
 		ai_will_do={
