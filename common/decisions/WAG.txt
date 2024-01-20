@@ -9,6 +9,7 @@ WAG_second_civil_war = {
 		visible = {
 			has_completed_focus = WAG_social_democracy_road
 		}
+		cancel_if_not_visible = yes
 	}
 	WAG_military_plot_cm = {
 		icon = generic_ignite_civil_war
@@ -20,6 +21,7 @@ WAG_second_civil_war = {
 		visible = {
 			has_completed_focus = WAG_communism_road
 		}
+		cancel_if_not_visible = yes
 	}
 }
 
@@ -40,6 +42,7 @@ WAG_first_two_year_half_plan = {
 			}
 			hidden_effect = {
 				country_event = WAG.2
+				set_country_flag = WAG_complete_first_tyhp
 			}
 		}
 	}
@@ -75,5 +78,77 @@ WAG_first_two_year_half_plan = {
 	}
 	WAG_kosui_hydropower_station = {
 		icon = GFX_decision_generic_special_project
+	}
+}
+
+WAG_nazi_reform = {
+	WAG_nazi_reform_mission = {
+		icon = generic_ignite_civil_war
+		days_mission_timeout = 100
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = WAG_reform_of_nazi
+		}
+		timeout_effect = {
+			start_civil_war = {
+				ideology = democratic
+				ruling_party = fascism
+				capital = 915
+				states = {912 914 915}
+			}
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = WAG
+						has_government = democratic
+					}
+					set_party_name = {
+						ideology = communism
+						long_name = WAG_civil_war_party
+						name = WAG_civil_war_party
+					}
+					set_party_name = {
+						ideology = democratic
+						long_name = WAG_civil_war_party
+						name = WAG_civil_war_party
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = 0.4
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.4
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.15
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.05
+					}
+				}
+				set_capital = {
+					state = 918
+				}
+#				add_popularity = {
+#					ideology = fascism
+#					popularity = 0.8
+#				}
+#				add_popularity = {
+#					ideology = neutrality
+#					popularity = 0.1
+#				}
+#				add_popularity = {
+#					ideology = communism
+#					popularity = 0.05
+#				}
+#				add_popularity = {
+#					ideology = democratic
+#					popularity = 0.05
+#				}
+			}
+		}
 	}
 }

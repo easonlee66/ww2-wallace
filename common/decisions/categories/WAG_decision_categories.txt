@@ -13,3 +13,11 @@ WAG_first_two_year_half_plan = {
 		original_tag = WAG
 	}
 }
+
+WAG_nazi_reform = {
+	icon = decision_category_generic_political_actions
+	picture = decision_cat_picture_chi_political_support
+	allowed = {
+		original_tag = WAG
+	}
+}
