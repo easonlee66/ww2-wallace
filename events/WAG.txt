@@ -23,3 +23,9 @@ country_event = {
 		add_war_support = -0.1
 	}
 }
+
+#超额完成 WAG.3 留作预留
+
+country_event = {
+	id = WAG.4
+}
