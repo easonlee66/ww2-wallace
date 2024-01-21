@@ -28,4 +28,151 @@ country_event = {
 
 country_event = {
 	id = WAG.4
+	title = WAG.4.t
+	desc = WAG.4.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.4.a
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.2
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = WAG.5
+	title = {
+		text = WAG.5.t
+		trigger = {
+			FRA = {
+#				has_capitulated = yes
+				has_focus_tree = free_french_focus
+			}
+#			VIC = {
+#				exists = yes
+#				has_government = fascism
+#			}
+		}
+	}
+	title = {
+		text = WAG.5.tt
+		trigger = {
+			FRA = {
+				has_capitulated = no
+				has_government = fascism
+			}
+#			VIC = {
+#				exists = no
+#			}
+		}
+	}
+	desc = {
+		text = WAG.5.d
+		trigger = {
+			tag = VIC
+			WAG = {
+				is_in_faction_with = GER
+			}
+		}
+	}
+	desc = {
+		text = WAG.5.dd
+		trigger = {
+			tag = VIC
+			NOT = {
+				WAG = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = WAG.5.b
+		add_war_support = 0.1
+		VIC = {
+			country_event = WAG.7
+		}
+	}
+	option = {
+		name = WAG.5.a
+		if = {
+			limit = {
+				is_in_faction_with = GER
+				VIC = {
+					is_in_faction_with = GER
+				}
+			}
+			GER = {
+				country_event = WAG.8
+			}
+			else = {
+				add_political_power = -10
+				add_stability = -0.1
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}#civil war missing
+				VIC = {
+					country_event = WAG.19
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = WAG.7
+	title = WAG.7.t
+	desc = WAG.7.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.7.a
+		add_war_support = 0.2
+		create_wargoal = {
+			target = WAG
+			type = take_claimed_state
+			generator = {909}
+			expire = 0
+		}
+	}
+}
+country_event = {
+	id = WAG.19
+	title = WAG.19.t
+	desc = WAG.19.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.19.a
+		add_political_power = 20
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+}
+country_event = {
+	id = WAG.8
+	title = WAG.8.t
+	desc = WAG.8.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.8.a
+		WAG = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = refused_help
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = abandoned_czechs
+			}
+		}
+	}
 }
