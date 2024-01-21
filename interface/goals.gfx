@@ -1,9 +1,13 @@
 spriteTypes = {	
 
 	
+#	spriteType = {
+#		name = "GFX_focus_attack_turkey"
+#		textureFile = "gfx/interface/goals/focus_attack_turkey.dds"
+#	}
 	spriteType = {
-		name = "GFX_focus_attack_turkey"
-		textureFile = "gfx/interface/goals/focus_attack_turkey.dds"
+		name = "GFX_focus_attack_wallace"
+		textureFile = "gfx/interface/goals/focus_attack_wallace_2.dds"
 	}
 
 	#### Generic continuous goal icons
