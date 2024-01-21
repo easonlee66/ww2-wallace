@@ -97,6 +97,7 @@ WAG_nazi_reform = {
 				states = {912 914 915}
 			}
 			hidden_effect = {
+				country_event = WAG.4
 				random_other_country = {
 					limit = {
 						original_tag = WAG
@@ -132,22 +133,22 @@ WAG_nazi_reform = {
 				set_capital = {
 					state = 918
 				}
-#				add_popularity = {
-#					ideology = fascism
-#					popularity = 0.8
-#				}
-#				add_popularity = {
-#					ideology = neutrality
-#					popularity = 0.1
-#				}
-#				add_popularity = {
-#					ideology = communism
-#					popularity = 0.05
-#				}
-#				add_popularity = {
-#					ideology = democratic
-#					popularity = 0.05
-#				}
+	#				add_popularity = {
+	#					ideology = fascism
+	#					popularity = 0.8
+	#				}
+	#				add_popularity = {
+	#					ideology = neutrality
+	#					popularity = 0.1
+	#				}
+	#				add_popularity = {
+	#					ideology = communism
+	#					popularity = 0.05
+	#				}
+	#				add_popularity = {
+	#					ideology = democratic
+	#					popularity = 0.05
+	#				}
 			}
 		}
 	}
