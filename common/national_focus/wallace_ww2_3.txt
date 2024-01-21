@@ -135,46 +135,62 @@ focus_tree={
 		completion_reward={
 			add_war_support=0.3
 			FRA={
-				set_variable={
-					var=opinion@WAG
-					value=-100
+				add_opinion_modifier = {
+					target = WAG
+					modifier = wag_declare_great_wallace
 				}
 			}
 			ENG={
-				set_variable={
-					var=opinion@WAG
-					value=-100
+				add_opinion_modifier = {
+					target = WAG
+					modifier = wag_declare_great_wallace
 				}
 			}
 			IRQ={
-				set_variable={
-					var=opinion@WAG
-					value=-100
+				add_opinion_modifier = {
+					target = WAG
+					modifier = holds_our_cores
 				}
 			}
 			TUR={
-				set_variable={
-					var=opinion@WAG
-					value=-100
+				add_opinion_modifier = {
+					target = WAG
+					modifier = wag_declare_great_wallace
 				}
 			}
 			PER={
-				add_to_variable={
-					var=opinion@WAG
-					value=-50
+				add_opinion_modifier = {
+					target = WAG
+					modifier = claims_on_us
 				}
 			}
 			SOV={
-				add_to_variable={
-					var=opinion@WAG
-					value=-50
+				add_opinion_modifier = {
+					target = WAG
+					modifier = claims_on_us
 				}
 			}
 			SAU={
-				add_to_variable={
-					var=opinion@WAG
-					value=-50
+				add_opinion_modifier = {
+					target = WAG
+					modifier = claims_on_us
 				}
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = wag_declare_great_wallace
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = wag_declare_great_wallace
+			}
+			add_opinion_modifier = {
+				target = TUR
+				modifier = holds_our_claims
+			}
+			add_opinion_modifier = {
+				target = IRQ
+				modifier = holds_our_claims
 			}
 		}
 	}
@@ -306,7 +322,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_demand_anatolia
-		icon=GFX_focus_attack_turkey
+		icon=GFX_focus_generic_attack_turkey
 		x=13
 		y=3
 		offset = {
