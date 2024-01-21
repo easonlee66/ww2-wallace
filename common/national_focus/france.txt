@@ -6331,17 +6331,49 @@
 		}
 	}
 	focus = {
-		id = FRA_expand_to_the_suez
-		icon = GFX_goal_generic_occupy_states_coastal
+		id = FRA_bring_home_west_kosui
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
 		x = 1
 		y = 2
 		offset = {
 			x = 0
 			y = 0
 		}
+		relative_position_id = FRA_intervention_in_greece
 		prerequisite = {
 			focus = FRA_intervention_in_greece
 			focus = FRA_grow_the_empire
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = FRA_fate_of_wallace
+		icon = GFX_focus_attack_wallace
+		cost = 10
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		relative_position_id = FRA_bring_home_west_kosui
+		prerequisite = {
+			focus = FRA_bring_home_west_kosui
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = FRA_expand_to_the_suez
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 1
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {
+			focus = FRA_fate_of_wallace
 		}
 		relative_position_id = FRA_intervention_in_greece
 		cost = 10

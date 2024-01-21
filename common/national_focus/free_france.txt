@@ -204,6 +204,33 @@
 		}
 	}
 	focus = {
+		id = FRA_a_free_wallace
+		icon = GFX_focus_attack_wallace
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_intervention_in_syria
+		prerequisite = {
+			focus = FRA_intervention_in_syria
+		}
+		available = {
+			WAG = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+			}
+		}
+		bypass = {
+			has_war_with = WAG
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = WAG
+				type = topple_government
+			}
+		}
+	}
+	focus = {
 		id = FRA_intervention_in_indochina
 		icon = GFX_goal_generic_position_armies
 		x = 1
