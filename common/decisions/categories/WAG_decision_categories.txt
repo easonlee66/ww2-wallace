@@ -3,6 +3,10 @@ WAG_second_civil_war = {
 
 	allowed = {
 		original_tag = WAG
+#		OR = {
+#			complete_national_focus = WAG_communism_road
+#			complete_national_focus = WAG_social_democracy_road
+#		}
 	}
 }
 
@@ -11,6 +15,7 @@ WAG_first_two_year_half_plan = {
 
 	allowed = {
 		original_tag = WAG
+#		complete_national_focus = WAG_first_two_year_half_plan
 	}
 }
 
