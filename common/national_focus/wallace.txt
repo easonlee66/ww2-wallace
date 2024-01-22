@@ -88,7 +88,17 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		available_if_capitulated=no
+		available={
+			is_subject = no
+			has_war = no
+			NOT = {
+				any_country = {
+					original_tag = WAG
+					has_government = fascism
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -768,6 +778,7 @@ focus_tree={
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
+			unlock_decision_category_tooltip = WAG_first_two_year_half_plan
 		}
 	}
 	focus={
@@ -908,228 +919,228 @@ focus_tree={
 		completion_reward={
 		}
 	}
-	focus={
-		id=default_id4
-		x=26
-		y=5
-		offset = {
-			x=-10
-			y=0
-			trigger = {
-				AND={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-					has_completed_focus = WAG_make_despotism
-					NOT = {
-						has_completed_focus = WAG_clear_against
-					}
-				}
-			}
-		}
-		offset = {
-			x=-14
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_clear_against
-				}
-			}
-		}
-		prerequisite={focus=WAG_mind_millitary}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=default_id6
-		x=30
-		y=5
-		offset = {
-			x=-10
-			y=0
-			trigger = {
-				AND={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-					has_completed_focus = WAG_make_despotism
-					NOT = {
-						has_completed_focus = WAG_clear_against
-					}
-				}
-			}
-		}
-		offset = {
-			x=-14
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_clear_against
-				}
-			}
-		}
-		prerequisite={focus=WAG_mind_civilization}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=default_id7
-		x=28
-		y=5
-		offset = {
-			x=-10
-			y=0
-			trigger = {
-				AND={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-					has_completed_focus = WAG_make_despotism
-					NOT = {
-						has_completed_focus = WAG_clear_against
-					}
-				}
-			}
-		}
-		offset = {
-			x=-14
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_clear_against
-				}
-			}
-		}
-		prerequisite={focus=WAG_mind_millitary focus=WAG_mind_civilization }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=default_id8
-		x=26
-		y=6
-		offset = {
-			x=-10
-			y=0
-			trigger = {
-				AND={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-					has_completed_focus = WAG_make_despotism
-					NOT = {
-						has_completed_focus = WAG_clear_against
-					}
-				}
-			}
-		}
-		offset = {
-			x=-14
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_clear_against
-				}
-			}
-		}
-		prerequisite={focus=default_id4}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=default_id9
-		x=30
-		y=6
-		offset = {
-			x=-10
-			y=0
-			trigger = {
-				AND={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-					has_completed_focus = WAG_make_despotism
-					NOT = {
-						has_completed_focus = WAG_clear_against
-					}
-				}
-			}
-		}
-		offset = {
-			x=-14
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_clear_against
-				}
-			}
-		}
-		prerequisite={focus=default_id6}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
+#	focus={
+#		id=default_id4
+#		x=26
+#		y=5
+#		offset = {
+#			x=-10
+#			y=0
+#			trigger = {
+#				AND={
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+#					}
+#					has_completed_focus = WAG_make_despotism
+#					NOT = {
+#						has_completed_focus = WAG_clear_against
+#					}
+#				}
+#			}
+#		}
+#		offset = {
+#			x=-14
+#			y=0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_clear_against
+#				}
+#			}
+#		}
+#		prerequisite={focus=WAG_mind_millitary}
+#		cost=10
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#			FOCUS_FILTER_INDUSTRY
+#		}
+#		completion_reward={
+#		}
+#	}
+#	focus={
+#		id=default_id6
+#		x=30
+#		y=5
+#		offset = {
+#			x=-10
+#			y=0
+#			trigger = {
+#				AND={
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+###					}
+	#				has_completed_focus = WAG_make_despotism
+	#				NOT = {
+	#					has_completed_focus = WAG_clear_against
+	#				}
+	#			}
+	#		}
+	#	}
+	#	offset = {
+	#		x=-14
+	#		y=0
+	#		trigger = {
+	#			AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_clear_against
+#				}
+#			}
+#		}
+##		prerequisite={focus=WAG_mind_civilization}
+#		cost=10
+##		ai_will_do={
+#			factor=1
+#		}
+##		available_if_capitulated=yes
+#		search_filters={
+#			FOCUS_FILTER_INDUSTRY
+#		}
+###		completion_reward={
+	#	}
+#	}
+#	focus={
+#		id=default_id7
+###		x=28
+#		y=5
+##		offset = {
+#			x=-10
+#			y=0
+#			trigger = {
+#				AND={
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+#					}
+#					has_completed_focus = WAG_make_despotism
+#					NOT = {
+#						has_completed_focus = WAG_clear_against
+#					}
+#				}
+#			}
+#		}
+#		offset = {
+##			x=-14
+#			y=0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_clear_against
+#				}
+#			}
+#		}
+#		prerequisite={focus=WAG_mind_millitary focus=WAG_mind_civilization }
+#		cost=10
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#		}
+#		completion_reward={
+#		}
+#	}
+##	focus={
+##		id=default_id8
+#		x=26
+#v		y=6
+##		offset = {
+#			x=-10
+#			y=0
+#			trigger = {
+#				AND={
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+##					}
+#					has_completed_focus = WAG_make_despotism
+#					NOT = {
+#						has_completed_focus = WAG_clear_against
+#					}
+#				}
+#			}
+#		}
+#		offset = {
+#			x=-14
+#			y=0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_clear_against
+#				}
+#			}
+#		}
+#		prerequisite={focus=default_id4}
+#		cost=10
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#		}
+#		completion_reward={
+#		}
+#	}
+#	focus={
+#		id=default_id9
+#		x=30
+#		y=6
+#		offset = {
+#			x=-10
+#			y=0
+#			trigger = {
+#				AND={
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+#					}
+#					has_completed_focus = WAG_make_despotism
+#					NOT = {
+#						has_completed_focus = WAG_clear_against
+#					}
+#				}
+#			}
+#		}
+#		offset = {
+#			x=-14
+#			y=0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_clear_against
+#				}
+#			}
+#		}
+#		prerequisite={focus=default_id6}
+#		cost=10
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#		}
+#		completion_reward={
+#		}
+#	}
 	focus={
 		id=WAG_second_two_year_half_plan
 		icon=GFX_goal_generic_production
@@ -1199,21 +1210,21 @@ focus_tree={
 		completion_reward={
 		}
 	}
-	focus={
-		id=default_id1__
-		x=18
-		y=3
-		prerequisite={focus=WAG_middle_road}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
+#	focus={
+#		id=default_id1__
+#		x=18
+#		y=3
+#		prerequisite={focus=WAG_middle_road}
+#		cost=10
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#		}
+#		completion_reward={
+#		}
+#	}
 	focus={
 		id=WAG_train_WCYL
 		icon=GFX_goal_generic_more_territorial_claims

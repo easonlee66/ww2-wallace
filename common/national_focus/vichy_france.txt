@@ -948,7 +948,7 @@
 		}
 		completion_reward = {
 			WAG = {
-				country_event = WAG.4
+				country_event = WAG.5
 			}
 		}
 	}
