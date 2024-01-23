@@ -6,12 +6,11 @@ state={
 		victory_points = {
 			10882 1
 		}
-		buildings = {
-			industrial_complex = 3
-			infrastructure = 2
-		}
+#		buildings = {
+#			industrial_complex = 3
+#			infrastructure = 2
+#		}
 		add_core_of = WAG
-		add_core_of = SYR
 	}
 	provinces={
 		10882 

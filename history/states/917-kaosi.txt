@@ -7,7 +7,7 @@ state={
 		victory_points = {
 			12416 1 
 		}
-		add_core_of = TUR
+		add_core_of = SYR
 		add_core_of = WAG
 
 	}

@@ -2,9 +2,9 @@ state={
 	id=912
 	name="STATE_912"
 
-	resources = {
-		oil = 8
-	}
+#	resources = {
+#		oil = 8
+#	}
 
 	history={
 		owner = WAG
