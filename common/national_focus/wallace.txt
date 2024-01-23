@@ -779,6 +779,54 @@ focus_tree={
 		}
 		completion_reward={
 			unlock_decision_category_tooltip = WAG_first_two_year_half_plan
+			add_political_power = -70
+			if = {
+				limit = {
+					has_idea = undisturbed_isolation
+				}
+				swap_ideas = {
+					remove_idea = undisturbed_isolation
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			if = {
+				limit = {
+					has_idea = isolation
+				}
+				swap_ideas = {
+					remove_idea = isolation
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			if = {
+				limit = {
+					has_idea = civilian_economy
+				}
+				swap_ideas = {
+					remove_idea = civilian_economy
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			if = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+				swap_ideas = {
+					remove_idea = low_economic_mobilisation
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			hidden_effect = {
+				910 = {
+					set_state_flag = WAG_south_state
+				}
+				911 = {
+					set_state_flag = WAG_south_state
+				}
+				914 = {
+					set_state_flag = WAG_south_state
+				}
+			}
 		}
 	}
 	focus={
