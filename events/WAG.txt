@@ -200,7 +200,7 @@ country_event = {
 		create_wargoal = {
 			target = WAG
 			type = take_claimed_state
-			generator = {909}
+			generator = {909 913 917 918}
 			expire = 0
 		}
 	}
@@ -724,7 +724,7 @@ country_event = {
 		create_wargoal = {
 			target = WAG
 			type = take_claimed_state
-			generator = {909}
+			generator = {909 913 917 918}
 			expire = 0
 		}
 	}

@@ -1,0 +1,22 @@
+add_namespace = WAG_news
+
+news_event = {
+	id = WAG_news.1
+	title = WAG_news.1.t
+	desc = WAG_news.1.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_news.1.a
+		trigger = {
+			NOT = {
+				original_tag = WAG
+			}
+		}
+	}
+	option = {
+		name = WAG_news.1.b
+		trigger = {
+			original_tag = WAG
+		}
+	}
+}

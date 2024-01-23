@@ -116,6 +116,10 @@ country_event = {
 			complete_national_focus = WAG_communism_road
 		}
 		unlock_decision_category_tooltip = WAG_second_civil_war
+		country_event = {
+			id = PRW.3
+			days = 100
+		}
 	}
 
 	option = {
@@ -140,6 +144,10 @@ country_event = {
 			complete_national_focus = WAG_social_democracy_road
 		}
 		unlock_decision_category_tooltip = WAG_second_civil_war
+		country_event = {
+			id = PRW.3
+			days = 100
+		}
 	}
 
 	option = {
@@ -160,5 +168,76 @@ country_event = {
 			complete_national_focus = WAG_middle_road
 		}
 		unlock_decision_category_tooltip = WAG_second_civil_war
+		country_event = {
+			id = PRW.3
+			days = 100
+		}
+	}
+}
+
+country_event = {
+	id = PRW.3
+	title = PRW.3.t
+	desc = PRW.3.d
+#	trigger = {
+#		tag = WAG
+#		OR = {
+#			has_completed_focus = WAG_communism_road
+#			has_completed_focus = WAG_social_democracy_road
+#			has_completed_focus = WAG_middle_road
+#		}
+#	}
+	is_triggered_only = yes
+	option = {
+		name = PRW.3.a
+		add_stability = -0.5
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "混乱的政府"
+			picture = GFX_PRW_a_mess_goverment
+			ideology = liberalism
+			traits = {
+				figurehead_president
+			}
+		}
+		add_ideas = FRA_disjointed_government
+	}
+}
+
+country_event = {
+	id = PRW.4
+	title = {
+		text = PRW.4.t
+		trigger = {
+			has_completed_focus = WAG_communism_road
+		}
+	}
+	title = {
+		text = PRW.4.tt
+		trigger = {
+			has_completed_focus = WAG_social_democracy_road
+		}
+	}
+	title = {
+		text = PRW.4.ttt
+		trigger = {
+			has_completed_focus = WAG_middle_road
+		}
+	}
+	desc = PRW.4.d
+	is_triggered_only = yes
+	option = {
+		name = PRW.4.a
+		trigger = {
+			has_completed_focus = WAG_social_democracy_road
+		}
+		add_war_support = 0.1
+		set_country_flag = WAG_second_civil_war
+		create_dynamic_country = {
+			original_tag = WAG
+		}
+		every_state = {
+			
+		}
 	}
 }
