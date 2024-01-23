@@ -10,9 +10,9 @@
 
 opinion_modifiers = {
 	wag_declare_great_wallace = {
-		value = -10
+		value = -40
 		min_trust = -100
-		decay = 1
+		decay = 5
 		days = 100
 	}
 
