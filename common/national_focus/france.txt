@@ -7530,9 +7530,9 @@
 					picture = GFX_portrait_SPA_alfonso_xiii
 					expire = "1965.1.1"
 					ideology = despotism
-					traits = {
-						
-					}
+#					traits = {
+#						
+#					}
 				}
 			}
 			else = {
@@ -7542,9 +7542,9 @@
 					picture = GFX_portrait_fra_infante_jaime
 					expire = "1965.1.1"
 					ideology = despotism
-					traits = {
-						
-					}
+#					traits = {
+#						
+#					}
 				}
 			}
 			set_party_name = {
@@ -7793,9 +7793,9 @@
 				picture = GFX_portraits_fra_napoleon_vi
 				expire = "1965.1.1"
 				ideology = despotism
-				traits = {
-					
-				}
+#				traits = {
+#					
+#				}
 			}
 			set_party_name = {
 				ideology = neutrality
