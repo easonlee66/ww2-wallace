@@ -36,7 +36,7 @@ characters={
 			id=-1
 		}
 	}
-	WAG_zhanwei={
-		name = WAG_muhamd_ziang_wikau
-	}
+#	WAG_zhanwei={
+#		name = WAG_muhammad_ziang_wikau
+#	}
 }
