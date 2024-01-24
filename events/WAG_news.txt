@@ -5,6 +5,7 @@ news_event = {
 	title = WAG_news.1.t
 	desc = WAG_news.1.d
 	is_triggered_only = yes
+	major = yes
 	option = {
 		name = WAG_news.1.a
 		trigger = {
@@ -17,6 +18,17 @@ news_event = {
 		name = WAG_news.1.b
 		trigger = {
 			original_tag = WAG
+		}
+	}
+}
+
+news_event = {
+	id = WAG_news.2
+	trigger = {
+		915 = {
+			NOT = {
+				is_controlled_by = WAG
+			}
 		}
 	}
 }

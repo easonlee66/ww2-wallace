@@ -116,6 +116,9 @@ country_event = {
 			complete_national_focus = WAG_communism_road
 		}
 		unlock_decision_category_tooltip = WAG_second_civil_war
+		every_state = {
+			set_state_flag = WAG_second_civil_war_against
+		}
 		country_event = {
 			id = PRW.3
 			days = 100
@@ -168,6 +171,9 @@ country_event = {
 			complete_national_focus = WAG_middle_road
 		}
 		unlock_decision_category_tooltip = WAG_second_civil_war
+		every_state = {
+			set_state_flag = WAG_second_civil_war_against
+		}
 		country_event = {
 			id = PRW.3
 			days = 100
@@ -235,9 +241,38 @@ country_event = {
 		set_country_flag = WAG_second_civil_war
 		create_dynamic_country = {
 			original_tag = WAG
-		}
-		every_state = {
-			
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			set_popularities = {
+				communism = 50
+				democratic = 30
+				fascism = 15
+				neutrality = 5
+			}
+			save_event_target_as = second_civil_war_against
+			every_state = {
+				if = {
+					limit = {
+						has_state_flag = WAG_second_civil_war_against
+						is_owned_and_controlled_by = WAG
+					}
+					event_target:second_civil_war_against = {
+						transfer_state = PREV
+					}
+				}
+			}
+			set_cosmetic_tag = WAG_people_republics
+			WAG = {
+				WAG_abudullah_an_komi = {
+					set_nationality = event_target:second_civil_war_against
+				}
+			}
+			WAG_abudullah_an_komi = {
+				promote_character = yes
+			}
+			load_focus_tree = wallace_focus
 		}
 	}
 }
