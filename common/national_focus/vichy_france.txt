@@ -34,9 +34,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_country_leader_trait = emergency_powers
@@ -73,9 +70,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
@@ -106,9 +100,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_tech_bonus = {
@@ -144,9 +135,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_state = {
@@ -193,9 +181,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_venerate_the_craftsman }
@@ -226,9 +211,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_timed_idea = { 
 				idea = FRA_down_with_marianne 
@@ -261,9 +243,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_timed_idea = { 
 				idea = FRA_up_with_jean_darc 
@@ -296,9 +275,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.05
@@ -329,9 +305,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_war_support = 0.05
@@ -364,9 +337,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
 		completion_reward = {
 			unlock_decision_category_tooltip = VIC_concessions_to_the_germans
@@ -397,9 +367,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
 		completion_reward = {
 			reduce_occupation_cost_effect = yes
@@ -437,9 +404,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
@@ -481,9 +445,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			set_rule = {
 				can_join_factions = yes
@@ -530,9 +491,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = { FRA_national_bureau_of_statistics }
 		}
@@ -563,9 +521,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = { FRA_legionary_service_order }
 			hidden_effect = { add_named_threat = { threat = 10 name = VIC_the_legionary_service_order } }
@@ -596,9 +551,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = FRA_legionary_service_order
@@ -642,9 +594,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = { FRA_anti_bolshevist_volunteers }
 		}
@@ -674,9 +623,6 @@
 		bypass = {
 			num_of_military_factories > 34
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = { FRA_rebuild_the_military }
 		}
@@ -706,9 +652,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			navy_experience = 50
@@ -756,9 +699,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = { FRA_hidden_materials }
 		}
@@ -788,9 +728,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -826,9 +763,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = {
 				name = VIC_modernize_the_airforce
@@ -865,9 +799,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_to_tech_sharing_group = VIC_learn_from_the_enemy
 			GER = { add_to_tech_sharing_group = VIC_learn_from_the_enemy }
@@ -899,9 +830,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = { FRA_buy_from_the_enemy }
 		}
