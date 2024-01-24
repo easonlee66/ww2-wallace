@@ -32,19 +32,22 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		ai_will_do={
-			factor=10
+			factor=3
 		}
-		available_if_capitulated=yes
+		available_if_capitulated = yes
 		completion_reward={
 			add_popularity={
 				ideology=fascism
-				popularity=0.5
+				popularity=0.1
 			}
 			add_popularity={
 				ideology=neutrality
-				popularity=0.2
+				popularity=0.1
 			}
-			add_stability=0.3
+			add_stability=0.1
+			set_politics = {
+				elections_allowed = no
+			}
 		}
 	}
 	focus={
@@ -66,14 +69,26 @@ focus_tree={
 				}
 			}
 		}
+		available = {
+			has_government = fascism
+		}
+		bypass = {
+			NOT = {
+				has_government = fascism
+			}
+		}
 		cost=10
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		ai_will_do={
 			factor=7
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
-		available_if_capitulated=yes
+		
 		completion_reward={
 			country_event=PRW.1
 		}
@@ -87,8 +102,11 @@ focus_tree={
 		cost=10
 		ai_will_do={
 			factor=1
+			modifier = {
+				factor = 0
+				date < 1937.1.1
+			}
 		}
-		available_if_capitulated=no
 		available={
 			is_subject = no
 			has_war = no
@@ -109,9 +127,12 @@ focus_tree={
 				ideology=fascism
 				popularity=-0.3
 			}
-			country_event={
-				id=PRW.2
-				days=10
+			hidden_effect = {
+				country_event={
+					id=PRW.2
+					days=10
+					random_days = 10
+				}
 			}
 		}
 	}
@@ -138,69 +159,71 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 			add_war_support=0.3
-			FRA={
+			hidden_effect = {
+				FRA={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = wag_declare_great_wallace
+					}
+				}
+				ENG={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = wag_declare_great_wallace
+					}
+				}
+				IRQ={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = holds_our_cores
+					}
+				}
+				TUR={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = wag_declare_great_wallace
+					}
+				}
+				PER={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = claims_on_us
+					}
+				}
+				SOV={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = claims_on_us
+					}
+				}
+				SAU={
+					add_opinion_modifier = {
+						target = WAG
+						modifier = claims_on_us
+					}
+				}
 				add_opinion_modifier = {
-					target = WAG
+					target = FRA
 					modifier = wag_declare_great_wallace
 				}
-			}
-			ENG={
 				add_opinion_modifier = {
-					target = WAG
+					target = ENG
 					modifier = wag_declare_great_wallace
 				}
-			}
-			IRQ={
 				add_opinion_modifier = {
-					target = WAG
-					modifier = holds_our_cores
+					target = TUR
+					modifier = holds_our_claims
 				}
-			}
-			TUR={
 				add_opinion_modifier = {
-					target = WAG
-					modifier = wag_declare_great_wallace
+					target = IRQ
+					modifier = holds_our_claims
 				}
-			}
-			PER={
-				add_opinion_modifier = {
-					target = WAG
-					modifier = claims_on_us
-				}
-			}
-			SOV={
-				add_opinion_modifier = {
-					target = WAG
-					modifier = claims_on_us
-				}
-			}
-			SAU={
-				add_opinion_modifier = {
-					target = WAG
-					modifier = claims_on_us
-				}
-			}
-			add_opinion_modifier = {
-				target = FRA
-				modifier = wag_declare_great_wallace
-			}
-			add_opinion_modifier = {
-				target = ENG
-				modifier = wag_declare_great_wallace
-			}
-			add_opinion_modifier = {
-				target = TUR
-				modifier = holds_our_claims
-			}
-			add_opinion_modifier = {
-				target = IRQ
-				modifier = holds_our_claims
 			}
 		}
 	}
@@ -213,13 +236,17 @@ focus_tree={
 		mutually_exclusive={focus=WAG_communism_road focus=WAG_middle_road }
 		cost=10
 		ai_will_do={
-			factor=1
+			factor=3
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
 		}
 	}
 	focus={
@@ -231,13 +258,17 @@ focus_tree={
 		mutually_exclusive={focus=WAG_social_democracy_road focus=WAG_middle_road }
 		cost=10
 		ai_will_do={
-			factor=1
+			factor=6
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 		}
 	}
 	focus={
@@ -276,11 +307,16 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		available_if_capitulated = yes
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -306,11 +342,12 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		available_if_capitulated = yes
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			unlock_decision_category_tooltip = WAG_nazi_reform
 		}
 	}
 	focus={
@@ -323,9 +360,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
-			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -353,7 +390,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		available={
 			TUR={
 				controls_state=350
@@ -405,11 +442,11 @@ focus_tree={
 						}
 					}
 					NOT={
-						has_war_with=FRA
+						has_war_with=TUR
 					}
 				}
 				create_wargoal={
-					target=FRA
+					target=TUR
 					type=take_state_focus
 					expire=0
 					generator={
@@ -442,7 +479,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		available={
 			FRA={
 				controls_state=553
@@ -522,7 +559,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		available={
 			IRQ={
 				controls_state=291
@@ -600,7 +637,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
@@ -630,11 +667,14 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_political_power = 70
 		}
 	}
 	focus={
@@ -673,9 +713,9 @@ focus_tree={
 		}
 		cost=10
 		ai_will_do={
-			factor=1
+			factor=10
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_RESEARCH
@@ -726,7 +766,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		available_if_capitulated = yes
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -770,9 +810,18 @@ focus_tree={
 		prerequisite={focus=WAG_industrial_effort}
 		cost=10
 		ai_will_do={
-			factor=1
+			factor=10
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1937.1.1
+					NOT = {
+						has_tech = construction2
+					}
+				}
+			}
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_RESEARCH
@@ -868,7 +917,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -914,7 +963,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -960,7 +1009,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -1005,7 +1054,7 @@ focus_tree={
 #		ai_will_do={
 #			factor=1
 #		}
-#		available_if_capitulated=yes
+#		
 #		search_filters={
 #			FOCUS_FILTER_INDUSTRY
 #		}
@@ -1050,7 +1099,7 @@ focus_tree={
 ##		ai_will_do={
 #			factor=1
 #		}
-##		available_if_capitulated=yes
+##		
 #		search_filters={
 #			FOCUS_FILTER_INDUSTRY
 #		}
@@ -1095,7 +1144,7 @@ focus_tree={
 #		ai_will_do={
 #			factor=1
 #		}
-#		available_if_capitulated=yes
+#		
 #		search_filters={
 #		}
 #		completion_reward={
@@ -1139,7 +1188,7 @@ focus_tree={
 #		ai_will_do={
 #			factor=1
 #		}
-#		available_if_capitulated=yes
+#		
 #		search_filters={
 #		}
 #		completion_reward={
@@ -1183,7 +1232,7 @@ focus_tree={
 #		ai_will_do={
 #			factor=1
 #		}
-#		available_if_capitulated=yes
+#		
 #		search_filters={
 #		}
 #		completion_reward={
@@ -1228,7 +1277,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		
 		allow_branch={
 			has_country_flag=WAG_complete_first_tyhp
 		}
@@ -1250,8 +1299,12 @@ focus_tree={
 		cost=10
 		ai_will_do={
 			factor=1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
-		available_if_capitulated=yes
+		
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1267,7 +1320,7 @@ focus_tree={
 #		ai_will_do={
 #			factor=1
 #		}
-#		available_if_capitulated=yes
+#		
 #		search_filters={
 #		}
 #		completion_reward={
@@ -1283,7 +1336,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1300,7 +1355,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1317,7 +1374,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1334,7 +1393,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1351,7 +1412,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1368,7 +1431,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available_if_capitulated=yes
+		bypass = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}

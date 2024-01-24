@@ -8168,7 +8168,7 @@
 					is_owned_or_subject_trigger = yes
 					CONTROLLER = {
 						NOT = {
-							OR = {
+#							OR = {
 								tag = BAY
 								tag = MEK
 								tag = SAX
@@ -8176,7 +8176,7 @@
 								tag = SHL
 								tag = WUR
 								tag = CZE
-							}
+#							}
 						}
 					}
 					NOT = {

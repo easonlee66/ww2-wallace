@@ -1,8 +1,11 @@
 ﻿l_english:
   wallace_focus:0 "瓦雷斯国 国策"
   WAG_make_despotism:0 "加强专制"
+  WAG_make_despotism_desc:0 "瓦雷斯第二帝国已经灭亡近二十年了，为了恢复帝国的荣耀，我们必须重新团结起来，齐聚在元首的周围，共同为复辟瓦雷斯第二帝国做好准备"
   WAG_oppisite_nazi:0 "反对纳粹党"
+  WAG_oppisite_nazi_desc:0 "帝国已经是过时的东西了，谁妄图逆历史潮流而行，历史的潮流就把谁卷走。瓦雷斯纳粹党妄图复辟瓦雷斯第二帝国不得人心，我们必须联合起来反对纳粹党。"
   WAG_defend_new_country:0 "捍卫新国家"
+  WAG_defend_new_country_desc:0 "如今，纳粹党的政权已经被我们推翻，摆在我们面前的是一个崭新的瓦雷斯国。但是仍然有新纳粹分子逃到了考试州狂报磨市，企图恢复他们的政权。于此同时，瓦雷斯革命同盟的两大主要成员，瓦雷斯共产党和瓦雷斯社会民主党对战后如何建设新国家，逐渐产生了分歧。无论如何，我们必须采取措施，捍卫新国家，保卫政权！"
   WAG_social_democracy_road:0 "社会民主主义之路"
   WAG_middle_road:0 "第三条道路"
   WAG_communism_road:0 "共产主义之路"
