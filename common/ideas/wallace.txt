@@ -1,4 +1,12 @@
 ideas = {
+	country = {
+		WAG_first_two_year_half_plan = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 5
+				production_speed_buildings_factor = 5
+			}
+		}
+	}
 	political_advisor = {
 		WAG_royalist = {
 			picture = generic_political_advisor_arab_1
