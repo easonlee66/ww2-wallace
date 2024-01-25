@@ -2456,12 +2456,6 @@ form_roman_empire_category = {
  				804 = { add_core_of = ROOT }
  				104 = { add_core_of = ROOT }
  				853 = { add_core_of = ROOT }
-				 917 = { add_core_of = ROOT }
-				 918 = { add_core_of = ROOT }
-				 919 = { add_core_of = ROOT }
-				 910 = { add_core_of = ROOT }
-				 909 = { add_core_of = ROOT }
-				 913 = { add_core_of = ROOT }
 
  			}
 			
@@ -2934,7 +2928,12 @@ form_roman_empire_category = {
 			controls_state = 676 #Mosul
 			controls_state = 680 #Deir-az-Zur
 			controls_state = 350 #Diyarbakir
-
+			controls_state = 917 #kaosi
+			controls_state = 918 #north kosui
+			controls_state = 919 #north wallace
+			controls_state = 913 #west kosui
+			controls_state = 909 #kosui 
+			controls_state = 910 #southwest wallace
 		}
 
 		visible = { 
@@ -2964,6 +2963,23 @@ form_roman_empire_category = {
 			# Diyarbakir
 			350 = { add_core_of = ROOT }
 			
+			# kaosi
+			917 = { add_core_of = ROOT }
+
+			#north sui
+			918 = { add_core_of = ROOT }
+
+			#north wallace
+			919 = { add_core_of = ROOT }
+
+			#south west wallace
+			910 = { add_core_of = ROOT }
+
+			#suikou
+			909 = { add_core_of = ROOT }
+
+			#west sui
+			913 = { add_core_of = ROOT }
 			
 			add_stability = -0.05
 			 
@@ -5339,12 +5355,12 @@ form_arabia_category = {
 			has_global_flag = form_arabia_flag
 		}
 		complete_effect = {
-			create_wargoal = {
-				target = WAG
-				type = take_claimed_state
-				generator = {909 913 917 918 910 911 912 914 915}
-				expire = 0
-			}
+#			create_wargoal = {
+#				target = WAG
+#				type = take_claimed_state
+#				generator = {909 913 917 918 910 911 912 914 915}
+#				expire = 0
+#			}
 		}
 	}
 }
@@ -5983,7 +5999,22 @@ form_andalusia_category = {
 				controls_state = 452
 				controls_state = 447
 			}
-			controls_state = 679
+			#wallace
+			custom_effect_tooltip = {
+				tooltip = form_country_wallace_required_state_tt
+				controls_state = 909
+				controls_state = 910
+				controls_state = 911
+				controls_state = 912
+				controls_state = 913
+				controls_state = 914
+				controls_state = 915
+				controls_state = 916
+				controls_state = 917
+				controls_state = 918
+				controls_state = 919
+				controls_state = 920
+			}
 			controls_state = 293
 			controls_state = 294
 			controls_state = 454
@@ -6037,6 +6068,19 @@ form_andalusia_category = {
 				457 = { add_core_of = ROOT }
 				452 = { add_core_of = ROOT }
 				447 = { add_core_of = ROOT }
+				#wallace
+				909 = { add_core_of = ROOT }
+				910 = { add_core_of = ROOT }
+				911 = { add_core_of = ROOT }
+				912 = { add_core_of = ROOT }
+				913 = { add_core_of = ROOT }
+				914 = { add_core_of = ROOT }
+				915 = { add_core_of = ROOT }
+				916 = { add_core_of = ROOT }
+				917 = { add_core_of = ROOT }
+				918 = { add_core_of = ROOT }
+				919 = { add_core_of = ROOT }
+				920 = { add_core_of = ROOT }
 				set_global_flag = restored_umayyad_flag
 			}
 		}
@@ -6956,6 +7000,22 @@ form_macedonian_empire_category = {
 				controls_state = 798
 				controls_state = 800
 			}
+			# wallace
+			custom_trigger_tooltip = {
+				tooltip = form_country_wallace_required_state_tt
+				controls_state = 909
+				controls_state = 910
+				controls_state = 911
+				controls_state = 912
+				controls_state = 913
+				controls_state = 914
+				controls_state = 915
+				controls_state = 916
+				controls_state = 917
+				controls_state = 918
+				controls_state = 919
+				controls_state = 920
+			}
 			# France: Syria
 			custom_trigger_tooltip = {
 				tooltip = form_persia_france_required_states_tt
@@ -7073,6 +7133,22 @@ form_macedonian_empire_category = {
 				798 = { add_core_of = ROOT }
 				800 = { add_core_of = ROOT }
 			}
+			# Wallace
+			custom_effect_tooltip = form_country_wallace_coring_states_tt
+			hidden_effect = {
+				909 = { add_core_of = ROOT }
+				910 = { add_core_of = ROOT }
+				911 = { add_core_of = ROOT }
+				912 = { add_core_of = ROOT }
+				913 = { add_core_of = ROOT }
+				914 = { add_core_of = ROOT }
+				915 = { add_core_of = ROOT }
+				916 = { add_core_of = ROOT }
+				917 = { add_core_of = ROOT }
+				918 = { add_core_of = ROOT }
+				919 = { add_core_of = ROOT }
+				920 = { add_core_of = ROOT }
+			}
 			# France
 			custom_effect_tooltip = form_persia_france_coring_states_tt
 			hidden_effect = {
@@ -7169,6 +7245,18 @@ form_turan_category = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_turan_iraq_required_states_tt
 				controls_state = 676
+			}
+			# Wallace
+			custom_effect_tooltip = {
+				tooltip = form_country_wallace_required_state_tt
+				controls_state = 909
+				controls_state = 913
+				controls_state = 919
+				controls_state = 915
+				controls_state = 916
+				controls_state = 917
+				controls_state = 918
+				controls_state = 920
 			}
 			# Persia
 			custom_trigger_tooltip = {
@@ -7295,6 +7383,15 @@ form_turan_category = {
 				#IRAQ
 				676 = { add_core_of = TUR }
 				291 = { add_core_of = TUR }
+				#WALLACE
+				909 = { add_core_of = TUR }
+				913 = { add_core_of = TUR }
+				915 = { add_core_of = TUR }
+				916 = { add_core_of = TUR }
+				917 = { add_core_of = TUR }
+				918 = { add_core_of = TUR }
+				919 = { add_core_of = TUR }
+				920 = { add_core_of = TUR }
 				#PERSIA
 				421 = { add_core_of = TUR }
 				419 = { add_core_of = TUR }
@@ -8370,6 +8467,110 @@ form_transcaucasus_category = {
 						transfer_state = 344
 					}
 					load_oob = "KUR_liberation_troops"
+				}
+				
+				puppet = KUR
+				
+				if = {
+					limit = {
+						has_war_with = TUR
+					}
+					KUR = {
+						add_to_war = {
+							targeted_alliance = ROOT 
+							enemy = TUR
+							hostility_reason = asked_to_join
+						}
+					}
+				}
+				
+				
+				
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	end_new_wallace = {  
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = GEO # Georgia 
+				original_tag = ARM # Armenia
+				original_tag = AZR # Azerbaijan
+			} 
+		}
+  
+		available = {
+			is_subject = no
+			controls_state = 920 # New Wallace
+		}
+
+		visible = {
+			OR = {
+				original_tag = GEO # Georgia
+				original_tag = ARM # Armenia
+				original_tag = AZR # Azerbaijan
+			}
+			has_global_flag = form_transcaucasia_flag
+			NOT = { has_global_flag = anatolian_kurds_subjugated_flag }
+
+				has_dlc = "No Step Back"
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = release_anatolian_kurdistan_tt 
+			
+			
+			hidden_effect = { 
+			
+				set_global_flag = anatolian_kurds_subjugated_flag
+				
+				KUR = {
+					transfer_state = 920 # New Wallace
+					if = {
+						limit = {
+							ROOT = { controls_state = 919 } #North Wallce
+						}
+						transfer_state = 919
+					}
+					if = {
+						limit = {
+							ROOT = { controls_state = 917 } #Kaosi
+						}
+						transfer_state = 917
+					}
+					if = {
+						limit = {
+							ROOT = { controls_state = 913 } #west sui
+						}
+						transfer_state = 913
+						add_core_of = 913
+					}
+					if = {
+						limit = {
+							ROOT = { controls_state = 918 } #North Sui
+						}
+						transfer_state = 918
+						add_core_of = 918
+					}
+					if = {
+						limit = {
+							ROOT = { controls_state = 909 } #suikou
+						}
+						transfer_state = 909
+						add_core_of = 909
+					}
 				}
 				
 				puppet = KUR
