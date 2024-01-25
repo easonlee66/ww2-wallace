@@ -10,6 +10,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/focus_attack_wallace_2.dds"
 	}
 
+	spriteType = {
+		name = "GFX_focus_befriend_wallace"
+		textureFile = "gfx/interface/goals/focus_befriend_wallace_2.dds"
+	}
+
 	#### Generic continuous goal icons
 
 	SpriteType = {
