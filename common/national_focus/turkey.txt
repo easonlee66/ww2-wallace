@@ -2728,7 +2728,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_complete_focus = TUR_recaim_kosui
 			WAG = { 
 				OR = {
 					exists = no
@@ -7994,12 +7993,12 @@ focus_tree = {
 				}
 			}
 		}
-		
-		will_lead_to_war = WAG
+
+		will_lead_to_war_with = WAG
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			create_war_goal = {
+			create_wargoal = {
 				target = WAG
 				type = puppet_wargoal_focus
 			}
