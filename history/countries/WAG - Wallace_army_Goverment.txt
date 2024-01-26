@@ -28,3 +28,52 @@ recruit_character = WAG_muhamd_ziang_wikau
 recruit_character = WAG_sadam_wang_zaoyangk
 recruit_character = WAG_salman_ritin_somin
 recruit_character = WAG_abudullah_an_komi
+
+1939.1.1 = {
+	set_country_flag = WAG_complete_first_tyhp
+	GER = {
+		add_to_faction = WAG
+	}
+	unlock_national_focus = WAG_first_two_year_half_plan
+	unlock_national_focus = WAG_make_despotism
+	unlock_national_focus = WAG_clear_against
+	complete_national_focus = WAG_industrial_effort
+	complete_national_focus = WAG_Mt.Iron_industry_centre
+	complete_national_focus = WAG_declare_great_wallace
+	complete_national_focus = WAG_demand_mesopotamia
+	complete_national_focus = WAG_demand_lower_kosui
+	complete_national_focus = WAG_demand_anatolia
+	unlock_national_focus = WAG_reform_of_nazi
+
+	set_technology = {
+		construction1 = 1
+		construction2 = 1
+		excavation1 = 1
+		excavation2 = 1
+		basic_machine_tools = 1
+		fuel_silos = 1
+		tech_support = 1
+		tech_engineers = 1
+		gwtank_chassis = 1
+		infantry_weapons1 = 1
+		support_weapons2 = 1
+	}
+
+	set_politics = {
+		ruling_party = fascism
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		communism = 5
+		democratic = 5
+		neutrality = 15
+		fascism = 75
+	}
+
+	activate_mission = WAG_nazi_reform_mission
+	add_days_mission_timeout = {
+		mission = WAG_nazi_reform_mission
+		days = -70
+	}
+}
