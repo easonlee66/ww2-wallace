@@ -44,7 +44,6 @@ focus_tree={
 				ideology=neutrality
 				popularity=0.1
 			}
-			add_stability=0.1
 			set_politics = {
 				elections_allowed = no
 			}
@@ -247,6 +246,7 @@ focus_tree={
 				ideology = democratic
 				popularity = 0.1
 			}
+			custom_effect_tooltip = WAG_social_democracy_road_custom_tooltip
 		}
 	}
 	focus={
@@ -269,6 +269,7 @@ focus_tree={
 				ideology = communism
 				popularity = 0.1
 			}
+			custom_effect_tooltip = WAG_communism_road_custom_tooltip
 		}
 	}
 	focus={
@@ -317,6 +318,7 @@ focus_tree={
 				popularity = 0.1
 			}
 			add_war_support = 0.1
+			add_stability = -0.2
 		}
 	}
 	focus={
@@ -432,27 +434,30 @@ focus_tree={
 		}
 		will_lead_to_war_with=TUR
 		completion_reward={
-			if={
-				limit={
-					country_exists=TUR
-					NOT={
-						FRA={
-							is_in_faction_with=TUR
-							has_capitulated=yes
-						}
-					}
-					NOT={
-						has_war_with=TUR
-					}
-				}
-				create_wargoal={
-					target=TUR
-					type=take_state_focus
-					expire=0
-					generator={
-						553
-					}
-				}
+#			if={
+#				limit={
+#					country_exists=TUR
+#					NOT={
+#						FRA={
+#							is_in_faction_with=TUR
+#							has_capitulated=yes
+#						}
+#					}
+#					NOT={
+#						has_war_with=TUR
+#					}
+#				}
+#				create_wargoal={
+#					target=TUR
+#					type=take_state_focus
+#					expire=0
+#					generator={
+#						553
+#					}
+#				}
+#			}
+			TUR = {
+				country_event = WAG.23
 			}
 		}
 	}
@@ -485,10 +490,19 @@ focus_tree={
 				controls_state=553
 				controls_state=554
 				controls_state=680
+				controls_state = 677
+			}
+			ENG = {
+				controls_state = 656
+				controls_state = 455
+				controls_state = 454
 			}
 			NOT={
 				FRA={
 					is_in_faction_with=WAG
+				}
+				ENG = {
+					is_in_faction_with = WAG
 				}
 			}
 		}
@@ -503,6 +517,20 @@ focus_tree={
 						controls_state=553
 						controls_state=554
 						controls_state=680
+						controls_state = 677
+					}
+				}
+			}
+			ENG={
+				OR={
+					exists=no
+					has_capitulated=yes
+					is_in_faction_with=WAG
+					has_war_with=ROOT
+					NOT={
+						controls_state = 656
+						controls_state = 455
+						controls_state = 454
 					}
 				}
 			}
@@ -511,28 +539,35 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		will_lead_to_war_with=FRA
+		will_lead_to_war_with=ENG
 		completion_reward={
-			if={
-				limit={
-					country_exists=FRA
-					NOT={
-						FRA={
-							is_in_faction_with=WAG
-							has_capitulated=yes
-						}
-					}
-					NOT={
-						has_war_with=FRA
-					}
-				}
-				create_wargoal={
-					target=FRA
-					type=take_state_focus
-					expire=0
-					generator={
-						553
-					}
-				}
+#			if={
+#				limit={
+#					country_exists=FRA
+#					NOT={
+#						FRA={
+#							is_in_faction_with=WAG
+#							has_capitulated=yes
+#						}
+#					}
+#					NOT={
+#						has_war_with=FRA
+#					}
+#				}
+#				create_wargoal={
+#					target=FRA
+#					type=take_state_focus
+#					expire=0
+#					generator={
+#						553
+#					}
+#				}
+#			}
+			FRA = {
+				country_event = WAG.24
+			}
+			ENG = {
+				country_event = WAG.24
 			}
 		}
 	}
@@ -589,26 +624,29 @@ focus_tree={
 		}
 		will_lead_to_war_with=IRQ
 		completion_reward={
-			if={
-				limit={
-					country_exists=IRQ
-					NOT={
-						IRQ={
-							is_in_faction_with=WAG
-						}
-					}
-					NOT={
-						has_war_with=IRQ
-					}
-				}
-				create_wargoal={
-					target=IRQ
-					type=take_state_focus
-					generator={
-						291
-					}
-					expire=0
-				}
+#			if={
+#				limit={
+#					country_exists=IRQ
+#					NOT={
+#						IRQ={
+#							is_in_faction_with=WAG
+#						}
+#					}
+#					NOT={
+#						has_war_with=IRQ
+#					}
+#				}
+#				create_wargoal={
+#					target=IRQ
+#					type=take_state_focus
+#					generator={
+#						291
+#					}
+#					expire=0
+#				}
+#			}
+			IRQ = {
+				country_event = WAG.28
 			}
 		}
 	}
@@ -675,6 +713,13 @@ focus_tree={
 		}
 		completion_reward={
 			add_political_power = 70
+			set_politics = {
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
 		}
 	}
 	focus={
@@ -771,6 +816,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_stability = 0.1
 		}
 	}
 	focus={
