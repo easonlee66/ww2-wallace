@@ -756,3 +756,362 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = WAG.23
+	title = WAG.23.t
+	desc = WAG.23.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.23.a
+		add_war_support = 0.1
+		WAG = {
+			add_state_claim = 350
+			add_state_claim=344
+			add_state_claim=352
+			add_state_claim=353
+			add_state_claim=800
+			add_state_claim=348
+			add_state_claim=798
+			add_state_claim=349
+			country_event = WAG.25
+		}
+	}
+	option = {
+		name = WAG.23.b
+		add_war_support = -0.1
+		add_stability = -0.2
+		WAG = {
+			transfer_state=350
+			transfer_state=344
+			transfer_state=352
+			transfer_state=353
+			transfer_state=800
+			transfer_state=348
+			transfer_state=798
+			transfer_state=349
+			add_state_core = 350
+			add_state_core=344
+			add_state_core=352
+			add_state_core=353
+			add_state_core=800
+			add_state_core=348
+			add_state_core=798
+			add_state_core=349
+		}
+	}
+}
+country_event = {
+	id = WAG.24
+	title = WAG.24.t
+	desc = WAG.24.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.24.a
+		add_war_support = 0.1
+		if = {
+			limit = {
+				original_tag = FRA
+			}
+			WAG = {
+				add_state_claim=553
+				add_state_claim=554
+				add_state_claim=680
+			}
+			else_if = {
+				limit = {
+					original_tag = ENG
+				}
+				add_state_claim = 656
+			}
+		}
+		WAG = {
+			country_event = WAG.25
+		}
+	}
+	option = {
+		name = WAG.24.b
+		trigger = {
+			OR = {
+				AND = {
+					original_tag = FRA
+					controls_state=553
+					controls_state=554
+					controls_state=680
+					OR = {
+						WAG = {
+							controls_state = 909
+						}
+						SYR = {
+							is_puppet_of = WAG
+							controls_state = 909
+						}
+					}
+				}
+				AND = {
+					original_tag = ENG
+					controls_state = 656
+					OR = {
+						WAG = {
+							controls_state = 291
+							controls_state = 675
+						}
+						IRQ = {
+							is_puppet_of = WAG
+							controls_state = 291
+							controls_state = 675
+						}
+					}
+				}
+			}
+		}
+		WAG = {
+			country_event = WAG.26
+		}
+	}
+	option = {
+		name = WAG.24.c
+		add_war_support = -0.1
+		add_stability = -0.2
+		if = {
+			limit = {
+				original_tag = FRA
+				controls_state=553
+				controls_state=554
+				controls_state=680
+			}
+			WAG = {
+				transfer_state=553
+				transfer_state=554
+				transfer_state=680
+				transfer_state=677
+				add_state_core=553
+				add_state_core=554
+				add_state_core=680
+				add_state_core=677
+				if = {
+					limit = {
+						FRA = {
+							controls_state = 799
+						}
+					}
+					transfer_state = 799
+					add_state_core = 799
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ENG
+				}
+				WAG = {
+					transfer_state = 656
+					transfer_state = 454
+					transfer_state = 455
+					add_state_core = 656
+					add_state_core = 454
+					add_state_core = 455
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = WAG.25
+	title = WAG.25.t
+	desc = WAG.25.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.25.a
+		add_war_support = 0.1
+		create_wargoal = {
+			target = FROM
+			type = take_claimed_state
+		}
+	}
+}
+country_event = {
+	id = WAG.26
+	title = {
+		text = WAG.26.t
+		trigger = {
+			from = {
+				original_tag = FRA
+			}
+		}
+	}
+	title = {
+		text = WAG.26.tt
+		trigger = {
+			from = {
+				original_tag = ENG
+			}
+		}
+	}
+	desc = WAG.26.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.26.a
+		if = {
+			limit = {
+				from = {
+					original_tag = FRA
+				}
+			}
+			transfer_state=553
+			transfer_state=554
+			transfer_state=680
+			add_state_core=553
+			add_state_core=554
+			add_state_core=680
+			else_if = {
+				limit = {
+					original_tag = ENG
+				}
+				transfer_state = 656
+				add_state_core = 656
+			}
+		}
+	}
+	option = {
+		name = WAG.26.b
+		from = {
+			country_event = WAG.27
+		}
+	}
+}
+country_event = {
+	id = WAG.27
+	title = WAG.27.t
+	desc = WAG.27.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.27.a
+		add_war_support = 0.1
+#		create_wargoal = {
+#			target = WAG
+#			type = puppet_wargoal_focus
+#		}
+		WAG = {
+			country_event = WAG.25
+		}
+	}
+	option = {
+		name = WAG.27.b
+		add_war_support = -0.1
+		add_stability = -0.2
+		if = {
+			limit = {
+				original_tag = FRA
+				controls_state=553
+				controls_state=554
+				controls_state=680
+			}
+			WAG = {
+				transfer_state=553
+				transfer_state=554
+				transfer_state=680
+				transfer_state=677
+				add_state_core=553
+				add_state_core=554
+				add_state_core=680
+				add_state_core=677
+				if = {
+					limit = {
+						FRA = {
+							controls_state = 799
+						}
+					}
+					transfer_state = 799
+					add_state_core = 799
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ENG
+				}
+				WAG = {
+					transfer_state = 656
+					transfer_state = 454
+					transfer_state = 455
+					add_state_core = 656
+					add_state_core = 454
+					add_state_core = 455
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = WAG.28
+	title = WAG.28.t
+	desc = WAG.28.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.28.a
+		add_war_support = -0.1
+		add_stability = -0.2
+		WAG = {
+			transfer_state = 675
+			transfer_state = 291
+			transfer_state = 676
+			add_state_core = 675
+			add_state_core = 291
+			add_state_core = 676
+		}
+	}
+	option = {
+		name = WAG.28.b
+		WAG = {
+			country_event = WAG.29
+		}
+	}
+	option = {
+		name = WAG.28.c
+		add_war_support = 0.1
+		WAG = {
+			country_event = WAG.25
+		}
+	}
+}
+country_event = {
+	id = WAG.29
+	title = WAG.29.t
+	desc = WAG.29.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.29.a
+		puppet = IRQ
+	}
+	option = {
+		name = WAG.29.b
+		IRQ = {
+			country_event = WAG.30
+		}
+	}
+}
+country_event = {
+	id = WAG.30
+	title = WAG.30.t
+	desc = WAG.30.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.30.a
+		add_war_support = -0.1
+		add_stability = -0.2
+		WAG = {
+			transfer_state = 675
+			transfer_state = 291
+			transfer_state = 676
+			add_state_core = 675
+			add_state_core = 291
+			add_state_core = 676
+		}
+	}
+	option = {
+		name = WAG.30.b
+		add_war_support = 0.1
+		WAG = {
+			country_event = WAG.25
+		}
+	}
+}
