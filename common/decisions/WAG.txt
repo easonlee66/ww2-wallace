@@ -33,7 +33,88 @@ WAG_second_civil_war = {
 	WAG_east_wallace_revolution = {
 		icon = generic_prepare_civil_war
 		available = {
-			
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_sth_is_done
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		days_remove = 30
+		cost = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_sth_is_done
+		}
+		remove_effect = {
+			clr_country_flag = WAG_second_civil_war_sth_is_done
+			914 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = WAG
+					}
+					clr_state_flag = WAG_second_civil_war_against
+				}
+			}
+			912 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = WAG
+					}
+					clr_state_flag = WAG_second_civil_war_against
+				}
+			}
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = 30
+			}
+		}
+	}
+	WAG_guaduate_indepence_of_KUR = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_sth_is_done
+				}
+			}
+			NOT = {
+				country_exists = KUR
+				920 = {
+					is_owned_and_controlled_by = WAG
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		days_remove = 30
+		cost = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_sth_is_done
+		}
+		remove_effect = {
+			clr_country_flag = WAG_second_civil_war_sth_is_done
+			920 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = WAG
+					}
+					clr_state_flag = WAG_second_civil_war_against
+				}
+			}
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = -30
+			}
+			set_country_flag = WAG_guaduate_indepence_of_KUR_flag
 		}
 	}
 }
@@ -45,7 +126,8 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		is_good = yes
 		activation = {
-			has_completed_focus = WAG_first_two_year_half_plan
+#			has_completed_focus = WAG_first_two_year_half_plan
+			has_war = no
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan

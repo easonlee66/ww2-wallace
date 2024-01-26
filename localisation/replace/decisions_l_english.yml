@@ -2,6 +2,8 @@
   WAG_second_civil_war:0 "二次内战"
   WAG_military_plot_sd:0 "军事密谋"
   WAG_military_plot_cm:0 "政府镇压"
+  WAG_sth_must_not_doing:0 "没有正在进行的§L准备二次内战§行动"
+  WAG_east_wallace_revolution:0 "东瓦革命根据地"
 
   form_country_wallace_required_states_tt:0 "控制§Y瓦雷斯国§!的所有地区。"
   form_country_wallace_coring_states_tt:0 "获得§Y瓦雷斯国§!所有地区的核心。\n"

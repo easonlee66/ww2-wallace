@@ -273,6 +273,13 @@ country_event = {
 				promote_character = yes
 			}
 			load_focus_tree = wallace_focus
+			if = {
+				limit = { has_country_flag = WAG_guaduate_indepence_of_KUR_flag }
+				KUR = {
+					transfer_state = 920
+				}
+				puppet = KUR
+			}
 		}
 	}
 }
