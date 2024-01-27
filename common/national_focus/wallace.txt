@@ -296,10 +296,10 @@ focus_tree={
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				} }
-			}
-			NOT = {
-				has_completed_focus = WAG_befriend_royalist
-				has_completed_focus = WAG_oppisite_nazi
+				NOT = {
+					has_completed_focus = WAG_befriend_royalist
+					has_completed_focus = WAG_oppisite_nazi
+				}
 			}
 		}
 		prerequisite={focus=WAG_make_despotism}
@@ -459,6 +459,14 @@ focus_tree={
 			TUR = {
 				country_event = WAG.23
 			}
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = WAG_demand_anatolia_custom_tooltip
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				declare_war_on = {
+					target = TUR
+				}
+			}
 		}
 	}
 	focus={
@@ -569,6 +577,17 @@ focus_tree={
 			ENG = {
 				country_event = WAG.24
 			}
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = WAG_demand_lower_kosui_custom_tooltip
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				declare_war_on = {
+					target = ENG
+				}
+				declare_war_on = {
+					target = FRA
+				}
+			}
 		}
 	}
 	focus={
@@ -648,6 +667,14 @@ focus_tree={
 			IRQ = {
 				country_event = WAG.28
 			}
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = WAG_demand_mesopotamia_custom_tooltip
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				declare_war_on = {
+					target = IRQ
+				}
+			}
 		}
 	}
 	focus={
@@ -680,19 +707,20 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			add_state_core=553
-			add_state_core=554
-			add_state_core=680
-			add_state_core=350
-			add_state_core=344
-			add_state_core=352
-			add_state_core=353
-			add_state_core=800
-			add_state_core=348
-			add_state_core=798
-			add_state_core=349
-			add_state_core=675
-			add_state_core=291
+#			add_state_core=553
+#			add_state_core=554
+#			add_state_core=680
+#			add_state_core=350
+#			add_state_core=344
+#			add_state_core=352
+#			add_state_core=353
+#			add_state_core=800
+#			add_state_core=348
+#			add_state_core=798
+#			add_state_core=349
+#			add_state_core=675
+#			add_state_core=291
+			custom_effect_tooltip = WAG_establish_great_wallace_custom_tooltip
 		}
 	}
 	focus={
@@ -720,6 +748,7 @@ focus_tree={
 				ideology = democratic
 				popularity = 0.1
 			}
+			custom_effect_tooltip = WAG_ensure_arsenal_safety_custom_tooltip
 		}
 	}
 	focus={
@@ -799,10 +828,10 @@ focus_tree={
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				} }
-			}
-			NOT = {
-				has_completed_focus = WAG_clear_against
-				has_completed_focus = WAG_oppisite_nazi
+				NOT = {
+					has_completed_focus = WAG_clear_against
+					has_completed_focus = WAG_oppisite_nazi
+				}
 			}
 		}
 		prerequisite={focus=WAG_make_despotism}
@@ -926,7 +955,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_Mt.Iron_industry_centre
-		icon=GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_research
 		x=28
 		y=2
 		offset = {
@@ -966,8 +995,10 @@ focus_tree={
 		
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
+			add_research_slot = 1
 		}
 	}
 	focus={
@@ -1286,7 +1317,7 @@ focus_tree={
 #	}
 	focus={
 		id=WAG_second_two_year_half_plan
-		icon=GFX_goal_generic_production
+		icon=GFX_goal_generic_construct_civ_factory
 		x=28
 		y=3
 		offset = {
@@ -1389,6 +1420,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			custom_effect_tooltip = WAG_train_WCYL_tooltip
 		}
 	}
 	focus={
@@ -1408,6 +1440,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			custom_effect_tooltip = WAG_take_WWFF_trust_custom_tooltip
 		}
 	}
 	focus={
@@ -1427,6 +1460,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			custom_effect_tooltip = WAG_take_arsenal_custom_tooltip
 		}
 	}
 	focus={
@@ -1446,6 +1480,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			custom_effect_tooltip = WAG_support_from_the_right_custom_tooltip
 		}
 	}
 	focus={
@@ -1465,6 +1500,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			custom_effect_tooltip = WAG_ensure_arsenal_safety_custom_tooltip
 		}
 	}
 	focus={
