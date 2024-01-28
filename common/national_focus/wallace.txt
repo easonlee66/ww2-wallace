@@ -748,7 +748,7 @@ focus_tree={
 				ideology = democratic
 				popularity = 0.1
 			}
-			custom_effect_tooltip = WAG_ensure_arsenal_safety_custom_tooltip
+			custom_effect_tooltip = WAG_emergency_power_custom_tooltip
 		}
 	}
 	focus={
