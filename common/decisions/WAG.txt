@@ -93,6 +93,12 @@ WAG_second_civil_war = {
 		}
 		visible = {
 			has_completed_focus = WAG_communism_road
+			NOT = {
+				country_exists = KUR
+				920 = {
+					is_owned_and_controlled_by = WAG
+				}
+			}
 		}
 		days_remove = 30
 		cost = 30
@@ -115,6 +121,103 @@ WAG_second_civil_war = {
 				days = -30
 			}
 			set_country_flag = WAG_guaduate_indepence_of_KUR_flag
+		}
+	}
+	WAG_build_up_red_army = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_sth_is_done
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_sth_is_done
+		}
+		remove_effect = {
+			clr_country_flag = WAG_second_civil_war_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = -30
+			}
+			army_experience = 30
+			add_stability = -0.05
+			set_country_flag = WAG_build_up_red_army
+		}
+	}
+	WAG_speeches_of_communism = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_sth_is_done
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		days_remove = WAG_scw_getland_cost
+		cost = 50
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_sth_is_done
+		}
+		remove_effect = {
+			clr_country_flag = WAG_second_civil_war_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = -30
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.01
+			}
+			add_stability = -0.1
+			add_political_power = 10
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_getland_cost
+					value = 30
+					compare = greater_than
+				} }
+				subtract_from_variable = {
+					var = WAG_scw_getland_cost
+					value = 10
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_getland_cost
+						value = 10
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_getland_cost
+						value = 5
+					}
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_getland_cost
+						value = 1
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_getland_cost
+						value = 1
+					}
+				}
+			}
 		}
 	}
 }
