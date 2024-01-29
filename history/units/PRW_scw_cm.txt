@@ -31,7 +31,7 @@ division_template = {
 	is_locked = yes
 }
 division_template = {
-	name = x
+	name = "WCYL"
 	regiments = {
 		infantry = {
 			x = 0
