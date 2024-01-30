@@ -6,6 +6,11 @@ ideas = {
 				production_speed_buildings_factor = 5
 			}
 		}
+#		WAG_new_nazi = {
+#			modifier = {
+#				fascism_acceptance = 0.01
+#			}
+#		}
 	}
 	political_advisor = {
 		WAG_royalist = {
