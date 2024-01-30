@@ -27,6 +27,10 @@ division_template = {
 			x = 0
 			y = 0
 		}
+		maintenance_company = {
+			x = 0
+			y = 1
+		}
 	}
 	is_locked = yes
 }
