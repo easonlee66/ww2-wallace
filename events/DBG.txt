@@ -24,6 +24,7 @@ country_event = {
 	id = DBG.2
 	title = DBG.2.t
 	desc = DBG.2.d
+	is_triggered_only = yes
 	option = {
 		name = DBG.2.a
 		unlock_national_focus = WAG_industrial_effort
@@ -31,5 +32,15 @@ country_event = {
 		unlock_national_focus = WAG_Mt.Iron_industry_centre
 		set_country_flag = WAG_complete_first_tyhp
 		country_event = WAG.1
+	}
+}
+
+country_event = {
+	id = DBG.3
+	title = DBG.3.t
+	desc = DBG.3.d
+	is_triggered_only = yes
+	option = {
+		name = DBG.3.a
 	}
 }
