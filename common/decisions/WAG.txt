@@ -1714,8 +1714,8 @@ WAG_second_civil_war_against = {
 						has_state_flag = WAG_second_civil_war_against
 					}
 				}
+				set_state_flag = WAG_second_civil_war_against
 			}
-			set_state_flag = WAG_second_civil_war_against
 		}
 	}
 }
