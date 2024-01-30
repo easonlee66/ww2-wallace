@@ -325,14 +325,14 @@ country_event = {
 #					}
 					has_tech = antiair1
 					has_tech = antitank1
-					has_tech = basic_medium_tank
+					has_tech = basic_medium_spaa
 				}
 				has_country_flag = WAG_nazi_army
 			}
 			set_technology = {
 				antiair1 = 1
 				antitank1 = 1
-				basic_medium_tank = 1
+				basic_medium_spaa = 1
 			}
 			add_political_power = -100
 			random_state = {
@@ -375,6 +375,7 @@ country_event = {
 			set_technology = {
 				tech_support = 1
 				tech_engineers = 1
+				tech_maintenance_company = 1
 			}
 			load_oob = PRW_scw_cm
 			set_cosmetic_tag = WAG_people_republics
@@ -405,11 +406,17 @@ country_event = {
 			limit = {
 				has_completed_focus = WAG_support_from_the_right
 			}
-			917 = {
+			random_state = {
+				limit = {
+					NOT = {
+						has_state_flag = WAG_second_civil_war_against
+					}
+					is_owned_and_controlled_by = WAG
+				}
 				create_unit = {
 					division = "division_template = \"right support\" start_experience_factor = 0.5 start_equipment_factor = 1"
 					owner = PREV
-					count = 5
+					count = 3
 				}
 			}
 		}
@@ -457,7 +464,13 @@ country_event = {
 		}
 		if = {
 			limit = { has_country_flag = WAG_nazi_army }
-			army_experience = 30
+			917 = {
+				create_unit = {
+					division = "division_template = \"nazi army\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = PREV
+					count = 5
+				}
+			}
 		}
 	}
 	option = {
@@ -472,6 +485,162 @@ country_event = {
 		trigger = {
 			has_completed_focus = WAG_communism_road
 		}
+		set_country_flag = WAG_second_civil_war
+		if = {
+			limit = {
+				NOT = {
+#					has_equipment = {
+#						medium_tank_aa_chassis = 1
+#					}
+					has_tech = tech_maintenance_company
+					has_tech = tech_engineers
+				}
+				OR = {
+					has_completed_focus = WAG_take_WWFF_trust
+					has_country_flag = WAG_build_up_red_army
+				}
+			}
+			set_technology = {
+				tech_maintenance_company = 1
+				tech_engineers = 1
+			}
+			add_political_power = -100
+			random_state = {
+				limit = {
+					NOT = {
+						has_state_flag = WAG_second_civil_war_against
+					}
+					is_owned_and_controlled_by = WAG
+					NOT = {
+						state = 912
+						state = 914
+					}
+				}
+				set_state_flag = WAG_second_civil_war_against
+			}
+		}
+		create_dynamic_country = {
+			original_tag = WAG
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				communism = 30
+				democratic = 50
+				fascism = 15
+				neutrality = 5
+			}
+			save_event_target_as = second_civil_war_against
+			every_state = {
+				if = {
+					limit = {
+						has_state_flag = WAG_second_civil_war_against
+						is_owned_and_controlled_by = WAG
+					}
+					event_target:second_civil_war_against = {
+						transfer_state = PREV
+					}
+				}
+			}
+			set_technology = {
+				gw_artillery = 1
+				basic_medium_spaa = 1
+				antiair1 = 1
+				antitank1 = 1
+			}
+			load_oob = PRW_scw_sd
+			set_cosmetic_tag = WAG_fourth_republic
+			WAG = {
+				WAG_salman_ritin_somin = {
+					set_nationality = event_target:second_civil_war_against
+				}
+			}
+			WAG_salman_ritin_somin = {
+				promote_character = yes
+			}
+#			load_focus_tree = wallace_focus
+			declare_war_on = {
+				target = WAG
+				type = civil_war
+			}
+		}
 		add_war_support = 0.1
+		load_oob = PRW_scw_cm
+		if = {
+			limit = {
+				has_completed_focus = WAG_train_WCYL
+			}
+			random_state = {
+				limit = {
+					has_state_flag = WAG_second_civil_war_against
+				}
+				create_unit = {
+					division = "division_template = \"right support\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = event_target:second_civil_war_against
+					count = 3
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = WAG_build_up_red_army }
+			random_state = {
+				limit = {
+					NOT = {
+						has_state_flag = WAG_second_civil_war_against
+					}
+					is_owned_and_controlled_by = WAG
+				}
+				create_unit = {
+					division = "division_template = \"red army\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+					owner = PREV
+					count = 7
+				}
+			}
+		}
+		if = {
+			limit = { has_completed_focus = WAG_train_WCYL }
+			random_state = {
+				limit = {
+					NOT = {
+						has_state_flag = WAG_second_civil_war_against
+					}
+					is_owned_and_controlled_by = WAG
+				}
+				create_unit = {
+					division = "division_template = \"WCYL\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = PREV
+					count = 3
+				}
+			}
+			if = {
+				limit = { has_completed_focus = WAG_take_WWFF_trust }
+				random_state = {
+					limit = {
+						NOT = {
+							has_state_flag = WAG_second_civil_war_against
+						}
+					}
+					create_unit = {
+						division = "division_template = \"WCYL\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+						owner = PREV
+						count = 5
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = WAG_nazi_army }
+			event_target:second_civil_war_against = {
+				army_experience = 30
+			}
+			917 = {
+				create_unit = {
+					division = "division_template = \"nazi army\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = event_target:second_civil_war_against
+					count = 5
+				}
+			}
+		}
 	}
 }
