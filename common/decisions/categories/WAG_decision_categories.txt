@@ -10,6 +10,13 @@ WAG_second_civil_war = {
 	}
 }
 
+WAG_second_civil_war_against = {
+	icon = spr_the_inevitable_civil_war
+	allowed = {
+		original_tag = WAG
+	}
+}
+
 WAG_first_two_year_half_plan = {
 	icon = generic_industry
 

@@ -173,7 +173,7 @@ WAG_second_civil_war = {
 			has_completed_focus = WAG_communism_road
 		}
 		days_remove = WAG_scw_getland_cost
-		cost = 50
+		cost = 40
 		complete_effect = {
 			set_country_flag = WAG_second_civil_war_sth_is_done
 		}
@@ -188,7 +188,7 @@ WAG_second_civil_war = {
 				popularity = 0.01
 			}
 			add_stability = -0.1
-			add_political_power = 50
+			add_political_power = 60
 			if = {
 				limit = { check_variable = {
 					var = WAG_scw_getland_cost
@@ -197,7 +197,18 @@ WAG_second_civil_war = {
 				} }
 				subtract_from_variable = {
 					var = WAG_scw_getland_cost
-					value = 10
+					value = 15
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_getland_cost
+						value = 15
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_getland_cost
+						value = 10
+					}
 				}
 				else_if = {
 					limit = { check_variable = {
@@ -208,17 +219,6 @@ WAG_second_civil_war = {
 					subtract_from_variable = {
 						var = WAG_scw_getland_cost
 						value = 5
-					}
-				}
-				else_if = {
-					limit = { check_variable = {
-						var = WAG_scw_getland_cost
-						value = 1
-						compare = greater_than
-					} }
-					subtract_from_variable = {
-						var = WAG_scw_getland_cost
-						value = 1
 					}
 				}
 			}
@@ -250,11 +250,11 @@ WAG_second_civil_war = {
 				days = -30
 			}
 			add_stability = -0.1
+			add_political_power = 10
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.1
 			}
-			add_political_power = 20
 			if = {
 				limit = { check_variable = {
 					var = WAG_scw_getland_cost
@@ -315,7 +315,7 @@ WAG_second_civil_war = {
 			has_completed_focus = WAG_social_democracy_road
 		}
 		days_remove = 30
-		cost = 50
+		cost = 30
 		complete_effect = {
 			set_country_flag = WAG_second_civil_war_sth_is_done
 		}
@@ -326,13 +326,21 @@ WAG_second_civil_war = {
 				days = -30
 			}
 			add_stability = 0.1
+			add_political_power = 10
 			add_to_variable = {
 				var = WAG_scw_against_getland_cost
 				value = 20
 			}
-			add_to_variable = {
-				var = WAG_scw_getland_cost
-				value = 10
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_getland_cost
+					value = 15
+					compare = greater_than
+				} }
+				add_to_variable = {
+					var = WAG_scw_getland_cost
+					value = -5
+				}
 			}
 		}
 	}
@@ -351,7 +359,7 @@ WAG_second_civil_war = {
 			has_completed_focus = WAG_social_democracy_road
 		}
 		days_remove = 20
-		cost = 50
+		cost = 30
 		complete_effect = {
 			set_country_flag = WAG_second_civil_war_sth_is_done
 		}
@@ -420,6 +428,19 @@ WAG_second_civil_war = {
 				uses = 1
 				category = artillery
 			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+				category = cat_anti_air
+			}
+			add_tech_bonus = {
+				name = anti_tank
+				bonus = 1
+				uses = 1
+				category = cat_anti_tank
+			}
 			set_country_flag = WAG_nazi_army
 		}
 	}
@@ -438,7 +459,7 @@ WAG_second_civil_war = {
 			has_completed_focus = WAG_social_democracy_road
 		}
 		days_remove = WAG_scw_getland_cost
-		cost = 50
+		cost = 40
 		complete_effect = {
 			set_country_flag = WAG_second_civil_war_sth_is_done
 		}
@@ -453,7 +474,7 @@ WAG_second_civil_war = {
 				popularity = 0.01
 			}
 			add_stability = -0.1
-			add_political_power = 50
+			add_political_power = 60
 			if = {
 				limit = { check_variable = {
 					var = WAG_scw_getland_cost
@@ -462,7 +483,18 @@ WAG_second_civil_war = {
 				} }
 				subtract_from_variable = {
 					var = WAG_scw_getland_cost
-					value = 10
+					value = 15
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_getland_cost
+						value = 15
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_getland_cost
+						value = 10
+					}
 				}
 				else_if = {
 					limit = { check_variable = {
@@ -475,17 +507,37 @@ WAG_second_civil_war = {
 						value = 5
 					}
 				}
-				else_if = {
-					limit = { check_variable = {
-						var = WAG_scw_getland_cost
-						value = 1
-						compare = greater_than
-					} }
-					subtract_from_variable = {
-						var = WAG_scw_getland_cost
-						value = 1
-					}
+			}
+		}
+	}
+	WAG_compromise_to_left = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_social_democracy_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_sth_is_done
 				}
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_social_democracy_road
+		}
+		days_remove = 30
+		cost = 90
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_sth_is_done
+		}
+		remove_effect = {
+			clr_country_flag = WAG_second_civil_war_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_sd
+				days = 120
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
 			}
 		}
 	}
@@ -972,6 +1024,698 @@ WAG_second_civil_war = {
 			909 = {
 				clr_state_flag = WAG_second_civil_war_against
 			}
+		}
+	}
+}
+#against
+WAG_second_civil_war_against = {
+	#conmunism mission
+	WAG_east_wallace_revolution_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_social_democracy_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_social_democracy_road
+		}
+		days_mission_timeout = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 30
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			914 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = WAG
+					}
+					set_state_flag = WAG_second_civil_war_against
+				}
+			}
+			912 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = WAG
+					}
+					set_state_flag = WAG_second_civil_war_against
+				}
+			}
+			set_temp_variable = {
+				var = temp_pp_growth
+				value = political_power_growth
+			}
+			multiply_temp_variable = {
+				var = temp_pp_growth
+				value = 30
+			}
+			if = {
+				limit = { check_variable = {
+					var = temp_pp_growth
+					value = 30
+					compare = less_than
+				} }
+				set_temp_variable = {
+					var = temp_pp_growth
+					value = 30
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = temp_pp_growth
+			}
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_sd
+				days = -30
+			}
+			set_country_flag = WAG_east_is_cm
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 20
+			}
+			activate_mission = WAG_guaduate_indepence_of_KUR_mission
+		}
+	}
+	WAG_guaduate_indepence_of_KUR_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_social_democracy_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			NOT = {
+				country_exists = KUR
+				920 = {
+					is_owned_and_controlled_by = WAG
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+			NOT = {
+				country_exists = KUR
+				920 = {
+					is_owned_and_controlled_by = WAG
+				}
+			}
+		}
+		days_mission_timeout = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 30
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			920 = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = WAG
+					}
+					clr_state_flag = WAG_second_civil_war_against
+				}
+			}
+			set_temp_variable = {
+				var = temp_pp_growth
+				value = political_power_growth
+			}
+			multiply_temp_variable = {
+				var = temp_pp_growth
+				value = 30
+			}
+			if = {
+				limit = { check_variable = {
+					var = temp_pp_growth
+					value = 30
+					compare = less_than
+				} }
+				set_temp_variable = {
+					var = temp_pp_growth
+					value = 30
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = temp_pp_growth
+			}
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_sd
+				days = -10
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 10
+			}
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_against_pp
+					value = 50
+					compare = less_than
+				} }
+				set_variable = {
+					var = WAG_scw_against_pp
+					value = 50
+				}
+			}
+			set_country_flag = WAG_guaduate_indepence_of_KUR_flag
+			activate_mission = WAG_build_up_red_army_mission
+		}
+	}
+	WAG_build_up_red_army_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_social_democracy_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_social_democracy_road
+		}
+		days_mission_timeout = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 50
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_sd
+				days = -30
+			}
+			set_temp_variable = {
+				var = temp_pp_growth
+				value = political_power_growth
+			}
+			multiply_temp_variable = {
+				var = temp_pp_growth
+				value = 30
+			}
+			if = {
+				limit = { check_variable = {
+					var = temp_pp_growth
+					value = 30
+					compare = less_than
+				} }
+				set_temp_variable = {
+					var = temp_pp_growth
+					value = 30
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = temp_pp_growth
+			}
+			add_stability = -0.05
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 10
+			}
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_against_pp
+					value = 40
+					compare = less_than
+				} }
+				set_variable = {
+					var = WAG_scw_against_pp
+					value = 40
+				}
+			}
+			set_country_flag = WAG_build_up_red_army
+			activate_mission = WAG_speeches_of_communism_mission
+		}
+	}
+	WAG_speeches_of_communism_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_social_democracy_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_social_democracy_road
+		}
+		days_mission_timeout = WAG_scw_against_getland_cost
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 40
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_sd
+				days = -10
+			}
+			add_stability = -0.1
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 60
+			}
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_against_getland_cost
+					value = 30
+					compare = greater_than
+				} }
+				subtract_from_variable = {
+					var = WAG_scw_against_getland_cost
+					value = 15
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 15
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 10
+					}
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 10
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 5
+					}
+				}
+			}
+			set_temp_variable = {
+				var = temp_pp_growth
+				value = political_power_growth
+			}
+			multiply_temp_variable = {
+				var = temp_pp_growth
+				value = WAG_scw_against_getland_cost
+			}
+			if = {
+				limit = { check_variable = {
+					var = temp_pp_growth
+					value = 30
+					compare = less_than
+				} }
+				set_temp_variable = {
+					var = temp_pp_growth
+					value = 30
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = temp_pp_growth
+			}
+			activate_mission = WAG_speeches_of_communism_mission
+		}
+	}
+	#social democracy mission
+	WAG_anti_strike_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		activation = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			OR = {
+				has_country_flag = WAG_nazi_army
+			}
+			check_variable = {
+				var = WAG_scw_getland_cost
+				value = 20
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		days_mission_timeout = 30
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 30
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = -30
+			}
+			add_stability = 0.1
+			add_to_variable = {
+				var = WAG_scw_getland_cost
+				value = 20
+			}
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_against_getland_cost
+					value = 15
+					compare = greater_than
+				} }
+				add_to_variable = {
+					var = WAG_scw_against_getland_cost
+					value = -5
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 10
+			}
+			set_temp_variable = {
+				var = temp_pp_growth
+				value = political_power_growth
+			}
+			multiply_temp_variable = {
+				var = temp_pp_growth
+				value = WAG_scw_against_getland_cost
+			}
+			if = {
+				limit = { check_variable = {
+					var = temp_pp_growth
+					value = 30
+					compare = less_than
+				} }
+				set_temp_variable = {
+					var = temp_pp_growth
+					value = 30
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = temp_pp_growth
+			}
+		}
+	}
+	WAG_get_nazi_army_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		days_mission_timeout = 30
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 50
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = -30
+			}
+			add_stability = -0.05
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 10
+			}
+			set_country_flag = WAG_nazi_army
+		}
+	}
+	WAG_speeches_of_sd_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		visible = {
+			has_completed_focus = WAG_communism_road
+		}
+		activation = {
+			has_completed_focus = WAG_communism_road
+			custom_trigger_tooltip = {
+				tooltip = WAG_sth_must_not_doing
+				NOT = {
+					has_country_flag = WAG_second_civil_war_against_sth_is_done
+				}
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = 40
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = WAG_scw_getland_cost
+				value = 20
+				compare = greater_than
+			}
+		}
+		days_mission_timeout = WAG_scw_against_getland_cost
+		complete_effect = {
+			set_country_flag = WAG_second_civil_war_against_sth_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = 40
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
+			add_days_mission_timeout = {
+				mission = WAG_military_plot_cm
+				days = -10
+			}
+			add_stability = -0.1
+			add_to_variable = {
+				var = WAG_scw_against_pp
+				value = 60
+			}
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_against_getland_cost
+					value = 30
+					compare = greater_than
+				} }
+				subtract_from_variable = {
+					var = WAG_scw_against_getland_cost
+					value = 15
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 15
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 10
+					}
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 10
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	#getland
+	WAG_getland_mission = {
+		icon = generic_prepare_civil_war
+		available = {
+			NOT = {
+				has_country_flag = WAG_second_civil_against_war_getland_is_done
+			}
+			OR = {
+				has_completed_focus = WAG_communism_road
+				has_completed_focus = WAG_social_democracy_road
+			}
+			any_state = {
+				is_owned_and_controlled_by = WAG
+				NOT = {
+					state = 917
+					state = 914
+					state = 912
+				}
+				NOT = {
+					has_state_flag = WAG_second_civil_war_against
+				}
+			}
+			set_temp_variable = {
+				var = WAG_scw_against_pp_plus_40
+				value = WAG_scw_against_getland_cost
+			}
+			add_to_temp_variable = {
+				var = WAG_scw_against_pp_plus_40
+				value = 40
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = WAG_scw_against_pp_plus_40
+				compare = greater_than
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = WAG_communism_road
+				has_completed_focus = WAG_social_democracy_road
+			}
+		}
+		activation = {
+			NOT = {
+				has_country_flag = WAG_second_civil_against_war_getland_is_done
+			}
+			OR = {
+				has_completed_focus = WAG_communism_road
+				has_completed_focus = WAG_social_democracy_road
+			}
+			any_state = {
+				is_owned_and_controlled_by = WAG
+				NOT = {
+					state = 917
+					state = 914
+					state = 912
+				}
+				NOT = {
+					has_state_flag = WAG_second_civil_war_against
+				}
+			}
+			set_temp_variable = {
+				var = WAG_scw_against_pp_plus_40
+				value = WAG_scw_against_getland_cost
+			}
+			add_to_temp_variable = {
+				var = WAG_scw_against_pp_plus_40
+				value = 40
+			}
+			check_variable = {
+				var = WAG_scw_against_pp
+				value = WAG_scw_against_pp_plus_40
+				compare = greater_than
+			}
+		}
+		days_mission_timeout = WAG_scw_against_getland_cost
+		complete_effect = {
+			set_country_flag = WAG_second_civil_against_war_getland_is_done
+			subtract_from_variable = {
+				var = WAG_scw_against_pp
+				value = WAG_scw_against_getland_cost
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_against_war_getland_is_done
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = WAG
+					NOT = {
+						state = 917
+						state = 914
+						state = 912
+					}
+					NOT = {
+						has_state_flag = WAG_second_civil_war_against
+					}
+				}
+			}
+			set_state_flag = WAG_second_civil_war_against
 		}
 	}
 }
