@@ -367,6 +367,35 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			custom_effect_tooltip = WAG_take_WWFF_trust_custom_tooltip
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_getland_cost
+					value = 30
+					compare = greater_than
+				} }
+				subtract_from_variable = {
+					var = WAG_scw_getland_cost
+					value = 15
+				}
+				else_if = {
+					limit = { check_variable = {
+						var = WAG_scw_getland_cost
+						value = 10
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_getland_cost
+						value = 9
+					}
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_getland_cost
+				value = 10
+			}
+			add_manpower = 10000
+			add_political_power = 20
 		}
 	}
 	focus={
@@ -747,6 +776,21 @@ focus_tree={
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
+			}
+			if = {
+				limit = { check_variable = {
+					var = WAG_scw_getland_cost
+					value = 15
+					compare = greater_than
+				} }
+				subtract_from_variable = {
+					var = WAG_scw_getland_cost
+					value = 5
+				}
+			}
+			add_to_variable = {
+				var = WAG_scw_against_getland_cost
+				value = 5
 			}
 			custom_effect_tooltip = WAG_emergency_power_custom_tooltip
 		}
@@ -1421,6 +1465,25 @@ focus_tree={
 		}
 		completion_reward={
 			custom_effect_tooltip = WAG_train_WCYL_tooltip
+			hidden_effect = {
+				if = {
+					limit = { check_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 15
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 5
+					}
+				}
+				add_to_variable = {
+					var = WAG_scw_getland_cost
+					value = 5
+				}
+			}
+			add_manpower = 10000
+			add_political_power = 20
 		}
 	}
 	focus={
@@ -1440,7 +1503,16 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			custom_effect_tooltip = WAG_take_WWFF_trust_custom_tooltip
+			custom_effect_tooltip = WAG_take_arsenal_custom_tooltip
+			if = {
+				limit = { has_tech = tech_support }
+				add_tech_bonus = {
+					name = maintenance_company
+					uses = 1
+					bonus = 2
+					category = maintenance_company_tech
+				}
+			}
 		}
 	}
 	focus={
@@ -1460,7 +1532,6 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			custom_effect_tooltip = WAG_take_arsenal_custom_tooltip
 		}
 	}
 	focus={
@@ -1481,6 +1552,42 @@ focus_tree={
 		}
 		completion_reward={
 			custom_effect_tooltip = WAG_support_from_the_right_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = { check_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 30
+						compare = greater_than
+					} }
+					subtract_from_variable = {
+						var = WAG_scw_against_getland_cost
+						value = 15
+					}
+					else_if = {
+						limit = { check_variable = {
+							var = WAG_scw_against_getland_cost
+							value = 10
+							compare = greater_than
+						} }
+						subtract_from_variable = {
+							var = WAG_scw_against_getland_cost
+							value = 9
+						}
+					}
+				}
+				add_to_variable = {
+					var = WAG_scw_getland_cost
+					value = 10
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
 		}
 	}
 	focus={
