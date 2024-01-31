@@ -1812,7 +1812,7 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		is_good = yes
 		activation = {
-#			has_completed_focus = WAG_first_two_year_half_plan
+			has_completed_focus = WAG_first_two_year_half_plan
 			has_war = no
 		}
 		visible = {
@@ -1839,10 +1839,7 @@ WAG_first_two_year_half_plan = {
 			num_of_civilian_factories_available_for_projects > 3
 		}
 		visible = {
-			owns_state = 915
-			controls_state = 915
-			has_tech = construction2
-			num_of_civilian_factories_available_for_projects > 3
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		days_remove = 70
 		cost = 50
@@ -1899,10 +1896,7 @@ WAG_first_two_year_half_plan = {
 			num_of_civilian_factories_available_for_projects > 2
 		}
 		visible = {
-			owns_state = 916
-			controls_state = 916
-			has_tech = excavation2
-			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		days_remove = 70
 		cost = 50
@@ -1942,20 +1936,7 @@ WAG_first_two_year_half_plan = {
 			}
 		}
 		visible = {
-			owns_state = 918
-			owns_state = 916
-			controls_state = 918
-			controls_state = 916
-			has_tech = construction2
-			num_of_civilian_factories_available_for_projects > 2
-			NOT = {
-				has_country_flag = WAG_complete_bridge_over_kosui
-			}
-			has_resources_amount = {
-				resource = steel
-				amount > 5
-				state = 916
-			}
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		days_remove = 70
 		cost = 50
@@ -1992,9 +1973,7 @@ WAG_first_two_year_half_plan = {
 			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
-			has_tech = construction2
-			has_country_flag = WAG_complete_bridge_over_kosui
-			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		days_remove = 70
 		cost = 50
@@ -2022,13 +2001,11 @@ WAG_first_two_year_half_plan = {
 		icon = GFX_decision_generic_special_project
 		available = {
 			has_tech = construction2
-			has_country_flag = WAG_complete_build_railway
+#			has_country_flag = WAG_complete_build_railway
 			num_of_civilian_factories_available_for_projects > 2
 		}
 		visible = {
-			has_tech = construction2
-			has_country_flag = WAG_complete_build_railway
-			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		days_remove = 70
 		cost = 50
@@ -2068,19 +2045,7 @@ WAG_first_two_year_half_plan = {
 			}
 		}
 		visible = {
-			has_tech = excavation2
-			num_of_civilian_factories_available_for_projects > 2
-			any_state = {
-				is_owned_and_controlled_by = WAG
-				has_state_flag = WAG_south_state
-				WAG = {
-					has_resources_amount = {
-						resource = oil
-						amount > 4
-						state = PREV
-					}
-				}
-			}
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		cost = 50
 		days_remove = 70
@@ -2115,9 +2080,7 @@ WAG_first_two_year_half_plan = {
 			num_of_factories < 50
 		}
 		visible = {
-			has_tech = construction1
-			num_of_civilian_factories_available_for_projects > 0
-			num_of_factories < 50
+			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		cost = 50
 		days_remove = 70
