@@ -358,7 +358,7 @@ focus_tree={
 		x=20
 		y=4
 		prerequisite={focus=WAG_train_WCYL}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -758,7 +758,7 @@ focus_tree={
 		x=16
 		y=3
 		prerequisite={focus=WAG_social_democracy_road}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1453,7 +1453,7 @@ focus_tree={
 		x=20
 		y=3
 		prerequisite={focus=WAG_communism_road}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1492,7 +1492,7 @@ focus_tree={
 		x=20
 		y=5
 		prerequisite={focus=WAG_take_WWFF_trust}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1521,7 +1521,7 @@ focus_tree={
 		x=20
 		y=6
 		prerequisite={focus=WAG_take_arsenal}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1540,7 +1540,7 @@ focus_tree={
 		x=16
 		y=4
 		prerequisite={focus=WAG_emergency_power}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1596,7 +1596,7 @@ focus_tree={
 		x=16
 		y=5
 		prerequisite={focus=WAG_support_from_the_right}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1616,7 +1616,7 @@ focus_tree={
 		x=16
 		y=6
 		prerequisite={focus=WAG_ensure_arsenal_safety}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
