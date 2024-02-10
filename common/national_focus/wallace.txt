@@ -1039,6 +1039,7 @@ focus_tree={
 					add_idea = partial_economic_mobilisation
 				}
 			}
+			add_ideas = WAG_first_two_year_half_plan
 			hidden_effect = {
 				910 = {
 					set_state_flag = WAG_south_state
@@ -1767,6 +1768,12 @@ focus_tree={
 					remove_idea = FRA_disjointed_government
 					add_idea = WAG_never_surrender
 				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = WAG_sait_kolu_treat }
+					remove_ideas = WAG_sait_kolu_treat
+				}				
 			}
 		}
 	}
