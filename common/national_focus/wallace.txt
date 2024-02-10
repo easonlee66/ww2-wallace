@@ -124,7 +124,7 @@ focus_tree={
 			add_political_power=10
 			add_popularity={
 				ideology=fascism
-				popularity=-0.2
+				popularity=-0.1
 			}
 			hidden_effect = {
 				country_event={
@@ -948,6 +948,9 @@ focus_tree={
 		icon=GFX_goal_generic_construction
 		x=28
 		y=1
+		available = {
+			has_war = no
+		}
 		offset = {
 			x=-10
 			y=0
@@ -998,6 +1001,7 @@ focus_tree={
 		}
 		completion_reward={
 			unlock_decision_category_tooltip = WAG_first_two_year_half_plan
+			activate_mission = WAG_ftyh_plan
 			add_political_power = -70
 			if = {
 				limit = {
