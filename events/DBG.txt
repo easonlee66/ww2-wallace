@@ -80,3 +80,32 @@ country_event = {
 		name = DBG.4.b
 	}
 }
+
+country_event = {
+	id = DBG.5
+	title = DBG.5.t
+	desc = DBG.5.d
+	is_triggered_only = yes
+	option = {
+		name = DBG.5.a
+		complete_national_focus = WAG_oppisite_nazi
+		complete_national_focus = WAG_defend_new_country
+		set_popularities = {
+			communism = 0.4
+			democratic = 0.4
+			fascism = 0.15
+			neutrality = 0.05
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_stability=0.2
+		add_political_power=10
+		add_popularity={
+			ideology=fascism
+			popularity=-0.1
+		}
+		country_event = PRW.2
+	}
+}
