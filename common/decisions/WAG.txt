@@ -1916,17 +1916,21 @@ WAG_first_two_year_half_plan = {
 			civilian_factory_use = 3
 		}
 		remove_effect = {
+			build_railway = {
+				path = { 10804 1549 }
+				level = 2
+			}
 			915 = {
 				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = supply_node
-					province = 10804
-					level = 1
-				}
-				add_building_construction = {
-					type = rail_way
-					level = 3
-				}
+#				add_building_construction = {
+#					type = supply_node
+#					province = 10804
+#					level = 1
+#				}
+#				add_building_construction = {
+#					type = rail_way
+#					level = 3
+#				}
 				add_building_construction = {
 					type = infrastructure
 					level = 3
@@ -1934,15 +1938,34 @@ WAG_first_two_year_half_plan = {
 			}
 			918 = {
 				add_building_construction = {
-					type = supply_node
-					province = 1549
+					type = infrastructure
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			917 = {
+				add_building_construction = {
+					type = infrastructure
 					level = 1
 				}
+			}
+			916 = {
 				add_building_construction = {
-					type = rail_way
-					level = 3
+					type = infrastructure
+					level = 1
 				}
 			}
+#			918 = {
+#				add_building_construction = {
+#					type = supply_node
+#					province = 1549
+#					level = 1
+#				}
+#				add_building_construction = {
+#					type = rail_way
+#					level = 3
+#				}
+#			}
 			news_event = {
 				id = WAG_news.1
 				days = 1
@@ -1961,7 +1984,7 @@ WAG_first_two_year_half_plan = {
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
 		}
-		days_remove = 70
+		days_remove = 50
 		cost = 50
 		fire_only_once = yes
 		highlight_states = {
@@ -1972,7 +1995,7 @@ WAG_first_two_year_half_plan = {
 #		on_map_mode = map_only
 		modifier = {
 			civilian_factory_use = 2
-			weekly_manpower = -1
+#			weekly_manpower = -1
 		}
 		remove_effect = {
 			916 = {
@@ -1981,6 +2004,7 @@ WAG_first_two_year_half_plan = {
 					amount = 8
 				}
 			}
+			set_country_flag = WAG_ftyhp_mt_iron
 		}
 	}
 	WAG_kosui_hydropower_station = {
@@ -1992,6 +2016,7 @@ WAG_first_two_year_half_plan = {
 			controls_state = 916
 			has_tech = construction2
 			num_of_civilian_factories_available_for_projects > 3
+			has_country_flag = WAG_ftyhp_mt_iron
 #			has_resources_amount = {
 #				resource = steel
 #				amount > 5
@@ -2019,11 +2044,29 @@ WAG_first_two_year_half_plan = {
 					type = industrial_complex
 					level = 1
 				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
 			}
 			918 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
+				}
+			}
+			916 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_resource = {
+					type = steel
+					amount = 2
 				}
 			}
 		}
@@ -2034,9 +2077,11 @@ WAG_first_two_year_half_plan = {
 			has_tech = construction2
 			has_country_flag = WAG_complete_bridge_over_kosui
 			num_of_civilian_factories_available_for_projects > 1
+			always = no
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			always = no
 		}
 		days_remove = 70
 		cost = 50
@@ -2070,7 +2115,7 @@ WAG_first_two_year_half_plan = {
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
 		}
-		days_remove = 70
+		days_remove = 30
 		cost = 50
 		fire_only_once = yes
 		highlight_states = {
@@ -2111,7 +2156,7 @@ WAG_first_two_year_half_plan = {
 			has_completed_focus = WAG_first_two_year_half_plan
 		}
 		cost = 50
-		days_remove = 70
+		days_remove = 50
 		remove_effect = {
 			random_state = {
 				limit = {
