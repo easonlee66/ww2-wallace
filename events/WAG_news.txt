@@ -32,3 +32,31 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = WAG_news.3
+	title = WAG_news.3.t
+	desc = WAG_news.3.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_news.3.a
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = WAG_news.3.b
+		trigger = {
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+	}
+	option = {
+		name = WAG_news.3.c
+		trigger = {
+			has_government = fascism
+		}
+	}
+}
