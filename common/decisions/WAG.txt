@@ -1055,20 +1055,20 @@ WAG_second_civil_war_against = {
 	#conmunism mission
 	WAG_east_wallace_revolution_mission = {
 		icon = generic_prepare_civil_war
-		available = {
-			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
-			check_variable = {
-				var = WAG_scw_against_pp
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
+#		available = {
+#			has_completed_focus = WAG_social_democracy_road
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
+#			check_variable = {
+#				var = WAG_scw_against_pp
+#				value = 30
+#				compare = greater_than_or_equals
+#			}
+#		}
 		visible = {
 			has_completed_focus = WAG_social_democracy_road
 		}
@@ -1089,15 +1089,15 @@ WAG_second_civil_war_against = {
 		}
 		days_mission_timeout = 30
 		fire_only_once = yes
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+#			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 30
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			914 = {
 				if = {
 					limit = {
@@ -1151,26 +1151,26 @@ WAG_second_civil_war_against = {
 	}
 	WAG_guaduate_indepence_of_KUR_mission = {
 		icon = generic_prepare_civil_war
-		available = {
-			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
-			NOT = {
-				country_exists = KUR
-				920 = {
-					is_owned_and_controlled_by = WAG
-				}
-			}
-			check_variable = {
-				var = WAG_scw_against_pp
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
+#		available = {
+#			has_completed_focus = WAG_social_democracy_road
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
+#			NOT = {
+#				country_exists = KUR
+#				920 = {
+#					is_owned_and_controlled_by = WAG
+#				}
+#			}
+#			check_variable = {
+#				var = WAG_scw_against_pp
+#				value = 30
+#				compare = greater_than_or_equals
+#			}
+#		}
 		visible = {
 			has_completed_focus = WAG_communism_road
 			NOT = {
@@ -1182,12 +1182,12 @@ WAG_second_civil_war_against = {
 		}
 		activation = {
 			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
 			NOT = {
 				country_exists = KUR
 				920 = {
@@ -1203,15 +1203,15 @@ WAG_second_civil_war_against = {
 		}
 		days_mission_timeout = 30
 		fire_only_once = yes
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+#			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 30
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			920 = {
 				if = {
 					limit = {
@@ -1268,31 +1268,31 @@ WAG_second_civil_war_against = {
 	}
 	WAG_build_up_red_army_mission = {
 		icon = generic_prepare_civil_war
-		available = {
-			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
-			check_variable = {
-				var = WAG_scw_against_pp
-				value = 50
-				compare = greater_than_or_equals
-			}
-		}
+#		available = {
+#			has_completed_focus = WAG_social_democracy_road
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
+#			check_variable = {
+#				var = WAG_scw_against_pp
+#				value = 50
+#				compare = greater_than_or_equals
+#			}
+#		}
 		visible = {
 			has_completed_focus = WAG_social_democracy_road
 		}
 		activation = {
 			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
 			check_variable = {
 				var = WAG_scw_against_pp
 				value = 50
@@ -1303,15 +1303,15 @@ WAG_second_civil_war_against = {
 		}
 		days_mission_timeout = 30
 		fire_only_once = yes
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+#			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 50
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			add_days_mission_timeout = {
 				mission = WAG_military_plot_sd
 				days = -30
@@ -1361,31 +1361,31 @@ WAG_second_civil_war_against = {
 	}
 	WAG_speeches_of_communism_mission = {
 		icon = generic_prepare_civil_war
-		available = {
-			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
-			check_variable = {
-				var = WAG_scw_against_pp
-				value = 40
-				compare = greater_than_or_equals
-			}
-		}
+#		available = {
+#			has_completed_focus = WAG_social_democracy_road
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
+#			check_variable = {
+#				var = WAG_scw_against_pp
+#				value = 40
+#				compare = greater_than_or_equals
+#			}
+#		}
 		visible = {
 			has_completed_focus = WAG_social_democracy_road
 		}
 		activation = {
 			has_completed_focus = WAG_social_democracy_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
 			check_variable = {
 				var = WAG_scw_against_pp
 				value = 40
@@ -1396,15 +1396,15 @@ WAG_second_civil_war_against = {
 			has_country_flag = WAG_guaduate_indepence_of_KUR_flag
 		}
 		days_mission_timeout = WAG_scw_against_getland_cost
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+#			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 40
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			add_days_mission_timeout = {
 				mission = WAG_military_plot_sd
 				days = -10
@@ -1476,31 +1476,31 @@ WAG_second_civil_war_against = {
 	#social democracy mission
 	WAG_anti_strike_mission = {
 		icon = generic_prepare_civil_war
-		available = {
-			has_completed_focus = WAG_communism_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
-			check_variable = {
-				var = WAG_scw_against_pp
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
+#		available = {
+#			has_completed_focus = WAG_communism_road
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+##					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
+#			check_variable = {
+#				var = WAG_scw_against_pp
+#				value = 30
+#				compare = greater_than_or_equals
+#			}
+#		}
 		visible = {
 			has_completed_focus = WAG_communism_road
 		}
 		activation = {
 			has_completed_focus = WAG_communism_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
 			OR = {
 				has_country_flag = WAG_nazi_army
 			}
@@ -1516,15 +1516,15 @@ WAG_second_civil_war_against = {
 			}
 		}
 		days_mission_timeout = 30
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+#			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 30
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			add_days_mission_timeout = {
 				mission = WAG_military_plot_cm
 				days = -30
@@ -1576,31 +1576,31 @@ WAG_second_civil_war_against = {
 	}
 	WAG_get_nazi_army_mission = {
 		icon = generic_prepare_civil_war
-		available = {
-			has_completed_focus = WAG_communism_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
-			check_variable = {
-				var = WAG_scw_against_pp
-				value = 50
-				compare = greater_than_or_equals
-			}
-		}
+#		available = {
+#			has_completed_focus = WAG_communism_road
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
+#			check_variable = {
+#				var = WAG_scw_against_pp
+#				value = 50
+#				compare = greater_than_or_equals
+#			}
+#		}
 		visible = {
 			has_completed_focus = WAG_communism_road
 		}
 		activation = {
 			has_completed_focus = WAG_communism_road
-			custom_trigger_tooltip = {
-				tooltip = WAG_sth_must_not_doing
-				NOT = {
-					has_country_flag = WAG_second_civil_war_against_sth_is_done
-				}
-			}
+#			custom_trigger_tooltip = {
+#				tooltip = WAG_sth_must_not_doing
+#				NOT = {
+#					has_country_flag = WAG_second_civil_war_against_sth_is_done
+#				}
+#			}
 			check_variable = {
 				var = WAG_scw_against_pp
 				value = 50
@@ -1611,15 +1611,15 @@ WAG_second_civil_war_against = {
 		days_mission_timeout = 30
 		cost = 50
 		fire_only_once = yes
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 50
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			add_days_mission_timeout = {
 				mission = WAG_military_plot_cm
 				days = -30
@@ -1672,15 +1672,15 @@ WAG_second_civil_war_against = {
 			}
 		}
 		days_mission_timeout = WAG_scw_against_getland_cost
-		complete_effect = {
-			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_war_against_sth_is_done
+#		}
+		timeout_effect = {
+#			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = 40
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_war_against_sth_is_done
 			add_days_mission_timeout = {
 				mission = WAG_military_plot_cm
 				days = -10
@@ -1768,9 +1768,9 @@ WAG_second_civil_war_against = {
 			}
 		}
 		activation = {
-			NOT = {
-				has_country_flag = WAG_second_civil_against_war_getland_is_done
-			}
+#			NOT = {
+#				has_country_flag = WAG_second_civil_against_war_getland_is_done
+#			}
 			OR = {
 				has_completed_focus = WAG_communism_road
 				has_completed_focus = WAG_social_democracy_road
@@ -1801,15 +1801,16 @@ WAG_second_civil_war_against = {
 			}
 		}
 		days_mission_timeout = WAG_scw_against_getland_cost
-		complete_effect = {
-			set_country_flag = WAG_second_civil_against_war_getland_is_done
+#		complete_effect = {
+#			set_country_flag = WAG_second_civil_against_war_getland_is_done
+#		}
+		
+		timeout_effect = {
 			subtract_from_variable = {
 				var = WAG_scw_against_pp
 				value = WAG_scw_against_getland_cost
 			}
-		}
-		timeout_effect = {
-			clr_country_flag = WAG_second_civil_against_war_getland_is_done
+#			clr_country_flag = WAG_second_civil_against_war_getland_is_done
 			random_state = {
 				limit = {
 					is_owned_and_controlled_by = WAG
@@ -1840,6 +1841,20 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+		}
+		available = {
+			num_of_factories > 30
+		}
+		complete_effect = {
+			effect_tooltip = {
+				add_political_power = 100
+				add_stability = 0.4
+				add_war_support = 0.1
+			}
+			hidden_effect = {
+				country_event = WAG.1
+				set_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		timeout_effect = {
 			effect_tooltip = {

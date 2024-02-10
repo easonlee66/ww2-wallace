@@ -8,6 +8,9 @@ country_event = {
 	option = {
 		name = WAG.1.a
 #		clr_country_flag = WAG_first_two_year_half_plan
+		add_political_power = 100
+		add_stability = 0.4
+		add_war_support = 0.1
 	}
 }
 

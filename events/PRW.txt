@@ -15,6 +15,7 @@ country_event = {
 			states = { 909 910 911 913 916 917 918 919 }
 			size = 0.5
 		}
+		news_event = WAG_news.3
 		hidden_effect = {
 			random_other_country = {
 				limit = {
