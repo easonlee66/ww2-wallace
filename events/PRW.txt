@@ -94,6 +94,20 @@ country_event = {
 	title = PRW.2.t
 	desc = PRW.2.d
 	is_triggered_only=yes
+	
+	immediate = {
+		set_party_name = {
+			ideology = communism
+			long_name = WAG_communism_party
+			name = WAG_communism_party
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = WAG_demorcratic_party
+			name = WAG_demorcratic_party
+		}
+		add_stability = -0.3
+	}
 
 	option={
 		name = PRW.2.a
@@ -151,7 +165,8 @@ country_event = {
 		activate_mission = WAG_get_nazi_army_mission
 		country_event = {
 			id = PRW.3
-			days = 100
+			days = 15
+			random_days = 10
 		}
 	}
 
@@ -205,7 +220,8 @@ country_event = {
 		activate_mission = WAG_east_wallace_revolution_mission
 		country_event = {
 			id = PRW.3
-			days = 100
+			days = 15
+			random_days = 10
 		}
 	}
 
@@ -226,13 +242,14 @@ country_event = {
 			}
 			complete_national_focus = WAG_middle_road
 		}
-#		unlock_decision_category_tooltip = WAG_second_civil_war
+		unlock_decision_category_tooltip = WAG_second_civil_war
 		every_state = {
 			set_state_flag = WAG_second_civil_war_against
 		}
 		country_event = {
 			id = PRW.3
-			days = 100
+			days = 15
+			random_days = 10
 		}
 	}
 }
@@ -253,7 +270,7 @@ country_event = {
 	option = {
 		name = PRW.3.a
 		add_stability = -0.5
-		retire_country_leader = yes
+		kill_country_leader = yes
 		create_country_leader = {
 			name = "混乱的政府"
 			picture = GFX_PRW_a_mess_goverment
@@ -293,6 +310,7 @@ country_event = {
 		trigger = {
 			has_completed_focus = WAG_social_democracy_road
 		}
+		news_event = WAG_news.5
 		set_country_flag = WAG_second_civil_war
 		if = {
 			limit = {
@@ -479,6 +497,7 @@ country_event = {
 		trigger = {
 			has_completed_focus = WAG_middle_road
 		}
+		news_event = WAG_news.5
 		add_war_support = 0.1
 	}
 	option = {
@@ -486,6 +505,7 @@ country_event = {
 		trigger = {
 			has_completed_focus = WAG_communism_road
 		}
+		news_event = WAG_news.5
 		set_country_flag = WAG_second_civil_war
 		if = {
 			limit = {
