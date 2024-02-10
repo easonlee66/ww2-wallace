@@ -1736,6 +1736,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_never_surrunder_com
+		icon=GFX_goal_generic_demand_territory
 		x=18
 		y=7
 		prerequisite = {
@@ -1749,18 +1750,34 @@ focus_tree={
 			has_country_flag = WAG_second_civil_war
 			has_completed_focus = WAG_communism_road
 		}
+		available = {
+			has_country_flag = WAG_second_civil_war
+		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			if = {
+				limit = { has_idea = FRA_disjointed_government }
+				swap_ideas = {
+					remove_idea = FRA_disjointed_government
+					add_idea = WAG_never_surrender
+				}
+			}
 		}
 	}
 	focus={
 		id=WAG_KUR_revolution
-		x=23
+		x=22
 		y=8
 		prerequisite={focus=WAG_never_surrunder_com}
 		cost=10
+		available = {
+			has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+			KUR = {
+				exists = yes
+			}
+		}
 		ai_will_do={
 			factor=1
 		}
@@ -1793,6 +1810,9 @@ focus_tree={
 				}
 			}
 		}
+		available = {
+			has_war = no
+		}
 		offset = {
 			x=-2
 			y=0
@@ -1813,6 +1833,11 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			if = {
+				limit = { has_idea = WAG_never_surrender }
+				remove_ideas = WAG_never_surrender
+			}
+			add_stability = 0.1
 		}
 	}
 	focus={
@@ -1825,6 +1850,32 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			TUR = {
+				owns_state = 352
+				owns_state = 353
+				owns_state = 800
+				controls_state = 352
+				controls_state = 353
+				controls_state = 800
+			}
+		}
+		bypass = {
+			NOT = {
+				TUR = {
+					owns_state = 352
+					owns_state = 353
+					owns_state = 800
+					controls_state = 352
+					controls_state = 353
+					controls_state = 800
+				}
+			}
+			TUR = {
+				is_in_faction_with = WAG
+				has_war_with = ROOT
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
@@ -1833,6 +1884,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_KUR_in_IRQ
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x=20
 		y=9
 		prerequisite={focus=WAG_KUR_revolution}
@@ -1840,20 +1892,23 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		search_filters={
-			FOCUS_FILTER_ANNEXATION
+		available = {
+			IRQ = {
+				owns_state = 676
+				controls_state = 676
+			}
 		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_KUR_in_SYR
-		x=24
-		y=9
-		prerequisite={focus=WAG_KUR_revolution}
-		cost=10
-		ai_will_do={
-			factor=1
+		bypass = {
+			NOT = {
+				IRQ = {
+					owns_state = 676
+					controls_state = 676
+				}
+			}
+			IRQ = {
+				is_in_faction_with = WAG
+				has_war_with = ROOT
+			}
 		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
@@ -1885,6 +1940,9 @@ focus_tree={
 				}
 			}
 		}
+		available = {
+			has_war = no
+		}
 		offset = {
 			x=2
 			y=0
@@ -1903,16 +1961,19 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			if = {
+				limit = { has_idea = WAG_never_surrender }
+				remove_ideas = WAG_never_surrender
+			}
+			add_war_support = 0.1
 		}
 	}
 	focus={
 		id=WAG_fate_of_KUR
-		x=23
+		icon=GFX_goal_generic_dangerous_deal
+		x=22
 		y=10
-		prerequisite={focus=WAG_KUR_in_IRQ}
-		prerequisite={focus=WAG_KUR_in_TUR}
-		prerequisite={focus=WAG_KUR_in_SYR}
-		prerequisite={focus=WAG_KUR_in_PER}
+		prerequisite={focus=WAG_KUR_in_IRQ focus=WAG_KUR_in_TUR focus=WAG_KUR_in_PER}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -1979,6 +2040,16 @@ focus_tree={
 					has_completed_focus = WAG_the_forth_internaion
 				}
 			}
+		}
+		available = {
+			SOV = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOV
 		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
@@ -2086,6 +2157,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			create_faction = FOURTH_INTERNATIONAL_FACTION
 		}
 	}
 	focus={
@@ -2147,6 +2219,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			
 		}
 	}
 	focus={
@@ -2213,6 +2286,9 @@ focus_tree={
 					has_completed_focus = WAG_no_border_for_worker
 				}
 			}
+		}
+		bypass = {
+			always = yes
 		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
@@ -2330,7 +2406,6 @@ focus_tree={
 		x=17
 		y=12
 		prerequisite={focus=WAG_special_economy_zone}
-		prerequisite={focus=WAG_two_rule_in_one_country}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -2388,7 +2463,7 @@ focus_tree={
 		icon=GFX_goal_generic_forceful_treaty
 		x=21
 		y=12
-		prerequisite={focus=WAG_two_rule_in_one_country}
+		prerequisite={focus=WAG_two_rule_in_one_country focus=WAG_special_economy_zone}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -2452,6 +2527,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_ideas = SPR_collectivized_society
 		}
 	}
 	focus={
@@ -2491,8 +2567,10 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_ideas = WAG_never_surrender
 		}
 	}
 	focus={
@@ -2535,6 +2613,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.2
 		}
 	}
 	focus={
@@ -2735,6 +2814,7 @@ focus_tree={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
+			add_ideas = SPR_collectivized_society
 		}
 	}
 	focus={
@@ -2791,6 +2871,9 @@ focus_tree={
 		x=19
 		y=12
 		prerequisite={focus=WAG_two_rule_in_one_country}
+		prerequisite = {
+			focus = WAG_special_economy_zone
+		}
 		cost=10
 		offset = {
 			x=-2
@@ -3006,12 +3089,34 @@ focus_tree={
 	focus={
 		id=WAG_KUR_in_PER
 		icon = GFX_focus_generic_attack_iran
-		x=26
+		x=24
 		y=9
 		prerequisite={focus=WAG_KUR_revolution}
 		cost=10
 		ai_will_do={
 			factor=1
+		}
+		available = {
+			PER = {
+				owns_state = 419
+				owns_state = 421
+				controls_state = 419
+				controls_state = 421
+			}
+		}
+		bypass = {
+			NOT = {
+				PER = {
+					owns_state = 419
+					owns_state = 421
+					controls_state = 419
+					controls_state = 421
+				}
+			}
+			PER = {
+				is_in_faction_with = WAG
+				has_war_with = WAG
+			}
 		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
@@ -3073,6 +3178,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_ideas = WAG_world_revolution
 		}
 	}
 	focus={
@@ -3261,6 +3367,42 @@ focus_tree={
 			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			if = {
+				limit = {
+					num_subjects > 0
+				}
+				add_ideas = WAG_comecon_wag_default
+				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
+				every_other_country = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_ideas = WAG_comecon_puppet_default
+				}
+
+				custom_effect_tooltip = SOV_found_the_comecon_program_tt
+				hidden_effect = {
+					add_to_tech_sharing_group = SOV_comecon
+					every_country = {
+						limit = {
+							is_subject_of = ROOT
+						}
+						add_to_tech_sharing_group = SOV_comecon
+					}
+				}
+			}
+			else = { #Early tooltip for when Soviets have no subjects
+				effect_tooltip = {
+					add_ideas = WAG_comecon_wag_default
+				}
+				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
+				effect_tooltip = {
+					add_ideas = WAG_comecon_puppet_default
+				}
+				custom_effect_tooltip = SOV_found_the_comecon_program_tt
+			}
+
+			unlock_decision_category_tooltip = SOV_comecon_dec_cat
 		}
 	}
 	focus={
