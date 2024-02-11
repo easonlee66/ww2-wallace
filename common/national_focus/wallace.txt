@@ -3045,6 +3045,20 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			set_cosmetic_tag = WAG_neutrality
+			add_war_support = 0.1
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
 		}
 	}
 	focus={
@@ -3152,6 +3166,11 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_stability = 0.1
+			set_politics = {
+				ruling_party = neutrality
+			}
+			news_event = WAG_news.6
 		}
 	}
 	focus={
@@ -3242,6 +3261,9 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			FRA = {
+				country_event = WAG.24
+			}
 		}
 	}
 	focus={
@@ -3255,9 +3277,15 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
-			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
+			add_ideas = WAG_old_weapon
+			add_tech_bonus = {
+				name = artillery
+				bonus = 0.5
+				category = artillery
+			}
 		}
 	}
 	focus={
@@ -3340,7 +3368,7 @@ focus_tree={
 		x=3
 		y=2
 		prerequisite={focus=WAG_find_new_emperor}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -3348,6 +3376,12 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_political_power = 50
+			add_stability = 0.2
 		}
 	}
 	focus={
@@ -3685,7 +3719,7 @@ focus_tree={
 		x=1
 		y=2
 		prerequisite={focus=WAG_find_new_emperor}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -3693,6 +3727,11 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			news_event = WAG_news.7
+			if = {
+				limit = { has_idea = WAG_sait_kolu_treat }
+				remove_ideas = WAG_sait_kolu_treat
+			}
 		}
 	}
 	focus={
@@ -3711,6 +3750,8 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.1
+			create_faction = GER_central_powers_faction
 		}
 	}
 	focus={
@@ -3727,6 +3768,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -3744,6 +3786,15 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			if = {
+				limit = { BUL = {
+					has_government = neutrality
+					NOT = {
+						is_in_faction_with = WAG
+					}
+				} }
+				add_to_faction = BUL
+			}
 		}
 	}
 	focus={
@@ -3784,7 +3835,7 @@ focus_tree={
 	focus={
 		id=WAG_rebuild_central_power
 		icon = GFX_goal_generic_dangerous_deal
-		x=1
+		x=8
 		y=8
 		prerequisite={focus=WAG_rekindle_imperial_sentiment}
 		prerequisite={focus=WAG_opposite_hitler}
@@ -3801,7 +3852,7 @@ focus_tree={
 	focus={
 		id=WAG_fight_with_our_old_enemy
 		icon = GFX_goal_generic_demand_territory
-		x=1
+		x=8
 		y=9
 		prerequisite={focus=WAG_rebuild_central_power}
 		cost=10
