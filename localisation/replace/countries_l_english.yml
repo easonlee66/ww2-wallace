@@ -1,6 +1,10 @@
 ﻿l_english:
  WAG_fascism:0 "瓦雷斯第三共和国"
  WAG_fascism_DEF:0 "瓦雷斯第三共和国"
+ WAG_great_wallace:0 "大瓦雷斯"
+ WAG_great_wallace_DEF:0 "大瓦雷斯"
+ WAG_holy_wallace_empire:0 "神圣瓦雷斯帝国"
+ WAG_holy_wallace_empire_DEF:0 "神圣瓦雷斯帝国"
  WAG_civil_war:0 "瓦雷斯第三帝国"
  WAG_civil_war_DEF:0 "瓦雷斯第三帝国"
  WAG_democratic:0 "瓦雷斯第四共和国"
