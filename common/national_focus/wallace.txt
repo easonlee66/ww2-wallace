@@ -2199,7 +2199,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_modern
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_the_giant_wakes
 		x=20
 		y=13
 		prerequisite={focus=WAG_developing_KUR}
@@ -3042,6 +3042,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3084,6 +3085,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3115,6 +3117,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3146,6 +3149,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3174,6 +3178,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3202,6 +3207,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3217,6 +3223,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3232,6 +3239,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3247,6 +3255,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
 		}
@@ -3275,6 +3284,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
 		}
@@ -3303,6 +3313,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3318,6 +3329,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3333,6 +3345,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3363,6 +3376,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3391,6 +3405,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3420,6 +3435,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3448,6 +3464,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
 		}
@@ -3476,6 +3493,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
 		}
@@ -3505,6 +3523,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
 		}
@@ -3533,6 +3552,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3562,6 +3582,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
 		}
@@ -3577,6 +3598,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
 		}
@@ -3606,6 +3628,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3635,13 +3658,14 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
 	}
 	focus={
 		id=WAG_battle_goes_on
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_spread_fascism
 		x=5
 		y=6
 		prerequisite={focus=WAG_holy_wallace_empire}
@@ -3650,6 +3674,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3665,6 +3690,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3682,6 +3708,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3697,6 +3724,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3713,6 +3741,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3730,6 +3759,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3746,6 +3776,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3762,6 +3793,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
@@ -3777,6 +3809,7 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3805,6 +3838,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3834,6 +3868,7 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 		}
@@ -3862,19 +3897,17 @@ focus_tree={
 			}
 		}
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
 	}
 	focus={
 		id=WAG_befriend_crazy
-		icon = GFX_focus_generic_fascist_propaganda
-		x=15
+		icon = GFX_focus_generic_fascist_troops
+		x=16
 		y=3
 		prerequisite={focus=WAG_remove_royalist}
-		mutually_exclusive = {
-			focus = WAG_remove_crazy
-		}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3893,37 +3926,7 @@ focus_tree={
 			}
 		}
 		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_remove_crazy
-		icon = GFX_focus_generic_conspiracy
-		x=17
-		y=3
-		prerequisite={focus=WAG_remove_royalist}
-		mutually_exclusive = {
-			focus = WAG_befriend_crazy
-		}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		offset = {
-			x = -6
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_free_election
-				}
-			}
-		}
-		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 		}
