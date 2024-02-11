@@ -63,6 +63,34 @@ news_event = {
 }
 
 news_event = {
+	id = WAG_news.4
+	title = WAG_news.4.t
+	desc = WAG_news.4.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_news.4.a
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = WAG_news.4.b
+		trigger = {
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+	}
+	option = {
+		name = WAG_news.4.c
+		trigger = {
+			has_government = fascism
+		}
+	}
+}
+
+news_event = {
 	id = WAG_news.5
 	title = WAG_news.5.t
 	desc = WAG_news.5.desc
