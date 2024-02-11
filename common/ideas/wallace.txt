@@ -83,15 +83,8 @@ ideas = {
 				factor = 0
 				modifier = {
 					tag = WAG
-					has_completed_focus = WAG_befriend_royalist
+					has_completed_focus = WAG_find_new_emperor
 					factor = 10
-				}
-				modifier = {
-					tag = WAG
-					NOT = {
-						has_completed_focus = WAG_oppisite_nazi
-					}
-					factor = 5
 				}
 			}
 		}
