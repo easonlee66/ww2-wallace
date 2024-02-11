@@ -1118,3 +1118,24 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = WAG.31
+	title = WAG.31.t
+	desc = WAG.31.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.31.a
+		event_target:WAG_kbms_government = {
+			annex_country = {
+				target = PREV
+			}
+		}
+	}
+	option = {
+		name = WAG.31.b
+		declare_war_on = {
+			target = event_target:WAG_kbms_government
+			type = civil_war
+		}
+	}
+}

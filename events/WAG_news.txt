@@ -68,6 +68,49 @@ news_event = {
 	desc = WAG_news.4.d
 	is_triggered_only = yes
 	major = yes
+	immediate = {
+		create_dynamic_country = {
+			original_tag = WAG
+			save_event_target_as = WAG_kbms_government
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 1
+			}
+			load_focus_tree = wallace_focus
+			complete_national_focus = WAG_revive_the_empire
+			complete_national_focus = WAG_long_live_Zayank_XI
+			unlock_national_focus = WAG_nazi_reform
+			transfer_state = 917
+			set_capital = {
+				state = 917
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = WAG
+				has_government = democratic
+			}
+			declare_war_on = {
+				target = event_target:WAG_kbms_government
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = WAG
+				has_government = fascism
+				has_completed_focus = WAG_free_election
+			}
+			country_event = {
+				id = WAG.31
+				days = 1
+				random_days = 10
+			}
+		}
+	}
 	option = {
 		name = WAG_news.4.a
 		trigger = {

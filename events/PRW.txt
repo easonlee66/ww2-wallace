@@ -16,8 +16,8 @@ country_event = {
 			size = 0.5
 		}
 		news_event = WAG_news.3
+		set_cosmetic_tag = WAG_fourth_republic
 		hidden_effect = {
-			set_cosmetic_tag = WAG_fourth_republic
 			random_other_country = {
 				limit = {
 					original_tag = WAG
@@ -88,6 +88,11 @@ country_event = {
 						allow_spawning_on_enemy_provs = yes
 					}
 				}
+			}
+			news_event = {
+				id = WAG_news.4
+				days = 20
+				random_days = 10
 			}
 		}
 	}
@@ -410,7 +415,15 @@ country_event = {
 			WAG_abudullah_an_komi = {
 				promote_character = yes
 			}
-#			load_focus_tree = wallace_focus
+			load_focus_tree = wallace_focus
+			unlock_national_focus = WAG_oppisite_nazi
+			unlock_national_focus = WAG_defend_new_country
+			unlock_national_focus = WAG_communism_road
+			unlock_national_focus = WAG_train_WCYL
+			unlock_national_focus = WAG_take_WWFF_trust
+			unlock_national_focus = WAG_take_arsenal
+			unlock_national_focus = WAG_the_communism_revolution
+			set_country_flag = WAG_second_civil_war
 			if = {
 				limit = { has_country_flag = WAG_guaduate_indepence_of_KUR_flag }
 				KUR = {
@@ -419,7 +432,7 @@ country_event = {
 				puppet = KUR
 			}
 			declare_war_on = {
-				target = WAG
+				target = PREV
 				type = civil_war
 			}
 		}
@@ -545,12 +558,12 @@ country_event = {
 			ruling_party = communism
 			elections_allowed = yes
 		}
-		set_popularities = {
-			communism = 50
-			democratic = 30
-			fascism = 15
-			neutrality = 5
-		}
+#		set_popularities = {
+#			communism = 50
+#			democratic = 30
+#			fascism = 15
+#			neutrality = 5
+#		}
 		create_dynamic_country = {
 			original_tag = WAG
 			set_politics = {
@@ -591,9 +604,17 @@ country_event = {
 			WAG_salman_ritin_somin = {
 				promote_character = yes
 			}
-#			load_focus_tree = wallace_focus
+			load_focus_tree = wallace_focus
+			unlock_national_focus = WAG_oppisite_nazi
+			unlock_national_focus = WAG_defend_new_country
+			unlock_national_focus = WAG_social_democracy_road
+			unlock_national_focus = WAG_emergency_power
+			unlock_national_focus = WAG_support_from_the_right
+			unlock_national_focus = WAG_ensure_arsenal_safety
+			unlock_national_focus = WAG_defend_the_republics
+			set_country_flag = WAG_second_civil_war
 			declare_war_on = {
-				target = WAG
+				target = PREV
 				type = civil_war
 			}
 		}
@@ -677,6 +698,38 @@ country_event = {
 	}
 }
 
-#country_event = {
-#	id = PRW.5
-#}
+country_event = {
+	id = PRW.5
+	title = PRW.5.t
+	desc = PRW.5.d
+	is_triggered_only = yes
+	option = {
+		name = PRW.5.a
+		KUR = {
+			declare_war_on = {
+				target = IRQ
+				type = take_core_state
+			}
+		}
+		add_to_war = {
+			targeted_alliance = KUR
+			enemy = IRQ
+		}
+	}
+	option = {
+		name = PRW.5.b
+		KUR = {
+			transfer_state = 676
+		}
+		IRQ = {
+			declare_war_on = {
+				target = KUR
+				type = take_core_state
+			}
+		}
+		add_to_war = {
+			targeted_alliance = KUR
+			enemy = IRQ
+		}
+	}
+}
