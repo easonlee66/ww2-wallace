@@ -1007,7 +1007,7 @@ WAG_second_civil_war = {
 		}
 	}
 	#920 KUR
-	WAG_get_kosui = {
+	WAG_get_new_wallace = {
 		icon = generic_prepare_civil_war
 		available = {
 			NOT = {
@@ -1610,7 +1610,7 @@ WAG_second_civil_war_against = {
 			always = no
 		}
 		days_mission_timeout = 30
-		cost = 50
+#		cost = 50
 		fire_only_once = yes
 #		complete_effect = {
 #			set_country_flag = WAG_second_civil_war_against_sth_is_done
@@ -2143,13 +2143,13 @@ WAG_first_two_year_half_plan = {
 			any_state = {
 				is_owned_and_controlled_by = WAG
 				has_state_flag = WAG_south_state
-				WAG = {
-					has_resources_amount = {
-						resource = oil
-						amount < 4
-						state = PREV
-					}
-				}
+#				WAG = {
+#					has_resources_amount = {
+#						resource = oil
+#						amount < 4
+#						state = PREV
+#					}
+#				}
 			}
 		}
 		visible = {
@@ -2162,13 +2162,13 @@ WAG_first_two_year_half_plan = {
 				limit = {
 					is_owned_and_controlled_by = WAG
 					has_state_flag = WAG_south_state
-					WAG = {
-						has_resources_amount = {
-							resource = oil
-							amount < 4
-							state = PREV
-						}
-					}
+#					WAG = {
+#						has_resources_amount = {
+#							resource = oil
+#							amount < 4
+#							state = PREV
+#						}
+#					}
 				}
 				WAG = {
 					add_resource = {
@@ -2217,7 +2217,7 @@ WAG_nazi_reform = {
 		days_mission_timeout = 100
 		fire_only_once = yes
 		activation = {
-			has_completed_focus = WAG_reform_of_nazi
+			has_completed_focus = WAG_nazi_reform
 		}
 		timeout_effect = {
 			start_civil_war = {

@@ -22,6 +22,8 @@ country_event = {
 					original_tag = WAG
 					has_government = fascism
 				}
+				load_focus_tree = wallace_focus
+				complete_national_focus = WAG_free_election
 				set_stability = 0.9
 				set_war_support = 0.8
 				add_popularity = {
@@ -671,4 +673,8 @@ country_event = {
 			}
 		}
 	}
+}
+
+country_event = {
+	id = PRW.5
 }

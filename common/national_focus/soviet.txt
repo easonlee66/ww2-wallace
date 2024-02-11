@@ -4872,9 +4872,10 @@ focus_tree = {
 			custom_effect_tooltip = SOV_focus_complete_effect_tt
 			unlock_decision_category_tooltip = SOV_industry_relocation
 
-			random_controlled_state = {
+			random_state = {
 				limit = {
 					SOV_is_industrial_relocation_destiny_state = yes
+					is_controlled_by = SOV
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -4896,10 +4897,10 @@ focus_tree = {
 					limit = {
 						ROOT = { has_full_control_of_state = 195 } #Leningrad
 					}
-					random_controlled_state = { #Different State please thanks
+					random_state = { #Different State please thanks
 						limit = {
 							NOT = { state = PREV }
-							NOT = { state = PREVPREV }
+							is_controlled_by = SOV
 							SOV_is_industrial_relocation_destiny_state = yes
 						}
 						add_extra_state_shared_building_slots = 2
@@ -4922,8 +4923,12 @@ focus_tree = {
 							limit = {
 								ROOT = { has_full_control_of_state = 202 } #Leningrad
 							}
-							random_controlled_state = { #Different State please thanks
+							random_state = { #Different State please thanks
 								limit = {
+									is_controlled_by = SOV
+									NOT = {
+										state = PREVPREV
+									}
 									NOT = { state = PREV }
 									SOV_is_industrial_relocation_destiny_state = yes
 								}

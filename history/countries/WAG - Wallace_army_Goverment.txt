@@ -37,15 +37,17 @@ recruit_character = WAG_abudullah_an_komi
 		add_to_faction = WAG
 	}
 	unlock_national_focus = WAG_first_two_year_half_plan
-	unlock_national_focus = WAG_make_despotism
-	unlock_national_focus = WAG_clear_against
+	unlock_national_focus = WAG_free_election
+	unlock_national_focus = WAG_befriend_GER
 	complete_national_focus = WAG_industrial_effort
 	complete_national_focus = WAG_Mt.Iron_industry_centre
-	complete_national_focus = WAG_declare_great_wallace
-	complete_national_focus = WAG_demand_mesopotamia
-	complete_national_focus = WAG_demand_lower_kosui
-	complete_national_focus = WAG_demand_anatolia
-	unlock_national_focus = WAG_reform_of_nazi
+	complete_national_focus = WAG_end_saint_kolu_treat
+	complete_national_focus = WAG_GER_technology
+	complete_national_focus = WAG_GER_allitary
+	complete_national_focus = WAG_GER_tanks
+	complete_national_focus = WAG_GER_general_staff
+	complete_national_focus = WAG_purchase_equipment
+	unlock_national_focus = WAG_nazi_reform
 
 	set_technology = {
 		construction1 = 1
