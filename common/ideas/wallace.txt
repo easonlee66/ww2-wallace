@@ -30,6 +30,12 @@ ideas = {
 				army_defence_factor = -0.4
 			}
 		}
+		WAG_old_weapon = {
+			modifier = {
+				army_attack_factor = 0.5
+				production_oil_factor = 1
+			}
+		}
 		WAG_comecon_puppet_default = {
 			name = SOV_comecon_sov_default
 
