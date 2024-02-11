@@ -17,6 +17,7 @@ country_event = {
 		}
 		news_event = WAG_news.3
 		hidden_effect = {
+			set_cosmetic_tag = WAG_fourth_republic
 			random_other_country = {
 				limit = {
 					original_tag = WAG
@@ -24,6 +25,7 @@ country_event = {
 				}
 				load_focus_tree = wallace_focus
 				complete_national_focus = WAG_free_election
+				set_cosmetic_tag = WAG_fascism
 				set_stability = 0.9
 				set_war_support = 0.8
 				add_popularity = {
@@ -675,6 +677,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = PRW.5
-}
+#country_event = {
+#	id = PRW.5
+#}

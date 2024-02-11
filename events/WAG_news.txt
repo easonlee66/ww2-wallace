@@ -67,6 +67,7 @@ news_event = {
 	title = WAG_news.4.t
 	desc = WAG_news.4.d
 	is_triggered_only = yes
+	major = yes
 	option = {
 		name = WAG_news.4.a
 		trigger = {
@@ -118,6 +119,96 @@ news_event = {
 		name = WAG_news.5.d
 		trigger = {
 			has_government = fascism
+		}
+	}
+}
+
+news_event = {
+	id = WAG_news.6
+	title = WAG_news.6.t
+	desc = WAG_news.6.desc
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = WAG_news.6.a
+		trigger = {
+			NOT = {
+				original_tag = WAG
+				is_in_faction_with = WAG
+			}
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = WAG_news.6.b
+		trigger = {
+			original_tag = WAG
+		}
+	}
+	option = {
+		name = WAG_news.6.c
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_government = communism
+			}
+		}
+	}
+	option = {
+		name = WAG_news.6.d
+		trigger = {
+			OR = {
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					is_in_faction_with = WAG
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = WAG_news.7
+	title = WAG_news.7.t
+	desc = WAG_news.7.desc
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = WAG_news.7.a
+		trigger = {
+			NOT = {
+				original_tag = WAG
+				is_in_faction_with = WAG
+			}
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = WAG_news.7.b
+		trigger = {
+			original_tag = WAG
+		}
+	}
+	option = {
+		name = WAG_news.7.c
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_government = communism
+			}
+		}
+	}
+	option = {
+		name = WAG_news.7.d
+		trigger = {
+			OR = {
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					is_in_faction_with = WAG
+				}
+			}
 		}
 	}
 }
