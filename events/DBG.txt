@@ -109,3 +109,23 @@ country_event = {
 		country_event = PRW.2
 	}
 }
+
+country_event = {
+	id = DBG.6
+	title = DBG.6.t
+	desc = DBG.6.d
+	is_triggered_only = yes
+	option = {
+		name = DBG.6.a
+	}
+}
+
+country_event = {
+	id = DBG.7
+	title = DBG.7.t
+	desc = DBG.7.d
+	is_triggered_only = yes
+	option = {
+		name = DBG.7.a
+	}
+}

@@ -9,7 +9,7 @@ WAG_second_civil_war = {
 		visible = {
 			has_completed_focus = WAG_social_democracy_road
 		}
-		cancel_if_not_visible = yes
+#		cancel_if_not_visible = yes
 		timeout_effect = {
 			country_event = PRW.4
 		}
@@ -2280,6 +2280,32 @@ WAG_nazi_reform = {
 	#					popularity = 0.05
 	#				}
 			}
+		}
+	}
+}
+
+DBG = {
+	DBG_mission_test = {
+		fire_only_once = yes
+		activation = {
+			is_debug = yes
+			has_completed_focus = WAG_oppisite_nazi
+		}
+		days_mission_timeout = 10
+		timeout_effect = {
+			country_event = DBG.6
+		}
+	}
+	DBG_mission_activation_test = {
+		available = {
+			is_debug = no
+		}
+		complete_effect = {
+			country_event = DBG.6
+		}
+		days_mission_timeout = 10
+		timeout_effect = {
+			country_event = DBG.6
 		}
 	}
 }

@@ -33,3 +33,10 @@ WAG_nazi_reform = {
 		original_tag = WAG
 	}
 }
+
+DBG = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		is_debug = yes
+	}
+}
