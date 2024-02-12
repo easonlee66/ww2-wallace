@@ -1,23 +1,32 @@
 ideas = {
 	country = {
 		WAG_first_two_year_half_plan = {
+			picture = generic_build_industrial_complex
 			modifier = {
-				production_factory_efficiency_gain_factor = 5
-				production_speed_buildings_factor = 5
+				production_factory_efficiency_gain_factor = 3
+				production_speed_buildings_factor = 3
+				production_oil_factor = 2
+				consumer_goods_factor = -0.3
+				production_speed_arms_factory_factor = 2
+				production_speed_supply_node_factor = 5
+				production_speed_industrial_complex_factor = 1
 			}
 		}
 		WAG_never_surrender = {
+			picture = generic_oppression
 			modifier = {
 				surrender_limit = 0.2
 				stability_factor = 0.2
 			}
 		}
 		WAG_world_revolution = {
+			picture = generic_communism_drift_bonus
 			modifier = {
 				justify_war_goal_time = -0.75
 			}
 		}
 		WAG_sait_kolu_treat = {
+			picture = HUN_treaty_of_triannon
 			rule = {
 				can_only_justify_war_on_threat_country = no
 				can_create_factions = no
@@ -26,14 +35,22 @@ ideas = {
 				war_support_factor = -0.4
 				production_factory_efficiency_gain_factor = -0.2
 				production_speed_buildings_factor = -0.2
+				production_speed_arms_factory_factor = -0.2
 				army_attack_factor = -0.4
 				army_defence_factor = -0.4
 			}
 		}
+		WAG_kosui_mother = {
+			picture = generic_war_preparation
+			modifier = {
+				army_core_defence_factor = 1
+			}
+		}
 		WAG_old_weapon = {
+			picture = generic_wall_line
 			modifier = {
 				army_attack_factor = 0.5
-				production_oil_factor = 1
+				production_oil_factor = 2
 			}
 		}
 		WAG_comecon_puppet_default = {

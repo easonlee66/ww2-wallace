@@ -12,6 +12,8 @@ set_technology = {
 }
 
 add_ideas = WAG_sait_kolu_treat
+add_ideas = WAG_kosui_mother
+add_ideas = sour_loser
 
 set_politics = {
 	ruling_party = fascism
@@ -80,4 +82,11 @@ recruit_character = WAG_abudullah_an_komi
 		mission = WAG_nazi_reform_mission
 		days = -70
 	}
+
+	recruit_character = WAG_muhamd_ziang_wikau
+	recruit_character = WAG_sadam_wang_zaoyangk
+	recruit_character = WAG_salman_ritin_somin
+	recruit_character = WAG_abudullah_an_komi
+
+	add_ideas = WAG_workhorse
 }
