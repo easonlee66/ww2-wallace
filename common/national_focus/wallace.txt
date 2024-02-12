@@ -8,6 +8,10 @@ focus_tree={
 		}
 	}
 	default=no
+	continuous_focus_position = {
+		x = 50
+		y = 1500
+	}
 	focus={
 		id=WAG_oppisite_nazi
 		icon=GFX_focus_generic_anti_fascist_diplomacy
@@ -1489,7 +1493,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_special_road_for_wallace
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_generic_position_armies
 		x=20
 		y=9
 		prerequisite={focus=WAG_build_communism_in_one_country}
@@ -3835,7 +3839,7 @@ focus_tree={
 	focus={
 		id=WAG_rebuild_central_power
 		icon = GFX_goal_generic_dangerous_deal
-		x=8
+		x=1
 		y=8
 		prerequisite={focus=WAG_rekindle_imperial_sentiment}
 		prerequisite={focus=WAG_opposite_hitler}
@@ -3852,7 +3856,7 @@ focus_tree={
 	focus={
 		id=WAG_fight_with_our_old_enemy
 		icon = GFX_goal_generic_demand_territory
-		x=8
+		x=1
 		y=9
 		prerequisite={focus=WAG_rebuild_central_power}
 		cost=10
