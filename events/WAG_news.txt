@@ -88,16 +88,21 @@ news_event = {
 			set_capital = {
 				state = 917
 			}
-		}
-		random_other_country = {
-			limit = {
-				original_tag = WAG
-				has_government = democratic
-			}
 			declare_war_on = {
-				target = event_target:WAG_kbms_government
+				target = WAG
+				type = civil_war
 			}
 		}
+#		random_other_country = {
+#			limit = {
+#				original_tag = WAG
+#				has_government = democratic
+#			}
+#			declare_war_on = {
+#				target = event_target:WAG_kbms_government
+#				type = civil_war
+#			}
+#		}
 		random_other_country = {
 			limit = {
 				original_tag = WAG
