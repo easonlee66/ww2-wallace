@@ -2441,91 +2441,94 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = TUR_befriend_wallace
-		icon = GFX_focus_befriend_wallace
-		prerequisite = { focus = TUR_return_of_the_sultan }
-		mutually_exclusive = {
-			focus = TUR_recaim_kosui
-		}
-		x = 1
-		y = 1
-		relative_position_id = TUR_return_of_the_sultan
-		cost = 10
-		ai_will_do = {
-			base = 10
-		}
-
-		bypass = {
-			OR = {
-				GRE = { 
-					exists = no
-					is_subject_of = ROOT
-					has_capitulated = yes
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			add_state_claim = 184
-			add_state_claim = 731
-			create_wargoal = {
-				type = take_state_focus
-				target = GRE
-			}
-		}
-	}
-	focus = {
-		id = TUR_recaim_kosui
-		icon = GFX_focus_attack_wallace
-		prerequisite = { focus = TUR_return_of_the_sultan }
-		mutually_exclusive = {
-			focus = TUR_befriend_wallace
-		}
-		x = -1
-		y = 1
-		relative_position_id = TUR_return_of_the_sultan
-		cost = 10
-		ai_will_do = {
-			base = 10
-		}
-
-		bypass = {
-			OR = {
-				GRE = { 
-					exists = no
-					is_subject_of = ROOT
-					has_capitulated = yes
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			add_state_claim = 920
-			add_state_claim = 919
-			add_state_claim = 909
-			add_state_claim = 910
-			add_state_claim = 911
-			add_state_claim = 913
-			add_state_claim = 914
-			add_state_claim = 915
-			add_state_claim = 916
-			add_state_claim = 917
-			add_state_claim = 918
-			create_wargoal = {
-				type = take_state_focus
-				target = WAG
-			}
-		}
-	}
+	#focus = {
+#		id = TUR_befriend_wallace
+#		icon = GFX_focus_befriend_wallace
+#		prerequisite = { focus = TUR_return_of_the_sultan }
+#		mutually_exclusive = {
+#			focus = TUR_recaim_kosui
+#		}
+#		x = 1
+#		y = 1
+#		relative_position_id = TUR_return_of_the_sultan
+#		cost = 10
+#		ai_will_do = {
+#			base = 10
+#		}
+#
+#		bypass = {
+#			OR = {
+#				GRE = { 
+#					exists = no
+#					is_subject_of = ROOT
+#					has_capitulated = yes
+#				}
+#			}
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ANNEXATION }
+#		completion_reward = {
+#			add_state_claim = 184
+#			add_state_claim = 731
+#			create_wargoal = {
+#				type = take_state_focus
+#				target = GRE
+#			}
+#		}
+	#}
+	#focus = {
+#		id = TUR_recaim_kosui
+#		icon = GFX_focus_attack_wallace
+#		prerequisite = { focus = TUR_return_of_the_sultan }
+#		mutually_exclusive = {
+#			focus = TUR_befriend_wallace
+#		}
+#		x = -1
+#		y = 1
+#		relative_position_id = TUR_return_of_the_sultan
+#		cost = 10
+#		ai_will_do = {
+#			base = 10
+#		}
+#
+#		bypass = {
+#			OR = {
+#				GRE = { 
+#					exists = no
+#					is_subject_of = ROOT
+#					has_capitulated = yes
+#				}
+#			}
+#		}
+#
+#		search_filters = { FOCUS_FILTER_ANNEXATION }
+#		completion_reward = {
+#			add_state_claim = 920
+#			add_state_claim = 919
+#			add_state_claim = 909
+#			add_state_claim = 910
+#			add_state_claim = 911
+#			add_state_claim = 913
+#			add_state_claim = 914
+#			add_state_claim = 915
+#			add_state_claim = 916
+#			add_state_claim = 917
+#			add_state_claim = 918
+#			create_wargoal = {
+#				type = take_state_focus
+#				target = WAG
+#			}
+#		}
+	#}
 	focus = {
 		id = TUR_reclaim_macedonia
 		icon = GFX_focus_generic_attack_greece
-		prerequisite = { focus = TUR_befriend_wallace focus = TUR_recaim_kosui }
+#		prerequisite = { focus = TUR_befriend_wallace focus = TUR_recaim_kosui }
+		prerequisite = {
+			focus = TUR_return_of_the_sultan
+		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = TUR_return_of_the_sultan
 		cost = 10
 		ai_will_do = {
@@ -2560,14 +2563,9 @@ focus_tree = {
 			OR = {
 				GER = { has_completed_focus = GER_the_central_powers }
 				HUN = { has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary }
-#				if = {
-#					limit = {
-#						has_completed_focus = TUR_befriend_wallace
-#					}
-#					WAG = {
-#						has_completed_focus = WAG_make_despotism
-#					}
-#				}
+				WAG = {
+					has_completed_focus = WAG_our_old_friend
+				}
 			}
 		}
 		mutually_exclusive = { focus = TUR_press_the_austro_hungarian_claim }
@@ -2612,6 +2610,17 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
+					WAG = {
+						has_completed_focus = WAG_our_old_friend
+						has_government = neutrality
+					}
+				}
+				WAG = {
+					country_event = generic.2
+				}
+			}
+			else_if = {
+				limit = {
 					HUN = { has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary }
 				}
 				set_rule = { can_create_factions = yes }
@@ -2626,27 +2635,7 @@ focus_tree = {
 					}
 				}
 			}
-#			else_if = {
-#				limit = {
-#					WAG = {
-#						has_completed_focus = WAG_make_despotism
-#					}
-#				}
-#				set_rule = {
-#					can_create_factions = yes
-#				}
-#				create_faction = GER_central_powers_faction
-#				WAG = {
-#					if = {
-#						limit = {ROOT = {is_in_faction = yes}}
-#						country_event = generic.5
-#					}
-#					else = {
-#						custom_effect_tooltip = invite_to_faction_tt
-#					}
-#				}
-#			}
-#			set_rule = { can_create_factions = yes }
+			set_rule = { can_create_factions = yes }
 		}
 	}
 
@@ -2779,6 +2768,9 @@ focus_tree = {
 		id = TUR_reclaiming_our_lost_empire
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = TUR_aligning_bulgaria }
+		prerequisite = {
+			focus = TUR_aligning_wallace
+		}
 		x = -3
 		y = 1
 		relative_position_id = TUR_aligning_bulgaria
@@ -2823,6 +2815,9 @@ focus_tree = {
 		id = TUR_expanding_the_saadabad_pact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TUR_aligning_bulgaria }
+		prerequisite = {
+			focus = TUR_aligning_wallace
+		}
 		x = -1
 		y = 1
 		relative_position_id = TUR_aligning_bulgaria
@@ -2909,6 +2904,9 @@ focus_tree = {
 		id = TUR_the_damascus_diktat
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TUR_aligning_bulgaria }
+		prerequisite = {
+			focus = TUR_aligning_wallace
+		}
 		x = 1
 		y = 1
 		relative_position_id = TUR_aligning_bulgaria
