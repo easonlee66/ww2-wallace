@@ -1043,6 +1043,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			country_event = PRW.4
 		}
 	}
 	focus={
@@ -1138,6 +1139,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			country_event = PRW.4
 		}
 	}
 	focus={
@@ -1148,7 +1150,7 @@ focus_tree={
 		prerequisite = {
 			focus = WAG_the_communism_revolution
 		}
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -1174,7 +1176,7 @@ focus_tree={
 				if = {
 					limit = { has_idea = WAG_sait_kolu_treat }
 					remove_ideas = WAG_sait_kolu_treat
-				}				
+				}
 			}
 		}
 	}
@@ -1187,8 +1189,12 @@ focus_tree={
 		cost=10
 		available = {
 			has_country_flag = WAG_guaduate_indepence_of_KUR_flag
-			KUR = {
-				exists = yes
+			country_exists = KUR
+		}
+		bypass = {
+			NOT = {
+				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+				country_exists = KUR
 			}
 		}
 		ai_will_do={
@@ -1289,11 +1295,16 @@ focus_tree={
 				is_in_faction_with = WAG
 				has_war_with = ROOT
 			}
+			NOT = {
+				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+				country_exists = KUR
+			}
 		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			country_event = PRW.6
 		}
 	}
 	focus={
@@ -1322,6 +1333,10 @@ focus_tree={
 			IRQ = {
 				is_in_faction_with = WAG
 				has_war_with = ROOT
+			}
+			NOT = {
+				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+				country_exists = KUR
 			}
 		}
 		search_filters={
@@ -1424,7 +1439,14 @@ focus_tree={
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
+		bypass = {
+			NOT = {
+				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+				country_exists = KUR
+			}
+		}
 		completion_reward={
+			country_event = PRW.8
 		}
 	}
 	focus={
@@ -1657,6 +1679,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_stability = 0.1
 		}
 	}
 	focus={
@@ -2220,6 +2243,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_ideas = WAG_morden
 		}
 	}
 	focus={
@@ -2429,11 +2453,16 @@ focus_tree={
 				is_in_faction_with = WAG
 				has_war_with = WAG
 			}
+			NOT = {
+				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+				country_exists = KUR
+			}
 		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			country_event = PRW.7
 		}
 	}
 	focus={
@@ -2980,6 +3009,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			give_guarantee = PER
 		}
 	}
 	focus={
