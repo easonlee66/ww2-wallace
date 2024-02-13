@@ -88,6 +88,9 @@ news_event = {
 			set_capital = {
 				state = 917
 			}
+			set_rule = {
+				can_join_factions = no
+			}
 			declare_war_on = {
 				target = WAG
 				type = civil_war
