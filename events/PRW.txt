@@ -748,10 +748,6 @@ country_event = {
 				type = take_core_state
 			}
 		}
-		add_to_war = {
-			targeted_alliance = KUR
-			enemy = IRQ
-		}
 	}
 }
 
@@ -784,10 +780,6 @@ country_event = {
 				type = take_core_state
 			}
 		}
-		add_to_war = {
-			targeted_alliance = KUR
-			enemy = TUR
-		}
 	}
 }
 
@@ -819,10 +811,6 @@ country_event = {
 				target = KUR
 				type = take_core_state
 			}
-		}
-		add_to_war = {
-			targeted_alliance = KUR
-			enemy = PER
 		}
 	}
 }
