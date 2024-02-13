@@ -23,10 +23,52 @@ ideas = {
 #				stability_factor = 0.2
 			}
 		}
+		WAG_enconomy_first = {
+			picture = generic_build_infrastructure
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_infrastructure_factor = 0.5
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.4
+				production_speed_buildings_factor = 0.2
+				production_factory_max_efficiency_factor = -0.3
+				stability_factor = 0.1
+			}
+		}
+		WAG_face_to_threat = {
+			picture = generic_build_infrastructure
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.3
+				production_speed_arms_factory_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		WAG_politics_in_test = {
+			picture = generic_war_preparation
+			modifier = {
+				weekly_manpower = 5
+			}
+		}
 		WAG_morden = {
 			picture = generic_build_infrastructure
 			modifier = {
 				weekly_manpower = 1.5
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.5
+			}
+		}
+		WAG_ban_social_democracy = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+		WAG_worker_first = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				weekly_manpower = 1
 			}
 		}
 		WAG_world_revolution = {
