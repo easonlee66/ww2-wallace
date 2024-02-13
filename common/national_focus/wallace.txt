@@ -1547,6 +1547,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -1662,7 +1663,11 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_ideas = WAG_ban_social_democracy
 		}
 	}
 	focus={
@@ -1680,6 +1685,10 @@ focus_tree={
 		}
 		completion_reward={
 			add_stability = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
 		}
 	}
 	focus={
@@ -1741,6 +1750,13 @@ focus_tree={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
+			if = {
+				limit = { NOT = {
+					has_idea = civilian_economy
+				} }
+				add_ideas = civilian_economy
+			}
+			add_ideas = WAG_enconomy_first
 		}
 	}
 	focus={
@@ -1796,10 +1812,48 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			OR = {
+				909 = {
+					is_owned_and_controlled_by = WAG
+				}
+				913 = {
+					is_owned_and_controlled_by = WAG
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				909 = {
+					is_owned_and_controlled_by = WAG
+				}
+				913 = {
+					is_owned_and_controlled_by = WAG
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
+			909 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			913 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 	focus={
@@ -1812,10 +1866,115 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			any_state = {
+				OR = {
+					is_controlled_by = WAG
+					AND = {
+						is_controlled_by = KUR
+						KUR = {
+							is_puppet_of = WAG
+						}
+					}
+				}
+				is_core_of = KUR
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					OR = {
+						is_controlled_by = WAG
+						AND = {
+							is_controlled_by = KUR
+							KUR = {
+								is_puppet_of = WAG
+							}
+						}
+					}
+					is_core_of = KUR
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
+			every_state = {
+				limit = {
+					OR = {
+						is_controlled_by = WAG
+						AND = {
+							is_controlled_by = KUR
+							KUR = {
+								is_puppet_of = WAG
+							}
+						}
+					}
+					is_core_of = KUR
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			random_state = {
+				limit = {
+					OR = {
+						is_controlled_by = WAG
+						AND = {
+							is_controlled_by = KUR
+							KUR = {
+								is_puppet_of = WAG
+							}
+						}
+					}
+					is_core_of = KUR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_state = {
+				limit = {
+					OR = {
+						is_controlled_by = WAG
+						AND = {
+							is_controlled_by = KUR
+							KUR = {
+								is_puppet_of = WAG
+							}
+						}
+					}
+					is_core_of = KUR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_state = {
+				limit = {
+					OR = {
+						is_controlled_by = WAG
+						AND = {
+							is_controlled_by = KUR
+							KUR = {
+								is_puppet_of = WAG
+							}
+						}
+					}
+					is_core_of = KUR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 		}
 	}
 	focus={
@@ -1833,6 +1992,24 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			if = {
+				limit = { any_state = {
+					is_controlled_by = WAG
+					is_core_of = KUR
+					NOT = {
+						is_core_of = WAG
+					}
+				} }
+				every_controlled_state = {
+					limit = {
+						is_core_of = KUR
+						NOT = {
+							is_core_of = WAG
+						}
+					}
+					add_core_of = WAG
+				}
+			}
 		}
 	}
 	focus={
@@ -1849,6 +2026,17 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_ideas = WAG_politics_in_test
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = PREV
+				}
+				create_unit = {
+					division = "division_template = \"WCYL\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = PREV
+					count = 5
+				}
+			}
 		}
 	}
 	focus={
@@ -2120,6 +2308,11 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_stability = 0.1
 		}
 	}
 	focus={
@@ -2226,6 +2419,13 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			ENG = {
+				country_event = generic.2
+			}
 		}
 	}
 	focus={
@@ -2902,6 +3102,14 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.1
+			if = {
+				limit = { has_idea = WAG_enconomy_first }
+				swap_ideas = {
+					remove_idea = WAG_enconomy_first
+					add_idea = WAG_face_to_threat
+				}
+			}
 		}
 	}
 	focus={
@@ -2918,6 +3126,11 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -2934,6 +3147,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -2941,6 +3155,23 @@ focus_tree={
 		icon=GFX_goal_generic_fortify_city
 		x=19
 		y=16
+		available = {
+			any_country = {
+				OR = {
+					has_focus_tree = vichy_french_focus
+					AND = {
+						original_tag = GER
+						has_government = fascism
+					}
+					AND = {
+						is_in_faction_with = GER
+						has_government = fascism
+					}
+				}
+				controls_state = 677
+				controls_state = 680
+			}
+		}
 		prerequisite={focus=WAG_anti_fascism}
 		cost=10
 		ai_will_do={
@@ -2950,6 +3181,30 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			909 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+				}
+			}
+			910 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+				}
+			}
+			913 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+				}
+			}
+			917 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+				}
+			}
 		}
 	}
 	focus={
@@ -3933,7 +4188,9 @@ focus_tree={
 						is_in_faction_with = WAG
 					}
 				} }
-				add_to_faction = BUL
+				BUL = {
+					country_event = generic.5
+				}
 			}
 		}
 	}
