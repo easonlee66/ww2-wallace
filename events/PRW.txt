@@ -429,7 +429,7 @@ country_event = {
 				KUR = {
 					transfer_state = 920
 				}
-				puppet = KUR
+				give_guarantee = KUR
 			}
 			declare_war_on = {
 				target = PREV
@@ -557,6 +557,17 @@ country_event = {
 		set_politics = {
 			ruling_party = communism
 			elections_allowed = yes
+		}
+		if = {
+			limit = { has_country_flag = WAG_guaduate_indepence_of_KUR_flag }
+			KUR = {
+				transfer_state = 920
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+			}
+			give_guarantee = KUR
 		}
 #		set_popularities = {
 #			communism = 50
@@ -730,6 +741,108 @@ country_event = {
 		add_to_war = {
 			targeted_alliance = KUR
 			enemy = IRQ
+		}
+	}
+}
+
+country_event = {
+	id = PRW.6
+	title = PRW.6.t
+	desc = PRW.6.d
+	is_triggered_only = yes
+	option = {
+		name = PRW.6.a
+		KUR = {
+			declare_war_on = {
+				target = TUR
+				type = take_core_state
+			}
+		}
+		add_to_war = {
+			targeted_alliance = KUR
+			enemy = TUR
+		}
+	}
+	option = {
+		name = PRW.6.b
+		KUR = {
+			transfer_state = 352
+		}
+		TUR = {
+			declare_war_on = {
+				target = KUR
+				type = take_core_state
+			}
+		}
+		add_to_war = {
+			targeted_alliance = KUR
+			enemy = TUR
+		}
+	}
+}
+
+country_event = {
+	id = PRW.7
+	title = PRW.7.t
+	desc = PRW.7.d
+	is_triggered_only = yes
+	option = {
+		name = PRW.7.a
+		KUR = {
+			declare_war_on = {
+				target = PER
+				type = take_core_state
+			}
+		}
+		add_to_war = {
+			targeted_alliance = KUR
+			enemy = PER
+		}
+	}
+	option = {
+		name = PRW.7.b
+		KUR = {
+			transfer_state = 352
+		}
+		PER = {
+			declare_war_on = {
+				target = KUR
+				type = take_core_state
+			}
+		}
+		add_to_war = {
+			targeted_alliance = KUR
+			enemy = PER
+		}
+	}
+}
+
+country_event = {
+	id = PRW.8
+	title = PRW.8.t
+	desc = PRW.8.d
+	is_triggered_only = yes
+	option = {
+		name = PRW.8.a
+		puppet = KUR
+	}
+	option = {
+		name = PRW.8.b
+	}
+	option = {
+		name = PRW.8.c
+		annex_country = {
+			target = KUR
+		}
+		every_state = {
+			limit = {
+				is_core_of = KUR
+				is_owned_and_controlled_by = WAG
+			}
+			start_resistance = yes
+			set_compliance = 10
+			set_resistance = 50
+			set_garrison_strength = 1.0
 		}
 	}
 }
