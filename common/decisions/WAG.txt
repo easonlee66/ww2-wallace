@@ -7,7 +7,11 @@ WAG_second_civil_war = {
 			always = no
 		}
 		available = {
-			always = no
+			has_country_flag = WAG_second_civil_war
+			NOT = {
+				has_completed_focus = WAG_social_democracy_road
+				original_tag = WAG
+			}
 		}
 		visible = {
 			has_completed_focus = WAG_social_democracy_road
@@ -28,7 +32,11 @@ WAG_second_civil_war = {
 			has_completed_focus = WAG_communism_road
 		}
 		available = {
-			always = no
+			has_country_flag = WAG_second_civil_war
+			NOT = {
+				has_completed_focus = WAG_communism_road
+				original_tag = WAG
+			}
 		}
 #		cancel_if_not_visible = yes
 		timeout_effect = {
@@ -1885,6 +1893,10 @@ WAG_first_two_year_half_plan = {
 		}
 		complete_effect = {
 			set_country_flag = WAG_complete_first_tyhp
+			if = {
+				limit = { has_idea = WAG_first_two_year_half_plan }
+				remove_ideas = WAG_first_two_year_half_plan
+			}
 		}
 	}
 	WAG_bridge_over_kosui = {
