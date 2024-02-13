@@ -1,5 +1,6 @@
 ﻿l_english:
   WAG_second_civil_war:0 "二次内战"
+  WAG_second_civil_war_desc:0 "如今，共产主义者和社会民主主义者之间的分析已经无法弥合，瓦雷斯国已经无法避免地需要再打一次内战，我们必须为第二次内战做好准备"
   WAG_military_plot_sd:0 "军事密谋"
   WAG_military_plot_cm:0 "政府镇压"
   WAG_sth_must_not_doing:0 "没有正在进行的§L准备二次内战§行动"
@@ -16,6 +17,7 @@
   WAG_compromise_to_left:0 "有限妥协"
 
   WAG_second_civil_war_against:0 "反对派准备内战"
+  WAG_second_civil_war_against_desc:0 "除了自己准备内战以外，我们必须关注我们的敌人，"
   WAG_east_wallace_revolution_mission:0 "东瓦革命根据地"
   WAG_guaduate_indepence_of_KUR_mission:0 "保证库尔德斯坦独立"
   WAG_build_up_red_army_mission:0 "建立红军"
