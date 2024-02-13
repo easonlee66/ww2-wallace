@@ -127,5 +127,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = DBG.7.a
+		complete_national_focus = WAG_oppisite_nazi
 	}
 }
