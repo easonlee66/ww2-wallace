@@ -442,7 +442,10 @@ focus_tree={
 					add_idea = partial_economic_mobilisation
 				}
 			}
-			add_ideas = WAG_first_two_year_half_plan
+			add_timed_idea = {
+				idea = WAG_first_two_year_half_plan
+				days = 900
+			}
 			hidden_effect = {
 				910 = {
 					set_state_flag = WAG_south_state
@@ -1325,6 +1328,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			country_event = PRW.5
 		}
 	}
 	focus={
@@ -3138,6 +3142,8 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.1
+			add_stability = -0.1
 		}
 	}
 	focus={
@@ -3246,9 +3252,20 @@ focus_tree={
 			factor=1
 		}
 		search_filters={
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
+			if = {
+				limit = { has_idea = sour_loser }
+				remove_ideas = sour_loser
+			}
+			add_tech_bonus = {
+				name = mw_aircraft
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				bonus = 1
+			}
 		}
 	}
 	focus={
@@ -3446,6 +3463,9 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			FRA = {
+				country_event = WAG.24
+			}
 		}
 	}
 	focus={
@@ -3476,6 +3496,9 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			IRQ = {
+				country_event = WAG.28
+			}
 		}
 	}
 	focus={
@@ -3699,6 +3722,12 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_war_support = 0.1
+			if = {
+				limit = { has_idea = sour_loser }
+				remove_ideas = sour_loser
+			}
+			set_cosmetic_tag = WAG_great_wallace
 		}
 	}
 	focus={
@@ -3736,6 +3765,7 @@ focus_tree={
 				limit = { has_idea = WAG_sait_kolu_treat }
 				remove_ideas = WAG_sait_kolu_treat
 			}
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -3755,7 +3785,74 @@ focus_tree={
 		}
 		completion_reward={
 			add_war_support = 0.1
-			create_faction = GER_central_powers_faction
+			if = {
+				limit = {
+					GER = { 
+						has_government = neutrality
+						has_completed_focus = GER_the_central_powers
+					}
+				}
+				GER = {
+					country_event = { id = generic.2 }
+				}
+			}
+			else_if = {
+				limit = {
+					GER = { 
+						has_government = neutrality
+						NOT = { has_completed_focus = GER_the_central_powers }
+					}
+				}
+				GER = {
+					set_rule = { can_create_factions = yes }
+					create_faction = GER_central_powers_faction
+					country_event = { id = generic.2 }
+				}
+			}
+			else_if = {
+				limit = {
+					TUR = { 
+						has_completed_focus = TUR_return_of_the_sultan
+						has_completed_focus = TUR_join_the_central_powers
+					}
+				}
+				TUR = {
+					country_event = { id = generic.2 }
+				}
+			}
+			else_if = {
+				limit = {
+					TUR = { 
+						has_completed_focus = TUR_return_of_the_sultan
+						NOT = { has_completed_focus = TUR_join_the_central_powers }
+					}
+				}
+				TUR = {
+					set_rule = { can_create_factions = yes }
+					create_faction = GER_central_powers_faction
+					country_event = { id = generic.2 }
+				}
+			}
+			else_if = {
+				limit = {
+					HUN = { has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary }
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction = GER_central_powers_faction
+				HUN = {
+					if = {
+						limit = { ROOT = { is_in_faction = yes } }
+						country_event = generic.5 
+					}
+					else = { 
+						custom_effect_tooltip = invite_to_faction_tt
+					}
+				}
+			}
+			else = {
+				set_rule = { can_create_factions = yes }
+				create_faction = GER_central_powers_faction
+			}
 		}
 	}
 	focus={
@@ -3768,11 +3865,15 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		bypass = {
+			TUR = {
+				is_in_faction_with = WAG
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -3784,6 +3885,11 @@ focus_tree={
 		cost=10
 		ai_will_do={
 			factor=1
+		}
+		bypass = {
+			BUL = {
+				is_in_faction_with = WAG
+			}
 		}
 		available_if_capitulated=yes
 		search_filters={
@@ -3834,6 +3940,30 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			if = {
+				limit = {
+					AUS = { exists = yes }
+				}
+				AUS = {
+					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
+				}
+			}
+			if = {
+				limit = {
+					HUN = { exists = yes }
+				}
+				HUN = {
+					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
+				}
+			}
+			if = {
+				limit = {
+					CZE = { exists = yes }
+				}
+				CZE = {
+					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
+				}
+			}
 		}
 	}
 	focus={
