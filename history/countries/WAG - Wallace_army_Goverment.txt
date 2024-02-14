@@ -13,7 +13,7 @@ set_technology = {
 
 add_ideas = WAG_sait_kolu_treat
 add_ideas = WAG_kosui_mother
-add_ideas = sour_loser
+#add_ideas = sour_loser
 
 set_politics = {
 	ruling_party = fascism
@@ -81,6 +81,11 @@ recruit_character = WAG_abudullah_an_komi
 		democratic = 5
 		neutrality = 15
 		fascism = 75
+	}
+
+	if = {
+		limit = { has_idea = WAG_sait_kolu_treat }
+		remove_ideas = WAG_sait_kolu_treat
 	}
 
 	activate_mission = WAG_nazi_reform_mission
