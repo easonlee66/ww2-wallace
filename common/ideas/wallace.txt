@@ -3,8 +3,9 @@ ideas = {
 		WAG_first_two_year_half_plan = {
 			picture = generic_build_infrastructure
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.2
-				production_factory_max_efficiency_factor = 0.3
+#				production_factory_efficiency_gain_factor = 0.2
+#				production_factory_max_efficiency_factor = 0.3
+				industrial_factory_donations = 0.3
 				military_factory_donations = 1
 				production_speed_buildings_factor = 1
 #				production_oil_factor = 0.5
@@ -31,7 +32,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = -0.4
 				production_speed_buildings_factor = 0.2
-				production_factory_max_efficiency_factor = -0.3
+				industrial_factory_donations = -0.3
+#				production_factory_max_efficiency_factor = -0.3
 				stability_factor = 0.1
 			}
 		}
@@ -69,12 +71,31 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			modifier = {
 				weekly_manpower = 1
+				stability_factor = 0.1
+				industrial_factory_donations = 0.1
+			}
+		}
+		WAG_all_people_to_industry = {
+			picture = generic_build_infrastructure
+			modifier = {
+				weekly_manpower = 1
+#				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.2
+				industrial_factory_donations = 0.2
 			}
 		}
 		WAG_shared_burdenss = {
 			picture = generic_communism_drift_bonus
 			modifier = {
 				consumer_goods_factor = -0.1
+			}
+		}
+		WAG_remove_against = {
+			picture = generic_oppression
+			modifier = {
+				stability_weekly = -0.01
+				industrial_factory_donations = 0.1
+				army_attack_factor = 0.1
 			}
 		}
 		WAG_world_revolution = {

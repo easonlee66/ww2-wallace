@@ -1800,6 +1800,13 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_stability = 0.1
+			add_war_support = -0.1
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 		}
 	}
 	focus={
@@ -2255,6 +2262,29 @@ focus_tree={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
+			add_tech_bonus = {
+				name = SPR_soviet_industrial_aid
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_timed_idea = { idea = SPR_soviet_industrial_aid days = 730 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_soviet_industrial_aid_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus={
@@ -2360,6 +2390,120 @@ focus_tree={
 		}
 		completion_reward={
 			add_ideas = SPR_collectivized_society
+			custom_effect_tooltip = SOV_the_collectivization_process_ns_tt
+
+			add_stability = -0.05
+			add_war_support = -0.05
+
+			if = { #Target a rural state with no civs
+				limit = {
+					any_owned_state = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+							has_state_category = city
+						}
+						is_fully_controlled_by = ROOT
+						industrial_complex < 5
+						arms_factory < 1
+						dockyard < 1
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						industrial_complex < 5
+						arms_factory < 1
+						dockyard < 1
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = { #Failsafe 1: Target a random rural state
+				limit = {
+					any_owned_state = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = { #Failsafe 2: Target a random state
+				limit = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+
+			SOV_paranoia_medium_decrease_effect = yes
 		}
 	}
 	focus={
@@ -2403,6 +2547,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_ideas = SPR_class_war_2
 		}
 	}
 	focus={
@@ -2754,6 +2899,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_ideas = WAG_remove_against
 		}
 	}
 	focus={
@@ -3047,6 +3193,30 @@ focus_tree={
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward={
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.1
+			}
+			add_to_tech_sharing_group = spr_research
+			SOV = { add_to_tech_sharing_group = spr_research }
+			add_tech_bonus = {
+				name = SPR_soviet_technological_advancements
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = SPR_soviet_technological_advancements
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = SPR_soviet_technological_advancements
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
 		}
 	}
 	focus={
@@ -3091,6 +3261,15 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			SOV = {
+				add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
+				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+			}
+			custom_effect_tooltip = SPR_expand_soviet_aid_tt
 		}
 	}
 	focus={
@@ -3255,6 +3434,65 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			SOV = {
+				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
+				add_ai_strategy = { type = send_lend_lease_desire id = SPR value = 200 }
+			}
+			add_timed_idea = { idea = SPR_equipment_shipments_spain days = 730 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus={
