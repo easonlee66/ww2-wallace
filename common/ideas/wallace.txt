@@ -71,6 +71,12 @@ ideas = {
 				weekly_manpower = 1
 			}
 		}
+		WAG_shared_burdenss = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
 		WAG_world_revolution = {
 			picture = generic_communism_drift_bonus
 			modifier = {

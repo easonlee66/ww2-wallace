@@ -2173,6 +2173,9 @@ focus_tree={
 		icon = GFX_goal_generic_major_war
 		x=11
 		y=13
+		will_lead_to_war_with = IRQ
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = TUR
 		prerequisite={focus=WAG_defeat_seed}
 		prerequisite={focus=WAG_revolution_never_stop}
 		cost=10
@@ -2584,6 +2587,7 @@ focus_tree={
 		icon=GFX_focus_attack_soviet
 		x=9
 		y=14
+		will_lead_to_war_with = SOV
 		prerequisite={focus=WAG_a_red_SYR}
 		mutually_exclusive={focus=WAG_our_true_enemy }
 		cost=10
@@ -2956,6 +2960,7 @@ focus_tree={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
+			add_ideas = WAG_shared_burdenss
 		}
 	}
 	focus={
@@ -3117,6 +3122,8 @@ focus_tree={
 		icon=GFX_focus_attack_germany
 		x=19
 		y=15
+		will_lead_to_war_with = VIC
+		will_lead_to_war_with = GER
 		prerequisite={focus=WAG_face_to_threat}
 		cost=10
 		ai_will_do={
@@ -3255,6 +3262,7 @@ focus_tree={
 		icon = GFX_goal_generic_major_alliance
 		x=21
 		y=16
+		will_lead_to_war_with = GER
 		prerequisite={focus=WAG_anti_SOV}
 		cost=10
 		ai_will_do={
@@ -3558,6 +3566,7 @@ focus_tree={
 		icon = GFX_focus_attack_france
 		x=0
 		y=4
+		will_lead_to_war_with = FRA
 		prerequisite={focus=WAG_honor_of_second_empire}
 		cost=10
 		ai_will_do={
@@ -3731,6 +3740,7 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		will_lead_to_war_with = FRA
 		offset = {
 			x = -6
 			y = 0
@@ -3741,6 +3751,30 @@ focus_tree={
 						option = HIDE
 					}
 					has_completed_focus = WAG_free_election
+				}
+			}
+		}
+		available = {
+			FRA = {
+				controls_state = 680
+				controls_state = 554
+				controls_state = 553
+				NOT = {
+					is_in_faction_with = WAG
+					has_war_with = WAG
+					has_capitulated = yes
+				}
+			}
+		}
+		bypass = {
+			FRA = {
+				is_in_faction_with = WAG
+				has_war_with = WAG
+				has_capitulated = yes
+				NOT = {
+					controls_state = 680
+					controls_state = 554
+					controls_state = 553
 				}
 			}
 		}
@@ -3758,8 +3792,22 @@ focus_tree={
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x=10
 		y=3
+		will_lead_to_war_with = IRQ
 		prerequisite={focus=WAG_end_saint_kolu_treat}
 		cost=10
+		available = {
+			IRQ = {
+				exists = yes
+			}
+		}
+		bypass = {
+			IRQ = {
+				exists = no
+				is_in_faction_with = WAG
+				is_puppet = yes
+				has_war_with = WAG
+			}
+		}
 		ai_will_do={
 			factor=1
 		}
@@ -3990,6 +4038,44 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			676 = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			291 = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			675 = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			680 = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			554 = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			553 = {
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
 		offset = {
 			x = -6
 			y = 0
@@ -4145,6 +4231,7 @@ focus_tree={
 		icon = GFX_focus_TUR_pivot_to_the_past
 		x=0
 		y=6
+		will_lead_to_war_with = TUR
 		prerequisite={focus=WAG_our_old_friend}
 		cost=10
 		ai_will_do={
@@ -4199,6 +4286,7 @@ focus_tree={
 		icon = GFX_focus_ger_oppose_hitler
 		x=0
 		y=7
+		will_lead_to_war_with = GER
 		prerequisite={focus=WAG_bringback_sudan}
 		prerequisite={focus=WAG_unite_BUL}
 		cost=10
@@ -4275,6 +4363,8 @@ focus_tree={
 		icon = GFX_goal_generic_demand_territory
 		x=1
 		y=9
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = ENG
 		prerequisite={focus=WAG_rebuild_central_power}
 		cost=10
 		ai_will_do={
@@ -4320,6 +4410,7 @@ focus_tree={
 		icon=GFX_focus_attack_soviet
 		x=11
 		y=6
+		will_lead_to_war_with = SOV
 		prerequisite={focus=WAG_form_great_wallace}
 		prerequisite={focus=WAG_wargaming_division}
 		cost=10
