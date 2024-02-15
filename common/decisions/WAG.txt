@@ -1915,6 +1915,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		days_remove = 70
 		cost = 50
@@ -1995,6 +1998,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		days_remove = 50
 		cost = 50
@@ -2037,6 +2043,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		days_remove = 70
 		cost = 50
@@ -2126,6 +2135,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		days_remove = 30
 		cost = 50
@@ -2166,6 +2178,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		cost = 50
 		days_remove = 50
@@ -2201,6 +2216,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		cost = 50
 		days_remove = 30
