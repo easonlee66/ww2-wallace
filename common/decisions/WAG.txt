@@ -1843,6 +1843,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		cancel_trigger = {
 			has_country_flag = WAG_complete_first_tyhp
@@ -1890,6 +1893,9 @@ WAG_first_two_year_half_plan = {
 		}
 		visible = {
 			num_of_factories > 50
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		complete_effect = {
 			set_country_flag = WAG_complete_first_tyhp
