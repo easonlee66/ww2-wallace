@@ -2020,7 +2020,10 @@ WAG_first_two_year_half_plan = {
 			}
 		}
 		cancel_trigger = {
-			has_country_flag = WAG_complete_first_tyhp
+			custom_trigger_tooltip = {
+				tooltip = WAG_ftyh_plan_trigger
+				has_country_flag = WAG_complete_first_tyhp
+			}
 		}
 		cancel_effect = {
 			effect_tooltip = {
@@ -2070,7 +2073,9 @@ WAG_first_two_year_half_plan = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = WAG_complete_first_tyhp
+			hidden_effect = {
+				set_country_flag = WAG_complete_first_tyhp
+			}
 			if = {
 				limit = { has_idea = WAG_first_two_year_half_plan }
 				remove_ideas = WAG_first_two_year_half_plan
@@ -2157,7 +2162,7 @@ WAG_first_two_year_half_plan = {
 				id = WAG_news.1
 				days = 1
 			}
-			set_country_flag = WAG_complete_bridge_over_kosui
+#			set_country_flag = WAG_complete_bridge_over_kosui
 		}
 	}
 	WAG_Mt.Iron_mining = {
@@ -2194,7 +2199,9 @@ WAG_first_two_year_half_plan = {
 					amount = 8
 				}
 			}
-			set_country_flag = WAG_ftyhp_mt_iron
+			hidden_effect = {
+				set_country_flag = WAG_ftyhp_mt_iron
+			}
 		}
 	}
 	WAG_kosui_hydropower_station = {
@@ -2268,7 +2275,7 @@ WAG_first_two_year_half_plan = {
 		icon = GFX_decision_generic_special_project
 		available = {
 			has_tech = construction2
-			has_country_flag = WAG_complete_bridge_over_kosui
+#			has_country_flag = WAG_complete_bridge_over_kosui
 			num_of_civilian_factories_available_for_projects > 1
 			always = no
 		}
@@ -2408,6 +2415,29 @@ WAG_first_two_year_half_plan = {
 					type = industrial_complex
 					level = 1
 				}
+			}
+		}
+	}
+	WAG_develop = {
+		icon = GFX_decision_generic_special_project
+		available = {
+			has_tech = construction1
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+			has_completed_focus = WAG_first_two_year_half_plan
+			NOT = {
+				has_country_flag = WAG_complete_first_tyhp
+			}
+		}
+		cost = 50
+		days_remove = 30
+		remove_effect = {
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = WAG
+				}
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}

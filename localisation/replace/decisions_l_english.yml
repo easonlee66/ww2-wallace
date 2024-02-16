@@ -72,12 +72,15 @@
 
   WAG_first_two_year_half_plan:0 "第一个两年半计划"
   WAG_ftyh_plan:0 "第一个两年半计划"
+  WAG_ftyh_plan_trigger:0 "已超额完成第一个两年半计划"
+  WAG_complete_ftyh_plan:0 "超额完成第一个两年半计划"
   WAG_bridge_over_kosui:0 "口水河特大桥"
   WAG_Mt.Iron_mining:0 "开采铁山铁矿"
   WAG_build_railway:0 "建设铁路网"
   WAG_repair_air_base:0 "修缮口水堡机场"
   WAG_find_oil_in_south:0 "勘探石油"
   WAG_build_factory:0 "建设工厂"
+  WAG_develop:0 "开发地块"
 
   WAG_nazi_reform_mission:0 "军事密谋"
   WAG_nazi_reform_custom_tooltip:0 "瓦雷斯国将会发生叛乱"
