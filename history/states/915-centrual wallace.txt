@@ -4,7 +4,7 @@ state={
 	history={
 		owner = WAG
 		victory_points = {
-			10804 1
+			10804 5
 		}
 		buildings = {
 #			infrastructure = 3
