@@ -53,6 +53,7 @@ focus_tree={
 		}
 		
 		completion_reward={
+			army_experience = 5
 			country_event=PRW.1
 		}
 	}
@@ -84,7 +85,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			add_stability=0.4
+			add_stability=0.2
 			add_political_power=10
 			add_popularity={
 				ideology=fascism
@@ -3584,6 +3585,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			army_experience = 5
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
@@ -3641,6 +3643,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			army_experience = 5
 		}
 	}
 	focus={
