@@ -2452,9 +2452,19 @@ WAG_nazi_reform = {
 			always = no
 #			has_completed_focus = WAG_nazi_reform
 		}
+		available = {
+			has_completed_focus = WAG_operation_black
+		}
+		complete_effect = {
+			custom_effect_tooltip = WAG_nazi_reform_custom_tooltip
+			hidden_effect = {
+				set_country_flag = WAG_nazi_reform_finish
+			}
+		}
 		timeout_effect = {
 			custom_effect_tooltip = WAG_nazi_reform_custom_tooltip
 			hidden_effect = {
+				set_country_flag = WAG_nazi_reform_finish
 				start_civil_war = {
 					ideology = democratic
 					ruling_party = fascism
@@ -2514,6 +2524,37 @@ WAG_nazi_reform = {
 	#					popularity = 0.05
 	#				}
 			}
+		}
+	}
+	WAG_tu = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_completed_focus = WAG_nazi_reform
+		}
+		visible = {
+			has_completed_focus = WAG_nazi_reform
+			NOT = {
+				has_country_flag = WAG_nazi_reform_finish
+			}
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			add_manpower = -100
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_political_power = 30
+			
 		}
 	}
 }
