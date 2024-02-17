@@ -3897,6 +3897,11 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			set_variable = {
+				var = WAG_nazi_reform_progress
+				value = 0
+			}
+			activate_mission = WAG_nazi_reform_mission
 		}
 	}
 	focus={
