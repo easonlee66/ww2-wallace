@@ -1273,12 +1273,11 @@ focus_tree={
 		}
 		available = {
 			TUR = {
-				owns_state = 352
-				owns_state = 353
-				owns_state = 800
-				controls_state = 352
-				controls_state = 353
-				controls_state = 800
+				OR = {
+					controls_state = 352
+					controls_state = 353
+					controls_state = 800
+				}
 			}
 		}
 		bypass = {

@@ -1954,6 +1954,7 @@ WAG_second_civil_war_against = {
 					state = 917
 					state = 914
 					state = 912
+					state = 920
 				}
 				NOT = {
 					has_state_flag = WAG_second_civil_war_against
@@ -2228,6 +2229,7 @@ WAG_first_two_year_half_plan = {
 		}
 		days_remove = 70
 		cost = 50
+		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
 				state = 918
@@ -2266,7 +2268,7 @@ WAG_first_two_year_half_plan = {
 				}
 				add_resource = {
 					type = steel
-					amount = 2
+					amount = 4
 				}
 			}
 		}
@@ -2361,6 +2363,9 @@ WAG_first_two_year_half_plan = {
 				has_country_flag = WAG_complete_first_tyhp
 			}
 		}
+		modifier = {
+			civilian_factory_use = 2
+		}
 		cost = 50
 		days_remove = 50
 		remove_effect = {
@@ -2379,7 +2384,7 @@ WAG_first_two_year_half_plan = {
 				WAG = {
 					add_resource = {
 						type = oil
-						amount = 1
+						amount = 5
 						state = PREV
 					}
 				}
@@ -2429,6 +2434,9 @@ WAG_first_two_year_half_plan = {
 			NOT = {
 				has_country_flag = WAG_complete_first_tyhp
 			}
+		}
+		modifier = {
+			civilian_factory_use = 1
 		}
 		cost = 50
 		days_remove = 30

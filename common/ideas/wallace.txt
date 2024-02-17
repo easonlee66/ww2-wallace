@@ -20,7 +20,7 @@ ideas = {
 			picture = generic_oppression
 			modifier = {
 				surrender_limit = 0.2
-				stability_weekly = 1
+				stability_weekly = 0.05
 #				stability_factor = 0.2
 			}
 		}
@@ -50,13 +50,13 @@ ideas = {
 		WAG_politics_in_test = {
 			picture = generic_war_preparation
 			modifier = {
-				weekly_manpower = 5
+				weekly_manpower = 500
 			}
 		}
 		WAG_morden = {
 			picture = generic_build_infrastructure
 			modifier = {
-				weekly_manpower = 1.5
+				weekly_manpower = 1500
 				consumer_goods_factor = -0.1
 				production_speed_buildings_factor = 0.5
 			}
