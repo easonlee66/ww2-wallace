@@ -260,3 +260,4 @@ TTS = "countries/The Two Sicilies.txt"
 #USW = "countries/United States of Wallace"
 
 WAG = "countries/Wallace_army_Goverment.txt"
+AMI = "countries/Aminoac.txt"
