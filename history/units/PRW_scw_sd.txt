@@ -84,11 +84,15 @@ division_template = {
 		}
 	}
 	support = {
-		artillery_brigade = {
+		artillery = {
 			x = 0
 			y = 0
 		}
-		anti_tank_brigade = {
+#		artillery_brigade = {
+#			x = 0
+#			y = 0
+#		}
+		anti_tank = {
 			x = 0
 			y = 1
 		}
