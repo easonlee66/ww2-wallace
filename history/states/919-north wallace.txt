@@ -6,10 +6,10 @@ state={
 		victory_points = {
 			12387 1
 		}
-		add_core_of = TUR
-		add_core_of = WAG
-		add_core_of = KUR
 		add_core_of = AMI
+		add_core_of = TUR
+#		add_core_of = WAG
+		add_core_of = KUR
 	}
 	provinces={
 		12387 
