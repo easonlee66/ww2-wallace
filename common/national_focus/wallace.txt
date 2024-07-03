@@ -18,19 +18,21 @@ focus_tree={
 		x=6
 		y=0
 		relative_position_id = WAG_free_election
-		mutually_exclusive={ focus=WAG_revive_the_empire focus = WAG_free_election }
+#		mutually_exclusive={ focus=WAG_revive_the_empire focus = WAG_free_election }
 		allow_branch={
 			if={
 				limit={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+#					}
+					always = yes
 				}
-				NOT={
-					has_completed_focus=WAG_revive_the_empire
-					has_completed_focus = WAG_free_election
-				}
+#				NOT={
+#					has_completed_focus=WAG_revive_the_empire
+#					has_completed_focus = WAG_free_election
+#				}
+				always = no
 			}
 		}
 		available = {
@@ -115,23 +117,24 @@ focus_tree={
 			factor=3
 		}
 		allow_branch = {
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}  }
-				NOT = {
-					has_completed_focus = WAG_revive_the_empire
-					has_completed_focus = WAG_free_election
-				}
-				if = {
-					limit = { has_country_flag = WAG_second_civil_war }
-					NOT = {
-						has_completed_focus = WAG_middle_road
-						has_completed_focus = WAG_communism_road
-					}
-				}
-			}
+			always = no
+#			if = {
+#				limit = { has_game_rule = {
+#					rule = obsolete_focus_branches_visibility
+#					option = HIDE
+#				}  }
+#				NOT = {
+#					has_completed_focus = WAG_revive_the_empire
+#					has_completed_focus = WAG_free_election
+#				}
+#				if = {
+#					limit = { has_country_flag = WAG_second_civil_war }
+#					NOT = {
+#						has_completed_focus = WAG_middle_road
+#						has_completed_focus = WAG_communism_road
+#					}
+#				}
+#			}
 		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
@@ -171,23 +174,24 @@ focus_tree={
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}  }
-				NOT = {
-					has_completed_focus = WAG_revive_the_empire
-					has_completed_focus = WAG_free_election
-				}
-				if = {
-					limit = { has_country_flag = WAG_second_civil_war }
-					NOT = {
-						has_completed_focus = WAG_middle_road
-						has_completed_focus = WAG_social_democracy_road
-					}
-				}
-			}
+			always = no
+#			if = {
+#				limit = { has_game_rule = {
+#					rule = obsolete_focus_branches_visibility
+#					option = HIDE
+#				}  }
+#				NOT = {
+#					has_completed_focus = WAG_revive_the_empire
+#					has_completed_focus = WAG_free_election
+#				}
+#				if = {
+#					limit = { has_country_flag = WAG_second_civil_war }
+#					NOT = {
+#						has_completed_focus = WAG_middle_road
+#						has_completed_focus = WAG_social_democracy_road
+#					}
+#				}
+#			}
 		}
 		
 		search_filters={
@@ -870,23 +874,24 @@ focus_tree={
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}  }
-				NOT = {
-					has_completed_focus = WAG_revive_the_empire
-					has_completed_focus = WAG_free_election
-				}
-				if = {
-					limit = { has_country_flag = WAG_second_civil_war }
-					NOT = {
-						has_completed_focus = WAG_social_democracy_road
-						has_completed_focus = WAG_communism_road
-					}
-				}
-			}
+			always = no
+#			if = {
+#				limit = { has_game_rule = {
+#					rule = obsolete_focus_branches_visibility
+#					option = HIDE
+#				}  }
+#				NOT = {
+#					has_completed_focus = WAG_revive_the_empire
+#					has_completed_focus = WAG_free_election
+#				}
+#				if = {
+#					limit = { has_country_flag = WAG_second_civil_war }
+#					NOT = {
+#						has_completed_focus = WAG_social_democracy_road
+#						has_completed_focus = WAG_communism_road
+#					}
+#				}
+#			}
 		}
 		
 		search_filters={
@@ -1179,17 +1184,18 @@ focus_tree={
 			factor=1
 		}
 		allow_branch = {
-			has_country_flag = WAG_second_civil_war
-			has_completed_focus = WAG_communism_road
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				} }
-				NOT = {
-					has_completed_focus = WAG_no_border_for_worker
-				}
-			}
+			always = no
+#			has_country_flag = WAG_second_civil_war
+#			has_completed_focus = WAG_communism_road
+#			if = {
+#				limit = { has_game_rule = {
+#					rule = obsolete_focus_branches_visibility
+#					option = HIDE
+#				} }
+#				NOT = {
+#					has_completed_focus = WAG_no_border_for_worker
+#				}
+#			}
 		}
 		offset = {
 			x = 2
@@ -1314,24 +1320,25 @@ focus_tree={
 		x=-4
 		y=0
 		relative_position_id = WAG_build_communism_in_one_country
-		prerequisite={focus=WAG_never_surrunder_com}
-		mutually_exclusive={focus=WAG_build_communism_in_one_country }
+#		prerequisite={focus=WAG_never_surrunder_com}
+#		mutually_exclusive={focus=WAG_build_communism_in_one_country }
 		cost=10
 		ai_will_do={
 			factor=1
 		}
 		allow_branch = {
-			has_country_flag = WAG_second_civil_war
-			has_completed_focus = WAG_communism_road
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				} }
-				NOT = {
-					has_completed_focus = WAG_build_communism_in_one_country
-				}
-			}
+			always = no
+#			has_country_flag = WAG_second_civil_war
+#			has_completed_focus = WAG_communism_road
+#			if = {
+#				limit = { has_game_rule = {
+#					rule = obsolete_focus_branches_visibility
+#					option = HIDE
+#				} }
+#				NOT = {
+#					has_completed_focus = WAG_build_communism_in_one_country
+#				}
+#			}
 		}
 		available = {
 			has_war = no
@@ -1399,132 +1406,13 @@ focus_tree={
 		}
 	}
 	focus={
-		id=WAG_befriend_SOV
-		icon=GFX_focus_generic_soviet_politics
-		x=2
-		y=1
-		relative_position_id = WAG_no_border_for_worker
-		prerequisite={focus=WAG_no_border_for_worker focus=WAG_build_communism_in_one_country }
-		mutually_exclusive={focus=WAG_special_road_for_wallace focus=WAG_the_forth_internaion }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		offset = {
-			x=2
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_build_communism_in_one_country
-					has_completed_focus = WAG_befriend_SOV
-				}
-			}
-		}
-		offset = {
-			x=-2
-			y=0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_no_border_for_worker
-					has_completed_focus = WAG_befriend_SOV
-				}
-			}
-		}
-		allow_branch = {
-			has_country_flag = WAG_second_civil_war
-			has_completed_focus = WAG_communism_road
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				} }
-				NOT = {
-					has_completed_focus = WAG_special_road_for_wallace
-					has_completed_focus = WAG_the_forth_internaion
-				}
-			}
-		}
-		available = {
-			SOV = {
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		bypass = {
-			is_in_faction_with = SOV
-		}
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_special_road_for_wallace
-		icon = GFX_goal_generic_position_armies
-		x=2
-		y=1
-		relative_position_id = WAG_build_communism_in_one_country
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					OR = {
-						has_completed_focus = WAG_special_road_for_wallace
-					}
-				}
-			}
-		}
-		prerequisite={focus=WAG_build_communism_in_one_country}
-		mutually_exclusive={focus=WAG_befriend_SOV focus=WAG_the_forth_internaion }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		allow_branch = {
-			has_country_flag = WAG_second_civil_war
-			has_completed_focus = WAG_communism_road
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				} }
-				NOT = {
-					has_completed_focus = WAG_befriend_SOV
-					has_completed_focus = WAG_the_forth_internaion
-					has_completed_focus = WAG_no_border_for_worker
-				}
-			}
-		}
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
-			add_war_support = 0.1
-		}
-	}
-	focus={
 		id=WAG_the_forth_internaion
 		icon=GFX_goal_support_fourth_int
 		x=-2
 		y=1
 		relative_position_id = WAG_no_border_for_worker
 		prerequisite={focus=WAG_no_border_for_worker}
-		mutually_exclusive={focus=WAG_befriend_SOV focus=WAG_special_road_for_wallace }
+#		mutually_exclusive={focus=WAG_befriend_SOV focus=WAG_special_road_for_wallace }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -1543,19 +1431,20 @@ focus_tree={
 			}
 		}
 		allow_branch = {
-			has_country_flag = WAG_second_civil_war
-			has_completed_focus = WAG_communism_road
-			if = {
-				limit = { has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				} }
-				NOT = {
-					has_completed_focus = WAG_befriend_SOV
-					has_completed_focus = WAG_special_road_for_wallace
-					has_completed_focus = WAG_build_communism_in_one_country
-				}
-			}
+			always = no
+#			has_country_flag = WAG_second_civil_war
+#			has_completed_focus = WAG_communism_road
+#			if = {
+#				limit = { has_game_rule = {
+#					rule = obsolete_focus_branches_visibility
+#					option = HIDE
+#				} }
+#				NOT = {
+#					has_completed_focus = WAG_befriend_SOV
+#					has_completed_focus = WAG_special_road_for_wallace
+#					has_completed_focus = WAG_build_communism_in_one_country
+#				}
+#			}
 		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
@@ -1569,8 +1458,12 @@ focus_tree={
 		icon=GFX_focus_generic_strike_at_democracy2
 		x=2
 		y=1
-		relative_position_id = WAG_the_forth_internaion
-		prerequisite={focus=WAG_the_forth_internaion focus=WAG_befriend_SOV }
+		relative_position_id = WAG_befriend_SOV
+		prerequisite = {
+			focus = WAG_befriend_SOV
+		}
+#		relative_position_id = WAG_the_forth_internaion
+#		prerequisite={focus=WAG_the_forth_internaion focus=WAG_befriend_SOV }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -2916,96 +2809,6 @@ focus_tree={
 		}
 	}
 	focus={
-		id=WAG_revive_the_empire
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x=3
-		y=0
-		mutually_exclusive={focus=WAG_free_election focus = WAG_oppisite_nazi }
-		allow_branch={
-			if={
-				limit={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-				}
-				NOT={
-					has_completed_focus=WAG_oppisite_nazi
-					has_completed_focus = WAG_free_election
-				}
-			}
-		}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
-			army_experience = 5
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-			set_cosmetic_tag = WAG_neutrality
-			add_war_support = 0.1
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
-		}
-	}
-	focus={
-		id=WAG_free_election
-		icon = GFX_goal_support_fascism
-		x=12
-		y=0
-		relative_position_id = WAG_revive_the_empire
-		mutually_exclusive={focus=WAG_revive_the_empire focus = WAG_oppisite_nazi }
-		allow_branch={
-			if={
-				limit={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
-				}
-				NOT={
-					has_completed_focus=WAG_revive_the_empire
-					has_completed_focus = WAG_oppisite_nazi
-				}
-			}
-		}
-		offset = {
-			x = -6
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_free_election
-				}
-			}
-		}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
-			army_experience = 5
-		}
-	}
-	focus={
 		id=WAG_long_live_Zayank_XI
 		icon = GFX_focus_ITA_dino_grandi
 		x=2
@@ -3019,17 +2822,22 @@ focus_tree={
 		}
 		allow_branch={
 			if={
-				limit={
-					has_game_rule={
-						rule=obsolete_focus_branches_visibility
-						option=HIDE
-					}
+				limit = {
+					always = yes
 				}
-				NOT={
-					has_completed_focus=WAG_oppisite_nazi
-					has_completed_focus = WAG_free_election
-					has_completed_focus = WAG_find_new_emperor
-				}
+				always = no
+#				limit={
+#					has_game_rule={
+#						rule=obsolete_focus_branches_visibility
+#						option=HIDE
+#					}
+#				}
+#				NOT={
+#					has_completed_focus=WAG_oppisite_nazi
+#					has_completed_focus = WAG_free_election
+#					has_completed_focus = WAG_find_new_emperor
+#				}
+#				always = no
 			}
 		}
 		search_filters={
@@ -3043,7 +2851,7 @@ focus_tree={
 	focus={
 		id=WAG_find_new_emperor
 		icon = GFX_focus_ger_return_of_the_kaiser
-		x=-2
+		x=0
 		y=1
 		relative_position_id = WAG_revive_the_empire
 		prerequisite={focus=WAG_revive_the_empire}
@@ -3081,23 +2889,27 @@ focus_tree={
 	focus={
 		id=WAG_end_saint_kolu_treat
 		icon = GFX_goal_generic_forceful_treaty
-		x=4
+		x=-6
 		y=1
-		relative_position_id = WAG_long_live_Zayank_XI
-		offset = {
-			x = -6
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = WAG_free_election
-				}
-			}
+		relative_position_id = WAG_befriend_GER
+		prerequisite = {
+			focus = WAG_befriend_GER
 		}
-		prerequisite={focus=WAG_befriend_GER focus=WAG_long_live_Zayank_XI }
+#		relative_position_id = WAG_long_live_Zayank_XI
+#		offset = {
+#			x = -6
+#			y = 0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_free_election
+#				}
+#			}
+#		}
+#		prerequisite={focus=WAG_befriend_GER focus=WAG_long_live_Zayank_XI }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3217,7 +3029,7 @@ focus_tree={
 	focus={
 		id=WAG_nazi_reform
 		icon = GFX_goal_generic_more_territorial_claims
-		x=2
+		x=-4
 		y=1
 		offset = {
 			x = -6
@@ -3232,8 +3044,12 @@ focus_tree={
 				}
 			}
 		}
-		relative_position_id = WAG_long_live_Zayank_XI
-		prerequisite={focus=WAG_befriend_GER focus=WAG_long_live_Zayank_XI }
+		relative_position_id = WAG_befriend_GER
+#		relative_position_id = WAG_long_live_Zayank_XI
+		prerequisite = {
+			focus = WAG_befriend_GER
+		}
+#		prerequisite={focus=WAG_befriend_GER focus=WAG_long_live_Zayank_XI }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3947,6 +3763,608 @@ focus_tree={
 		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_fight_for_independence
+		x=9
+		y=0
+		mutually_exclusive={focus=WAG_connect_with_west }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_connect_with_west
+		x=16
+		y=0
+		mutually_exclusive={focus=WAG_fight_for_independence }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_abandon_the_westminster_system
+		x=7
+		y=1
+		prerequisite={focus=WAG_fight_for_independence}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_prepare_for_the_war
+		x=13
+		y=1
+		prerequisite={focus=WAG_fight_for_independence}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_problem_of_AMI
+		x=23
+		y=1
+		prerequisite={focus=WAG_connect_with_west focus=WAG_fight_for_independence }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_remove_Aminoac
+		x=20
+		y=2
+		prerequisite={focus=WAG_problem_of_AMI}
+		mutually_exclusive={focus=WAG_aminoac_autonomies_zone focus=WAG_AMI_kindom }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_aminoac_autonomies_zone
+		x=26
+		y=2
+		prerequisite={focus=WAG_problem_of_AMI}
+		mutually_exclusive={focus=WAG_remove_Aminoac focus=WAG_AMI_kindom }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_AMI_kindom
+		x=23
+		y=2
+		prerequisite={focus=WAG_problem_of_AMI}
+		mutually_exclusive={focus=WAG_remove_Aminoac focus=WAG_aminoac_autonomies_zone }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_ask_for_supports
+		x=15
+		y=1
+		prerequisite={focus=WAG_connect_with_west}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_our_lost_land
+		x=17
+		y=1
+		prerequisite={focus=WAG_connect_with_west}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_honor_of_the_empire_navral
+		x=33
+		y=0
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_rebuild_submine
+		x=31
+		y=1
+		prerequisite={focus=WAG_honor_of_the_empire_navral}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_rebuild_
+		x=35
+		y=1
+		prerequisite={focus=WAG_honor_of_the_empire_navral}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_step_to_time
+		x=43
+		y=0
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_free_election
+		icon = GFX_goal_support_fascism
+		x=-4
+		y=1
+		relative_position_id = WAG_abandon_the_westminster_system
+		prerequisite = {
+			focus = WAG_abandon_the_westminster_system
+		}
+		mutually_exclusive = {
+			focus = WAG_our_own_path
+			focus = WAG_befriend_SOV
+		}
+#		relative_position_id = WAG_revive_the_empire
+#		mutually_exclusive={focus=WAG_revive_the_empire focus = WAG_oppisite_nazi }
+		allow_branch={
+			if={
+				limit={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+				}
+				NOT={
+					has_completed_focus=WAG_revive_the_empire
+					has_completed_focus = WAG_oppisite_nazi
+				}
+			}
+		}
+#		offset = {
+#			x = -6
+#			y = 0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_free_election
+#				}
+#			}
+#		}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+			army_experience = 5
+		}
+	}
+	focus={
+		id=WAG_arabic_friends
+		x=0
+		y=1
+		prerequisite={focus=WAG_connect_with_west focus=WAG_fight_for_independence }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_befriend_SOV
+		icon=GFX_focus_generic_soviet_politics
+		x=0
+		y=1
+		relative_position_id = WAG_abandon_the_westminster_system
+	#	prerequisite={focus=WAG_no_border_for_worker focus=WAG_build_communism_in_one_country }
+		prerequisite = {
+			focus = WAG_abandon_the_westminster_system
+		}
+		mutually_exclusive = {
+			focus = WAG_our_own_path
+			focus = WAG_free_election
+		}
+#		mutually_exclusive={focus=WAG_special_road_for_wallace focus=WAG_the_forth_internaion }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+#		offset = {
+#			x=2
+#			y=0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_build_communism_in_one_country
+#					has_completed_focus = WAG_befriend_SOV
+#				}
+#			}
+#		}
+#		offset = {
+#			x=-2
+#			y=0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					has_completed_focus = WAG_no_border_for_worker
+#					has_completed_focus = WAG_befriend_SOV
+#				}
+#			}
+#		}
+		allow_branch = {
+#			has_country_flag = WAG_second_civil_war
+#			has_completed_focus = WAG_communism_road
+			if = {
+				limit = { has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				} }
+				NOT = {
+					has_completed_focus = WAG_our_own_path
+					has_completed_focus = WAG_free_election
+#					has_completed_focus = WAG_special_road_for_wallace
+#					has_completed_focus = WAG_the_forth_internaion
+				}
+			}
+		}
+		available = {
+			SOV = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOV
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_our_own_path
+		x=11
+		y=2
+		prerequisite={focus=WAG_abandon_the_westminster_system}
+		mutually_exclusive={focus=WAG_free_election focus=WAG_befriend_SOV }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_end_saint_Kolu_trait
+		x=13
+		y=2
+		prerequisite={focus=WAG_prepare_for_the_war}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_support_SYR_independence
+		x=1
+		y=2
+		prerequisite={focus=WAG_arabic_friends}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_support_HAM_independence
+		x=-1
+		y=2
+		prerequisite={focus=WAG_arabic_friends}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_revive_the_empire
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x=0
+		y=1
+		relative_position_id = WAG_our_own_path
+		mutually_exclusive = {
+			focus = WAG_special_road_for_wallace
+		}
+		prerequisite = {
+			focus = WAG_our_own_path
+		}
+#		mutually_exclusive={focus=WAG_free_election focus = WAG_oppisite_nazi }
+		allow_branch={
+			if={
+				limit={
+					has_game_rule={
+						rule=obsolete_focus_branches_visibility
+						option=HIDE
+					}
+				}
+				NOT={
+					has_completed_focus=WAG_oppisite_nazi
+					has_completed_focus = WAG_free_election
+				}
+			}
+		}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+			army_experience = 5
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			set_cosmetic_tag = WAG_neutrality
+			add_war_support = 0.1
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+	}
+	focus={
+		id=WAG_special_road_for_wallace
+		icon = GFX_goal_generic_position_armies
+		x=-1
+		y=1
+		relative_position_id = WAG_our_own_path
+#		offset = {
+#			x = -2
+#			y = 0
+#			trigger = {
+#				AND = {
+#					has_game_rule = {
+#						rule = obsolete_focus_branches_visibility
+#						option = HIDE
+#					}
+#					OR = {
+#						has_completed_focus = WAG_special_road_for_wallace
+#					}
+#				}
+#			}
+#		}
+#		prerequisite={focus=WAG_build_communism_in_one_country}
+#		mutually_exclusive={focus=WAG_befriend_SOV focus=WAG_the_forth_internaion }
+		prerequisite = {
+			focus = WAG_our_own_path
+		}
+		mutually_exclusive = {
+			focus = WAG_revive_the_empire
+		}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		allow_branch = {
+			has_country_flag = WAG_second_civil_war
+			has_completed_focus = WAG_communism_road
+			if = {
+				limit = { has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				} }
+				NOT = {
+					has_completed_focus = WAG_befriend_SOV
+					has_completed_focus = WAG_the_forth_internaion
+					has_completed_focus = WAG_no_border_for_worker
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward={
+			add_war_support = 0.1
+		}
+	}
+	focus={
+		id=WAG_millitarty_industry_effort
+		x=12
+		y=3
+		prerequisite={focus=WAG_end_saint_Kolu_trait}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_mobilize_our_people
+		x=14
+		y=3
+		prerequisite={focus=WAG_end_saint_Kolu_trait}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_ask_for_our_land
+		x=13
+		y=4
+		prerequisite={focus=WAG_millitarty_industry_effort}
+		prerequisite={focus=WAG_mobilize_our_people}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_creativity_goes_first
+		x=41
+		y=1
+		prerequisite={focus=WAG_step_to_time}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_industry_effort
+		x=45
+		y=1
+		prerequisite={focus=WAG_step_to_time}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
 		}
 		completion_reward={
 		}
