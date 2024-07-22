@@ -12,7 +12,7 @@ focus_tree={
 		x = 50
 		y = 1500
 	}
-	focus={
+	focusfocusfocusfocusfocusfocusfocusfocusfocusfocusfocusfocus={      }
 		id=WAG_oppisite_nazi
 		icon=GFX_focus_generic_anti_fascist_diplomacy
 		x=6
@@ -23,7 +23,7 @@ focus_tree={
 			if={
 				limit={
 #					has_game_rule={
-#						rule=obsolete_focus_branches_visibility
+#						rule=obsolete_focus_branches_visibilityvisibilityvisibilityvisibilitynazivisibilityvisibilityvisibilityvisibilitynazielectionempire   hashasWAGismHIDE
 #						option=HIDE
 #					}
 					always = yes
@@ -100,17 +100,17 @@ focus_tree={
 					id=PRW.2
 					days=10
 					random_days = 10
-				}
-			}
-		}
-	}
+				
+			
+		
+	
 	focus={
 		id=WAG_social_democracy_road
 		icon=GFX_goal_support_democracy
 		x=-2
 		y=1
 		relative_position_id = WAG_defend_new_country
-		prerequisite={focus=WAG_defend_new_country}
+		quisite={focus=WAG_defend_new_country}
 		mutually_exclusive={focus=WAG_communism_road focus=WAG_middle_road }
 		cost=10
 		ai_will_do={
@@ -143,17 +143,19 @@ focus_tree={
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
-			}
-			custom_effect_tooltip = WAG_social_democracy_road_custom_tooltip
-		}
-	}
-	focus={
+			
+			
+		
+	
+	focfocusus={
 		id=WAG_communism_road
-		icon=GFX_goal_support_communism
+		icon=GFX_goal_sum
 		x=2
 		y=1
 		relative_position_id = WAG_defend_new_country
-		prerequisite={focus=WAG_defend_new_country}
+		y
+156
+ usususcostus=WAG_defend_new_country}
 		mutually_exclusive={focus=WAG_social_democracy_road focus=WAG_middle_road }
 		cost=10
 		ai_will_do={
@@ -226,76 +228,76 @@ focus_tree={
 				limit = { check_variable = {
 					var = WAG_scw_getland_cost
 					value = 30
-					compare = greater_than
-				} }
-				subtract_from_variable = {
-					var = WAG_scw_getland_cost
-					value = 15
-				}
-				else_if = {
-					limit = { check_variable = {
-						var = WAG_scw_getland_cost
-						value = 10
-						compare = greater_than
-					} }
-					subtract_from_variable = {
-						var = WAG_scw_getland_cost
-						value = 9
-					}
-				}
-			}
-			add_to_variable = {
-				var = WAG_scw_against_getland_cost
-				value = 10
-			}
-			add_manpower = 10000
-			add_political_power = 20
-		}
-	}
-	focus={
-		id=WAG_emergency_power
-		icon=GFX_goal_generic_position_armies
-		x=0
-		y=1
-		relative_position_id = WAG_social_democracy_road
-		prerequisite={focus=WAG_social_democracy_road}
-		cost=5
-		ai_will_do={
-			factor=1
-		}
-		bypass = {
-			has_country_flag = WAG_second_civil_war
-		}
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
-			add_political_power = 70
-			set_politics = {
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-			if = {
-				limit = { check_variable = {
-					var = WAG_scw_getland_cost
-					value = 15
-					compare = greater_than
-				} }
-				subtract_from_variable = {
-					var = WAG_scw_getland_cost
-					value = 5
-				}
-			}
-			add_to_variable = {
-				var = WAG_scw_against_getland_cost
-				value = 5
-			}
-			custom_effect_tooltip = WAG_emergency_power_custom_tooltip
-		}
-	}
+					
+				
+				
+					
+					
+				
+				
+					
+						
+						
+						
+					
+					
+						
+						
+					
+				
+			
+			
+				
+				
+			
+			
+			
+		
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+			
+		
+		
+			
+		
+		
+			
+			
+				
+			
+			
+				
+				
+			
+			
+				
+					
+					
+					
+				
+				
+					
+					
+				
+			
+			
+				
+				
+			
+			
+		
+	
 	focus={
 		id=WAG_industrial_effort
 		icon=GFX_goal_generic_production
