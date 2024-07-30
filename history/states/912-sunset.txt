@@ -7,7 +7,7 @@ state={
 #	}
 
 	history={
-		owner = WAG
+		owner = IRQ
 		victory_points = {
 			1938 1 
 		}
