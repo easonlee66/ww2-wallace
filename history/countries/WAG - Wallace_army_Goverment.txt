@@ -12,20 +12,24 @@ set_technology = {
 }
 
 add_ideas = WAG_sait_kolu_treat
-add_ideas = WAG_kosui_mother
+#add_ideas = WAG_kosui_mother
 #add_ideas = sour_loser
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1934.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
-	fascism = 50 
-	neutrality = 10 #10%自民 2%保皇
-	communism = 20 #12%安 10%统革 8%农工 4%库共 2%其他小党
-	democratic = 20 #5%安 13%社民 14%瓦共 7%农工 6%库共 2%其他小党
+	neutrality = 10
+	democratic = 20
+	fascism = 35
+	neutrality = 35
+#	fascism = 50 
+#	neutrality = 10 #10%自民 2%保皇
+#	communism = 20 #12%安 10%统革 8%农工 4%库共 2%其他小党
+#	democratic = 20 #5%安 13%社民 14%瓦共 7%农工 6%库共 2%其他小党
 }
 
 recruit_character = WAG_muhamd_ziang_wikau
