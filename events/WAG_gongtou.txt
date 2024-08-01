@@ -1,0 +1,74 @@
+add_namespace = WAG_gongtou
+
+country_event = {
+	id = WAG_gongtou.1
+	title = WAG_gongtou.1.t
+	desc = WAG_gongtou.1.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.1.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.2
+	title = WAG_gongtou.2.t
+	desc = WAG_gongtou.2.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.2.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.3
+	title = WAG_gongtou.3.t
+	desc = WAG_gongtou.3.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.3.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.4
+	title = WAG_gongtou.4.t
+	desc = WAG_gongtou.4.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.1.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.5
+	title = WAG_gongtou.5.t
+	desc = WAG_gongtou.5.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.5.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.6
+	title = WAG_gongtou.6.t
+	desc = WAG_gongtou.6.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.1.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.7
+	title = WAG_gongtou.7.t
+	desc = WAG_gongtou.7.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.2.a
+	}
+}
+country_event = {
+	id = WAG_gongtou.8
+	title = WAG_gongtou.8.t
+	desc = WAG_gongtou.8.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_gongtou.1.a
+	}
+}
