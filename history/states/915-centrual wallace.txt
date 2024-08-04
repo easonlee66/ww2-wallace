@@ -14,6 +14,8 @@ state={
 #			supply_node = 1
 		}
 		add_core_of = WAG
+		add_core_of = SYR
+		add_core_of = IRQ
 	}
 	provinces={
 		10804 
