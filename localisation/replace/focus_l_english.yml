@@ -115,15 +115,28 @@
   WAG_opposite_hitler:0 "反对希特勒"
   WAG_rekindle_imperial_sentiment:0 "哈布斯堡归来"
   WAG_rebuild_central_power:0 "重建同盟国"
-  WAG_fight_wiwithth_our_old_enemy:0 "重燃战火"
+  WAG_fight_with_our_old_enemy:0 "重燃战火"
 
 #蓝线
   WAG_connect_with_west:0 "亲西方"
   WAG_ask_for_supports:0 "要求同盟国援助"
-  WAG_our_lost_land:0 ""
+  WAG_our_lost_land:0 "国策待施工..."
 
 #陆军线
   WAG_end_saint_kolu_trait:0 "撕毁圣克卢条约"
+
+# 造核线
+  WAG_solve_the_nation_problem:0 "着手解决民族问题"
+  WAG_give_autonomy:0 "给予自治权"
+  WAG_remove_resistance:0 "镇压抵抗"
+  WAG_union_solution:0 "联盟方案"
+  WAG_federal_solution:0 "联邦方案"
+  WAG_remove_terrorist:0 "根除恐怖组织"
+  WAG_wallace_education:0 "教育同化"
+  WAG_strict_police:0 "秘密警察"
+  WAG_wallacian_over_country:0 "瓦雷斯移民"
+  WAG_wallician_only_people:0 "国策待施工..."
+  WAG_refree:0 "国策待施工..."
 
 
 #工业线
