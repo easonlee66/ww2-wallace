@@ -3197,8 +3197,8 @@ focus_tree={
 			focus = WAG_abandon_the_westminster_system
 		}
 		mutually_exclusive = {
-			focus = WAG_our_own_path
-			focus = WAG_befriend_SOV
+			focus = WAG_revive_the_empire
+			focus = WAG_communism_road
 		}
 #		relative_position_id = WAG_revive_the_empire
 #		mutually_exclusive={focus=WAG_revive_the_empire focus = WAG_oppisite_nazi }
@@ -3211,8 +3211,8 @@ focus_tree={
 					}
 				}
 				NOT={
-					has_completed_focus=WAG_our_own_path
-					has_completed_focus = WAG_befriend_SOV
+					has_completed_focus = WAG_revive_the_empire
+					has_completed_focus = WAG_communism_road
 				}
 			}
 		}
@@ -3258,16 +3258,15 @@ focus_tree={
 	focus={
 		id=WAG_befriend_SOV
 		icon=GFX_focus_generic_soviet_politics
-		x=1
+		x=-3
 		y=1
-		relative_position_id = WAG_abandon_the_westminster_system
+		relative_position_id = WAG_communism_road
 	#	prerequisite={focus=WAG_no_border_for_worker focus=WAG_build_communism_in_one_country }
 		prerequisite = {
-			focus = WAG_abandon_the_westminster_system
+			focus = WAG_communism_road
 		}
 		mutually_exclusive = {
-			focus = WAG_our_own_path
-			focus = WAG_free_election
+			focus = WAG_special_road_for_wallace
 		}
 #		mutually_exclusive={focus=WAG_special_road_for_wallace focus=WAG_the_forth_internaion }
 		cost=10
@@ -3281,8 +3280,9 @@ focus_tree={
 					option = HIDE
 				} }
 				NOT = {
-					has_completed_focus = WAG_our_own_path
+					has_completed_focus = WAG_special_road_for_wallace
 					has_completed_focus = WAG_free_election
+					has_completed_focus = WAG_revive_the_empire
 				}
 			}
 		}
@@ -3294,23 +3294,6 @@ focus_tree={
 		}
 		completion_reward={
 			add_to_faction = SOV
-		}
-	}
-	focus={
-		id=WAG_our_own_path
-		x=8
-		y=1
-		relative_position_id = WAG_abandon_the_westminster_system
-		prerequisite={focus=WAG_abandon_the_westminster_system}
-		mutually_exclusive={focus=WAG_free_election focus=WAG_befriend_SOV }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
 		}
 	}
 	focus={
@@ -3363,14 +3346,15 @@ focus_tree={
 	focus={
 		id=WAG_revive_the_empire
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x=3
+		x=11
 		y=1
-		relative_position_id = WAG_our_own_path
+		relative_position_id = WAG_abandon_the_westminster_system
 		mutually_exclusive = {
-			focus = WAG_special_road_for_wallace
+			focus = WAG_communism_road
+			focus = WAG_free_election
 		}
 		prerequisite = {
-			focus = WAG_our_own_path
+			focus = WAG_abandon_the_westminster_system
 		}
 #		mutually_exclusive={focus=WAG_free_election focus = WAG_oppisite_nazi }
 		allow_branch={
@@ -3382,7 +3366,8 @@ focus_tree={
 					}
 				}
 				NOT={
-					has_completed_focus=WAG_special_road_for_wallace
+					has_completed_focus = WAG_communism_road
+					has_completed_focus = WAG_free_election
 				}
 			}
 		}
@@ -3414,9 +3399,9 @@ focus_tree={
 	focus={
 		id=WAG_special_road_for_wallace
 		icon = GFX_goal_generic_position_armies
-		x=-2
+		x=2
 		y=1
-		relative_position_id = WAG_our_own_path
+		relative_position_id = WAG_communism_road
 #		offset = {
 #			x = -2
 #			y = 0
@@ -3435,10 +3420,10 @@ focus_tree={
 #		prerequisite={focus=WAG_build_communism_in_one_country}
 #		mutually_exclusive={focus=WAG_befriend_SOV focus=WAG_the_forth_internaion }
 		prerequisite = {
-			focus = WAG_our_own_path
+			focus = WAG_communism_road
 		}
 		mutually_exclusive = {
-			focus = WAG_revive_the_empire
+			focus = WAG_befriend_SOV
 		}
 		cost=10
 		ai_will_do={
@@ -3451,7 +3436,9 @@ focus_tree={
 					option = HIDE
 				} }
 				NOT = {
+					has_completed_focus = WAG_befriend_SOV
 					has_completed_focus = WAG_revive_the_empire
+					has_completed_focus = WAG_free_election
 				}
 			}
 		}
@@ -3461,6 +3448,22 @@ focus_tree={
 		completion_reward={
 			add_war_support = 0.1
 		}
+	}
+	focus = {
+		id = WAG_communism_road
+		icon=GFX_goal_support_communism
+		cost = 10
+		prerequisite = {
+			focus = WAG_abandon_the_westminster_system
+		}
+		mutually_exclusive = {
+			focus = WAG_revive_the_empire
+			focus = WAG_free_election
+		}
+		relative_position_id = WAG_abandon_the_westminster_system
+		x = 3
+		y = 1
+		completion_reward = { }
 	}
 	focus={
 		id=WAG_millitarty_industry_effort
@@ -3624,6 +3627,29 @@ focus_tree={
 		}
 		completion_reward={
 			random_list = {
+				75 = {
+					country_event = WAG_gongtou.1
+				}
+				25 = {
+					country_event = WAG_gongtou.2
+				}
+			}
+			country_event = WAG_gongtou.3
+			random_list = {
+				95 = {
+					country_event = WAG_gongtou.6
+				}
+				5 = {
+					country_event = WAG_gongtou.5
+				}
+			}
+			random_list = {
+				65 = {
+					country_event = WAG_gongtou.7
+				}
+				35 = {
+					country_event = WAG_gongtou.8
+				}
 			}
 		}
 	}
