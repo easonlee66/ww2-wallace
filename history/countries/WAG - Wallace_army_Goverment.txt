@@ -23,9 +23,9 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 10
-	democratic = 20
-	fascism = 35
-	neutrality = 35
+	democratic = 50
+	fascism = 25
+	communism = 15
 #	fascism = 50 
 #	neutrality = 10 #10%自民 2%保皇
 #	communism = 20 #12%安 10%统革 8%农工 4%库共 2%其他小党
@@ -38,11 +38,11 @@ recruit_character = WAG_salman_ritin_somin
 recruit_character = WAG_abudullah_an_komi
 
 1939.1.1 = {
-	set_country_flag = WAG_complete_first_tyhp
+#	set_country_flag = WAG_complete_first_tyhp
 	GER = {
 		add_to_faction = WAG
 	}
-	unlock_national_focus = WAG_first_two_year_half_plan
+#	unlock_national_focus = WAG_first_two_year_half_plan
 	unlock_national_focus = WAG_free_election
 	unlock_national_focus = WAG_befriend_GER
 	complete_national_focus = WAG_industrial_effort
