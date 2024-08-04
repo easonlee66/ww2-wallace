@@ -7,7 +7,6 @@ state={
 			2013 1
 		}
 		add_core_of = SYR
-		add_core_of = WAG
 	}
 	provinces={
 		2013 

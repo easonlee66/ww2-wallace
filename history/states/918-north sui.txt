@@ -7,7 +7,7 @@ state={
 			1549 1
 		}
 		add_core_of = SYR
-		add_core_of = WAG
+		add_claim_by = AMI
 	}
 	provinces={
 		1549 
