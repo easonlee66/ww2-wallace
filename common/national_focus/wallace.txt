@@ -3336,7 +3336,7 @@ focus_tree={
 	focus={
 		id=WAG_support_SYR_independence
 		x=2
-		y=2
+		y=3
 		prerequisite={focus=WAG_arabic_friends}
 		cost=10
 		ai_will_do={
@@ -3351,7 +3351,7 @@ focus_tree={
 	focus={
 		id=WAG_support_HAM_independence
 		x=0
-		y=2
+		y=3
 		prerequisite={focus=WAG_arabic_friends}
 		cost=10
 		ai_will_do={
