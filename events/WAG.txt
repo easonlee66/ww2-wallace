@@ -1139,3 +1139,21 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = WAG.32
+	title = WAG.32.t
+	desc = WAG.32.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.32.a
+	}
+	option = {
+		name = WAG.32.b
+		set_country_flag = WAG_arab_nation_recognize
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+}
