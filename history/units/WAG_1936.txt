@@ -30,7 +30,7 @@
 #	}
 #}
 division_template = {
-	name = "wu bu mei chan"
+	name = "wallace royal army"
 	regiments = {
 		infantry = {
 			x = 0
@@ -62,7 +62,7 @@ units = {
 		}
 		location = 1606
 #		division_template = "wu bu pao hui"
-		division_template = "wu bu mei chan"
+		division_template = "wallace royal army"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.1
 	}
@@ -72,7 +72,7 @@ units = {
 			name_order = 1
 		}
 		location = 10804
-		division_template = "wu bu mei chan"
+		division_template = "wallace royal army"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
