@@ -112,6 +112,16 @@ country_event = {
 	option = {
 		name = WAG.25.a
 		add_war_support = 0.1
+		every_state = {
+			limit = {
+				is_controlled_by = FROM
+				if = {
+					limit = { original_tag = FRA }
+					is_core_of = SYR
+				}
+			}
+			add_claim_by = WAG
+		}
 		create_wargoal = {
 			target = FROM
 			type = take_claimed_state
