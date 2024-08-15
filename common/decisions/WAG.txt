@@ -2567,6 +2567,18 @@ WAG_nazi_reform = {
 	}
 }
 
+WAG_ask_for_our_land = {
+	WAG_ask_for_lifant = {
+		cost = 20
+	}
+	WAG_ask_for_aminoac = {
+		cost = 30
+	}
+	WAG_ask_for_mesopudamia = {
+		cost = 20
+	}
+}
+
 DBG = {
 	DBG_mission_test = {
 		fire_only_once = yes
@@ -2592,6 +2604,11 @@ DBG = {
 		days_mission_timeout = 10
 		timeout_effect = {
 			country_event = DBG.6
+		}
+	}
+	DBG_test_coring = {
+		remove_effect = {
+			complete_national_focus = WAG_ask_for_our_land
 		}
 	}
 }

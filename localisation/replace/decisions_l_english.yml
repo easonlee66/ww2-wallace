@@ -94,5 +94,7 @@
   WAG_remove_perssia:0 "移除波斯文化"
   WAG_remove_chinese:0 "移除中国文化"
 
+  DBG:0 "DEBUG"
+
   form_country_wallace_required_state_tt:0 "控制§Y瓦雷斯国§!的所有地区。"
   form_country_wallace_coring_states_tt:0 "获得§Y瓦雷斯国§!所有地区的核心。\n"
