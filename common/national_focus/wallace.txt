@@ -1439,7 +1439,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_befriend_allice
-		icon=GFX_focus_chi_british_cooperation
+		icon = GFX_goal_generic_demand_territory
 		x=0
 		y=1
 		relative_position_id = WAG_two_rule_in_one_country
@@ -1455,13 +1455,6 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-			ENG = {
-				country_event = generic.2
-			}
 		}
 	}
 	focus={
@@ -1908,6 +1901,11 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			any_country = {
+				has_government = fascism
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
@@ -1917,11 +1915,59 @@ focus_tree={
 				popularity = -0.1
 			}
 			add_war_support = 0.1
+			if = {
+				limit = { GER = {
+					has_government = fascism
+				} }
+				create_wargoal = {
+					target = GER
+					type = puppet
+				}
+			}
+			else_if = {
+				limit = { ITA = {
+					has_government = fascism
+				} }
+				create_wargoal = {
+					target = ITA
+					type = puppet
+				}
+			}
+			else_if = {
+				limit = { IRQ = {
+					exists = yes
+					has_government = fascism
+				} }
+				create_wargoal = {
+					target = IRQ
+					type = annex
+				}
+			}
+			else_if = {
+				limit = { JAP = {
+					has_government = fascism
+				} }
+				create_wargoal = {
+					target = JAP
+					type = puppet
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						has_government = fascism
+					}
+					create_wargoal = {
+						target = PREV
+						type = puppet
+					}
+				}
+			}
 		}
 	}
 	focus={
 		id=WAG_anti_SOV
-		icon=GFX_focus_attack_soviet
+		icon=GFX_focus_attack_britain
 		x=1
 		y=1
 		relative_position_id = WAG_face_to_threat
@@ -1930,11 +1976,194 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			OR = {
+				any_country = {
+					is_puppet_of = ENG
+				}
+				any_state = {
+					is_controlled_by = ENG
+					NOT = {
+						is_core_of = ENG
+					}
+				}
+				any_country = {
+					is_puppet_of = FRA
+				}
+				any_state = {
+					is_controlled_by = FRA
+					NOT = {
+						is_core_of = FRA
+					}
+				}
+				AND = {
+					USA = {
+						has_completed_focus = USA_the_giant_wakes
+					}
+					OR = {
+						any_country = {
+							is_puppet_of = USA
+						}
+						any_state = {
+							is_controlled_by = USA
+							NOT = {
+								is_core_of = USA
+							}
+						}
+					}
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 			add_war_support = 0.1
+			if = {
+				limit = {
+					any_country = {
+						is_puppet_of = ENG
+					}
+				}
+				random_country = {
+					WAG = {
+						create_wargoal = {
+							target = PREV
+							type = puppet
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						any_state = {
+							is_controlled_by = ENG
+							NOT = {
+								is_core_of = ENG
+							}
+						}
+					}
+					else = {
+						create_wargoal = {
+							target = ENG
+							type = puppet
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_puppet_of = FRA
+					}
+				}
+				random_country = {
+					WAG = {
+						create_wargoal = {
+							target = PREV
+							type = puppet
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						any_state = {
+							is_controlled_by = FRA
+							NOT = {
+								is_core_of = FRA
+							}
+						}
+					}
+					else = {
+						create_wargoal = {
+							target = FRA
+							type = puppet
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_puppet_of = USA
+					}
+					USA = {
+						has_completed_focus = USA_the_giant_wakes
+					}
+				}
+				random_country = {
+					WAG = {
+						create_wargoal = {
+							target = PREV
+							type = puppet
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						any_state = {
+							is_controlled_by = USA
+							NOT = {
+								is_core_of = USA
+							}
+						}
+						USA = {
+							has_completed_focus = USA_the_giant_wakes
+						}
+					}
+					else = {
+						create_wargoal = {
+							target = USA
+							type = puppet
+						}
+					}
+				}
+			}
+		}
+	}
+	focus={
+		id=WAG_secure_west_wallace_t
+		icon=GFX_goal_generic_fortify_city
+		x=0
+		y=1
+		relative_position_id = WAG_anti_SOV
+		available = {
+			any_neighbor_country = {
+				OR = {
+					is_in_faction_with = ENG
+					is_in_faction_with = FRA
+					original_tag = ENG
+					original_tag = FRA
+					is_puppet_of = ENG
+					is_puppet_of = FRA
+					AND = {
+						USA = {
+							has_completed_focus = USA_the_giant_wakes
+						}
+						is_in_faction_with = USA
+						original_tag = USA
+						is_puppet_of = USA
+					}
+				}
+			}
+		}
+		prerequisite={focus=WAG_anti_SOV}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward={
+			every_owned_state = {
+				limit = {
+					is_neighbor_of = IRQ
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+				}
+			}
 		}
 	}
 	focus={
@@ -1944,20 +2173,9 @@ focus_tree={
 		y=1
 		relative_position_id = WAG_anti_fascism
 		available = {
-			any_country = {
-				OR = {
-					has_focus_tree = vichy_french_focus
-					AND = {
-						original_tag = GER
-						has_government = fascism
-					}
-					AND = {
-						is_in_faction_with = GER
-						has_government = fascism
-					}
-				}
-				controls_state = 677
-				controls_state = 680
+			IRQ = {
+				exists = yes
+				has_government = fascism
 			}
 		}
 		prerequisite={focus=WAG_anti_fascism}
@@ -1969,28 +2187,13 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			909 = {
-				add_building_construction = {
-					type = bunker
-					level = 5
+			every_owned_state = {
+				limit = {
+					is_neighbor_of = IRQ
 				}
-			}
-			910 = {
 				add_building_construction = {
 					type = bunker
-					level = 3
-				}
-			}
-			913 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-				}
-			}
-			917 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
+					level = 2
 				}
 			}
 		}
@@ -2073,13 +2276,18 @@ focus_tree={
 	}
 	focus={
 		id=WAG_secure_PER
-		icon = GFX_goal_generic_major_alliance
-		x=0
+		icon = GFX_focus_attack_soviet
+		x=2
 		y=1
 		relative_position_id = WAG_anti_SOV
 		will_lead_to_war_with = SOV
 		prerequisite={focus=WAG_anti_SOV}
 		cost=10
+		available = {
+			any_country = {
+				is_puppet_of = SOV
+			}
+		}
 		ai_will_do={
 			factor=1
 		}
@@ -2087,7 +2295,17 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			give_guarantee = PER
+			random_country = {
+				limit = {
+					is_puppet_of = SOV
+				}
+				WAG = {
+					create_wargoal = {
+						target = PREV
+						type = puppet
+					}
+				}
+			}
 		}
 	}
 	focus={
