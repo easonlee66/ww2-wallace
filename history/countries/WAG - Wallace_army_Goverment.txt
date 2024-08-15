@@ -8,7 +8,10 @@ set_war_support = 0.5
 
 set_technology = {
 	infantry_weapons = 1
-#	fuel_silos = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	fuel_silos = 1
 }
 
 add_ideas = WAG_sait_kolu_treat
@@ -93,6 +96,21 @@ recruit_character = WAG_abudullah_an_komi
 		limit = { has_idea = WAG_sait_kolu_treat }
 		remove_ideas = WAG_sait_kolu_treat
 	}
+
+	if = {
+		limit = { has_idea = WAG_noboody_like_empire }
+		remove_ideas = WAG_noboody_like_empire
+	}
+
+	if = {
+		limit = { has_idea = WAG_western_impression }
+		remove_ideas = WAG_western_impression
+	}
+
+	add_ideas = WAG_never_surrender
+	add_ideas = WAG_abandon_the_westminster_system
+	add_ideas = WAG_prepare_for_the_war
+	add_ideas = WAG_mobilize_our_people
 
 	activate_mission = WAG_nazi_reform_mission
 	add_days_mission_timeout = {
