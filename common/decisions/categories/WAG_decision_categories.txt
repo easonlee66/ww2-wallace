@@ -34,6 +34,13 @@ WAG_nazi_reform = {
 	}
 }
 
+WAG_ask_for_our_land = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		original_tag = WAG
+	}
+}
+
 DBG = {
 	icon = decision_category_generic_political_actions
 	allowed = {
