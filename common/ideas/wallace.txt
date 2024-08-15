@@ -172,15 +172,16 @@ ideas = {
 				democratic_drift = 0.1
 			}
 		}
-
 		WAG_worker_first = {
 			picture = generic_communism_drift_bonus
 			modifier = {
 				weekly_manpower = 100
 				stability_factor = 0.1
+				communism_acceptance = 0.1
 				industrial_factory_donations = 0.1
 			}
 		}
+
 		WAG_all_people_to_industry = {
 			picture = generic_build_infrastructure
 			modifier = {
