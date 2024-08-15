@@ -14,6 +14,8 @@ set_technology = {
 	fuel_silos = 1
 }
 
+set_cosmetic_tag = WAG_French
+
 add_ideas = WAG_sait_kolu_treat
 add_ideas = WAG_noboody_like_empire
 add_ideas = WAG_western_impression
