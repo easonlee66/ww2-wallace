@@ -94,6 +94,10 @@
   WAG_remove_perssia:0 "移除波斯文化"
   WAG_remove_chinese:0 "移除中国文化"
 
+  WAG_ask_for_aminoac:0 "索取阿弥诺斯地区"
+  WAG_ask_for_lifant:0 "索取黎凡特地区"
+  WAG_ask_for_mesopudamia:0 "索取美索不达米亚地区"
+
   DBG:0 "DEBUG"
 
   form_country_wallace_required_state_tt:0 "控制§Y瓦雷斯国§!的所有地区。"
