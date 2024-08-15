@@ -126,6 +126,10 @@ ideas = {
 #				production_factory_max_efficiency_factor = -0.3
 				stability_factor = 0.1
 			}
+			rule = {
+				can_join_faction = no
+				can_create_factions = no
+			}
 		}
 		WAG_special_economy_zone = {
 			picture = generic_build_infrastructure
@@ -144,6 +148,7 @@ ideas = {
 				production_speed_buildings_factor = 0.3
 				production_speed_arms_factory_factor = 0.1
 				war_support_factor = 0.1
+				justify_war_goal_time = -0.1
 			}
 		}
 		WAG_politics_in_test = {
@@ -160,12 +165,14 @@ ideas = {
 				production_speed_buildings_factor = 0.5
 			}
 		}
+
 		WAG_ban_social_democracy = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
 				democratic_drift = 0.1
 			}
 		}
+
 		WAG_worker_first = {
 			picture = generic_communism_drift_bonus
 			modifier = {
@@ -195,12 +202,6 @@ ideas = {
 				stability_weekly = -0.01
 				industrial_factory_donations = 0.1
 				army_attack_factor = 0.1
-			}
-		}
-		WAG_world_revolution = {
-			picture = generic_communism_drift_bonus
-			modifier = {
-				justify_war_goal_time = -0.75
 			}
 		}
 # 白线
@@ -254,6 +255,12 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor  = -0.03
+			}
+		}
+		WAG_world_revolution = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				justify_war_goal_time = -0.75
 			}
 		}
 #		WAG_new_nazi = {
