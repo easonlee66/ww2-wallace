@@ -7,10 +7,6 @@
   DBG.2.d:0 "直接完成第一个两年半计划，用于测试第二个两年半计划"
   DBG.2.a:0 "点此修复"
 
-  DBG.3.t:0 "DEBUG:查看反对派pp、获取土地花费"
-  DBG.3.d:0 "反对派pp为[WAG.WAG_scw_against_pp]，获取土地花费为[WAG.WAG_scw_against_getland_cost]"
-  DBG.3.a:0 "OK"
-
   DBG.4.t:0 "DEBUG:移除混乱的政府"
   DBG.4.d:0 "内战打完后应该有个国策可以消除混乱的政府，还没做。内战中请勿触发此事件。"
   DBG.4.a:0 "点此消除混乱的政府"
@@ -162,7 +158,7 @@
 
   WAG_news.11.t:0 "军政府与纳粹党达成合作"
   WAG_news.11.d:0 ""
-  WAG_news.11.c:0 "让瓦雷斯国再次伟大！"
+  WAG_news.11.b:0 "让瓦雷斯国再次伟大！"
 
   WAG_news.12.t:0 "军政府"
 
