@@ -882,31 +882,12 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available = {
-			OR = {
-				909 = {
-					is_owned_and_controlled_by = WAG
-				}
-				913 = {
-					is_owned_and_controlled_by = WAG
-				}
-			}
-		}
-		bypass = {
-			NOT = {
-				909 = {
-					is_owned_and_controlled_by = WAG
-				}
-				913 = {
-					is_owned_and_controlled_by = WAG
-				}
-			}
-		}
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
-			909 = {
+			add_ideas = WAG_special_economy_zone
+			random_controlled_state = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
@@ -917,12 +898,16 @@ focus_tree={
 					level = 1
 				}
 			}
-			913 = {
+			random_controlled_state = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 	}
@@ -1094,7 +1079,7 @@ focus_tree={
 		relative_position_id = WAG_muti_party
 #		prerequisite={focus=WAG_fate_of_KUR}
 		prerequisite={focus=WAG_muti_party}
-		cost=10
+		cost=1
 		ai_will_do={
 			factor=1
 		}
@@ -1102,24 +1087,6 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			if = {
-				limit = { any_state = {
-					is_controlled_by = WAG
-					is_core_of = KUR
-					NOT = {
-						is_core_of = WAG
-					}
-				} }
-				every_controlled_state = {
-					limit = {
-						is_core_of = KUR
-						NOT = {
-							is_core_of = WAG
-						}
-					}
-					add_core_of = WAG
-				}
-			}
 		}
 	}
 	focus={
@@ -3123,7 +3090,7 @@ focus_tree={
 		}
 		x=13
 		y=1
-		cost=10
+		cost=4
 		ai_will_do={
 			factor=1
 		}
@@ -3166,7 +3133,7 @@ focus_tree={
 		relative_position_id = WAG_fight_for_independence
 		prerequisite={focus=WAG_fight_for_independence}
 		mutually_exclusive={focus=WAG_connect_with_west }
-		cost=10
+		cost=3
 		ai_will_do={
 			factor=1
 		}
@@ -3662,7 +3629,7 @@ focus_tree={
 		mutually_exclusive = {
 			focus = WAG_befriend_SOV
 		}
-		cost=10
+		cost=3
 		ai_will_do={
 			factor=1
 		}
@@ -3691,7 +3658,7 @@ focus_tree={
 	focus = {
 		id = WAG_communism_road
 		icon=GFX_goal_support_communism
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = WAG_abandon_the_westminster_system
 		}
@@ -3953,29 +3920,40 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			random_list = {
-				75 = {
-					country_event = WAG_gongtou.1
+			if = {
+				limit = { NOT = {
+					has_completed_focus = WAG_two_rule_in_one_country
+				} }
+				random_list = {
+					75 = {
+						country_event = WAG_gongtou.1
+					}
+					25 = {
+						country_event = WAG_gongtou.2
+					}
 				}
-				25 = {
+				country_event = WAG_gongtou.3
+				random_list = {
+					95 = {
+						country_event = WAG_gongtou.6
+					}
+					5 = {
+						country_event = WAG_gongtou.5
+					}
+				}
+				random_list = {
+					65 = {
+						country_event = WAG_gongtou.7
+					}
+					35 = {
+						country_event = WAG_gongtou.8
+					}
+				}
+				else = {
 					country_event = WAG_gongtou.2
-				}
-			}
-			country_event = WAG_gongtou.3
-			random_list = {
-				95 = {
-					country_event = WAG_gongtou.6
-				}
-				5 = {
+					country_event = WAG_gongtou.3
 					country_event = WAG_gongtou.5
-				}
-			}
-			random_list = {
-				65 = {
 					country_event = WAG_gongtou.7
-				}
-				35 = {
-					country_event = WAG_gongtou.8
 				}
 			}
 		}
