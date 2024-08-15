@@ -7,6 +7,7 @@ state={
 			2013 1
 		}
 		add_core_of = SYR
+		add_claim_by = WAG
 	}
 	provinces={
 		2013 

@@ -10,6 +10,7 @@ state={
 		add_core_of = TUR
 #		add_core_of = WAG
 		add_core_of = KUR
+		add_claim_by = WAG
 	}
 	provinces={
 		12387 
