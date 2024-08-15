@@ -12,6 +12,8 @@ set_technology = {
 }
 
 add_ideas = WAG_sait_kolu_treat
+add_ideas = WAG_noboody_like_empire
+add_ideas = WAG_western_impression
 #add_ideas = WAG_kosui_mother
 #add_ideas = sour_loser
 
