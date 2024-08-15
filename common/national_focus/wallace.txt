@@ -1285,6 +1285,7 @@ focus_tree={
 				popularity = 0.1
 			}
 			add_stability = 0.1
+			add_ideas = WAG_worker_first
 		}
 	}
 	focus={

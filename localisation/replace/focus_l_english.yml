@@ -65,7 +65,8 @@
   WAG_SOV_milliary_advisors_desc:0 "瓦雷斯国缺乏军事家，来自苏联的军事顾问可以填补瓦雷斯国这方面的空白，让瓦雷斯国得以更好地进行军事改革。"
   WAG_SOV_equipment:0 "苏式武器"
   WAG_SOV_equipment_desc:0 "光用步枪很难打败法西斯势力，火炮和坦克是打一场大战必备的。既然瓦雷斯国没有办法独立造出坦克，我们可以研究苏式火炮、苏式坦克，全力生产苏式装备，让瓦雷斯国军事实力迈上一个台阶。"
-  WAG_ban_social_democracy:0 "一党制"
+
+  WAG_ban_social_democracy:0 "取缔反动政党"
   WAG_ban_social_democracy_desc:0 "瓦雷斯共产党是瓦雷斯国唯一的执政党，其他的反动政党统统应该取缔，以维持瓦雷斯国的稳定"
   WAG_worker_first:0 "工人阶级专政"
   WAG_worker_first_desc:0 "社会主义政体就需要工人阶级专政，把瓦雷斯国建设成工人们的国家。"
@@ -78,7 +79,7 @@
   WAG_special_economy_zone_desc:0 "为发展经济，我们必须开始改革开放。首先就是把水西省开放为经济特区，给予经济上的特殊政策，引进外资，大力发展经济。"
   WAG_developing_KUR:0 "库尔德大开发"
   WAG_developing_KUR_desc:0 "为了促进区域平衡发展，我们必须加快开发库尔德斯坦地区，同时促进瓦雷斯族和库尔德族融合发展"
-  WAG_muti_party:0 "多党制"
+  WAG_muti_party:0 "政治协商制度"
   WAG_muti_party_desc:0 "我们必须重视政党问题，瓦雷斯共产党领导的多党合作机制便是最好的选择。我们可以联合所有同志共同建设社会主义"
   WAG_two_rule_in_one_country:0 "民族区域自治"
   WAG_two_rule_in_one_country_desc:0 "瓦雷斯国境内生活着大量阿拉伯人、突厥人、库尔德人，我们必须"
