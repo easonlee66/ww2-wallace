@@ -19,7 +19,9 @@
  WAG_people_republics:0 "瓦雷斯共产党政权"
  WAG_people_republics_DEF:0 "瓦雷斯共产党政权"
  WAG_French:0 "瓦雷斯国"
- WAG_French_DEF:0 "瓦雷斯"
+ WAG_French_DEF:0 "瓦雷斯国"
+ WAG_army_government_ct:0 "瓦雷斯军政府"
+ WAG_army_government_ct_DEF:0 "瓦雷斯军政府"
 
  WAG_fascism_ADJ:0 "瓦雷斯"
  WAG_democratic_ADJ:0 "瓦雷斯"
