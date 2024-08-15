@@ -1125,7 +1125,7 @@ focus_tree={
 	focus={
 		id=WAG_politics_in_test
 		icon=GFX_goal_generic_forceful_treaty
-		x=2
+		x=0
 		y=1
 		relative_position_id = WAG_two_rule_in_one_country
 		prerequisite={focus=WAG_two_rule_in_one_country focus=WAG_special_economy_zone}
@@ -1442,10 +1442,9 @@ focus_tree={
 		icon = GFX_goal_generic_demand_territory
 		x=0
 		y=1
-		relative_position_id = WAG_two_rule_in_one_country
-		prerequisite={focus=WAG_two_rule_in_one_country}
+		relative_position_id = WAG_politics_in_test
 		prerequisite = {
-			focus = WAG_special_economy_zone
+			focus = WAG_politics_in_test
 		}
 		cost=10
 		ai_will_do={
@@ -1455,16 +1454,19 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = WAG_no_faction_movementss
 		}
 	}
 	focus={
 		id=WAG_modern
 		icon = GFX_focus_generic_the_giant_wakes
-		x=1
+		x=0
 		y=1
 		relative_position_id = WAG_developing_KUR
 		prerequisite={focus=WAG_developing_KUR}
-		prerequisite={focus=WAG_befriend_allice}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -1868,8 +1870,8 @@ focus_tree={
 		icon = GFX_goal_generic_military_deal
 		x=0
 		y=1
-		relative_position_id = WAG_modern
-		prerequisite={focus=WAG_modern}
+		relative_position_id = WAG_befriend_allice
+		prerequisite={focus=WAG_befriend_allice}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -2155,13 +2157,33 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			every_owned_state = {
+			every_neighbor_country = {
 				limit = {
-					is_neighbor_of = IRQ
+					OR = {
+						is_in_faction_with = ENG
+						is_in_faction_with = FRA
+						original_tag = ENG
+						original_tag = FRA
+						is_puppet_of = ENG
+						is_puppet_of = FRA
+						AND = {
+							USA = {
+								has_completed_focus = USA_the_giant_wakes
+							}
+							is_in_faction_with = USA
+							original_tag = USA
+							is_puppet_of = USA
+						}
+					}
 				}
-				add_building_construction = {
-					type = bunker
-					level = 2
+				every_controlled_state = {
+					limit = {
+						is_neighbor_of = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+					}
 				}
 			}
 		}
@@ -2187,7 +2209,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			every_owned_state = {
+			every_controlled_state = {
 				limit = {
 					is_neighbor_of = IRQ
 				}
