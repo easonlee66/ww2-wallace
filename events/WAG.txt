@@ -116,7 +116,7 @@ country_event = {
 			limit = {
 				is_controlled_by = FROM
 				if = {
-					limit = { original_tag = FRA }
+					limit = { FROM = { original_tag = FRA } }
 					is_core_of = SYR
 				}
 			}
