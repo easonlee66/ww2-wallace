@@ -4133,6 +4133,9 @@ form_persian_empire_category = {
 				controls_state = 676
 				controls_state = 675
 				controls_state = 291
+				controls_state = 912
+				controls_state = 914
+				controls_state = 920
 			}
 			# Turkey
 			custom_trigger_tooltip = {
@@ -4163,14 +4166,6 @@ form_persian_empire_category = {
 			#wallace
 			custom_trigger_tooltip = {
 				tooltip = form_country_wallace_required_state_tt
-				controls_state = 911
-				controls_state = 918
-				controls_state = 920
-				controls_state = 913
-				controls_state = 909
-				controls_state = 910
-				controls_state = 912
-				controls_state = 914
 				controls_state = 915
 				controls_state = 916
 			}
@@ -4181,6 +4176,11 @@ form_persian_empire_category = {
 				controls_state = 680
 				controls_state = 553
 				controls_state = 554
+				controls_state = 911
+				controls_state = 918
+				controls_state = 913
+				controls_state = 909
+				controls_state = 910
 			}
 			# Italy: North Africa / Dodecanese
 			custom_trigger_tooltip = {
@@ -4244,20 +4244,15 @@ form_persian_empire_category = {
 				676 = { add_core_of = ROOT }
 				675 = { add_core_of = ROOT }
 				291 = { add_core_of = ROOT }
+				912 = { add_core_of = ROOT }
+				914 = { add_core_of = ROOT }
+				920 = { add_core_of = ROOT }
 			}
 			# Wallace
 			custom_effect_tooltip = form_country_wallace_coring_states_tt
 			hidden_effect = {
-				909 = { add_core_of = ROOT }
-				910 = { add_core_of = ROOT }
-				911 = { add_core_of = ROOT }
-				912 = { add_core_of = ROOT }
-				913 = { add_core_of = ROOT }
-				914 = { add_core_of = ROOT }
 				915 = { add_core_of = ROOT }
 				916 = { add_core_of = ROOT }
-				918 = { add_core_of = ROOT }
-				920 = { add_core_of = ROOT }
 			}
 			# Turkey
 			custom_effect_tooltip = form_country_turkey_coring_states_tt
@@ -4290,6 +4285,11 @@ form_persian_empire_category = {
 				680 = { add_core_of = ROOT }
 				553 = { add_core_of = ROOT }
 				554 = { add_core_of = ROOT }
+				909 = { add_core_of = ROOT }
+				910 = { add_core_of = ROOT }
+				911 = { add_core_of = ROOT }
+				913 = { add_core_of = ROOT }
+				918 = { add_core_of = ROOT }
 			}
 			# Italy
 			custom_effect_tooltip = form_persia_italy_coring_states_tt
@@ -4934,6 +4934,12 @@ form_byzantine_empire_category = {
 			controls_state = 680
 			controls_state = 553
 			controls_state = 554
+			controls_state = 917
+			controls_state = 913
+			controls_state = 909
+			controls_state = 910
+			controls_state = 911
+			controls_state = 799
 			# Italy: Dodecanese
 			controls_state = 164
 			# Britain: Middle East
@@ -4941,14 +4947,6 @@ form_byzantine_empire_category = {
 			controls_state = 454
 			controls_state = 455
 			controls_state = 183
-			controls_state = 799
-			#wallace
-			controls_state = 917
-			controls_state = 918
-			controls_state = 919
-			controls_state = 913
-			controls_state = 909
-			controls_state = 910
 		}
 
 		visible = {
@@ -4972,8 +4970,7 @@ form_byzantine_empire_category = {
 			183 = { add_core_of = ROOT }
 			799 = { add_core_of = ROOT }
 			917 = { add_core_of = ROOT }
-			918 = { add_core_of = ROOT }
-			919 = { add_core_of = ROOT }
+			911 = { add_core_of = ROOT }
 			910 = { add_core_of = ROOT }
 			909 = { add_core_of = ROOT }
 			913 = { add_core_of = ROOT }
@@ -5085,6 +5082,10 @@ form_arabia_category = {
 				original_tag = KUW
 				original_tag = UAE
 				original_tag = QAT
+				AND = {
+					original_tag = WAG
+					has_country_flag = WAG_arab_nation_recognize
+				}
 			}
 			has_dlc = "Waking the Tiger"
 		}
@@ -5099,6 +5100,15 @@ form_arabia_category = {
 				controls_state = 676
 				controls_state = 675
 				controls_state = 291
+				controls_state = 920
+				controls_state = 914
+				controls_state = 912
+			}
+			# Wallace
+			custom_trigger_tooltip = {
+				tooltip = form_country_wallace_required_state_tt
+				controls_state = 916
+				controls_state = 915
 			}
 			# Saudi Arabia
 			custom_trigger_tooltip = {
@@ -5140,6 +5150,13 @@ form_arabia_category = {
 				controls_state = 680
 				controls_state = 553
 				controls_state = 554
+				controls_state = 909
+				controls_state = 910
+				controls_state = 911
+				controls_state = 913
+				controls_state = 917
+				controls_state = 918
+				controls_state = 919
 			}
 			# Britain: Egypt, Middle East, Arabia
 			custom_trigger_tooltip = {
@@ -5185,6 +5202,15 @@ form_arabia_category = {
 				676 = { add_core_of = ROOT }
 				675 = { add_core_of = ROOT }
 				291 = { add_core_of = ROOT }
+				912 = { add_core_of = ROOT }
+				914 = { add_core_of = ROOT }
+				920 = { add_core_of = ROOT }
+			}
+			# Wallace
+			custom_effect_tooltip = form_country_wallace_coring_states_tt
+			hidden_effect = {
+				915 = { add_core_of = ROOT }
+				916 = { add_core_of = ROOT }
 			}
 			# Saudi Arabia
 			custom_effect_tooltip = form_country_saudi_coring_states_tt
@@ -5224,6 +5250,13 @@ form_arabia_category = {
 				553 = { add_core_of = ROOT }
 				554 = { add_core_of = ROOT }
 				462 = { add_core_of = ROOT }
+				909 = { add_core_of = ROOT }
+				910 = { add_core_of = ROOT }
+				911 = { add_core_of = ROOT }
+				913 = { add_core_of = ROOT }
+				918 = { add_core_of = ROOT }
+				917 = { add_core_of = ROOT }
+				919 = { add_core_of = ROOT }
 			}
 			# Britain
 			custom_effect_tooltip = form_arabia_britain_coring_states_tt
