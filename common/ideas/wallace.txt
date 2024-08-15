@@ -111,6 +111,9 @@ ideas = {
 		WAG_mobilize_our_people = {
 			picture = generic_oppression
 			modifier = {
+				army_org_factor = 0.2
+				army_org_regain = 0.1
+				conscription_factor = 0.05
 			}
 		}
 # 红线
@@ -127,7 +130,7 @@ ideas = {
 				stability_factor = 0.1
 			}
 			rule = {
-				can_join_faction = no
+				can_join_factions = no
 				can_create_factions = no
 			}
 		}
@@ -149,6 +152,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				war_support_factor = 0.1
 				justify_war_goal_time = -0.1
+				army_defence_against_major_factor = 0.1
+				army_attack_against_major_factor = 0.2
 			}
 		}
 		WAG_politics_in_test = {
@@ -163,6 +168,9 @@ ideas = {
 				weekly_manpower = 150
 				consumer_goods_factor = -0.1
 				production_speed_buildings_factor = 0.5
+				army_speed_factor = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.05
 			}
 		}
 
@@ -170,6 +178,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
 				democratic_drift = 0.1
+				stability_weekly_factor = 0.1
 			}
 		}
 		WAG_worker_first = {
@@ -285,7 +294,8 @@ ideas = {
 				factor = 0
 				modifier = {
 					tag = WAG
-					has_completed_focus = WAG_find_new_emperor
+					has_completed_focus = WAG_revive_the_empire
+#					has_completed_focus = WAG_find_new_emperor
 					factor = 10
 				}
 			}
