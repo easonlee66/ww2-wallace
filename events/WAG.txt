@@ -73,6 +73,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = WAG.24
 	title = WAG.24.t
@@ -81,62 +82,12 @@ country_event = {
 	option = {
 		name = WAG.24.a
 		add_war_support = 0.1
-		if = {
-			limit = {
-				original_tag = FRA
-			}
-			WAG = {
-				add_state_claim=553
-				add_state_claim=554
-				add_state_claim=680
-			}
-			else_if = {
-				limit = {
-					original_tag = ENG
-				}
-				add_state_claim = 656
-			}
-		}
 		WAG = {
 			country_event = WAG.25
 		}
 	}
 	option = {
 		name = WAG.24.b
-		trigger = {
-			OR = {
-				AND = {
-					original_tag = FRA
-					controls_state=553
-					controls_state=554
-					controls_state=680
-					OR = {
-						WAG = {
-							controls_state = 909
-						}
-						SYR = {
-							is_puppet_of = WAG
-							controls_state = 909
-						}
-					}
-				}
-				AND = {
-					original_tag = ENG
-					controls_state = 656
-					OR = {
-						WAG = {
-							controls_state = 291
-							controls_state = 675
-						}
-						IRQ = {
-							is_puppet_of = WAG
-							controls_state = 291
-							controls_state = 675
-						}
-					}
-				}
-			}
-		}
 		WAG = {
 			country_event = WAG.26
 		}
@@ -144,46 +95,12 @@ country_event = {
 	option = {
 		name = WAG.24.c
 		add_war_support = -0.1
-		add_stability = -0.2
-		if = {
+		add_stability = -0.1
+		every_controlled_state = {
 			limit = {
-				original_tag = FRA
-				controls_state=553
-				controls_state=554
-				controls_state=680
+				is_core_of = SYR
 			}
-			WAG = {
-				transfer_state=553
-				transfer_state=554
-				transfer_state=680
-				transfer_state=677
-				add_state_core=553
-				add_state_core=554
-				add_state_core=680
-				add_state_core=677
-				if = {
-					limit = {
-						FRA = {
-							controls_state = 799
-						}
-					}
-					transfer_state = 799
-					add_state_core = 799
-				}
-			}
-			else_if = {
-				limit = {
-					original_tag = ENG
-				}
-				WAG = {
-					transfer_state = 656
-					transfer_state = 454
-					transfer_state = 455
-					add_state_core = 656
-					add_state_core = 454
-					add_state_core = 455
-				}
-			}
+			transfer_state_to = WAG
 		}
 	}
 }
@@ -203,45 +120,17 @@ country_event = {
 }
 country_event = {
 	id = WAG.26
-	title = {
-		text = WAG.26.t
-		trigger = {
-			from = {
-				original_tag = FRA
-			}
-		}
-	}
-	title = {
-		text = WAG.26.tt
-		trigger = {
-			from = {
-				original_tag = ENG
-			}
-		}
-	}
+	title = WAG.26.t
 	desc = WAG.26.d
 	is_triggered_only = yes
 	option = {
 		name = WAG.26.a
-		if = {
+		every_state = {
 			limit = {
-				from = {
-					original_tag = FRA
-				}
+				is_controlled_by = FROM
+				is_claimed_by = WAG
 			}
-			transfer_state=553
-			transfer_state=554
-			transfer_state=680
-			add_state_core=553
-			add_state_core=554
-			add_state_core=680
-			else_if = {
-				limit = {
-					original_tag = ENG
-				}
-				transfer_state = 656
-				add_state_core = 656
-			}
+			transfer_state_to = WAG
 		}
 	}
 	option = {
@@ -271,45 +160,31 @@ country_event = {
 		name = WAG.27.b
 		add_war_support = -0.1
 		add_stability = -0.2
-		if = {
+		every_controlled_state = {
 			limit = {
-				original_tag = FRA
-				controls_state=553
-				controls_state=554
-				controls_state=680
+				is_core_of = SYR
 			}
-			WAG = {
-				transfer_state=553
-				transfer_state=554
-				transfer_state=680
-				transfer_state=677
-				add_state_core=553
-				add_state_core=554
-				add_state_core=680
-				add_state_core=677
-				if = {
-					limit = {
-						FRA = {
-							controls_state = 799
-						}
-					}
-					transfer_state = 799
-					add_state_core = 799
-				}
+			transfer_state_to = WAG
+		}
+	}
+}
+country_event = {
+	id = WAG.5
+	title = WAG.5.t
+	desc = WAG.5.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.5.a
+		WAG = {
+			annex_country = {
+				target = PREV
 			}
-			else_if = {
-				limit = {
-					original_tag = ENG
-				}
-				WAG = {
-					transfer_state = 656
-					transfer_state = 454
-					transfer_state = 455
-					add_state_core = 656
-					add_state_core = 454
-					add_state_core = 455
-				}
-			}
+		}
+	}
+	option = {
+		name = WAG.5.b
+		WAG = {
+			country_event = WAG.25
 		}
 	}
 }
@@ -320,15 +195,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = WAG.28.a
-		add_war_support = -0.1
-		add_stability = -0.2
 		WAG = {
-			transfer_state = 675
-			transfer_state = 291
-			transfer_state = 676
-			add_state_core = 675
-			add_state_core = 291
-			add_state_core = 676
+			annex_country = {
+				target = PREV
+			}
 		}
 	}
 	option = {
@@ -352,7 +222,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = WAG.29.a
-		puppet = IRQ
+		every_state = {
+			limit = {
+				is_controlled_by = IRQ
+				is_claimed_by = WAG
+			}
+			transfer_state_to = WAG
+		}
 	}
 	option = {
 		name = WAG.29.b
@@ -368,15 +244,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = WAG.30.a
-		add_war_support = -0.1
-		add_stability = -0.2
 		WAG = {
-			transfer_state = 675
-			transfer_state = 291
-			transfer_state = 676
-			add_state_core = 675
-			add_state_core = 291
-			add_state_core = 676
+			annex_country = {
+				target = PREV
+			}
 		}
 	}
 	option = {
