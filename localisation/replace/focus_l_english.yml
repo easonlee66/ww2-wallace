@@ -95,6 +95,8 @@
   WAG_anti_fascism_desc:0 "法西斯的大肆侵略威胁着世界的和平，我们必须站在反法西斯同盟的一边，共同防御德意两国的侵略，争取世界和平"
   WAG_secure_west_wallace:0 "东瓦防线"
   WAG_secure_west_wallace_desc:0 "伊拉克正在与德国合作，我们必须在与伊拉克接壤的地方修建堡垒，确保轴心国不会威胁到瓦雷斯国本土"
+  WAG_secure_west_wallace_t:0 "西瓦防线"
+  WAG_secure_west_wallace_t_desc:0 "为打破西方霸权，我们必须在与同盟国接壤的地段修建堡垒，抵御他们的进攻"
   WAG_anti_SOV:0 "反西方"
   WAG_anti_SOV_desc:0 "我们必须打破西方霸权，争取完全独立，并解放我们第三世界国家。"
   WAG_secure_PER:0 "反苏"

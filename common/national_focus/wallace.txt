@@ -454,7 +454,7 @@ focus_tree={
 		}
 		bypass = {
 			NOT = {
-				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+#				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
 				country_exists = KUR
 			}
 		}
@@ -559,7 +559,7 @@ focus_tree={
 				has_war_with = ROOT
 			}
 			NOT = {
-				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+#				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
 				country_exists = KUR
 			}
 		}
@@ -599,7 +599,7 @@ focus_tree={
 				has_war_with = ROOT
 			}
 			NOT = {
-				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+#				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
 				country_exists = KUR
 			}
 		}
@@ -693,7 +693,7 @@ focus_tree={
 		}
 		bypass = {
 			NOT = {
-				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+#				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
 				country_exists = KUR
 			}
 		}
@@ -1594,7 +1594,7 @@ focus_tree={
 				has_war_with = WAG
 			}
 			NOT = {
-				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
+#				has_country_flag = WAG_guaduate_indepence_of_KUR_flag
 				country_exists = KUR
 			}
 		}
@@ -1891,7 +1891,7 @@ focus_tree={
 				} }
 				create_wargoal = {
 					target = GER
-					type = puppet
+					type = topple_government
 				}
 			}
 			else_if = {
@@ -1900,7 +1900,7 @@ focus_tree={
 				} }
 				create_wargoal = {
 					target = ITA
-					type = puppet
+					type = topple_government
 				}
 			}
 			else_if = {
@@ -1910,7 +1910,7 @@ focus_tree={
 				} }
 				create_wargoal = {
 					target = IRQ
-					type = annex
+					type = annex_everything
 				}
 			}
 			else_if = {
@@ -1919,7 +1919,7 @@ focus_tree={
 				} }
 				create_wargoal = {
 					target = JAP
-					type = puppet
+					type = topple_government
 				}
 			}
 			else = {
@@ -1929,7 +1929,7 @@ focus_tree={
 					}
 					create_wargoal = {
 						target = PREV
-						type = puppet
+						type = puppet_wargoal_focus
 					}
 				}
 			}
@@ -1996,10 +1996,13 @@ focus_tree={
 					}
 				}
 				random_country = {
+					limit = {
+						is_puppet_of = ENG
+					}
 					WAG = {
 						create_wargoal = {
 							target = PREV
-							type = puppet
+							type = puppet_wargoal_focus
 						}
 					}
 				}
@@ -2012,11 +2015,9 @@ focus_tree={
 							}
 						}
 					}
-					else = {
-						create_wargoal = {
-							target = ENG
-							type = puppet
-						}
+					create_wargoal = {
+						target = ENG
+						type = topple_government
 					}
 				}
 			}
@@ -2027,10 +2028,13 @@ focus_tree={
 					}
 				}
 				random_country = {
+					limit = {
+						is_puppet_of = FRA
+					}
 					WAG = {
 						create_wargoal = {
 							target = PREV
-							type = puppet
+							type = puppet_wargoal_focus
 						}
 					}
 				}
@@ -2043,11 +2047,9 @@ focus_tree={
 							}
 						}
 					}
-					else = {
-						create_wargoal = {
-							target = FRA
-							type = puppet
-						}
+					create_wargoal = {
+						target = FRA
+						type = topple_government
 					}
 				}
 			}
@@ -2064,7 +2066,7 @@ focus_tree={
 					WAG = {
 						create_wargoal = {
 							target = PREV
-							type = puppet
+							type = puppet_wargoal_focus
 						}
 					}
 				}
@@ -2080,11 +2082,9 @@ focus_tree={
 							has_completed_focus = USA_the_giant_wakes
 						}
 					}
-					else = {
-						create_wargoal = {
-							target = USA
-							type = puppet
-						}
+					create_wargoal = {
+						target = USA
+						type = topple_government
 					}
 				}
 			}
@@ -2144,13 +2144,15 @@ focus_tree={
 						}
 					}
 				}
-				every_controlled_state = {
-					limit = {
-						is_neighbor_of = PREV
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
+				WAG = {
+					every_controlled_state = {
+#						limit = {
+#							is_neighbor_of = PREVPREV
+#						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+						}
 					}
 				}
 			}
@@ -2178,9 +2180,9 @@ focus_tree={
 		}
 		completion_reward={
 			every_controlled_state = {
-				limit = {
-					is_neighbor_of = IRQ
-				}
+#				limit = {
+#					is_neighbor_of = IRQ
+#				}
 				add_building_construction = {
 					type = bunker
 					level = 2
@@ -2292,7 +2294,7 @@ focus_tree={
 				WAG = {
 					create_wargoal = {
 						target = PREV
-						type = puppet
+						type = puppet_wargoal_focus
 					}
 				}
 			}
@@ -3096,6 +3098,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 			army_experience = 5
@@ -3139,6 +3142,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 			swap_ideas = {
@@ -3146,10 +3150,6 @@ focus_tree={
 				add_idea = WAG_abandon_the_westminster_system
 			}
 			add_stability = -0.1
-			add_popularity = {
-				ideology = democracy
-				popularity = 0.1
-			}
 		}
 	}
 	focus = {
@@ -3158,6 +3158,9 @@ focus_tree={
 		cost = 10
 		x = 19
 		y = 0
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+		}
 		completion_reward = {
 			army_experience = 10
 			load_oob = WAG_new_army
@@ -3187,78 +3190,13 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward={
 			add_war_support = 0.1
 			add_political_power = 20
 			add_ideas = WAG_never_surrender
 			army_experience = 20
-		}
-	}
-	focus={
-		id=WAG_problem_of_AMI
-		x=23
-		y=1
-		allow_branch = {
-			always = no
-		}
-		prerequisite={focus=WAG_connect_with_west focus=WAG_fight_for_independence }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_remove_Aminoac
-		x=20
-		y=2
-		prerequisite={focus=WAG_problem_of_AMI}
-		mutually_exclusive={focus=WAG_aminoac_autonomies_zone focus=WAG_AMI_kindom }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_aminoac_autonomies_zone
-		x=26
-		y=2
-		prerequisite={focus=WAG_problem_of_AMI}
-		mutually_exclusive={focus=WAG_remove_Aminoac focus=WAG_AMI_kindom }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_AMI_kindom
-		x=23
-		y=2
-		prerequisite={focus=WAG_problem_of_AMI}
-		mutually_exclusive={focus=WAG_remove_Aminoac focus=WAG_aminoac_autonomies_zone }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
 		}
 	}
 	focus={
@@ -3474,14 +3412,14 @@ focus_tree={
 				}
 			}
 		}
-		available = {
-			has_government = communism
-		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
 			add_to_faction = SOV
+			add_war_support = 0.1
+			add_stability = 0.1
+			add_political_power = 10
 		}
 	}
 	focus={
@@ -3497,6 +3435,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
 			if = {
@@ -3707,6 +3646,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward={
 			random_state = {
@@ -3768,11 +3708,13 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward={
 			add_war_support = 0.1
 			add_political_power = 20
 			add_stability = 0.05
+			add_ideas = WAG_mobilize_our_people
 		}
 	}
 	focus={
@@ -3783,14 +3725,16 @@ focus_tree={
 		relative_position_id = WAG_millitarty_industry_effort
 		prerequisite={focus=WAG_millitarty_industry_effort}
 		prerequisite={focus=WAG_mobilize_our_people}
-		cost=10
+		cost=3
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_war_support = 0.1
 		}
 	}
 	focus={
@@ -3847,6 +3791,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			add_stability = 0.1
@@ -3866,6 +3811,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			add_stability = 0.1
@@ -3890,6 +3836,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			add_political_power = 30
@@ -3899,7 +3846,8 @@ focus_tree={
 						is_core_of = WAG
 					}
 				}
-				add_resistance = -1
+				add_resistance = -0.1
+				add_compliance = -0.1
 			}
 		}
 	}
@@ -3917,7 +3865,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			if = {
@@ -3972,7 +3920,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			every_owned_state = {
@@ -4123,9 +4071,19 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			add_stability = 0.1
+			every_controlled_state = {
+				limit = {
+					NOT = {
+						is_core_of = WAG
+					}
+					resistance_target > 0.5
+				}
+				add_resistance = -0.1
+			}
 		}
 	}
 	focus={
@@ -4141,6 +4099,7 @@ focus_tree={
 		}
 		available_if_capitulated=yes
 		search_filters={
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			if = {
@@ -4169,13 +4128,13 @@ focus_tree={
 		y=1
 		relative_position_id=WAG_united_country
 		prerequisite={focus=WAG_united_country focus=WAG_federal_solution }
-		cost=10
+		cost=3
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
 		search_filters={
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward={
 			add_stability = 0.1
