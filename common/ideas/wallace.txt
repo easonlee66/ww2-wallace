@@ -50,7 +50,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				democratic_acceptance = 0.1
+				democratic_drift = 0.1
 			}
 		}
 		WAG_abandon_the_westminster_system = {
@@ -59,7 +59,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = -0.1
 				stability_factor = -0.3
 				stability_weekly = -0.05
 			}
@@ -177,7 +177,7 @@ ideas = {
 		WAG_ban_social_democracy = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = -0.1
 				stability_weekly_factor = 0.1
 			}
 		}
