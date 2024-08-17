@@ -783,7 +783,7 @@ focus_tree={
 		y=1
 		relative_position_id = WAG_special_road_for_wallace
 		prerequisite={focus=WAG_special_road_for_wallace}
-		cost=10
+		cost=6
 		ai_will_do={
 			factor=1
 		}
@@ -3102,10 +3102,12 @@ focus_tree={
 		}
 		completion_reward={
 			army_experience = 5
+			set_cosmetic_tag = WAG_army_government_ct
 			swap_ideas = {
 				remove_idea = WAG_noboody_like_empire
 				add_idea = WAG_army_goverment
 			}
+			news_event = WAG_news.8
 		}
 	}
 	focus={
@@ -3150,6 +3152,7 @@ focus_tree={
 				add_idea = WAG_abandon_the_westminster_system
 			}
 			add_stability = -0.1
+			news_event = WAG_news.9
 		}
 	}
 	focus = {
@@ -3351,7 +3354,16 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			drop_cosmetic_tag = yes
+			set_politics = {
+				ruling_party = fascism
+			}
 			army_experience = 5
+			swap_ideas = {
+				remove_idea = WAG_army_goverment
+				add_idea = WAG_a_mess_country
+			}
+			news_event = WAG_news.11
 		}
 	}
 	focus={
@@ -3626,11 +3638,16 @@ focus_tree={
 		x = 3
 		y = 1
 		completion_reward = {
+			drop_cosmetic_tag = yes
 			add_political_power = 20
 			swap_ideas = {
 				remove_idea = WAG_army_goverment
 				add_idea = WAG_a_mess_country
 			}
+			set_politics = {
+				ruling_party = communism
+			}
+			news_event = WAG_news.10
 		}
 	}
 	focus={
