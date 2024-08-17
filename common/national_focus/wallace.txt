@@ -2326,6 +2326,9 @@ focus_tree={
 		prerequisite = {
 			focus = WAG_befriend_GER
 		}
+		allow_branch = {
+			always = no
+		}
 #		relative_position_id = WAG_long_live_Zayank_XI
 #		offset = {
 #			x = -6
@@ -2467,7 +2470,7 @@ focus_tree={
 	focus={
 		id=WAG_GER_technology
 		icon = GFX_goal_generic_scientific_exchange
-		x=1
+		x=0
 		y=1
 		relative_position_id = WAG_befriend_GER
 		prerequisite={focus=WAG_befriend_GER}
@@ -2484,12 +2487,12 @@ focus_tree={
 	focus={
 		id=WAG_nazi_reform
 		icon = GFX_goal_generic_more_territorial_claims
-		x=-1
-		y=1
+		x=-2
+		y=0
 		relative_position_id = WAG_befriend_GER
 #		relative_position_id = WAG_long_live_Zayank_XI
 		prerequisite = {
-			focus = WAG_befriend_GER
+			focus = WAG_free_election
 		}
 #		prerequisite={focus=WAG_befriend_GER focus=WAG_long_live_Zayank_XI }
 		cost=10
@@ -3045,10 +3048,10 @@ focus_tree={
 	focus={
 		id=WAG_remove_royalist
 		icon = GFX_focus_generic_strike_at_democracy1
-		x=3
-		y=1
+		x=2
+		y=0
 		relative_position_id = WAG_befriend_GER
-		prerequisite={focus=WAG_befriend_GER}
+		prerequisite={focus=WAG_free_election}
 		cost=10
 		ai_will_do={
 			factor=1
