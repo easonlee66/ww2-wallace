@@ -7,7 +7,8 @@
 #### 安装教程
 
 1.  在 文档\Paradox Interactive\Hearts of Iron IV\mod 下新建Wallace.mod
-2.  输入```
+2.  输入
+```
 version="1.12.*"
 tags={
 	"Alternative History"
