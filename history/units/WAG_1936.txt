@@ -60,7 +60,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 1606
+		location = 10882
 #		division_template = "wu bu pao hui"
 		division_template = "wallace royal army"
 		start_experience_factor = 0.1
