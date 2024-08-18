@@ -761,7 +761,7 @@ focus_tree={
 		}
 #		relative_position_id = WAG_the_forth_internaion
 #		prerequisite={focus=WAG_the_forth_internaion focus=WAG_befriend_SOV }
-		cost=10
+		cost=5
 		ai_will_do={
 			factor=1
 		}
@@ -773,6 +773,7 @@ focus_tree={
 				ideology = democratic
 				popularity = -0.1
 			}
+			add_political_power = -40
 			add_ideas = WAG_ban_social_democracy
 		}
 	}
@@ -1239,7 +1240,7 @@ focus_tree={
 		y=1
 		relative_position_id = WAG_ban_social_democracy
 		prerequisite={focus=WAG_ban_social_democracy}
-		cost=10
+		cost=3
 		ai_will_do={
 			factor=1
 		}
