@@ -35,16 +35,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = DBG.3
-	title = DBG.3.t
-	desc = DBG.3.d
-	is_triggered_only = yes
-	option = {
-		name = DBG.3.a
-	}
-}
-
 #country_event = {
 #	id = DBG.4
 #	title = DBG.4.t

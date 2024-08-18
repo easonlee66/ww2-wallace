@@ -30,6 +30,22 @@ country_event = {
 #超额完成 WAG.3 留作预留
 
 country_event = {
+	id = WAG.6
+	title = WAG.6.t
+	desc = WAG.6.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.23.a
+		add_stability = -0.1
+		add_political_power = -20
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = {
 	id = WAG.23
 	title = WAG.23.t
 	desc = WAG.23.d
