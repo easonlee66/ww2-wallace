@@ -757,7 +757,7 @@ focus_tree={
 		relative_position_id = WAG_befriend_SOV
 		prerequisite = {
 			focus = WAG_befriend_SOV
-			focus = WAG_special_road_for_wallace
+#			focus = WAG_special_road_for_wallace
 		}
 #		relative_position_id = WAG_the_forth_internaion
 #		prerequisite={focus=WAG_the_forth_internaion focus=WAG_befriend_SOV }
@@ -3247,6 +3247,9 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		allow_branch = {
+			has_completed_focus = WAG_ask_for_our_land
+		}
 		available_if_capitulated=yes
 		search_filters={
 		}
@@ -3314,7 +3317,7 @@ focus_tree={
 		}
 		available = {
 			check_variable = {
-				party_popularity@fascism > 0.5
+				party_popularity@fascism > 0.4
 			}
 		}
 		mutually_exclusive = {
@@ -3514,6 +3517,9 @@ focus_tree={
 			set_temp_variable = { WAG_rw_support = party_popularity@neutrality }
 			add_to_temp_variable = { WAG_rw_support = party_popularity@fascism }
 			check_variable = { WAG_rw_support > 0.5 }
+			check_variable = {
+				party_popularity@neutrality > party_popularity@fascism
+			}
 		}
 #		mutually_exclusive={focus=WAG_free_election focus = WAG_oppisite_nazi }
 		allow_branch={
@@ -3623,7 +3629,7 @@ focus_tree={
 		}
 		available = {
 			check_variable = {
-				party_popularity@communism > 0.5
+				party_popularity@communism > 0.4
 			}
 		}
 		allow_branch = {
