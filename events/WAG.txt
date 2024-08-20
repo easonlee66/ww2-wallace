@@ -35,12 +35,43 @@ country_event = {
 	desc = WAG.6.d
 	is_triggered_only = yes
 	option = {
-		name = WAG.23.a
+		name = WAG.6.a
 		add_stability = -0.1
 		add_political_power = -20
 		add_popularity = {
 			ideology = communism
 			popularity = 0.1
+		}
+	}
+	option = {
+		name = WAG.6.b
+		add_stability = 0.1
+		add_popularity = {
+			ideology = communism
+			popularity = -0.1
+		}
+	}
+}
+country_event = {
+	id = WAG.7
+	title = WAG.7.t
+	desc = WAG.7.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.6.a
+		add_stability = -0.1
+		add_political_power = -20
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = WAG.6.b
+		add_stability = 0.1
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
 		}
 	}
 }

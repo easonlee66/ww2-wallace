@@ -846,6 +846,28 @@ focus_tree={
 			}
 			add_ideas = WAG_enconomy_first
 			add_stability = 0.1
+			random_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 		}
 	}
 	focus={
@@ -883,6 +905,14 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			any_controlled_state = {
+				NOT = {
+					state = 915
+					state = 916
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -891,9 +921,13 @@ focus_tree={
 			random_controlled_state = {
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 				}
 				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -902,9 +936,43 @@ focus_tree={
 			random_controlled_state = {
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 				}
 				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -928,16 +996,6 @@ focus_tree={
 				NOT = {
 					state = 915
 					state = 916
-				}
-			}
-		}
-		bypass = {
-			NOT = {
-				any_controlled_state = {
-					NOT = {
-						state = 915
-						state = 916
-					}
 				}
 			}
 		}
@@ -3112,6 +3170,14 @@ focus_tree={
 				add_idea = WAG_army_goverment
 			}
 			news_event = WAG_news.8
+			country_event = {
+				id = WAG.6
+				random_days = 10
+			}
+			country_event = {
+				id = WAG.7
+				random_days = 10
+			}
 		}
 	}
 	focus={
