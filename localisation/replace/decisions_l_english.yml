@@ -98,6 +98,9 @@
   WAG_ask_for_lifant:0 "索取黎凡特地区"
   WAG_ask_for_mesopudamia:0 "索取美索不达米亚地区"
 
+  WAG_stability:0 "稳定国内局势"
+  WAG_strict:0 "全国戒严"
+
   DBG:0 "DEBUG"
 
   form_country_wallace_required_state_tt:0 "控制§Y瓦雷斯国§!的所有地区。"

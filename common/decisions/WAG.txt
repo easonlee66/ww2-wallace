@@ -628,6 +628,27 @@ WAG_ask_for_our_land = {
 	}
 }
 
+WAG_stability = {
+	WAG_strict = {
+		cost = 20
+		visible = {
+			has_idea = WAG_army_goverment
+		}
+		available = {
+			check_variable = {
+				stability < 0.5
+			}
+		}
+		days_remove = 5
+		complete_effect = {
+			add_stability = 0.1
+		}
+		remove_effect = {
+			add_political_power = 30
+		}
+	}
+}
+
 DBG = {
 	DBG_test_coring = {
 		remove_effect = {
