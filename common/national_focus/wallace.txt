@@ -3865,9 +3865,6 @@ focus_tree={
 		icon = GFX_goal_generic_national_unity
 		x=32
 		y=2
-		allow_branch = {
-			has_completed_focus = WAG_ask_for_our_land
-		}
 		available = {
 			any_controlled_state = {
 				NOT = {
