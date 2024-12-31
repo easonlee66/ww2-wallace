@@ -1,0 +1,25 @@
+state={
+	id=985
+	name="STATE_912"
+
+#	resources = {
+#		oil = 8
+#	}
+
+	history={
+		owner = IRQ
+		victory_points = {
+			1938 1 
+		}
+		add_core_of = IRQ
+		add_claim_by = WAG
+	}
+
+	provinces={
+		1938 12372 
+	}
+	manpower=11827
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=1.000
+}

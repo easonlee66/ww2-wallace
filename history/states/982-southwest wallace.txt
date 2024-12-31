@@ -1,21 +1,19 @@
 state={
-	id=918
-	name="STATE_918"
+	id=983
+	name="STATE_910"
 	history={
 		owner = FRA
 		victory_points = {
-			1549 1
+			2013 1
 		}
 		add_core_of = SYR
-		add_claim_by = AMI
 		add_claim_by = WAG
-		add_core_of = KUR
 	}
 	provinces={
-		1549 
+		2013 
 	}
-	manpower=42410
+	manpower=3240
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=rural
 	local_supplies=0.000
 }

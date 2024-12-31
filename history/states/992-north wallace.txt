@@ -1,21 +1,21 @@
 state={
-	id=914
-	name="STATE_914"
-
+	id=992
+	name="STATE_919"
 	history={
-		owner = IRQ
+		owner = AMI
 		victory_points = {
-			10106 1 
+			12387 1
 		}
-		add_core_of = IRQ
-		add_claim_by = WAG
+		add_core_of = AMI
+		add_core_of = TUR
+#		add_core_of = WAG
 		add_core_of = KUR
+		add_claim_by = WAG
 	}
-
 	provinces={
-		1600 10106 
+		12387 
 	}
-	manpower=9720
+	manpower=13720
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

@@ -1,19 +1,19 @@
 state={
-	id=910
-	name="STATE_910"
+	id=984
+	name="STATE_911"
 	history={
 		owner = FRA
 		victory_points = {
-			2013 1
+			901 1
 		}
 		add_core_of = SYR
 		add_claim_by = WAG
 	}
 	provinces={
-		2013 
+		901 
 	}
-	manpower=3240
+	manpower=9720
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=town
 	local_supplies=0.000
 }
