@@ -4,7 +4,7 @@ state={
 	history={
 		owner = AMI
 		victory_points = {
-			12387 1
+			12387 3
 		}
 		add_core_of = AMI
 		add_core_of = TUR
