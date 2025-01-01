@@ -2,12 +2,11 @@
   wallace_focus:0 "瓦雷斯国 国策"
 
 # 政治线
-  WAG_fight_for_independence:0 "发动军事政变"
   WAG_abandon_the_westminster_system:0 "发动军事政变"
 
 # 黑线
 
-  WAG_free_election:0 "法西斯道路"
+  WAG_free_election:0 "民族复兴党上台"
   WAG_free_election_desc:0 ""
   WAG_befriend_GER:0 "交好德国"
   WAG_befriend_GER_desc:0 ""
