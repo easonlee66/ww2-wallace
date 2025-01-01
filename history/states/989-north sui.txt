@@ -1,0 +1,21 @@
+state={
+	id=989
+	name="STATE_918"
+	history={
+		owner = FRA
+		victory_points = {
+			1549 2
+		}
+		add_core_of = SYR
+		add_claim_by = AMI
+		add_claim_by = WAG
+		add_core_of = KUR
+	}
+	provinces={
+		1549 
+	}
+	manpower=42410
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

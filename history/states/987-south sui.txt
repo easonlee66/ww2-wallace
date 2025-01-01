@@ -1,5 +1,5 @@
 state={
-	id=989
+	id=987
 	name="STATE_916"
 	history={
 		owner = WAG

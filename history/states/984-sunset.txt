@@ -1,23 +1,25 @@
 state={
-	id=987
-	name="STATE_914"
+	id=984
+	name="STATE_912"
+
+#	resources = {
+#		oil = 8
+#	}
 
 	history={
 		owner = IRQ
 		victory_points = {
-			10106 1
-			1600 2 
+			1938 1 
 		}
 		add_core_of = IRQ
 		add_claim_by = WAG
-		add_core_of = KUR
 	}
 
 	provinces={
-		1600 10106 
+		1938 12372 
 	}
-	manpower=9720
+	manpower=11827
 	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	state_category=city
+	local_supplies=1.000
 }
