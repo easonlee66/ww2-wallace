@@ -3146,49 +3146,43 @@ focus_tree={
 		completion_reward={
 		}
 	}
-	focus={
-		id=WAG_fight_for_independence
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = {
-			focus = WAG_train_new_army
-		}
-		x=13
-		y=1
-		cost=4
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward={
-			army_experience = 5
-			set_cosmetic_tag = WAG_army_government_ct
-			swap_ideas = {
-				remove_idea = WAG_noboody_like_empire
-				add_idea = WAG_army_goverment
-			}
-			news_event = WAG_news.8
-			country_event = {
-				id = WAG.6
-				random_days = 10
-			}
-			country_event = {
-				id = WAG.7
-				random_days = 10
-			}
-		}
-	}
+#	focus={
+#		id=WAG_fight_for_independence
+#		icon = GFX_goal_generic_demand_territory
+#		x=13
+#		y=1
+#		cost=4
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#			FOCUS_FILTER_POLITICAL
+#		}
+#		completion_reward={
+#			army_experience = 5
+#			set_cosmetic_tag = WAG_army_government_ct
+#			swap_ideas = {
+#				remove_idea = WAG_noboody_like_empire
+#				add_idea = WAG_army_goverment
+#			}
+#			news_event = WAG_news.8
+#			country_event = {
+#				id = WAG.6
+#				random_days = 10
+#			}
+#			country_event = {
+#				id = WAG.7
+#				random_days = 10
+#			}
+#		}
+#	}
 	focus={
 		id=WAG_connect_with_west
 		icon = GFX_focus_chi_reach_out_to_france
-		x=13
-		y=1
-		prerequisite = {
-			focus = WAG_fight_for_independence
-		}
-		relative_position_id = WAG_fight_for_independence
+		x=25
+		y=0
+		relative_position_id = WAG_abandon_the_westminster_system
 		mutually_exclusive={focus=WAG_abandon_the_westminster_system }
 		cost=10
 		ai_will_do={
@@ -3203,10 +3197,8 @@ focus_tree={
 	focus={
 		id=WAG_abandon_the_westminster_system
 		icon = GFX_goal_generic_propaganda
-		x=-1
-		y=1
-		relative_position_id = WAG_fight_for_independence
-		prerequisite={focus=WAG_fight_for_independence}
+		x=12
+		y=0
 		mutually_exclusive={focus=WAG_connect_with_west }
 		cost=3
 		ai_will_do={
@@ -3229,8 +3221,9 @@ focus_tree={
 		id = WAG_train_new_army
 		icon = GFX_goal_generic_position_armies
 		cost = 10
-		x = 19
-		y = 0
+		x = 0
+		y = 1
+		prerequisite={focus=WAG_abandon_the_westminster_system}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
 		}
@@ -3244,19 +3237,35 @@ focus_tree={
 					count = 1
 				}
 			}
+			army_experience = 5
+			set_cosmetic_tag = WAG_army_government_ct
+			swap_ideas = {
+				remove_idea = WAG_noboody_like_empire
+				add_idea = WAG_army_goverment
+			}
+			news_event = WAG_news.8
+			country_event = {
+				id = WAG.6
+				random_days = 10
+			}
+			country_event = {
+				id = WAG.7
+				random_days = 10
+			}
 		}
 	}
 	focus={
 		id=WAG_prepare_for_the_war
 		icon = GFX_goal_generic_military_sphere
-		x=38
-		y=1
+		x=2
+		y=0
+		relative_position_id=WAG_train_new_army
+		prerequisite={focus=WAG_abandon_the_westminster_system}
 		available = {
 			NOT = {
 				has_idea = WAG_a_mess_country
 			}
 		}
-		prerequisite={focus=WAG_train_new_army}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3510,10 +3519,11 @@ focus_tree={
 	focus={
 		id=WAG_end_saint_Kolu_trait
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x=0
+		x=-1
 		y=1
 		relative_position_id = WAG_prepare_for_the_war
 		prerequisite={focus=WAG_prepare_for_the_war}
+		prerequisite={focus=WAG_train_new_army}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3805,7 +3815,7 @@ focus_tree={
 		}
 		completion_reward={
 			add_war_support = 0.1
-			add_political_power = 20
+			add_political_power = 20s
 			add_stability = 0.05
 			add_ideas = WAG_mobilize_our_people
 		}
@@ -3863,8 +3873,9 @@ focus_tree={
 	focus={
 		id=WAG_solve_the_nation_problem
 		icon = GFX_goal_generic_national_unity
-		x=32
-		y=2
+		x=30
+		y=1
+		prerequisite={focus=WAG_abandon_the_westminster_system focus=WAG_connect_with_west}
 		available = {
 			any_controlled_state = {
 				NOT = {
