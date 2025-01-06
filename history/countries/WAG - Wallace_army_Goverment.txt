@@ -30,9 +30,9 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 10
-	democratic = 50
-	fascism = 25
-	communism = 15
+	democratic = 30
+	fascism = 35
+	communism = 25
 #	fascism = 50 
 #	neutrality = 10 #10%自民 2%保皇
 #	communism = 20 #12%安 10%统革 8%农工 4%库共 2%其他小党
