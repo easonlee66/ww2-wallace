@@ -39,7 +39,7 @@ set_popularities = {
 #	democratic = 20 #5%安 13%社民 14%瓦共 7%农工 6%库共 2%其他小党
 }
 
-recruit_character = WAG_muhamd_ziang_wikau
+recruit_character = WAG_muhammud_von_pisau
 recruit_character = WAG_sadam_wang_zaoyangk
 recruit_character = WAG_salman_ritin_somin
 recruit_character = WAG_abudullah_an_komi
