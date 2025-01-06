@@ -1,6 +1,6 @@
 characters={
-	WAG_muhamd_ziang_wikau={
-		name=WAG_muhammad_kiang_wikau
+	WAG_muhammad_von_pisau={
+		name=WAG_muhammad_von_pisau
 #		portraits={
 #			civilian={
 #				large="GFX_portrait_iraq_ghazi"
@@ -10,6 +10,17 @@ characters={
 			ideology=nazism
 			expire="1965.1.1"
 			id=-1
+		}
+		advisor={
+			cost=150
+			slot=political_advisor
+			idea_token=WAG_muhammmad_von_pisau
+			allowed={
+				original_tag=WAG
+			}
+			traits={
+				national_propagandist
+			}
 		}
 	}
 	WAG_sadam_wang_zaoyangk={
@@ -27,6 +38,17 @@ characters={
 			expire="1965.1.1"
 			id=-1
 		}
+		advisor={
+			cost=150
+			slot=political_advisor
+			idea_token=WAG_salman_ritin_somin
+			allowed={
+				original_tag=WAG
+			}
+			traits={
+				socdem_reformist
+			}
+		}
 	}
 	WAG_abudullah_an_komi={
 		name = WAG_abudullah_an_komi
@@ -35,8 +57,71 @@ characters={
 			expire = "1965.1.1"
 			id=-1
 		}
+		advisor={
+			cost=150
+			slot=political_advisor
+			idea_token=WAG_abudullah_an_komi
+			allowed={
+				original_tag=WAG
+			}
+			traits={
+				socialist_autocrat
+			}
+		}
 	}
+	WAG_royalist = {
+		name=WAG_royalist
+		portraits = {
+			civilian={
+				large=GFX_idea_SYR_generic_3
+			}
+		}
+		advisor={
+			cost=150
+			slot=political_advisor
+			idea_token=WAG_royalist
+			allowed = {
+				original_tag = WAG
+			}
+			traits = {
+				staunch_monarchist
+			}
+#			ai_will_do = {
+#				factor = 0
+#				modifier = {
+#					tag = WAG
+#					has_completed_focus = WAG_revive_the_empire
+#	#					has_completed_focus = WAG_find_new_emperor
+#					factor = 10
+#				}
+#			}
+		}
+	}
+	WAG_army_chief = {
+		name=WAG_army_chief
+		picture = generic_army_arab_1
+		allowed = {
+			original_tag = WAG
+		}
+		traits = {
+			army_chief_defensive_1
+		}
+	}
+#	WAG_workhorse = {
+#		picture = generic_political_advisor_arab_2
+#		allowed = {
+#			original_tag = WAG
+#		}
+#		traits = {
+#			silent_workhorse
+#		}
+#		ai_will_do = {
+#			factor = 10
+#		}
+#	}
+}
+#army_chief = {
 #	WAG_zhanwei={
 #		name = WAG_muhammad_ziang_wikau
 #	}
-}
+#}

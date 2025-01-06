@@ -283,46 +283,5 @@ ideas = {
 #		}
 	}
 	political_advisor = {
-		WAG_royalist = {
-			picture = generic_political_advisor_arab_1
-			allowed = {
-				original_tag = WAG
-			}
-			traits = {
-				staunch_monarchist
-			}
-			ai_will_do = {
-				factor = 0
-				modifier = {
-					tag = WAG
-					has_completed_focus = WAG_revive_the_empire
-#					has_completed_focus = WAG_find_new_emperor
-					factor = 10
-				}
-			}
-		}
-		WAG_workhorse = {
-			picture = generic_political_advisor_arab_2
-			allowed = {
-				original_tag = WAG
-			}
-			traits = {
-				silent_workhorse
-			}
-			ai_will_do = {
-				factor = 10
-			}
-		}
-	}
-	army_chief = {
-		WAG_army_chief = {
-			picture = generic_army_arab_1
-			allowed = {
-				original_tag = WAG
-			}
-			traits = {
-				army_chief_defensive_1
-			}
-		}
 	}
 }
