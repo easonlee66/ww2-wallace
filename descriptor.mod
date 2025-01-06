@@ -3,4 +3,4 @@ tags={
 	"Alternative History"
 }
 name="WW2 Wallace"
-supported_version="1.15.11"
+supported_version="1.15.1"
