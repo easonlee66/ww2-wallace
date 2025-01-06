@@ -1,0 +1,17 @@
+spriteTypes = {	
+
+	
+#	spriteType = {
+#		name = "GFX_focus_attack_turkey"
+#		textureFile = "gfx/interface/goals/focus_attack_turkey.dds"
+#	}
+	spriteType = {
+		name = "GFX_focus_attack_wallace"
+		textureFile = "gfx/interface/goals/focus_attack_wallace_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_befriend_wallace"
+		textureFile = "gfx/interface/goals/focus_befriend_wallace_2.dds"
+	}
+}
