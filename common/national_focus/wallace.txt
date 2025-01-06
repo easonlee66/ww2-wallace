@@ -15,13 +15,14 @@ focus_tree={
 	focus={
 		id=WAG_industrial_effort
 		icon=GFX_goal_generic_production
-		x=42
-		y=0
+		x=1
+		y=1
+		relative_position_id=WAG_remove_royalist
 		cost=10
 		ai_will_do={
 			factor=10
 		}
-		
+		prerequisite={focus=WAG_free_election focus=WAG_befriend_SOV }
 		search_filters={
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_RESEARCH
@@ -409,10 +410,6 @@ focus_tree={
 		cost=10
 		ai_will_do={
 			factor=1
-		}
-		
-		allow_branch={
-			has_country_flag=WAG_complete_first_tyhp
 		}
 		available={
 		}
@@ -3384,7 +3381,7 @@ focus_tree={
 	focus={
 		id=WAG_free_election
 		icon = GFX_goal_support_fascism
-		x=-6
+		x=-7
 		y=1
 		relative_position_id = WAG_abandon_the_westminster_system
 		prerequisite = {
