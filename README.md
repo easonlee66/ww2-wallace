@@ -7,17 +7,19 @@
 #### 安装教程
 
 1.  在 文档\Paradox Interactive\Hearts of Iron IV\mod 下新建Wallace.mod
-2.  输入
+2.  输入（4.1及以后版本）
 ```
-version="1.12.*"
+version="1.15.*"
 tags={
 	"Alternative History"
 }
 name="WW2 Wallace"
-supported_version="1.12.11"
+supported_version="1.15.1"
 path=解压后文件夹的位置
 ```
-3.  打开钢4启动器，将mod添加到播放集并启用
+*（注：4.0及以前版本请将所有1.15改为1.12）*
+3.  打开钢4启动器，将mod添加到播放集，并启用
+若提示该mod适用于另一个版本，可以修改support_version=1.15.后面的数字
 
 #### 使用说明
 
