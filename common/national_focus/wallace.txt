@@ -2470,12 +2470,42 @@ focus_tree={
 				limit = { has_idea = sour_loser }
 				remove_ideas = sour_loser
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = mw_aircraft
 				category = light_air
 				category = medium_air
 				category = heavy_air
 				bonus = 1
+			}
+			986 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = millitary_factory
+					level = 2
+				}
+			}
+			987 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = millitary_factory
+					level = 2
+				}
+			}
+			982 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 	}
@@ -2520,6 +2550,12 @@ focus_tree={
 				name = artillery
 				bonus = 0.5
 				category = artillery
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			987 = {
 			}
 		}
 	}
@@ -2926,10 +2962,37 @@ focus_tree={
 				is_in_faction_with = WAG
 			}
 		}
+		available = {
+			TUR = {
+				OR = {
+					NOT = {
+						complete_national_focus = TUR_pivot_to_the_past
+					}
+					complete_national_focus = TUR_return_of_the_sultan
+				}
+			}
+		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
+		will_lead_to_war_with = TUR
 		completion_reward={
+			if = {
+				limit = {
+					TUR = {
+						complete_national_focus = TUR_pivot_to_the_past
+					}
+				}
+				TUR = {
+					country_event = generic.5
+				}
+				else = {
+					create_wargoal = {
+						target = TUR
+						type = puppet_wargoal_focus
+					}
+				}
+			}
 		}
 	}
 	focus={
@@ -2952,6 +3015,7 @@ focus_tree={
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
 		}
+		will_lead_to_war_with = BUL
 		completion_reward={
 			if = {
 				limit = { BUL = {
@@ -2962,6 +3026,12 @@ focus_tree={
 				} }
 				BUL = {
 					country_event = generic.5
+				}
+				else = {
+					create_wargoal = {
+						target = BUL
+						type = puppet_wargoal_focus
+					}
 				}
 			}
 		}
@@ -2984,6 +3054,22 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			if = {
+				limit = {
+					GER = {
+						complete_national_focus = GER_revive_the_kaiserreich_ww
+					}
+				}
+				GER = {
+					country_event = generic.5
+				}
+				else = {
+					create_wargoal = {
+						target = GER
+						type = puppet_wargoal_focus
+					}
+				}
+			}
 		}
 	}
 	focus={
@@ -3044,6 +3130,7 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
+			add_war_support = 0.2
 		}
 	}
 	focus={
@@ -3063,6 +3150,26 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = FRA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SOV
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ITA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = JAP
+				type = annex_everything
+			}
 		}
 	}
 	focus={
@@ -3197,7 +3304,7 @@ focus_tree={
 		x=12
 		y=0
 		mutually_exclusive={focus=WAG_connect_with_west }
-		cost=3
+		cost=10
 		ai_will_do={
 			factor=1
 		}
@@ -3211,7 +3318,29 @@ focus_tree={
 				add_idea = WAG_abandon_the_westminster_system
 			}
 			add_stability = -0.1
-			news_event = WAG_news.9
+			news_event = WAG_news.8
+			set_politics = {
+				ruling_party = neutrality
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = WAG_army_goverment
+				name = WAG_army_government
+			}
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "WAG_army_government"
+				desc = "WAG_army_government_desc"
+				ideology = despotism
+			}
+			country_event = {
+				id = WAG.6
+				random_days = 10
+			}
+			country_event = {
+				id = WAG.7
+				random_days = 10
+			}
 		}
 	}
 	focus = {
@@ -3241,14 +3370,6 @@ focus_tree={
 				add_idea = WAG_army_goverment
 			}
 			news_event = WAG_news.8
-			country_event = {
-				id = WAG.6
-				random_days = 10
-			}
-			country_event = {
-				id = WAG.7
-				random_days = 10
-			}
 		}
 	}
 	focus={
