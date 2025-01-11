@@ -10,6 +10,9 @@ characters={
 			ideology=nazism
 			expire="1965.1.1"
 			id=-1
+            traits={
+                crazy_right
+            }
 		}
 		advisor={
 			cost=150
@@ -20,6 +23,7 @@ characters={
 			}
 			traits={
 				national_propagandist
+                crazy_right_advisor
 			}
 		}
 	}
