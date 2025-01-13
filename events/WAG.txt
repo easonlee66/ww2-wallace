@@ -159,19 +159,29 @@ country_event = {
 	option = {
 		name = WAG.25.a
 		add_war_support = 0.1
-		every_state = {
+		if = {
 			limit = {
-				is_controlled_by = FROM
-				if = {
-					limit = { FROM = { original_tag = FRA } }
-					is_core_of = SYR
+				FROM  = {
+					original_tag = FRA
 				}
 			}
-			add_claim_by = WAG
-		}
-		create_wargoal = {
-			target = FROM
-			type = take_claimed_state
+			every_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_core_of = SYR
+				}
+				add_claim_by = WAG
+			}
+			create_wargoal = {
+				target = FROM
+				type = take_claimed_state
+			}
+			else = {
+				create_wargoal = {
+					target = FROM
+					type = annex_everything
+				}
+			}
 		}
 	}
 }
@@ -351,6 +361,32 @@ country_event = {
 			NOT = {
 				has_government = fascism
 			}
+		}
+	}
+}
+country_event = {
+	id = WAG.33
+	title = WAG.24.t
+	desc = WAG.24.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.24.a
+		trigger = {
+			is_ai = no
+		}
+		WAG = {
+			country_event = WAG.25
+		}
+	}
+	option = {
+		name = WAG.24.b
+		add_war_support = -0.1
+		add_stability = -0.1
+		every_controlled_state = {
+			limit = {
+				is_core_of = SYR
+			}
+			transfer_state_to = WAG
 		}
 	}
 }
