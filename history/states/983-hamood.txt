@@ -1,6 +1,6 @@
 state={
 	id=983
-	name="STATE_910"
+	name="STATE_983"
 	history={
 		owner = FRA
 		victory_points = {
