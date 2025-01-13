@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_simp_chinese:
   DBG.1.t:0 "DEBUG:修复领导人问题"
   DBG.1.d:0 "这个在之前发朋友圈的版本里没有，用于修复领导人不显示、乱显示的bug"
   DBG.1.a:0 "点此修复"
