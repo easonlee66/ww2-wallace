@@ -43,6 +43,7 @@ recruit_character = WAG_muhammad_von_pisau
 recruit_character = WAG_sadam_wang_zaoyangk
 recruit_character = WAG_salman_ritin_somin
 recruit_character = WAG_abudullah_an_komi
+recruit_character = WAG_royalist
 
 1939.1.1 = {
 #	set_country_flag = WAG_complete_first_tyhp
