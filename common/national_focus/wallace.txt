@@ -2966,9 +2966,9 @@ focus_tree={
 			TUR = {
 				OR = {
 					NOT = {
-						complete_national_focus = TUR_pivot_to_the_past
+						has_completed_focus = TUR_pivot_to_the_past
 					}
-					complete_national_focus = TUR_return_of_the_sultan
+					has_completed_focus = TUR_return_of_the_sultan
 				}
 			}
 		}
@@ -2980,7 +2980,7 @@ focus_tree={
 			if = {
 				limit = {
 					TUR = {
-						complete_national_focus = TUR_pivot_to_the_past
+						has_completed_focus = TUR_pivot_to_the_past
 					}
 				}
 				TUR = {
@@ -3057,7 +3057,7 @@ focus_tree={
 			if = {
 				limit = {
 					GER = {
-						complete_national_focus = GER_revive_the_kaiserreich_ww
+						has_completed_focus = GER_revive_the_kaiserreich_ww
 					}
 				}
 				GER = {
