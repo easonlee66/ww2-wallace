@@ -116,7 +116,7 @@ focus_tree={
 				911 = {
 					set_state_flag = WAG_south_state
 				}
-				914 = {
+				985 = {
 					set_state_flag = WAG_south_state
 				}
 			}
@@ -905,8 +905,8 @@ focus_tree={
 		available = {
 			any_controlled_state = {
 				NOT = {
-					state = 915
-					state = 916
+					state = 986
+					state = 987
 				}
 			}
 		}
@@ -991,8 +991,8 @@ focus_tree={
 		available = {
 			any_controlled_state = {
 				NOT = {
-					state = 915
-					state = 916
+					state = 986
+					state = 987
 				}
 			}
 		}
@@ -1004,8 +1004,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_building_construction = {
@@ -1017,8 +1017,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1031,8 +1031,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1045,8 +1045,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1059,8 +1059,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1073,8 +1073,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1087,8 +1087,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1101,8 +1101,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1115,8 +1115,8 @@ focus_tree={
 				limit = {
 					is_controlled_by = WAG
 					NOT = {
-						state = 915
-						state = 916
+						state = 986
+						state = 987
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -3356,7 +3356,7 @@ focus_tree={
 		completion_reward = {
 			army_experience = 10
 			load_oob = WAG_new_army
-			916 = {
+			987 = {
 				create_unit = {
 					division = "division_template = \"wallace new army\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
 					owner = PREV

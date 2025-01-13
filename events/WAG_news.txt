@@ -25,7 +25,7 @@ news_event = {
 #news_event = {
 #	id = WAG_news.2
 #	trigger = {
-#		915 = {
+#		986 = {
 #			NOT = {
 #				is_controlled_by = WAG
 #			}

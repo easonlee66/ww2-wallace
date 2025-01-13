@@ -81,8 +81,8 @@ WAG_first_two_year_half_plan = {
 	WAG_bridge_over_kosui = {
 		icon = GFX_decision_generic_special_project
 		available = {
-			owns_state = 915
-			controls_state = 915
+			owns_state = 986
+			controls_state = 986
 			has_tech = construction2
 			num_of_civilian_factories_available_for_projects > 3
 		}
@@ -97,7 +97,7 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
-				state = 915
+				state = 986
 			}
 		}
 		modifier = {
@@ -108,7 +108,7 @@ WAG_first_two_year_half_plan = {
 				path = { 10804 1549 }
 				level = 2
 			}
-			915 = {
+			986 = {
 				add_extra_state_shared_building_slots = 3
 #				add_building_construction = {
 #					type = supply_node
@@ -124,26 +124,26 @@ WAG_first_two_year_half_plan = {
 					level = 3
 				}
 			}
-			918 = {
+			989 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			917 = {
+			988 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 				}
 			}
-			916 = {
+			987 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 				}
 			}
-#			918 = {
+#			989 = {
 #				add_building_construction = {
 #					type = supply_node
 #					province = 1549
@@ -164,8 +164,8 @@ WAG_first_two_year_half_plan = {
 	WAG_Mt.Iron_mining = {
 		icon = generic_prospect_for_resources
 		available = {
-			owns_state = 916
-			controls_state = 916
+			owns_state = 987
+			controls_state = 987
 			has_tech = excavation2
 			num_of_civilian_factories_available_for_projects > 2
 		}
@@ -180,7 +180,7 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
-				state = 916
+				state = 987
 			}
 		}
 #		on_map_mode = map_only
@@ -189,7 +189,7 @@ WAG_first_two_year_half_plan = {
 #			weekly_manpower = -1
 		}
 		remove_effect = {
-			916 = {
+			987 = {
 				add_resource = {
 					type = steel
 					amount = 8
@@ -203,17 +203,17 @@ WAG_first_two_year_half_plan = {
 	WAG_kosui_hydropower_station = {
 		icon = GFX_decision_generic_special_project
 		available = {
-			owns_state = 918
-			owns_state = 916
-			controls_state = 918
-			controls_state = 916
+			owns_state = 989
+			owns_state = 987
+			controls_state = 989
+			controls_state = 987
 			has_tech = construction2
 			num_of_civilian_factories_available_for_projects > 3
 			has_country_flag = WAG_ftyhp_mt_iron
 #			has_resources_amount = {
 #				resource = steel
 #				amount > 5
-#				state = 916
+#				state = 987
 #			}
 		}
 		visible = {
@@ -227,7 +227,7 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
-				state = 918
+				state = 989
 			}
 		}
 		modifier = {
@@ -235,7 +235,7 @@ WAG_first_two_year_half_plan = {
 			country_resource_cost_steel = 2
 		}
 		remove_effect = {
-			915 = {
+			986 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -246,13 +246,13 @@ WAG_first_two_year_half_plan = {
 					level = 1
 				}
 			}
-			918 = {
+			989 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 				}
 			}
-			916 = {
+			987 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -285,7 +285,7 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
-				state = 915
+				state = 986
 			}
 		}
 		modifier = {
@@ -320,14 +320,14 @@ WAG_first_two_year_half_plan = {
 		fire_only_once = yes
 		highlight_states = {
 			highlight_state_targets = {
-				state = 915
+				state = 986
 			}
 		}
 		modifier = {
 			civilian_factory_use = 2
 		}
 		remove_effect = {
-			915 = {
+			986 = {
 				add_building_construction = {
 					type = air_base
 					level = 1
@@ -471,8 +471,8 @@ WAG_nazi_reform = {
 				start_civil_war = {
 					ideology = democratic
 					ruling_party = fascism
-					capital = 915
-					states = {912 914 915}
+					capital = 986
+					states = {984 985 986}
 				}
 				country_event = WAG.4
 				random_other_country = {
@@ -508,7 +508,7 @@ WAG_nazi_reform = {
 					}
 				}
 				set_capital = {
-					state = 918
+					state = 989
 				}
 	#				add_popularity = {
 	#					ideology = fascism
