@@ -3318,6 +3318,7 @@ focus_tree={
 				add_idea = WAG_abandon_the_westminster_system
 			}
 			add_stability = -0.1
+			add_political_power = 100
 			news_event = WAG_news.8
 			set_politics = {
 				ruling_party = neutrality
@@ -3340,6 +3341,10 @@ focus_tree={
 			country_event = {
 				id = WAG.7
 				random_days = 10
+			}
+			swap_ideas = {
+				remove_idea = WAG_noboody_like_empire
+				add_idea = WAG_army_goverment
 			}
 		}
 	}
@@ -3365,10 +3370,6 @@ focus_tree={
 			}
 			army_experience = 5
 			set_cosmetic_tag = WAG_army_government_ct
-			swap_ideas = {
-				remove_idea = WAG_noboody_like_empire
-				add_idea = WAG_army_goverment
-			}
 			news_event = WAG_news.8
 		}
 	}
