@@ -30,4 +30,8 @@ leader_traits = {
        political_power_factor = -0.1
        war_support_factor = 0.1
    }
+   royalist = {
+        random = yes
+        neutrality_drift = 0.1
+   }
 }
