@@ -48,6 +48,13 @@ WAG_stability = {
 	}
 }
 
+WAG_ask_for_land_net = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		original_tag = WAG
+	}
+}
+
 DBG = {
 	icon = decision_category_generic_political_actions
 	allowed = {
