@@ -16,18 +16,18 @@ leader_traits = {
 		political_power_factor = -0.1
 		surrender_limit = -0.3
 	}
-    crazy_right_advisor = {
-       random = no
-       facism_drift = 0.1
-       stability_factor = -0.2
-       political_power_factor = -0.1
-       war_support_factor = 0.1
+    crazy_right_advisor = {
+       random = no
+       facism_drift = 0.1
+       stability_factor = -0.2
+       political_power_factor = -0.1
+       war_support_factor = 0.1
 #       justify_wargoal_ = -1
-   }
-   crazy_right = {
-       random = no
-       stability_factor = -0.2
-       political_power_factor = -0.1
-       war_support_factor = 0.1
+   }
+   crazy_right = {
+       random = no
+       stability_factor = -0.2
+       political_power_factor = -0.1
+       war_support_factor = 0.1
    }
 }
