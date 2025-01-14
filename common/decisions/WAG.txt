@@ -655,6 +655,7 @@ WAG_ask_for_land_net = {
 		visible = {
 			has_completed_focus = WAG_our_dockyard
 		}
+		fire_only_once = yes
 		remove_effect = {
 			FRA = {
 				country_event = WAG.33
@@ -666,6 +667,7 @@ WAG_ask_for_land_net = {
 		visible = {
 			has_completed_focus = WAG_our_dockyard
 		}
+		fire_only_once = yes
 		remove_effect = {
 			IRQ = {
 				WAG = {
@@ -679,6 +681,7 @@ WAG_ask_for_land_net = {
 		visible = {
 			has_completed_focus = WAG_our_dockyard
 		}
+		fire_only_once = yes
 		remove_effect = {
 			WAG = {
 				annex_country = AMI
@@ -690,6 +693,7 @@ WAG_ask_for_land_net = {
 		visible = {
 			has_completed_focus = WAG_our_dockyard
 		}
+		fire_only_once = yes
 		available = {
 			has_war = no
 			any_state = {
