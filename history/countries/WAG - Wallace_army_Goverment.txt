@@ -45,6 +45,8 @@ recruit_character = WAG_salman_ritin_somin
 recruit_character = WAG_abudullah_an_komi
 recruit_character = WAG_royalist
 
+set_convoys = 10
+
 1939.1.1 = {
 #	set_country_flag = WAG_complete_first_tyhp
 	GER = {
