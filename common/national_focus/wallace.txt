@@ -2453,10 +2453,10 @@ focus_tree={
 		id=WAG_honor_of_second_empire
 		icon = GFX_focus_ger_revive_kaiserreich
 		x=0
-		y=1
+		y=2
 		relative_position_id = WAG_revive_the_empire
 		prerequisite = {
-			focus = WAG_revive_the_empire
+			focus = WAG_our_dockyard
 		}
 		cost=10
 		ai_will_do={
@@ -2512,11 +2512,13 @@ focus_tree={
 	focus={
 		id=WAG_our_dockyard
 		icon = GFX_focus_attack_france
-		x=-1
+		x=0
 		y=1
-		relative_position_id = WAG_honor_of_second_empire
+		relative_position_id = WAG_revive_the_empire
 		will_lead_to_war_with = FRA
-		prerequisite={focus=WAG_honor_of_second_empire}
+		will_lead_to_war_with = AMI
+		will_lead_to_war_with = IRQ
+		prerequisite={focus=WAG_revive_the_empire }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -2525,9 +2527,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
-			FRA = {
-				country_event = WAG.24
-			}
+			unlock_decision_category_tooltip = WAG_ask_for_land_net
 		}
 	}
 	focus={
@@ -2860,11 +2860,10 @@ focus_tree={
 	focus={
 		id=WAG_our_old_friend
 		icon = GFX_goal_generic_major_alliance
-		x=1
+		x=-1
 		y=1
-		relative_position_id = WAG_our_dockyard
-		prerequisite={focus=WAG_our_dockyard}
-		prerequisite={focus=WAG_old_weapon}
+		relative_position_id = WAG_honor_of_second_empire
+		prerequisite={focus=WAG_honor_of_second_empire }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3111,6 +3110,44 @@ focus_tree={
 				CZE = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
 				}
+			}
+		}
+	}
+	focus={
+		id=WAG_attack_balkan
+		icon = GFX_focus_GER_fate_of_yugoslavia
+		x=2
+		y=1
+		relative_position_id=WAG_unite_BUL
+		prerequisite={focus=WAG_unite_BUL}
+		prerequisite={focus=WAG_bringback_sudan}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+		will_lead_to_war_with = YUG
+		will_lead_to_war_with = ROM
+		will_lead_to_war_with = GRE
+		will_lead_to_war_with = ALB
+		completion_reward={
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GRE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ALB
+				type = annex_everything
 			}
 		}
 	}
@@ -3749,7 +3786,6 @@ focus_tree={
 			}
 			set_cosmetic_tag = WAG_neutrality
 			add_war_support = 0.1
-			news_event = WAG_news.6
 			swap_ideas = {
 				remove_idea = WAG_army_goverment
 				add_idea = WAG_a_mess_country
@@ -3939,26 +3975,26 @@ focus_tree={
 			add_ideas = WAG_mobilize_our_people
 		}
 	}
-	focus={
-		id=WAG_ask_for_our_land
-		icon = GFX_focus_attack_france
-		x=1
-		y=1
-		relative_position_id = WAG_millitarty_industry_effort
-		prerequisite={focus=WAG_millitarty_industry_effort}
-		prerequisite={focus=WAG_mobilize_our_people}
-		cost=3
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-			FOCUS_FILTER_ANNEXATION
-		}
-		completion_reward={
-			add_war_support = 0.1
-		}
-	}
+#	focus={
+#		id=WAG_ask_for_our_land
+#		icon = GFX_focus_attack_france
+#		x=1
+#		y=1
+#		relative_position_id = WAG_millitarty_industry_effort
+#		prerequisite={focus=WAG_millitarty_industry_effort}
+#		prerequisite={focus=WAG_mobilize_our_people}
+#		cost=3
+#		ai_will_do={
+#			factor=1
+#		}
+#		available_if_capitulated=yes
+#		search_filters={
+#			FOCUS_FILTER_ANNEXATION
+#		}
+#		completion_reward={
+#			add_war_support = 0.1
+#		}
+#	}
 	focus={
 		id=WAG_creativity_goes_first
 		x=41
