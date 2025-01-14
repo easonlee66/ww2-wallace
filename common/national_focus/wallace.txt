@@ -2474,6 +2474,7 @@ focus_tree={
 				specialization = specialization_air
 				value = 0.5
 			}
+			add_research_slot = 1
 			add_tech_bonus = {
 				name = mw_aircraft
 				category = light_air
@@ -2484,27 +2485,27 @@ focus_tree={
 			986 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 				}
 				add_building_construction = {
-					type = millitary_factory
+					type = arms_factory
 					level = 2
 				}
 			}
 			987 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 				}
 				add_building_construction = {
-					type = millitary_factory
+					type = arms_factory
 					level = 2
 				}
 			}
 			982 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 				}
 			}
 		}
@@ -2986,9 +2987,22 @@ focus_tree={
 					country_event = generic.5
 				}
 				else = {
-					create_wargoal = {
-						target = TUR
-						type = puppet_wargoal_focus
+					TUR = {
+						start_civil_war = {
+							ideology = neutrality
+							ruling_party = neutrality
+							size = 0.3
+							capital = 797
+							states = {341 797 347 340 350 352 353 800 354 344}
+						}
+					}
+					random_country = {
+						limit = {
+							original_tag = TUR
+							controls_state = 797
+						}
+						add_to_faction = WAG
+						complete_national_focus = TUR_pivot_to_the_past
 					}
 				}
 			}
