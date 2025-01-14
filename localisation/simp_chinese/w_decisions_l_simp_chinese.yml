@@ -101,6 +101,12 @@
   WAG_stability:0 "稳定国内局势"
   WAG_strict:0 "全国戒严"
 
+  WAG_ask_for_land_net:0 "夺回昔日故土"
+  WAG_ask_for_lifant_net:0 "声索黎凡特"
+  WAG_ask_for_IRQ_net:0 "要求伊拉克屈服"
+  WAG_ask_for_AMI_will_be_removed:0 "要求阿弥诺斯屈服"
+  WAG_revive_the_empire_net:0 "举行登基大典"
+
   DBG:0 "DEBUG"
 
   form_country_wallace_required_state_tt:0 "控制§Y瓦雷斯国§!的所有地区。"

@@ -649,6 +649,79 @@ WAG_stability = {
 	}
 }
 
+WAG_ask_for_land_net = {
+	WAG_ask_for_lifant_net = {
+		cost = 50
+		visible = {
+			has_completed_focus = WAG_our_dockyard
+		}
+		remove_effect = {
+			FRA = {
+				country_event = WAG.33
+			}
+		}
+	}
+	WAG_ask_for_IRQ_net = {
+		cost = 50
+		visible = {
+			has_completed_focus = WAG_our_dockyard
+		}
+		remove_effect = {
+			IRQ = {
+				WAG = {
+					country_event = WAG.25
+				}
+			}
+		}
+	}
+	WAG_ask_for_AMI_will_be_removed = {
+		cost = 50
+		visible = {
+			has_completed_focus = WAG_our_dockyard
+		}
+		remove_effect = {
+			WAG = {
+				annex_country = AMI
+			}
+		}
+	}
+	WAG_revive_the_empire_net = {
+		cost = 50
+		visible = {
+			has_completed_focus = WAG_our_dockyard
+		}
+		available = {
+			has_war = no
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = IRQ
+						is_core_of = SYR
+					}
+				}
+				is_owned_and_controlled_by = WAG
+			}
+			AMI = {
+				exists = no
+			}
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = IRQ
+						is_core_of = SYR
+						is_core_of = AMI
+					}
+					is_owned_and_controlled_by = WAG
+				}
+				add_core_of = WAG
+			}
+			news_event = WAG_news.6
+		}
+	}
+}
+
 DBG = {
 	DBG_test_coring = {
 		remove_effect = {
