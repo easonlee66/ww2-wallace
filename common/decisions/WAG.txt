@@ -669,9 +669,10 @@ WAG_ask_for_land_net = {
 		}
 		fire_only_once = yes
 		remove_effect = {
-			IRQ = {
-				WAG = {
-					country_event = WAG.25
+			WAG = {
+				create_wargoal = {
+					type = annex_everything
+					target = IRQ
 				}
 			}
 		}
@@ -684,7 +685,8 @@ WAG_ask_for_land_net = {
 		fire_only_once = yes
 		remove_effect = {
 			WAG = {
-				annex_country = AMI
+				transfer_state = 988
+				transfer_state = 990
 			}
 		}
 	}
