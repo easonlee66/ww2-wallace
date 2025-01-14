@@ -3001,8 +3001,22 @@ focus_tree={
 							original_tag = TUR
 							controls_state = 797
 						}
-						add_to_faction = WAG
+						give_military_access = WAG
 						complete_national_focus = TUR_pivot_to_the_past
+					}
+					random_country = {
+						limit = {
+							original_tag = TUR
+							NOT = {
+								controls_state = 797
+							}
+						}
+						WAG = {
+							create_wargoal = {
+								type = puppet_wargoal_focus
+								target = PREV
+							}
+						}
 					}
 				}
 			}
