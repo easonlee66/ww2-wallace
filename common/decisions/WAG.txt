@@ -692,7 +692,7 @@ WAG_ask_for_land_net = {
 		}
 		available = {
 			has_war = no
-			every_state = {
+			any_state = {
 				limit = {
 					OR = {
 						is_core_of = IRQ
