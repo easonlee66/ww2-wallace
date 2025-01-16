@@ -2474,15 +2474,13 @@ focus_tree={
 				specialization = specialization_air
 				value = 0.5
 			}
-			add_research_slot = 1
-			add_tech_bonus = {
-				name = mw_aircraft
-				category = light_air
-				category = medium_air
-				category = heavy_air
-				bonus = 1
+			add_breakthrough_progress = {
+				specialization = specialization_navy
+				value = 1
 			}
+			add_research_slot = 1
 			986 = {
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = industrial_complex
 					level = 4
@@ -2493,6 +2491,7 @@ focus_tree={
 				}
 			}
 			987 = {
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
 					level = 3
@@ -2503,6 +2502,7 @@ focus_tree={
 				}
 			}
 			982 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 3
@@ -2534,7 +2534,7 @@ focus_tree={
 	focus={
 		id=WAG_old_weapon
 		icon = GFX_goal_generic_secret_weapon
-		x=1
+		x=0
 		y=1
 		relative_position_id = WAG_honor_of_second_empire
 		prerequisite={focus=WAG_honor_of_second_empire}
@@ -2552,11 +2552,20 @@ focus_tree={
 				bonus = 0.5
 				category = artillery
 			}
+			add_tech_bonus = {
+				name = mw_aircraft
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				bonus = 1
+			}
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.5
 			}
-			987 = {
+			add_breakthrough_progress = {
+				specialization = specialization_navy
+				value = 0.7
 			}
 		}
 	}
@@ -2861,7 +2870,7 @@ focus_tree={
 	focus={
 		id=WAG_our_old_friend
 		icon = GFX_goal_generic_major_alliance
-		x=-1
+		x=-2
 		y=1
 		relative_position_id = WAG_honor_of_second_empire
 		prerequisite={focus=WAG_honor_of_second_empire }
@@ -3347,12 +3356,44 @@ focus_tree={
 #		}
 #	}
 	focus={
-		id=WAG_connect_with_west
-		icon = GFX_focus_chi_reach_out_to_france
-		x=25
+		id=WAG_connect_with_the_west
+		icon = GFX_goal_generic_dangerous_deal
+		x=47
 		y=0
-		relative_position_id = WAG_abandon_the_westminster_system
-		mutually_exclusive={focus=WAG_abandon_the_westminster_system }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		allow_branch = {
+			if = {
+				limit = { has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				} }
+				NOT = {
+					has_completed_focus = WAG_abandon_the_westminster_system
+				}
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_stability = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus={
+		id=WAG_get_well_with_paris
+		icon = GFX_focus_chi_reach_out_to_france
+		x=6
+		y=1
+		relative_position_id = WAG_connect_with_the_west
+		prerequisite={focus=WAG_connect_with_the_west}
+		mutually_exclusive={focus=WAG_get_well_with_london }
 		cost=10
 		ai_will_do={
 			factor=1
@@ -3361,6 +3402,504 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			puppet = FRA
+		}
+	}
+	focus={
+		id=WAG_get_well_with_london
+		icon = GFX_focus_chi_british_cooperation
+		x=-2
+		y=1
+		relative_position_id = WAG_connect_with_the_west
+		prerequisite={focus=WAG_connect_with_the_west}
+		mutually_exclusive={focus=WAG_get_well_with_paris }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			puppet = ENG
+		}
+	}
+	focus={
+		id=WAG_get_western_industry_acid
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x=4
+		y=1
+		relative_position_id = WAG_get_well_with_london
+		prerequisite={focus=WAG_get_well_with_paris focus=WAG_get_well_with_london }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			random_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+		}
+	}
+	focus={
+		id=WAG_ask_for_syria
+		icon = GFX_goal_generic_political_pressure
+		x=0
+		y=1
+		relative_position_id = WAG_get_well_with_paris
+		prerequisite={focus=WAG_get_well_with_paris}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			every_state = {
+				limit = {
+					is_core_of = SYR
+				}
+				transfer_state_to = WAG
+				add_core_of = WAG
+			}
+		}
+	}
+	focus={
+		id=WAG_kill_the_eastern_fascism_threat
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x=1
+		y=1
+		relative_position_id = WAG_end_monachism
+		prerequisite={focus=WAG_get_well_with_london}
+		prerequisite={focus=WAG_end_fascism}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			every_state = {
+				limit = {
+					is_core_of = IRQ
+				}
+				add_core_of = WAG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+		}
+	}
+	focus={
+		id=WAG_democratic_reform
+		icon = GFX_goal_support_democracy
+		x=-5
+		y=1
+		relative_position_id = WAG_connect_with_the_west
+		prerequisite={focus=WAG_connect_with_the_west}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			if = {
+				limit = {
+					has_idea = WAG_noboody_like_empire
+				}
+				remove_ideas = WAG_noboody_like_empire
+			}
+		}
+	}
+	focus={
+		id=WAG_ask_for_police_acid
+		icon = GFX_focus_generic_military_mission
+		x=0
+		y=1
+		relative_position_id = WAG_democratic_reform
+		prerequisite={focus=WAG_democratic_reform}
+		prerequisite={focus=WAG_get_well_with_paris focus=WAG_get_well_with_london }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_stability = 0.1
+			add_war_support = 0.1
+			weekly_manpower = 50
+		}
+	}
+	focus={
+		id=WAG_end_communism
+		icon = GFX_goal_anti_comintern_pact
+		x=0
+		y=1
+		relative_position_id = WAG_ask_for_police_acid
+		prerequisite={focus=WAG_ask_for_police_acid}
+		prerequisite={focus=WAG_democratic_and_freedom}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+		}
+	}
+	focus={
+		id=WAG_end_fascism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x=-2
+		y=1
+		relative_position_id = WAG_ask_for_police_acid
+		prerequisite={focus=WAG_ask_for_police_acid}
+		prerequisite={focus=WAG_democratic_and_freedom}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+		}
+	}
+	focus={
+		id=WAG_end_monachism
+		icon = GFX_focus_rom_handle_king
+		x=2
+		y=1
+		relative_position_id = WAG_ask_for_police_acid
+		prerequisite={focus=WAG_ask_for_police_acid}
+		prerequisite={focus=WAG_democratic_and_freedom}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+	focus={
+		id=WAG_democratic_and_freedom
+		icon = GFX_goal_continuous_boost_freedom
+		x=-4
+		y=1
+		relative_position_id = WAG_democratic_reform
+		prerequisite={focus=WAG_democratic_reform}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = WAG_shared_burdenss
+		}
+	}
+	focus={
+		id=WAG_free_economy
+		icon = GFX_focus_generic_the_giant_wakes
+		x=0
+		y=1
+		relative_position_id = WAG_democratic_and_freedom
+		prerequisite={focus=WAG_democratic_and_freedom}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = WAG_morden
+		}
+	}
+	focus={
+		id=WAG_spread_freedom
+		icon = GFX_goal_generic_major_war
+		x=1
+		y=1
+		relative_position_id = WAG_end_fascism
+		prerequisite={focus=WAG_democratic_and_freedom}
+		prerequisite={focus=WAG_end_monachism}
+		prerequisite={focus=WAG_end_communism}
+		prerequisite={focus=WAG_end_fascism}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						has_government = democratic
+					}
+				}
+				WAG = {
+					create_wargoal = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
+				}
+			}
+		}
+	}
+	focus={
+		id=WAG_get_western_army_acid
+		icon = GFX_focus_chi_army_reform
+		x=2
+		y=1
+		relative_position_id = WAG_get_well_with_london
+		prerequisite={focus=WAG_get_well_with_paris focus=WAG_get_well_with_london }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			load_oob = WAG_new_army
+			987 = {
+				create_unit = {
+					division = "division_template = \"wallace new army\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+	}
+	focus={
+		id=WAG_get_western_tecnology_acid
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x=-2
+		y=1
+		relative_position_id = WAG_get_well_with_paris
+		prerequisite={focus=WAG_get_well_with_paris focus=WAG_get_well_with_london }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+				name = artillery
+				bonus = 0.5
+				category = artillery
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			add_tech_bonus = {
+				name = mw_aircraft
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				bonus = 1
+			}
+		}
+	}
+	focus={
+		id=WAG_depend_on_west
+		icon = GFX_goal_generic_national_unity
+		x=0
+		y=1
+		relative_position_id = WAG_get_western_army_acid
+		prerequisite={focus=WAG_get_western_army_acid}
+		prerequisite={focus=WAG_get_western_industry_acid}
+		prerequisite={focus=WAG_get_western_tecnology_acid}
+		mutually_exclusive={focus=WAG_effort_to_independent }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_stability = 0.1
+		}
+	}
+	focus={
+		id=WAG_effort_to_independent
+		icon = GFX_focus_generic_support_the_left_right
+		x=0
+		y=1
+		relative_position_id = WAG_get_western_tecnology_acid
+		prerequisite={focus=WAG_get_western_army_acid}
+		prerequisite={focus=WAG_get_western_industry_acid}
+		prerequisite={focus=WAG_get_western_tecnology_acid}
+		mutually_exclusive={focus=WAG_depend_on_west }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_war_support = 0.1
+		}
+	}
+	focus={
+		id=WAG_copy_western_weapon
+		icon = GFX_focus_generic_license_production
+		x=0
+		y=1
+		relative_position_id = WAG_effort_to_independent
+		prerequisite={focus=WAG_effort_to_independent}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+				name = artillery
+				bonus = 0.5
+				category = artillery
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			add_tech_bonus = {
+				name = mw_aircraft
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				bonus = 1
+			}
+		}
+	}
+	focus={
+		id=WAG_expend_university
+		icon = GFX_focus_research
+		x=2
+		y=1
+		relative_position_id = WAG_depend_on_west
+		prerequisite={focus=WAG_effort_to_independent focus=WAG_depend_on_west }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_research_slot = 1
+		}
+	}
+	focus={
+		id=WAG_self_research_and_produce
+		icon = GFX_goal_generic_production
+		x=0
+		y=1
+		relative_position_id = WAG_expend_university
+		prerequisite={focus=WAG_expend_university}
+		prerequisite={focus=WAG_copy_western_weapon}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+				name = artillery
+				bonus = 0.5
+				category = artillery
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			add_tech_bonus = {
+				name = mw_aircraft
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				bonus = 1
+			}
+		}
+	}
+	focus={
+		id=WAG_invite_western_investgation
+		icon = GFX_goal_generic_construct_civ_factory
+		x=0
+		y=1
+		relative_position_id = WAG_depend_on_west
+		prerequisite={focus=WAG_depend_on_west}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			random_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
 		}
 	}
 	focus={
@@ -3368,10 +3907,21 @@ focus_tree={
 		icon = GFX_goal_generic_propaganda
 		x=12
 		y=0
-		mutually_exclusive={focus=WAG_connect_with_west }
+		mutually_exclusive={focus=WAG_connect_with_the_west }
 		cost=10
 		ai_will_do={
 			factor=1
+		}
+		allow_branch = {
+			if = {
+				limit = { has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				} }
+				NOT = {
+					has_completed_focus = WAG_connect_with_the_west
+				}
+			}
 		}
 		available_if_capitulated=yes
 		search_filters={
@@ -3466,48 +4016,15 @@ focus_tree={
 		}
 	}
 	focus={
-		id=WAG_ask_for_supports
-		x=-1
-		y=1
-		relative_position_id = WAG_connect_with_west
-		prerequisite={focus=WAG_connect_with_west}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_our_lost_land
-		x=1
-		y=1
-		relative_position_id = WAG_connect_with_west
-		prerequisite={focus=WAG_connect_with_west}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
 		id=WAG_honor_of_the_empire_navral
 		icon = GFX_goal_generic_occupy_states_coastal
-		x=46
-		y=0
+		x=2
+		y=1
+		relative_position_id = WAG_honor_of_second_empire
+		prerequisite={focus=WAG_honor_of_second_empire}
 		cost=10
 		ai_will_do={
 			factor=1
-		}
-		allow_branch = {
-			has_completed_focus = WAG_ask_for_our_land
 		}
 		available_if_capitulated=yes
 		search_filters={
@@ -3518,7 +4035,7 @@ focus_tree={
 	focus={
 		id=WAG_rebuild_submine
 		icon = GFX_goal_generic_navy_submarine
-		x=-2
+		x=-1
 		y=1
 		relative_position_id = WAG_honor_of_the_empire_navral
 		prerequisite={focus=WAG_honor_of_the_empire_navral}
@@ -3533,8 +4050,9 @@ focus_tree={
 		}
 	}
 	focus={
-		id=WAG_rebuild_
-		x=2
+		id=WAG_rebuild_main_ship
+		icon = GFX_goal_generic_navy_cruiser
+		x=1
 		y=1
 		relative_position_id = WAG_honor_of_the_empire_navral
 		prerequisite={focus=WAG_honor_of_the_empire_navral}
@@ -3630,25 +4148,17 @@ focus_tree={
 				add_idea = WAG_a_mess_country
 			}
 			news_event = WAG_news.11
-		}
-	}
-	focus={
-		id=WAG_arabic_friends
-		x=-12
-		y=1
-		relative_position_id = WAG_fight_for_independence
-		prerequisite={focus=WAG_fight_for_independence }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		allow_branch = {
-			has_country_flag = WAG_arab_nation_recognize
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
+			if = {
+				limit = {
+					has_idea = WAG_abandon_the_westminster_system
+				}
+				remove_ideas = WAG_abandon_the_westminster_system
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = WAG_neutrality_party
+				name = WAG_neutrality_party
+			}
 		}
 	}
 	focus={
@@ -3731,39 +4241,9 @@ focus_tree={
 		}
 	}
 	focus={
-		id=WAG_support_SYR_independence
-		x=2
-		y=3
-		prerequisite={focus=WAG_arabic_friends}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_support_HAM_independence
-		x=0
-		y=3
-		prerequisite={focus=WAG_arabic_friends}
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
 		id=WAG_revive_the_empire
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x=11
+		x=12
 		y=1
 		relative_position_id = WAG_abandon_the_westminster_system
 		mutually_exclusive = {
@@ -3817,6 +4297,17 @@ focus_tree={
 			swap_ideas = {
 				remove_idea = WAG_army_goverment
 				add_idea = WAG_a_mess_country
+			}
+			if = {
+				limit = {
+					has_idea = WAG_abandon_the_westminster_system
+				}
+				remove_ideas = WAG_abandon_the_westminster_system
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = WAG_neutrality_party
+				name = WAG_neutrality_party
 			}
 		}
 	}
@@ -3917,6 +4408,17 @@ focus_tree={
 				ruling_party = communism
 			}
 			news_event = WAG_news.10
+			if = {
+				limit = {
+					has_idea = WAG_abandon_the_westminster_system
+				}
+				remove_ideas = WAG_abandon_the_westminster_system
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = WAG_neutrality_party
+				name = WAG_neutrality_party
+			}
 		}
 	}
 	focus={
@@ -4056,9 +4558,9 @@ focus_tree={
 	focus={
 		id=WAG_solve_the_nation_problem
 		icon = GFX_goal_generic_national_unity
-		x=30
+		x=32
 		y=1
-		prerequisite={focus=WAG_abandon_the_westminster_system focus=WAG_connect_with_west}
+		prerequisite={focus=WAG_abandon_the_westminster_system focus=WAG_connect_with_the_west}
 		available = {
 			any_controlled_state = {
 				NOT = {
@@ -4310,7 +4812,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_wallace_education
-		icon=GFX_goal_generic_forceful_treaty
+		icon=GFX_focus_generic_military_academy
 		x=-1
 		y=1
 		relative_position_id=WAG_remove_resistance
@@ -4408,6 +4910,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_our_homeland
+		icon = GFX_goal_tripartite_pact
 		x=1
 		y=1
 		relative_position_id=WAG_united_country
@@ -4445,6 +4948,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_wallacian_over_country
+		icon = GFX_goal_generic_political_pressure
 		x=1
 		y=1
 		relative_position_id=WAG_wallace_education
@@ -4462,28 +4966,12 @@ focus_tree={
 	}
 	focus={
 		id=WAG_wallcian_only_people
-		x=-1
+		icon = GFX_focus_generic_strike_at_democracy1
+		x=0
 		y=1
 		relative_position_id=WAG_wallacian_over_country
 		prerequisite={focus=WAG_wallacian_over_country}
 		mutually_exclusive={focus=WAG_refree }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
-		}
-	}
-	focus={
-		id=WAG_refree
-		x=1
-		y=1
-		relative_position_id=WAG_wallacian_over_country
-		prerequisite={focus=WAG_wallacian_over_country}
-		mutually_exclusive={focus=WAG_wallcian_only_people }
 		cost=10
 		ai_will_do={
 			factor=1
