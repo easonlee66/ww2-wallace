@@ -4966,7 +4966,7 @@ focus_tree={
 	}
 	focus={
 		id=WAG_wallcian_only_people
-		icon = GFX_focus_generic_strike_at_democracy1
+		icon = GFX_focus_ger_reichskommisariats
 		x=0
 		y=1
 		relative_position_id=WAG_wallacian_over_country
