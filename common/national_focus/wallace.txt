@@ -3010,7 +3010,7 @@ focus_tree={
 							original_tag = TUR
 							controls_state = 797
 						}
-						give_military_access = WAG
+						save_event_target_as = event_target:WAG_tur_civil_war_sudan
 						complete_national_focus = TUR_pivot_to_the_past
 					}
 					random_country = {
@@ -3020,12 +3020,7 @@ focus_tree={
 								controls_state = 797
 							}
 						}
-						WAG = {
-							create_wargoal = {
-								type = puppet_wargoal_focus
-								target = PREV
-							}
-						}
+						save_event_target_as = event_target:WAG_tur_civil_war_kamel
 					}
 				}
 			}
@@ -3402,7 +3397,9 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			puppet = FRA
+			FRA = {
+				puppet = WAG
+			}
 		}
 	}
 	focus={
@@ -3421,7 +3418,9 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			puppet = ENG
+			ENG = {
+				puppet = WAG
+			}
 		}
 	}
 	focus={
