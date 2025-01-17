@@ -55,6 +55,20 @@ WAG_ask_for_land_net = {
 	}
 }
 
+WAG_revive_centrual_power = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		original_tag = WAG
+	}
+}
+
+WAG_attack_balkan = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		original_tag = WAG
+	}
+}
+
 DBG = {
 	icon = decision_category_generic_political_actions
 	allowed = {

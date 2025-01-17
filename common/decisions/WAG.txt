@@ -728,6 +728,145 @@ WAG_ask_for_land_net = {
 	}
 }
 
+WAG_revive_centrual_power = {
+	WAG_support_tur_civil_war = {
+		visible = {
+			has_completed_focus = WAG_bringback_sudan
+		}
+		available = {
+			any_country = {
+				limit = {
+					original_tag = TUR
+					has_war_with = TUR
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = decision_cost_ie_2000
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+			}
+		}
+		days_remove = 5
+		remove_effect = {
+			event_target:WAG_tur_civil_war_sudan = {
+				country_event = {
+					id = wuw_GER_diplomacy.82
+					hours = 12
+				}
+			}
+			set_country_flag = WAG_complete_support_sudan
+		}
+	}
+	WAG_get_in_civil_war_directly = {
+		visible = {
+			has_country_flag = WAG_complete_support_sudan
+		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			event_target:WAG_tur_civil_war_sudan = {
+				add_to_faction = WAG
+			}
+		}
+	}
+	WAG_support_ger_civil_war = {
+		visible = {
+			has_completed_focus = WAG_opposite_hitler
+		}
+		available = {
+			any_country = {
+				limit = {
+					original_tag = GER
+					has_war_with = GER
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = decision_cost_ie_2000
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2000
+				}
+			}
+		}
+		days_remove = 5
+		remove_effect = {
+			event_target:WAG_ger_cw_kaiser = {
+				country_event = {
+					id = wuw_GER_diplomacy.82
+					hours = 12
+				}
+			}
+			set_country_flag = WAG_complete_support_kaiser
+		}
+	}
+}
+WAG_attack_balkan = {
+	WAG_attack_yogoslave = {
+		visible = {
+			has_completed_focus = WAG_attack_balkan
+		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			create_wargoal = {
+				target = YUG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	WAG_attack_greece = {
+		visible = {
+			has_completed_focus = WAG_attack_balkan
+		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			create_wargoal = {
+				target = GRE
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	WAG_attack_romania = {
+		visible = {
+			has_completed_focus = WAG_attack_balkan
+		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			create_wargoal = {
+				target = ROM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	WAG_attack_albania = {
+		visible = {
+			has_completed_focus = WAG_attack_balkan
+		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			create_wargoal = {
+				target = ALB
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
 DBG = {
 	DBG_test_coring = {
 		remove_effect = {
