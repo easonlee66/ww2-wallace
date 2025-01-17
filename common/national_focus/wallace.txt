@@ -2528,6 +2528,7 @@ focus_tree={
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward={
+			add_ideas = WAG_kosui_mother
 			unlock_decision_category_tooltip = WAG_ask_for_land_net
 		}
 	}
@@ -3003,22 +3004,9 @@ focus_tree={
 							size = 0.3
 							capital = 797
 							states = {341 797 347 340 350 352 353 800 354 344}
-						}
-					}
-					random_country = {
-						limit = {
-							original_tag = TUR
-							controls_state = 797
-						}
-						save_event_target_as = event_target:WAG_tur_civil_war_sudan
-						complete_national_focus = TUR_pivot_to_the_past
-					}
-					random_country = {
-						limit = {
-							original_tag = TUR
-							NOT = {
-								controls_state = 797
-							}
+							load_focus_tree = turkish_focus
+							save_event_target_as = event_target:WAG_tur_civil_war_sudan
+							complete_national_focus = TUR_pivot_to_the_past
 						}
 						save_event_target_as = event_target:WAG_tur_civil_war_kamel
 					}
@@ -3095,9 +3083,16 @@ focus_tree={
 					country_event = generic.5
 				}
 				else = {
-					create_wargoal = {
-						target = GER
-						type = puppet_wargoal_focus
+					GER = {
+						start_civil_war = {
+							ideology = neutrality
+							size = 0.3
+							capital = 797
+							states = {64 61 52 53 54 60 65 66 67 68 62 63 5}
+							complete_national_focus = GER_oppose_hitler
+							save_event_target_as = WAG_ger_cw_kaiser
+						}
+						save_event_target_as = WAG_ger_cw_hitler
 					}
 				}
 			}
@@ -3165,22 +3160,7 @@ focus_tree={
 		will_lead_to_war_with = GRE
 		will_lead_to_war_with = ALB
 		completion_reward={
-			create_wargoal = {
-				target = YUG
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = ROM
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = GRE
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = ALB
-				type = annex_everything
-			}
+			unlock_decision_category_tooltip = WAG_attack_balkan
 		}
 	}
 	focus={
@@ -4029,6 +4009,11 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			add_breakthrough_progress = {
+				specialization = specialization_navy
+				value = 1
+			}
+			add_ideas = WAG_honor_of_the_empire_navral
 		}
 	}
 	focus={
@@ -4046,6 +4031,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			add_ideas = WAG_rebuild_submine
 		}
 	}
 	focus={
@@ -4063,6 +4049,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			add_ideas = WAG_rebuild_main_ship
 		}
 	}
 	focus={
