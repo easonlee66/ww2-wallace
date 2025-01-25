@@ -39,14 +39,8 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		if = {
-			limit = { 910={ is_controlled_by_ROOT_or_subject = yes } }
-			910={
-				add_core_of = WAG
-			}
-		}
-		if = {
-			limit = { 911={ is_controlled_by_ROOT_or_subject = yes } }
-			911={
+			limit = { 983={ is_controlled_by_ROOT_or_subject = yes } }
+			983={
 				add_core_of = WAG
 			}
 		}
