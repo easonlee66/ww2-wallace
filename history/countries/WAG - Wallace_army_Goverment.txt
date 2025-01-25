@@ -1,4 +1,4 @@
-capital = 915
+capital = 986
 
 oob="WAG_1936"
 
@@ -128,5 +128,5 @@ set_convoys = 10
 #	recruit_character = WAG_salman_ritin_somin
 #	recruit_character = WAG_abudullah_an_komi
 
-	add_ideas = WAG_workhorse
+#	add_ideas = WAG_workhorse
 }
