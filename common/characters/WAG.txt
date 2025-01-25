@@ -88,7 +88,7 @@ characters={
 				original_tag = WAG
 			}
 			traits = {
-				royalists
+				royalist
 			}
 #			ai_will_do = {
 #				factor = 0
@@ -101,16 +101,16 @@ characters={
 #			}
 		}
 	}
-	WAG_army_chief = {
-		name=WAG_army_chief
-		picture = generic_army_arab_1
-		allowed = {
-			original_tag = WAG
-		}
-		traits = {
-			army_chief_defensive_1
-		}
-	}
+#	WAG_army_chief = {
+#		name=WAG_army_chief
+#		picture = generic_army_arab_1
+#		allowed = {
+#			original_tag = WAG
+#		}
+#		traits = {
+#			army_chief_defensive_1
+#		}
+#	}
 #	WAG_workhorse = {
 #		picture = generic_political_advisor_arab_2
 #		allowed = {
