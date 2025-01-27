@@ -2767,6 +2767,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			add_political_power = 50
 			if = {
 				limit = {
 					has_idea = WAG_noboody_like_empire
@@ -2878,6 +2879,12 @@ focus_tree={
 		}
 		completion_reward={
 			add_ideas = WAG_shared_burdenss
+			hidden_effect = {
+				if = {
+					limit = { has_idea = WAG_western_impression }
+					remove_ideas = WAG_western_impression
+				}
+			}
 		}
 	}
 	focus={
@@ -3267,11 +3274,12 @@ focus_tree={
 			create_country_leader = {
 				name = "WAG_army_government"
 				desc = "WAG_army_government_desc"
-				portraits = {
-					civilian = {
-						large="GFX_portrait_POL_Sejmik_Regency" 
-					}
-				}
+				picture = "GFX_portrait_POL_Sejmik_Regency"
+#				portraits = {
+#					civilian = {
+#						large="GFX_portrait_POL_Sejmik_Regency" 
+#					}
+#				}
 				ideology = despotism
 			}
 			country_event = {
