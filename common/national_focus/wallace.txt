@@ -37,8 +37,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_communism_road
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_communism_road
 			}
 		}
 		completion_reward={
@@ -2595,7 +2598,16 @@ focus_tree={
 			x=-28
 			y=0
 			trigger = {
-				has_completed_focus = WAG_connect_with_the_west
+				if = {
+					limit = { has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					} }
+					has_completed_focus = WAG_connect_with_the_west
+					else = {
+						always = no
+					}
+				}
 			}
 		}
 		available_if_capitulated=yes
@@ -3176,6 +3188,9 @@ focus_tree={
 						}
 					}
 					has_completed_focus = WAG_revive_the_empire
+					else = {
+						always = no
+					}
 				}
 			}
 		}
@@ -3191,6 +3206,9 @@ focus_tree={
 						}
 					}
 					has_completed_focus = WAG_free_election
+					else = {
+						always = no
+					}
 				}
 			}
 		}
@@ -3556,8 +3574,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_befriend_SOV
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_befriend_SOV
 			}
 		}
 		mutually_exclusive = {
@@ -3655,6 +3676,9 @@ focus_tree={
 						}
 					}
 					has_completed_focus = WAG_revive_the_empire
+					else = {
+						always = no
+					}
 				}
 			}
 		}
@@ -3716,23 +3740,6 @@ focus_tree={
 		x=2
 		y=1
 		relative_position_id = WAG_communism_road
-#		offset = {
-#			x = -2
-#			y = 0
-#			trigger = {
-#				AND = {
-#					has_game_rule = {
-#						rule = obsolete_focus_branches_visibility
-#						option = HIDE
-#					}
-#					OR = {
-#						has_completed_focus = WAG_special_road_for_wallace
-#					}
-#				}
-#			}
-#		}
-#		prerequisite={focus=WAG_build_communism_in_one_country}
-#		mutually_exclusive={focus=WAG_befriend_SOV focus=WAG_the_forth_internaion }
 		prerequisite = {
 			focus = WAG_communism_road
 		}
@@ -3792,8 +3799,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_befriend_SOV
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_befriend_SOV
 			}
 		}
 		allow_branch = {
@@ -3819,8 +3829,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_communism_road
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_communism_road
 			}
 		}
 		offset = {
@@ -3833,8 +3846,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_special_road_for_wallace
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_special_road_for_wallace
 			}
 		}
 #		relative_position_id = WAG_abandon_the_westminster_system
@@ -3993,6 +4009,9 @@ focus_tree={
 						}
 					}
 					has_completed_focus = WAG_revive_the_empire
+					else = {
+						always = no
+					}
 				}
 			}
 		}
@@ -4008,6 +4027,9 @@ focus_tree={
 						}
 					}
 					has_completed_focus = WAG_connect_with_the_west
+					else = {
+						always = no
+					}
 				}
 			}
 		}
@@ -4023,6 +4045,9 @@ focus_tree={
 						}
 					}
 					has_completed_focus = WAG_free_election
+					else = {
+						always = no
+					}
 				}
 			}
 		}
@@ -4036,8 +4061,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_communism_road
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_communism_road
 			}
 		}
 		offset = {
@@ -4050,8 +4078,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_special_road_for_wallace
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_special_road_for_wallace
 			}
 		}
 		offset = {
@@ -4064,8 +4095,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_befriend_SOV
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_befriend_SOV
 			}
 		}
 		cost=3
