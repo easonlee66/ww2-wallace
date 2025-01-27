@@ -3178,8 +3178,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_befriend_SOV
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_befriend_SOV
 			}
 		}
 		offset = {
@@ -3228,8 +3231,11 @@ focus_tree={
 						option = HIDE
 					}
 					}
+					has_completed_focus = WAG_special_road_for_wallace
+					else = {
+						always = no
+					}
 				}
-				has_completed_focus = WAG_special_road_for_wallace
 			}
 		}
 		available_if_capitulated=yes
