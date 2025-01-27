@@ -1,0 +1,329 @@
+units={
+	fleet = {
+		name = "submarine"
+		naval_base = 2089
+		task_force = {
+			name = "submarine 1"
+			location = 2089
+			ship = {
+				name = "Ibash 1"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 2"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 3"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 4"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 5"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 6"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 7"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 8"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 9"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 10"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 11"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 12"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 13"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 14"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 15"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 16"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 17"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 18"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 19"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 20"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 21"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 22"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 23"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 24"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 25"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 26"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 27"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 28"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+			ship = {
+				name = "Ibash 29"
+				definition = submarine
+				equipment = {
+					ship_hull_submarine_1 = {
+						amount = 1
+						owner = WAG
+						version_name = "Type I"
+					}
+				}
+			}
+		}
+	}
+}
