@@ -1,10 +1,15 @@
 ﻿l_simp_chinese:
 # 开局DEBUFF
   WAG_sait_kolu_treat:0 "圣克卢条约"
+  WAG_sait_kolu_treat_desc:0 "上次世界大战，瓦雷斯国战败，被迫签订《圣克卢条约》。该条约极大的限制了瓦雷斯国的军备。"
   WAG_noboody_like_empire:0 "混乱的政府"
+  WAG_noboody_like_empire_desc:0 "陷入半殖民地状态的瓦雷斯国政局极其混乱。西方国家希望扩大在我国的殖民影响，共产党和纳粹党都旗帜鲜明的反对现任政府，而很多民众仍然怀念第二帝国。我们必须尽快选择我们的道路"
   WAG_army_goverment:0 "军政府"
+  WAG_army_goverment_desc:0 "发动军事政变后，瓦雷斯国的政权由军队掌控"
   WAG_a_mess_country:0 "混乱的国家"
+  WAG_a_mess_country_desc:0 "随着政府重新组建，军队也将政权交还给了政府。但是我们的国家仍然没有立刻稳定下来，秩序还有待进一步恢复。"
   WAG_western_impression:0 "西方意识形态影响"
+  WAG_western_impression_desc:0 "西方国家希望扩大在我国的殖民影响"
 # 工业线
   WAG_first_two_year_half_plan:0 "第一个两年半计划"
 # 军事线
@@ -22,3 +27,5 @@
   WAG_comecon_wag_default:0 "团结在社会主义之下"
 
   WAG_no_faction_movementss:0 "不结盟运动"
+# 2024
+  WAG_
