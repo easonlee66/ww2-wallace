@@ -3373,11 +3373,17 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			controls_province = 2089
+			owns_state = 291
+			has_dlc = "Man the Guns"
+		}
 		available_if_capitulated=yes
 		search_filters={
 		}
 		completion_reward={
 			add_ideas = WAG_rebuild_submine
+			load_oob = WAG_naval
 		}
 	}
 	focus={
@@ -3391,11 +3397,17 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
+		available = {
+			controls_province = 2089
+			owns_state = 291
+			has_dlc = "Man the Guns"
+		}
 		available_if_capitulated=yes
 		search_filters={
 		}
 		completion_reward={
 			add_ideas = WAG_rebuild_main_ship
+			load_oob = WAG_naval_mainship
 		}
 	}
 	focus={
