@@ -1831,6 +1831,21 @@ focus_tree={
 		prerequisite = {
 			focus = WAG_our_dockyard
 		}
+		available = {
+			any_state = {
+				hidden_trigger = {
+					OR = {
+						NOT = {
+							OR = {
+								is_core_of = IRQ
+								is_core_of = SYR
+							}
+						}
+						is_core_of = WAG
+					}
+				}
+			}
+		}
 		cost=10
 		ai_will_do={
 			factor=1
@@ -2389,9 +2404,11 @@ focus_tree={
 						start_civil_war = {
 							ideology = neutrality
 							size = 0.3
-							capital = 797
+							capital = 64
 							states = {64 61 52 53 54 60 65 66 67 68 62 63 5}
+							load_focus_tree = german_focus
 							complete_national_focus = GER_oppose_hitler
+							load_oob = GER_German_Civil_War_fascist
 							save_event_target_as = WAG_ger_cw_kaiser
 						}
 						save_event_target_as = WAG_ger_cw_hitler
@@ -2453,6 +2470,9 @@ focus_tree={
 		cost=10
 		ai_will_do={
 			factor=1
+		}
+		available = {
+			has_war = no
 		}
 		search_filters={
 			FOCUS_FILTER_ANNEXATION
@@ -2587,7 +2607,7 @@ focus_tree={
 		y=0
 		cost=10
 		ai_will_do={
-			factor=1
+			factor=0
 		}
 		allow_branch = {
 			if = {
@@ -3390,6 +3410,16 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			hidden_effect = {
+				if = {
+					limit = { NOT = {
+						has_tech = early_submarine
+					} }
+					set_technology = {
+						early_submarine = 1
+					}
+				}
+			}
 			add_ideas = WAG_rebuild_submine
 			load_oob = WAG_naval
 		}
@@ -3414,6 +3444,24 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			hidden_effect = {
+				if = {
+					limit = { NOT = {
+						has_tech = early_destroyer
+					} }
+					set_technology = {
+						early_destroyer = 1
+					}
+				}
+				if = {
+					limit = { NOT = {
+						has_tech = early_light_cruiser
+					} }
+					set_technology = {
+						early_light_cruiser = 1
+					}
+				}
+			}
 			add_ideas = WAG_rebuild_main_ship
 			load_oob = WAG_naval_mainship
 		}
@@ -3688,6 +3736,9 @@ focus_tree={
 		prerequisite = {
 			focus = WAG_abandon_the_westminster_system
 		}
+		ai_will_do = {
+			factor = 0
+		}
 		available = {
 			set_temp_variable = { WAG_rw_support = party_popularity@neutrality }
 			add_to_temp_variable = { WAG_rw_support = party_popularity@fascism }
@@ -3731,9 +3782,6 @@ focus_tree={
 			}
 		}
 		cost=10
-		ai_will_do={
-			factor=1
-		}
 		search_filters={
 			FOCUS_FILTER_POLITICAL
 		}
@@ -3758,6 +3806,7 @@ focus_tree={
 				}
 				remove_ideas = WAG_abandon_the_westminster_system
 			}
+			kill_country_leader = yes
 			promote_character = WAG_sadam_wang_zaoyangk
 			set_party_name = {
 				ideology = neutrality
