@@ -390,3 +390,179 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = WAG.5555
+	title = WAG.5555.t
+	desc = WAG.5555.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.5555.a
+		trigger = {
+			NOT = {
+				has_completed_focus = WAG_abandon_the_westminster_system
+				has_completed_focus = WAG_connect_with_the_west
+			}
+		}
+		set_war_support = 0.2
+		set_stability = 0.3
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = 1931.6.18
+		}
+		set_popularities = {
+			communism = 50
+			democratic = 30
+			fascism = 10
+			neutrality = 10
+		}
+		remove_ideas = WAG_western_impression
+		remove_ideas = WAG_sait_kolu_treat
+		add_ideas = WAG_2024_shadow_of_civil_war
+		add_ideas = WAG_2024_fascism_rising
+		add_ideas = WAG_2024_nation_from_2024
+		transfer_state = 990
+		transfer_state = 989
+		transfer_state = 985
+		transfer_state = 984
+		transfer_state = 983
+		transfer_state = 982
+		add_state_core = 982
+		add_state_core = 983
+		add_state_core = 984
+		add_state_core = 985
+		add_state_core = 988
+		add_state_core = 989
+		add_state_core = 990
+		add_state_core = 991
+		AMI = {
+			create_wargoal = {
+				target = WAG
+				type = independence_wargoal
+			}
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_ideas = WAG_western_impression
+			add_ideas = WAG_never_surrender
+			add_ideas = WAG_mobilize_our_people
+			add_ideas = WAG_morden
+			add_ideas = WAG_prepare_for_the_war
+			add_ideas = WAG_politics_in_test
+			add_ideas = WAG_2024_nation_from_2024
+			add_offsite_building = {
+				type = industrial_complex
+				level = 10
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+		}
+		KUR = {
+			transfer_state = 991
+			set_politics = {
+				ruling_party = communism
+			}
+			set_popularities = {
+				communism = 50
+				democratic = 30
+				fascism = 10
+				neutrality = 10
+			}
+			add_ideas = WAG_2024_nation_from_2024
+			add_ideas = WAG_first_two_year_half_plan
+			add_ideas = WAG_shared_burdenss
+			add_ideas = WAG_2024_fascism_rising
+		}
+		puppet = KUR
+		988 = {
+			add_extra_state_shared_building_slots = 15
+			add_building_construction = {
+				type = industrial_complex
+				level = 5
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 5
+			}
+			add_resource = {
+				type = chromium
+				amount = 5
+			}
+		}
+		991 = {
+			add_extra_state_shared_building_slots = 15
+			add_building_construction = {
+				type = industrial_complex
+				level = 5
+			}
+			add_resource = {
+				type = chromium
+				amount = 5
+			}
+		}
+		987 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+				type = industrial_complex
+				level = 5
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 5
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+			}
+		}
+		986 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+				type = industrial_complex
+				level = 7
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+		}
+		982 = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = industrial_complex
+				level = 5
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+			}
+		}
+		983 = {
+			add_resource = {
+				type = oil
+				amount = 10
+			}
+		}
+		984 = {
+			add_resource = {
+				type = oil
+				amount = 10
+			}
+		}
+	}
+}
