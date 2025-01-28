@@ -42,17 +42,17 @@ characters={
 			expire="1965.1.1"
 			id=-1
 		}
-		advisor={
-			cost=150
-			slot=political_advisor
-			idea_token=WAG_salman_ritin_somin
-			allowed={
-				original_tag=WAG
-			}
-			traits={
-				socdem_reformist
-			}
-		}
+#		advisor={
+#			cost=150
+#			slot=political_advisor
+#			idea_token=WAG_salman_ritin_somin
+#			allowed={
+#				original_tag=WAG
+#			}
+#			traits={
+#				socdem_reformist
+#			}
+#		}
 	}
 	WAG_abudullah_an_komi={
 		name = WAG_abudullah_an_komi
@@ -61,23 +61,24 @@ characters={
 			expire = "1965.1.1"
 			id=-1
 		}
-		advisor={
-			cost=150
-			slot=political_advisor
-			idea_token=WAG_abudullah_an_komi
-			allowed={
-				original_tag=WAG
-			}
-			traits={
-				socialist_autocrat
-			}
-		}
+#		advisor={
+#			cost=150
+#			slot=political_advisor
+#			idea_token=WAG_abudullah_an_komi
+#			allowed={
+#				original_tag=WAG
+#			}
+#			traits={
+#				socialist_autocrat
+#			}
+#		}
 	}
 	WAG_royalist = {
 		name=WAG_royalist
 		portraits = {
 			civilian={
 				large=GFX_idea_SYR_generic_3
+				small = GFX_idea_SYR_generic_3
 			}
 		}
 		advisor={
