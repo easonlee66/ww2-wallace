@@ -697,21 +697,46 @@ WAG_revive_centrual_power = {
 	}
 	WAG_get_in_civil_war_directly = {
 		visible = {
-			has_country_flag = WAG_complete_support_sudan
+			any_country = {
+				original_tag = TUR
+				has_war_with = TUR
+			}
 		}
+#		visible = {
+#			has_country_flag = WAG_complete_support_sudan
+#		}
 		cost = 50
 		fire_only_once = yes
 		remove_effect = {
-			event_target:WAG_tur_civil_war_sudan = {
-				add_to_faction = WAG
+			event_target:WAG_tur_cw_sudan = {
+				annex_country = {
+					target = TUR
+				}
+			}
+		}
+	}
+	WAG_get_in_civil_war_directly_ger = {
+		visible = {
+			any_country = {
+				original_tag = GER
+				has_war_with = GER
+			}
+		}
+#		visible = {
+#			has_country_flag = WAG_complete_support_sudan
+#		}
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			event_target:WAG_ger_cw_kaiser = {
+				annex_country = {
+					target = GER
+				}
 			}
 		}
 	}
 	WAG_support_ger_civil_war = {
 		visible = {
-			has_completed_focus = WAG_opposite_hitler
-		}
-		available = {
 			any_country = {
 				original_tag = GER
 				has_war_with = GER
@@ -742,7 +767,7 @@ WAG_revive_centrual_power = {
 #					hours = 12
 #				}
 			}
-			set_country_flag = WAG_complete_support_kaiser
+#			set_country_flag = WAG_complete_support_kaiser
 		}
 	}
 }
