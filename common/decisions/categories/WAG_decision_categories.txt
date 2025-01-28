@@ -3,6 +3,7 @@ WAG_second_civil_war = {
 
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 #		OR = {
 #			complete_national_focus = WAG_communism_road
 #			complete_national_focus = WAG_social_democracy_road
@@ -14,6 +15,7 @@ WAG_second_civil_war_against = {
 	icon = spr_the_inevitable_civil_war
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 	}
 }
 
@@ -22,6 +24,7 @@ WAG_first_two_year_half_plan = {
 
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 #		complete_national_focus = WAG_first_two_year_half_plan
 	}
 }
@@ -31,6 +34,7 @@ WAG_nazi_reform = {
 	picture = decision_cat_picture_chi_political_support
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 	}
 }
 
@@ -38,6 +42,7 @@ WAG_ask_for_our_land = {
 	icon = decision_category_generic_political_actions
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 	}
 }
 
@@ -45,6 +50,7 @@ WAG_stability = {
 	icon = decision_category_generic_political_actions
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 	}
 }
 
@@ -52,6 +58,7 @@ WAG_ask_for_land_net = {
 	icon = decision_category_generic_political_actions
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 	}
 }
 
@@ -59,6 +66,7 @@ WAG_revive_centrual_power = {
 	icon = decision_category_generic_political_actions
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
 	}
 }
 
@@ -66,6 +74,15 @@ WAG_attack_balkan = {
 	icon = decision_category_generic_political_actions
 	allowed = {
 		original_tag = WAG
+		has_focus_tree = wallace_focus
+	}
+}
+
+WAG_2024 = {
+	icon = decision_cat_picture_chi_political_support
+	allowed = {
+		original_tag = WAG
+		has_focus_tree = wallace_2024_focus
 	}
 }
 
