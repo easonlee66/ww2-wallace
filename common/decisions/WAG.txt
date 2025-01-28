@@ -474,7 +474,7 @@ WAG_nazi_reform = {
 					capital = 986
 					states = {984 985 986}
 				}
-				country_event = WAG.4
+#				country_event = WAG.4
 				random_other_country = {
 					limit = {
 						original_tag = WAG
@@ -732,10 +732,15 @@ WAG_revive_centrual_power = {
 		days_remove = 5
 		remove_effect = {
 			event_target:WAG_ger_cw_kaiser = {
-				country_event = {
-					id = wuw_GER_diplomacy.82
-					hours = 12
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = WAG
 				}
+#				country_event = {
+#					id = wuw_GER_diplomacy.82
+#					hours = 12
+#				}
 			}
 			set_country_flag = WAG_complete_support_kaiser
 		}
