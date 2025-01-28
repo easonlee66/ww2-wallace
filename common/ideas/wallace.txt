@@ -7,8 +7,7 @@ ideas = {
 				always = yes
 			}
 			rule = {
-				can_only_justify_war_on_threat_country = yes
-				can_create_factions = no
+				can_not_declare_war = yes
 			}
 			modifier = {
 				production_speed_buildings_factor = -0.2
@@ -28,8 +27,9 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				political_power_factor = -0.2
-				army_core_defence_factor = -0.3
-				army_core_attack_factor = -0.1
+				army_defence_factor = -0.3
+				army_attack_factor = -0.1
+				war_support_factor = -0.1
 			}
 		}
 		WAG_army_goverment = {
@@ -94,6 +94,7 @@ ideas = {
 			}
 		}
 # 军事线
+# 断枪图片generic_army_problems
 		WAG_never_surrender = {
 			picture = generic_oppression
 			modifier = {
@@ -218,6 +219,7 @@ ideas = {
 			}
 		}
 # 白线
+#王冠图片 HUN_hungarian_monarchy_habsburg
 		WAG_kosui_mother = {
 			picture = generic_war_preparation
 			allowed_civil_war = {
@@ -272,6 +274,14 @@ ideas = {
 				}
 			}
 		}
+# 蓝线
+		WAG_ask_for_police_acid = {
+#			name = WAG_ask_for_police_acid
+			picture = generic_wall_line
+			modifier = {
+				weekly_manpower = 50
+			}
+		}
 # 备用
 		WAG_comecon_puppet_default = {
 			name = SOV_comecon_sov_default
@@ -318,7 +328,125 @@ ideas = {
 #				fascism_acceptance = 0.01
 #			}
 #		}
-	}
-	political_advisor = {
+#2024
+#开局DEBUFF
+		WAG_2024_shadow_of_civil_war = {
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = -0.3
+				stability_factor = -0.1
+				political_power_factor = -0.3
+			}
+		}
+		WAG_2024_nation_from_2024 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_create_factions = no
+				can_join_factions = no
+				can_access_market = no
+				can_be_called_to_war = no
+				can_not_declare_war = yes
+			}
+		}
+		WAG_2024_fascism_rising = {
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			cancel = {
+				fascism > 0.2
+			}
+			on_remove = {
+				if = {
+					limit = { original_tag = KUR }
+					set_politics = {
+						ruling_party = fascism
+					}
+					WAG = {
+						end_puppet = KUR
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.3
+					}
+					create_wargoal = {
+						target = WAG
+						type = independence_wargoal
+					}
+					add_ideas = WAG_never_surrender
+					add_ideas = WAG_mobilize_our_people
+					add_ideas = WAG_morden
+					add_ideas = WAG_prepare_for_the_war
+					add_ideas = WAG_politics_in_test
+					add_offsite_building = {
+						type = industrial_complex
+						level = 10
+					}
+					add_offsite_building = {
+						type = arms_factory
+						level = 10
+					}
+					else = {
+						start_civil_war = {
+							ideology = fascism
+							capital = 984
+							states = {983 984}
+							size = 0.3
+							add_ideas = WAG_never_surrender
+							add_ideas = WAG_mobilize_our_people
+							add_ideas = WAG_morden
+							add_ideas = WAG_prepare_for_the_war
+							add_ideas = WAG_politics_in_test
+						}
+					}
+				}
+			}
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+		WAG_2024_victory = {
+			modifier = {
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+				army_org_factor = -0.1
+			}
+		}
+		WAG_2024_a_bright_future = {
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		WAG_2024_support_people = {
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_factor = 0.2
+				war_support_factor = 0.2
+			}
+		}
+		WAG_2024_add_millartry_cost = {
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				army_org_factor = 0.1
+			}
+		}
+		WAG_2024_pay_for_debt = {
+			modifier = {
+				consumer_goods_factor = -0.3
+			}
+		}
+		WAG_2024_add_research_cost = {
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
 	}
 }
