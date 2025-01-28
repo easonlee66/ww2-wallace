@@ -1,0 +1,320 @@
+focus_tree={
+	id = wallace_2024_focus
+	country={
+		factor=0
+		modifier={
+			add=10
+			tag=WAG
+		}
+	}
+	default=no
+	focus={
+		id=WAG_2024_CELEBRATE_VICTORY
+		icon=GFX_focus_YUG_pan_slavic_congress
+		x=6
+		y=0
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = 50
+			add_war_support = 0.1
+			add_stability = 0.1
+			add_ideas = WAG_2024_victory
+			set_country_flag = WAG_2024_CELEBRATE_VICTORY_FLAG
+		}
+	}
+	focus={
+		id=WAG_2024_prepare_for_high_kaosi
+		icon = GFX_goal_generic_position_armies
+		x=7
+		y=1
+		prerequisite={focus=WAG_2024_CELEBRATE_VICTORY}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = {
+				days > 150
+				flag = WAG_2024_CELEBRATE_VICTORY_FLAG
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_war_support = 0.1
+			remove_ideas = WAG_2024_victory
+		}
+	}
+	focus={
+		id=WAG_2024_admit_aminoac
+		icon = GFX_goal_generic_alliance
+		x=10
+		y=2
+		prerequisite={focus=WAG_2024_new_diplomacy}
+		mutually_exclusive={focus=WAG_2024_end_aminoac }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_new_diplomacy
+		icon = GFX_goal_tripartite_pact
+		x=11
+		y=1
+		prerequisite={focus=WAG_2024_CELEBRATE_VICTORY}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_end_aminoac
+		icon = GFX_goal_generic_major_war
+		x=13
+		y=2
+		prerequisite={focus=WAG_2024_new_diplomacy}
+		mutually_exclusive={focus=WAG_2024_admit_aminoac }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_north_aminoac
+		icon = GFX_goal_demand_sudetenland
+		x=10
+		y=3
+		prerequisite={focus=WAG_2024_admit_aminoac}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_a_bright_future
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x=4
+		y=1
+		prerequisite={focus=WAG_2024_CELEBRATE_VICTORY}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = WAG_2024_a_bright_future
+		}
+	}
+	focus={
+		id=WAG_2024_volunteer_to_palastame
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x=8
+		y=2
+		prerequisite={focus=WAG_2024_new_diplomacy}
+		prerequisite={focus=WAG_2024_prepare_for_high_kaosi}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_war_support = 0.1
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=WAG_2024_add_millartry_cost
+		icon = GFX_goal_generic_political_pressure
+		x=6
+		y=2
+		prerequisite={focus=WAG_2024_a_bright_future}
+		prerequisite={focus=WAG_2024_prepare_for_high_kaosi}
+		mutually_exclusive={focus=WAG_2024_support_people focus=WAG_2024_pay_for_debt focus=WAG_2024_add_research_cost }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = WAG_2024_add_millartry_cost
+		}
+	}
+	focus={
+		id=WAG_2024_support_people
+		icon=GFX_goal_generic_consumer_goods
+		x=4
+		y=2
+		prerequisite={focus=WAG_2024_a_bright_future}
+		mutually_exclusive={focus=WAG_2024_add_millartry_cost focus=WAG_2024_pay_for_debt focus=WAG_2024_add_research_cost }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = WAG_2024_support_people
+		}
+	}
+	focus={
+		id=WAG_2024_pay_for_debt
+		icon=GFX_goal_generic_intelligence_exchange
+		x=2
+		y=2
+		prerequisite={focus=WAG_2024_a_bright_future}
+		mutually_exclusive={focus=WAG_2024_add_millartry_cost focus=WAG_2024_support_people focus=WAG_2024_add_research_cost }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = WAG_2024_pay_for_debt
+		}
+	}
+	focus={
+		id=WAG_2024_add_research_cost
+		icon = GFX_focus_research
+		x=0
+		y=2
+		prerequisite={focus=WAG_2024_a_bright_future}
+		mutually_exclusive={focus=WAG_2024_add_millartry_cost focus=WAG_2024_support_people focus=WAG_2024_pay_for_debt }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_research_slot = 1
+			add_ideas = WAG_2024_add_research_cost
+		}
+	}
+	focus={
+		id=WAG_2024_peoples_republic
+		icon = GFX_goal_generic_demand_territory
+		x=4
+		y=3
+		prerequisite={focus=WAG_2024_support_people}
+		available = {
+			has_war = no
+			NOT = {
+				has_idea = WAG_2024_fascism_rising
+			}
+		}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_millitary_strengthen_the_nation
+		icon = GFX_goal_generic_army_artillery
+		x=6
+		y=3
+		prerequisite={focus=WAG_2024_add_millartry_cost}
+		available = {
+			has_war = no
+			NOT = {
+				has_idea = WAG_2024_fascism_rising
+			}
+		}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_a_growing_economy
+		icon = GFX_focus_generic_the_giant_wakes
+		x=2
+		y=3
+		prerequisite={focus=WAG_2024_pay_for_debt}
+		available = {
+			has_war = no
+			NOT = {
+				has_idea = WAG_2024_fascism_rising
+			}
+		}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=WAG_2024_foresee_country
+		icon=GFX_focus_generic_socialist_science
+		x=0
+		y=3
+		available = {
+			has_war = no
+			NOT = {
+				has_idea = WAG_2024_fascism_rising
+			}
+		}
+		prerequisite={focus=WAG_2024_add_research_cost}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+}

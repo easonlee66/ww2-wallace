@@ -1,0 +1,25 @@
+WAG_2024 = {
+	WAG_anti_fascism = {
+		cost = 50
+		days_remove = 20
+		days_re_enable = 10
+		complete_effect = {
+			add_stability = -0.1
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+		}
+	}
+	WAG_anti_fascism_KUR = {
+		cost = 50
+		days_re_enable = 30
+		remove_effect = {
+			KUR = {
+				country_event = WAG_2024.1
+			}
+		}
+	}
+}
