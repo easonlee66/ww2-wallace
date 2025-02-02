@@ -39,6 +39,8 @@
   
 # 红线
 
+  WAG_a_red_SYR:0 "解放昔日领土"
+
   WAG_communism_road:0 "共产主义道路"
   WAG_befriend_SOV:0 "交好苏联"
   WAG_befriend_SOV_desc:0 ""
@@ -110,8 +112,10 @@
   WAG_honor_of_second_empire_desc:0 "第二帝国为我们留下的工业，很多都已经被破坏。为了重拾第二帝国的荣耀，我们必须修复他们。第二帝国遗留下来的工程，我们也将再次启动。"
   WAG_our_dockyard:0 "声索昔日领土"
   WAG_our_dockyard_desc:0 "只有我们拿回了昔日故土，我们才敢宣布瓦雷斯帝国的重生"
-  WAG_old_weapon:0 "重拾旧日武器"
+  WAG_old_weapon:0 "爆炸小面包"
   WAG_honor_of_the_empire_navral:0 "重建朝阳海军"
+  WAG_rebuild_submine:0 "重建潜艇部队"
+  WAG_rebuild_mian_ship:0 "重建护航舰队"
   WAG_our_old_friend:0 "昔日盟友"
   WAG_bringback_sudan:0 "苏丹归来"
   WAG_unite_BUL:0 "联合保加利亚"
