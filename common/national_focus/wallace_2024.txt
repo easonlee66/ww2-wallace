@@ -50,6 +50,8 @@ focus_tree={
 		completion_reward={
 			add_war_support = 0.1
 			remove_ideas = WAG_2024_victory
+			load_oob = WAG_new_army
+			activate_mission = WAG_2024_high_kaosi_war
 		}
 	}
 	focus={
@@ -67,6 +69,9 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			add_political_power = -50
+			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 	focus={
@@ -83,6 +88,10 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			add_stability = 0.1
+			add_political_power = 50
+			add_ideas = WAG_special_economy_zone
+			add_ideas = WAG_prepare_for_the_war
 		}
 	}
 	focus={
@@ -100,6 +109,11 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			AMI = {
+				annex_country = {
+					target = WAG
+				}
+			}
 		}
 	}
 	focus={
@@ -138,6 +152,9 @@ focus_tree={
 	focus={
 		id=WAG_2024_volunteer_to_palastame
 		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+			has_war = no
+		}
 		x=8
 		y=2
 		prerequisite={focus=WAG_2024_new_diplomacy}
@@ -153,6 +170,8 @@ focus_tree={
 			add_war_support = 0.1
 			add_stability = 0.1
 			add_political_power = 50
+			army_experience = 50
+			add_ideas = WAG_kosui_mother
 		}
 	}
 	focus={
@@ -237,6 +256,8 @@ focus_tree={
 		prerequisite={focus=WAG_2024_support_people}
 		available = {
 			has_war = no
+			controls_state = 988
+			owns_state = 988
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
 			}
@@ -249,6 +270,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			country_event = WAG_2024.2
 		}
 	}
 	focus={
@@ -259,6 +281,8 @@ focus_tree={
 		prerequisite={focus=WAG_2024_add_millartry_cost}
 		available = {
 			has_war = no
+			controls_state = 988
+			owns_state = 988
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
 			}
@@ -271,6 +295,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			country_event = WAG_2024.2
 		}
 	}
 	focus={
@@ -281,6 +306,8 @@ focus_tree={
 		prerequisite={focus=WAG_2024_pay_for_debt}
 		available = {
 			has_war = no
+			controls_state = 988
+			owns_state = 988
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
 			}
@@ -293,6 +320,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			country_event = WAG_2024.2
 		}
 	}
 	focus={
@@ -302,6 +330,8 @@ focus_tree={
 		y=3
 		available = {
 			has_war = no
+			controls_state = 988
+			owns_state = 988
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
 			}
@@ -315,6 +345,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
+			country_event = WAG_2024.2
 		}
 	}
 }

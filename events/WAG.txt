@@ -437,10 +437,12 @@ country_event = {
 		add_state_core = 990
 		add_state_core = 991
 		AMI = {
-			create_wargoal = {
-				target = WAG
-				type = independence_wargoal
-			}
+#			create_wargoal = {
+#				target = WAG
+#				type = independence_wargoal
+#			}
+			army_experience = 50
+			air_experience = 50
 			set_politics = {
 				ruling_party = democratic
 			}
@@ -465,6 +467,8 @@ country_event = {
 			set_politics = {
 				ruling_party = communism
 			}
+			army_experience = 10
+			air_experience = 10
 			set_popularities = {
 				communism = 50
 				democratic = 30
@@ -564,5 +568,6 @@ country_event = {
 				amount = 10
 			}
 		}
+		country_event = WAG_2024.6
 	}
 }

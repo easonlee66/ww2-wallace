@@ -1,5 +1,5 @@
 add_namespace = WAG_2024
-
+ 
 country_event = {
 	id = WAG_2024.1
 	title = WAG_2024.1.t
@@ -76,5 +76,71 @@ country_event = {
 		add_autonomy_ratio = {
 			value = 100
 		}
+	}
+}
+
+country_event = {
+	id = WAG_2024.2
+	title = WAG_2024.2.t
+	desc = {
+		text = WAG_2024.2.d
+		trigger = {
+			has_completed_focus = WAG_2024_foresee_country
+		}
+	}
+	desc = {
+		text = WAG_2024.3.d
+		trigger = {
+			has_completed_focus = WAG_2024_a_growing_economy
+		}
+	}
+	desc = {
+		text = WAG_2024.4.d
+		trigger = {
+			has_completed_focus = WAG_2024_peoples_republic
+		}
+	}
+	desc = {
+		text = WAG_2024.5.d
+		trigger = {
+			has_completed_focus = WAG_2024_millitary_strengthen_the_nation
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = WAG_2024.2.a
+		custom_effect_tooltip = WAG_2024.a.tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					KUR = {
+						exists = yes
+					}
+				}
+				annex_country = {
+					target = KUR
+				}
+			}
+			AMI = {
+				transfer_state = 988
+				transfer_state = 990
+			}
+			FRA = {
+				set_autonomy = {
+					target = AMI
+					autonomy_state = autonomy_dominion
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = WAG_2024.6
+	title = WAG_2024.6.t
+	desc = WAG_2024.6.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_2024.6.a
 	}
 }
