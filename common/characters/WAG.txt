@@ -1,11 +1,11 @@
 characters={
 	WAG_muhammad_von_pisau={
 		name=WAG_muhammad_von_pisau
-#		portraits={
-#			civilian={
-#				large="GFX_portrait_iraq_ghazi"
-#			}
-#		}
+		portraits = {
+			civilian = {
+				large = GFX_w_m_von_pisau
+			}
+		}
 		country_leader={
 			ideology=nazism
 			expire="1965.1.1"

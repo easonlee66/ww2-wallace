@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_w_m_von_pisau
+		textureFile = "gfx/leaders/WAG/Portrait_Wallace_Muhamod_von_pisau.dds"
+	}
+}
