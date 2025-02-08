@@ -1,0 +1,222 @@
+﻿l_english:
+  wallace_focus:0 "瓦雷斯国 国策"
+
+# 政治线
+  WAG_abandon_the_westminster_system:0 "发动军事政变"
+
+# 黑线
+
+  WAG_free_election:0 "民族复兴党上台"
+
+  WAG_befriend_GER:0 "交好德国"
+  WAG_GER_technology:0 "邀请德国专家"
+  WAG_GER_allitary:0 "引进德国火炮"
+  WAG_GER_tanks:0 "仿制德国坦克"
+  WAG_GER_general_staff:0 "邀请德国军事顾问"
+  WAG_purchase_equipment:0 "购买德式武器"
+  WAG_wargaming_division:0 "新式军队"
+
+  WAG_get_mesopotamia:0 "伊拉克的命运"
+  WAG_get_lower_kosui:0 "夺取叙利亚"
+  WAG_form_great_wallace:0 "重振民族精神"
+  WAG_form_great_wallace_desc:0 "我们终于夺回了我们在一战中失去的领土，洗清了《圣克卢条约》的耻辱，瓦雷斯民族万岁！"
+  WAG_form_great_wallace_tooltip:0 "§Y瓦雷斯国§现在被称为§Y大瓦雷斯§"
+  WAG_operation_babaluosa:0 "支援巴巴罗萨计划"
+  WAG_unite_PER:0 "联合伊朗"
+
+  WAG_remove_royalist:0 "移除君主主义者"
+  WAG_nazi_reform:0 "纳粹党改革"
+  WAG_nazi_reform_desc:0 "为了回到过去瓦雷斯第二帝国的辉煌时刻，我们必须全面改革，在任何方面都效仿过去，摆脱一切外国势力的影响。"
+  
+# 红线
+
+  WAG_communism_road:0 "共产主义道路"
+
+  WAG_a_red_SYR:0 "解放昔日领土"
+
+  WAG_befriend_SOV:0 "交好苏联"
+
+  WAG_soviet_technological_advancements:0 "苏联专家"
+  WAG_soviet_technological_advancements_desc:0 "苏联的科技一直是社会主义阵营中最先进的，我们可以请求苏联的科研专家访问瓦雷斯国，为我国科技研究提供辅助，以创新驱动瓦雷斯国的发展"
+  WAG_industry_support_from_SOV:0 "苏联工业"
+  WAG_industry_support_from_SOV_desc:0 "苏联已经完成了两个五年计划，第三个五年计划也正在进行。瓦雷斯国要想更快速工业化，更好地完成第一个两年半计划，必须请求苏联投资我们瓦雷斯国发展，在瓦苏边境修建大量工厂，以更好地发展。"
+
+  WAG_collectivized_farm:0 "农业集体化"
+  WAG_collectivized_farm_desc:0 "农业是工业的基础，我们必须推进农业集体化进程，建设集体农庄，增加粮食产量，同时令更多农民可以投身到工业化建设中。"
+  WAG_all_people_to_industry:0 "动员全国力量"
+  WAG_all_people_to_industry_desc:0 "众人拾柴火焰高，集体农庄令更少的农民可以产出更多的粮食，那些多出来的人就可以投身到我国工业化建设中，或为我国服役"
+  WAG_shared_burdens:0 "提倡节俭"
+  WAG_shared_burdens_desc:0 "为了工业化，有时候必须做出必要的牺牲。比如说个人层面的节俭，以便将更多资源投入到工业化建设中。不过苦一时，工业化建设完成后那些国产工业品将会令我们人民更好的生活。"
+
+  WAG_solidify_government_control:0 "增强政府行政力"
+  WAG_solidify_government_control_desc:0 "瓦雷斯国政府必须拥有足够的行政力，来铲除一切阻碍瓦雷斯国发展工业化的反动派。"
+  WAG_the_class_war:0 "阶级斗争"
+  WAG_the_class_war_desc:0 "资产阶级和无产阶级自古以来便不共戴天。我们必须在国内大清洗，扫除这些资本主义残余，让全国一切力量投身到社会主义建设中去。"
+  WAG_remove_against:0 "肃反运动"
+  WAG_remove_against_desc:0 "如今第二次世界大战的阴云正笼罩着我们。虽然德国和苏联签订了互不侵犯条约，但所有人都清楚德国和苏联意识形态上的冲突不是一张厕纸可以解决的。为了应对法西斯威胁，我们必须清楚国内一切试图和法西斯、帝国主义等势力勾结的人，移除掉先前瓦雷斯纳粹党的余孽。"
+
+  WAG_expand_SOV_aid:0 "苏联军事援助"
+  WAG_expand_SOV_aid_desc:0 "瓦雷斯国如今工业能力已经今非昔比了，但是军事上仍然小米加步枪。我们必须请求苏联在军事方面援助我国，让我国有同法西斯势力一战的能力"
+  WAG_SOV_milliary_advisors:0 "苏联军事顾问"
+  WAG_SOV_milliary_advisors_desc:0 "瓦雷斯国缺乏军事家，来自苏联的军事顾问可以填补瓦雷斯国这方面的空白，让瓦雷斯国得以更好地进行军事改革。"
+  WAG_SOV_equipment:0 "苏式武器"
+  WAG_SOV_equipment_desc:0 "光用步枪很难打败法西斯势力，火炮和坦克是打一场大战必备的。既然瓦雷斯国没有办法独立造出坦克，我们可以研究苏式火炮、苏式坦克，全力生产苏式装备，让瓦雷斯国军事实力迈上一个台阶。"
+
+  WAG_ban_social_democracy:0 "取缔反动政党"
+  WAG_ban_social_democracy_desc:0 "瓦雷斯共产党是瓦雷斯国唯一的执政党，其他的反动政党统统应该取缔，以维持瓦雷斯国的稳定"
+  WAG_worker_first:0 "工人阶级专政"
+  WAG_worker_first_desc:0 "社会主义政体就需要工人阶级专政，把瓦雷斯国建设成工人们的国家。"
+
+
+  WAG_special_road_for_wallace:0 "瓦雷斯特色社会主义之路"
+  WAG_special_road_for_wallace_desc:0 "我们必将建成有瓦雷斯国特色的社会主义"
+  WAG_enconomy_first:0 "以经济建设为纲"
+  WAG_enconomy_first_desc:0 "瓦雷斯国已经经历了两场内战，我们必须抓紧发展国民经济，把瓦雷斯国建设成富强民主文明和谐美丽的社会主义现代化强国"
+  WAG_special_economy_zone:0 "水西经济特区"
+  WAG_special_economy_zone_desc:0 "为发展经济，我们必须开始改革开放。首先就是把水西省开放为经济特区，给予经济上的特殊政策，引进外资，大力发展经济。"
+  WAG_developing_KUR:0 "库尔德大开发"
+  WAG_developing_KUR_desc:0 "为了促进区域平衡发展，我们必须加快开发库尔德斯坦地区，同时促进瓦雷斯族和库尔德族融合发展"
+  WAG_muti_party:0 "政治协商制度"
+  WAG_muti_party_desc:0 "我们必须重视政党问题，瓦雷斯共产党领导的多党合作机制便是最好的选择。我们可以联合所有同志共同建设社会主义"
+  WAG_two_rule_in_one_country:0 "民族区域自治"
+  WAG_two_rule_in_one_country_desc:0 "瓦雷斯国境内生活着大量阿拉伯人、突厥人、库尔德人，我们必须"
+  WAG_befriend_allice:0 "不结盟运动"
+  WAG_befriend_allice_desc:0 "瓦雷斯国要独立发展，不能依附于任何一个列强。"
+  WAG_politics_in_test:0 "政治纳入考试"
+  WAG_politics_in_test_desc:0 "为了培养忠于我们事业的人才，我们必须将政治这门学科纳入考试，鼓励学生学习政治，踊跃加入青年团。"
+  WAG_modern:0 "现代化"
+  WAG_modern_desc:0 "将瓦雷斯国建成富强、民主、文明、和谐、美丽的社会主义现代化强国，就是我们的瓦雷斯梦"
+  WAG_face_to_threat:0 "面对威胁"
+  WAG_face_to_threat_desc:0 "当今欧洲，第二次世界大战的阴云笼罩着，为了瓦雷斯国能持续发展，我们必须直面战争威胁"
+  WAG_anti_fascism:0 "反法西斯"
+  WAG_anti_fascism_desc:0 "法西斯的大肆侵略威胁着世界的和平，我们必须站在反法西斯同盟的一边，共同防御德意两国的侵略，争取世界和平"
+  WAG_secure_west_wallace:0 "东瓦防线"
+  WAG_secure_west_wallace_desc:0 "伊拉克正在与德国合作，我们必须在与伊拉克接壤的地方修建堡垒，确保轴心国不会威胁到瓦雷斯国本土"
+  WAG_secure_west_wallace_t:0 "西瓦防线"
+  WAG_secure_west_wallace_t_desc:0 "为打破西方霸权，我们必须在与同盟国接壤的地段修建堡垒，抵御他们的进攻"
+  WAG_anti_SOV:0 "反西方"
+  WAG_anti_SOV_desc:0 "我们必须打破西方霸权，争取完全独立，并解放我们第三世界国家。"
+  WAG_secure_PER:0 "反苏"
+  WAG_secure_PER_desc:0 "西方已经被我们击败，我们第三世界国家理应获得完全独立，但苏联霸权主义却妄图把我们的兄弟变成他的卫星国，我们必须反苏保护他们。"
+
+# 白线
+
+  WAG_revive_the_empire:0 "复辟帝制"
+  WAG_end_crazy:0 "清洗法西斯残党"
+  WAG_our_dockyard:0 "声索昔日领土"
+  WAG_our_dockyard_desc:0 "只有我们拿回了昔日故土，我们才敢宣布瓦雷斯帝国的重生"
+  WAG_honor_of_second_empire:0 "第二帝国的荣耀"
+  WAG_honor_of_second_empire_desc:0 "第二帝国为我们留下的工业，很多都已经被破坏。为了重拾第二帝国的荣耀，我们必须修复他们。第二帝国遗留下来的工程，我们也将再次启动。"
+
+  WAG_old_weapon:0 "爆炸小面包"
+
+  WAG_honor_of_the_empire_navral:0 "重建朝阳海军"
+  WAG_rebuild_submine:0 "重建潜艇部队"
+  WAG_rebuild_mian_ship:0 "重建护航舰队"
+
+  WAG_our_old_friend:0 "昔日盟友"
+  WAG_bringback_sudan:0 "苏丹归来"
+  WAG_unite_BUL:0 "联合保加利亚"
+  WAG_attack_balkan:0 "袭击巴尔干半岛"
+  WAG_attack_balkan_desc:0 "一战的发生就是源于巴尔干半岛的矛盾。如今俄国势力已经撤出巴尔干，我们必然击溃小协约国，掌控巴尔干"
+  WAG_opposite_hitler:0 "反对希特勒"
+  WAG_rekindle_imperial_sentiment:0 "哈布斯堡归来"
+  WAG_rebuild_central_power:0 "重建同盟国"
+  WAG_fight_with_our_old_enemy:0 "重燃战火"
+
+#蓝线
+  WAG_connect_with_the_west:0 "亲西方"
+
+  WAG_democratic_reform:0 "民主改革"
+  WAG_democratic_and_freedom:0 "自由民主"
+  WAG_free_economy:0 "自由经济"
+  WAG_ask_for_police_acid:0 "请求驻军援助"
+  WAG_end_fascism:0 "反法西斯"
+  WAG_end_communism:0 "反共"
+  WAG_end_monachism:0 "反君主制"
+  WAG_spread_freedom:0 "传播民主"
+
+  WAG_get_well_with_london:0 "交好英国"
+  WAG_get_well_with_paris:0 "交好法国"
+  WAG_kill_the_eastern_fascism_threat:0 "消灭东方法西斯威胁"
+  WAG_ask_for_syria:0 "索取叙利亚"
+
+  WAG_get_western_army_acid:0 "军事援助"
+  WAG_get_western_industry_acid:0 "工业援助"
+  WAG_western_tecnology_acid:0 "科技援助"
+  WAG_depend_on_west:0 "依赖西方"
+  WAG_effort_to_independent:0 "自给自足的努力"
+  WAG_invite_western_investgation:0 "邀请西方投资"
+  WAG_expend_university:0 "扩展瓦雷斯大学城"
+  WAG_copy_western_weapon:0 "仿制西方武器"
+  WAG_self_research_and_produce:0 "自给自足"
+
+#陆军线
+  WAG_train_new_army:0 "振兴陆军"
+  WAG_prepare_for_the_war:0 "准备战争"
+  WAG_end_saint_Kolu_trait:0 "撕毁圣克卢条约"
+  WAG_millitarty_industry_effort:0 "重视军工"
+  WAG_mobilize_our_people:0 "动员人民"
+
+# 造核线
+  WAG_solve_the_nation_problem:0 "着手解决民族问题"
+
+  WAG_give_autonomy:0 "给予自治权"
+  WAG_union_solution:0 "联盟方案"
+  WAG_federal_solution:0 "联邦方案"
+  WAG_united_country:0 "联合国家"
+  WAG_our_homeland:0 "我们共同的祖国"
+
+  WAG_remove_terrorist:0 "根除恐怖组织"
+
+  WAG_remove_resistance:0 "镇压抵抗"
+  WAG_wallace_education:0 "教育同化"
+  WAG_strict_police:0 "秘密警察"
+  WAG_wallacian_over_country:0 "瓦雷斯移民"
+  WAG_wallician_only_people:0 ""
+
+
+#工业线
+  WAG_industrial_effort:0 "工业化建设"
+  WAG_industrial_effort_desc:0 "瓦雷斯国已经非常落后于时代了。我们必须加强科技创新，准备开始工业化建设，争取把瓦雷斯国从落后的商业国变成先进的工业国。"
+  WAG_first_two_year_half_plan:0 "第一个两年半计划"
+  WAG_first_two_year_half_plan_desc:0 "瓦雷斯国工厂严重不足，我们必须通过两年半计划来加强工厂建设，动员全国的力量，大规模建设工厂，提升瓦雷斯国的工业水平"
+  WAG_Mt.Iron_industry_centre:0 "铁山靠研究所"
+  WAG_Mt.Iron_industry_centre_desc:0 "科技是第一生产力，我们必须加快科技研究，在铁山靠建立研究所，为了加快瓦雷斯国工业化的脚步。"
+  WAG_second_two_year_half_plan:0 "第二个两年半计划"
+  WAG_mind_millitary:0 "重视军工"
+  WAG_mind_civilization:0 "重视民生"
+
+
+#  彩蛋 wag2024
+  WAG_2024_CELEBRATE_VICTORY:0 "庆祝中考战役胜利"
+  WAG_2024_CELEBRATE_VICTORY_desc:0 "在2024年，我们瓦雷斯国终于打赢了中考战役，从考试州分离主义势力中收复了中考地区。我们必须向全国乃至全世界宣告我们的胜利！"
+  WAG_2024_a_bright_future:0 "迈向光明的未来"
+  WAG_2024_a_bright_future_desc:0 "既然考试州分离主义势力被我们击溃，暂时不会对我们构成威胁，是时候处理国内事务，让瓦雷斯国再次伟大了。"
+  WAG_2024_add_research_cost:0 "增加科研投入"
+  WAG_2024_add_research_cost_desc:0 "科技是第一生产力"
+  WAG_2024_foresee_country:0 "远视国家"
+  WAG_2024_foresee_country_desc:0 "至此，瓦雷斯国迎来了一缕曙光"
+  WAG_2024_pay_for_debt:0 "偿还外债"
+  WAG_2024_pay_for_debt_desc:0 "战争告一段落，我们必须开始着手经济建设"
+  WAG_2024_a_growing_economy:0 "经济增长"
+  WAG_2024_a_growing_economy_desc:0 "至此，瓦雷斯国迎来了一缕曙光"
+  WAG_2024_support_people:0 "提高福利"
+  WAG_2024_support_people_desc:0 "我们国家已经经历了十余年断断续续的战火，是时候让人民群众过上好日子了"
+  WAG_2024_peoples_republic:0 "人民的共和国"
+  WAG_2024_peoples_republic_desc:0 "至此，瓦雷斯国迎来了一缕曙光"
+  WAG_2024_add_millartry_cost:0 "加大军费开支"
+  WAG_2024_millitary_strengthen_the_nation:0 "军事强国"
+  WAG_2024_millitary_strengthen_the_nation_desc:0 "至此，瓦雷斯国迎来了一缕曙光"
+  WAG_2024_prepare_for_high_kaosi:0 "准备高考战役"
+  WAG_2024_prepare_for_high_kaosi_desc:0 "欢庆过后，我们不能忘记，考试州分离主义势力还没有被完全消灭。我们必须整军备战，以应对分离主义势力的反扑。"
+  WAG_2024_volunteer_to_palastame:0 "援巴勒斯坦志愿军"
+  WAG_2024_volunteer_to_palastame_desc:0 "我们的阿拉伯兄弟还处在犹太人无情的战火中，我们可以派出志愿军帮助他们，顺便在实战中提升我们陆军的作战实力以应对接下来的战争"
+  WAG_2024_new_diplomacy:0 "调整外交政策"
+  WAG_2024_end_aminoac:0 "消灭阿弥诺斯联邦共和国"
+  WAG_2024_end_aminoac_desc:0 "你真觉得你能打过阿弥诺斯？？？"
+  WAG_2024_admit_aminoac:0 "承认阿弥诺斯联邦共和国"
+  WAG_2024_north_aminoac:0 "要求阿弥诺斯改名北阿弥诺斯"
+  WAG_2024_north_aminoac_desc:0 "南阿弥诺斯是瓦雷斯国不可分割的一部分，因此阿弥诺斯联邦共和国只是北阿弥诺斯，应当改名北阿弥诺斯联邦共和国"
+
+#  iraq_focus:0 "伊拉克 国策"
