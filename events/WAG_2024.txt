@@ -188,3 +188,13 @@ country_event = {
 		name = WAG_2024.8.a
 	}
 }
+
+country_event = {
+	id = WAG_2024.9
+	title = WAG_2024.9.t
+	desc = WAG_2024.9.d
+	is_triggered_only = yes
+	option = {
+		name = WAG_2024.9.a
+	}
+}

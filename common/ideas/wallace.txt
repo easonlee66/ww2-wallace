@@ -401,6 +401,9 @@ ideas = {
 						type = arms_factory
 						level = 10
 					}
+					WAG = {
+						country_event = WAG_2024.9
+					}
 					else = {
 						start_civil_war = {
 							ideology = fascism
