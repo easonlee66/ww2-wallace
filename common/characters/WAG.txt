@@ -4,6 +4,7 @@ characters={
 		portraits = {
 			civilian = {
 				large = GFX_w_m_von_pisau
+				small = GFX_w_m_von_pisau
 			}
 		}
 		country_leader={
