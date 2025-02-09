@@ -23,7 +23,6 @@ focus_tree={
 			add_war_support = 0.1
 			add_stability = 0.1
 			add_ideas = WAG_2024_victory
-			set_country_flag = WAG_2024_CELEBRATE_VICTORY_FLAG
 		}
 	}
 	focus={
@@ -36,18 +35,20 @@ focus_tree={
 		ai_will_do={
 			factor=1
 		}
-		available = {
-			has_country_flag = {
-				days > 150
-				flag = WAG_2024_CELEBRATE_VICTORY_FLAG
-			}
-		}
 		available_if_capitulated=yes
 		completion_reward={
 			add_war_support = 0.1
 			remove_ideas = WAG_2024_victory
 			load_oob = WAG_new_army
-			activate_mission = WAG_2024_high_kaosi_war
+			AMI = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+				create_wargoal = {
+					target = WAG
+					type = independence_wargoal
+				}
+			}
 		}
 	}
 	focus={
@@ -237,6 +238,12 @@ focus_tree={
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
 			}
+			KUR = {
+				OR = {
+					has_government = communism
+					exists = no
+				}
+			}
 		}
 		cost=10
 		ai_will_do={
@@ -259,6 +266,12 @@ focus_tree={
 			owns_state = 988
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
+			}
+			KUR = {
+				OR = {
+					has_government = communism
+					exists = no
+				}
 			}
 		}
 		cost=10
@@ -283,6 +296,12 @@ focus_tree={
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
 			}
+			KUR = {
+				OR = {
+					has_government = communism
+					exists = no
+				}
+			}
 		}
 		cost=10
 		ai_will_do={
@@ -304,6 +323,12 @@ focus_tree={
 			owns_state = 988
 			NOT = {
 				has_idea = WAG_2024_fascism_rising
+			}
+			KUR = {
+				OR = {
+					has_government = communism
+					exists = no
+				}
 			}
 		}
 		prerequisite={focus=WAG_2024_add_research_cost}

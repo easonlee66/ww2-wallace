@@ -28,4 +28,11 @@
 
   WAG_no_faction_movementss:0 "不结盟运动"
 # 2024
-  WAG_
+  WAG_2024_shadow_of_civil_war:0 "内战的阴影"
+  WAG_2024_shadow_of_civil_war_desc:0 "2023年，瓦雷斯国经历了两场内战。虽然都被我们平定，但战争的阴云仍然笼罩着每一个人。"
+  WAG_2024_nation_from_2024:0 "2024年的国家"
+  WAG_2024_nation_from_2024_desc:0 "这个国家来自2024年，无法与周围1936年的国家互动"
+  WAG_2024_fascism_rising:0 "法西斯思潮崛起"
+  WAG_2024_fascism_rising_desc:0 "随着局势的不断紧张，很多民族主义者都谴责我们政府做法太过软弱，应该在瓦雷斯国控制的考试州地区实行民族清洗以保证考试州的稳定。极右翼势力在不断抬头。"
+  WAG_2024_victory:0 "中考战役的胜利者"
+  WAG_2024_victory_desc:0 "历经千辛万苦，瓦雷斯国答应了中考战役，成功向世界证明了自己。我们必须以此自豪！"

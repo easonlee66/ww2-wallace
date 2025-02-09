@@ -479,6 +479,7 @@ country_event = {
 			add_ideas = WAG_first_two_year_half_plan
 			add_ideas = WAG_shared_burdenss
 			add_ideas = WAG_2024_fascism_rising
+			add_ideas = WAG_politics_in_test
 		}
 		puppet = KUR
 		988 = {
@@ -569,5 +570,6 @@ country_event = {
 			}
 		}
 		country_event = WAG_2024.6
+		load_focus_tree = wallace_2024_focus
 	}
 }

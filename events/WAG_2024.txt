@@ -121,9 +121,27 @@ country_event = {
 					target = KUR
 				}
 			}
+			remove_ideas = WAG_2024_shadow_of_civil_war
+			remove_ideas = WAG_2024_nation_from_2024
+			add_ideas = WAG_sait_kolu_treat
+			add_ideas = WAG_western_impression
+			set_politics = {
+				ruling_party = democratic
+				last_election = "1934.1.1"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			set_popularities = {
+				neutrality = 10
+				democratic = 30
+				fascism = 35
+				communism = 25
+			}
+			load_focus_tree = wallace_focus
 			AMI = {
 				transfer_state = 988
 				transfer_state = 990
+				remove_ideas = WAG_2024_nation_from_2024
 			}
 			FRA = {
 				set_autonomy = {

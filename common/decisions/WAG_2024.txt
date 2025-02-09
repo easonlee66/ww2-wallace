@@ -1,5 +1,9 @@
 WAG_2024 = {
 	WAG_2024_anti_fascism = {
+		visible = {
+			has_focus_tree = wallace_2024_focus
+			has_idea = WAG_2024_fascism_rising
+		}
 		cost = 50
 		days_remove = 20
 		days_re_enable = 10
@@ -16,38 +20,43 @@ WAG_2024 = {
 	WAG_2024_anti_fascism_KUR = {
 		cost = 50
 		days_re_enable = 30
+		visible = {
+			has_focus_tree = wallace_2024_focus
+			KUR = {
+				has_idea = WAG_2024_fascism_rising
+			}
+		}
 		remove_effect = {
 			KUR = {
 				country_event = WAG_2024.1
 			}
 		}
 	}
-	WAG_2024_high_kaosi_war = {
-		icon = generic_ignite_civil_war
-		days_mission_timeout = 400
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		visible = {
-			has_completed_focus = WAG_2024_prepare_for_high_kaosi
-		}
-		cancel_trigger = {
-			has_completed_focus = WAG_2024_add_millartry_cost
-			num_of_factories > 50
-		}
-		cancel_effect = {
-			annex_country = {
-				target = AMI
-			}
-		}
-		timeout_effect = {
-			AMI = {
-				create_wargoal = {
-					target = WAG
-					type = independence_wargoal
-				}
-			}
-		}
-	}
+#	WAG_2024_high_kaosi_war = {
+#		icon = generic_ignite_civil_war
+#		days_mission_timeout = 400
+#		fire_only_once = yes
+#		visible = {
+#			has_completed_focus = WAG_2024_prepare_for_high_kaosi
+#		}
+#		cancel_trigger = {
+#			has_completed_focus = WAG_2024_add_millartry_cost
+#			num_of_factories > 50
+#		}
+#		cancel_effect = {
+#			annex_country = {
+#				target = AMI
+#			}
+#		}
+#		timeout_effect = {
+#			AMI = {
+#				set_rule = {
+#					can_not_declare_war = no
+#				}
+#				declare_war_on = {
+#					target = WAG
+#				}
+#			}
+#		}
+#	}
 }
