@@ -13,7 +13,7 @@ state={
 		add_claim_by = WAG
 	}
 	provinces={
-		12387 
+		12387 4512
 	}
 	manpower=13720
 	buildings_max_level_factor=1.000

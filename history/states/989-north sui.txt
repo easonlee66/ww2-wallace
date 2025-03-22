@@ -12,7 +12,7 @@ state={
 		add_core_of = KUR
 	}
 	provinces={
-		1549 
+		1549  1578
 	}
 	manpower=42410
 	buildings_max_level_factor=1.000
