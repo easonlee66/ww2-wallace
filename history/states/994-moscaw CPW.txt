@@ -1,0 +1,18 @@
+state={
+	id=994
+	name="STATE_994"
+	provinces={
+		13369 
+	}
+	manpower=100
+	history = {
+		owner = SOV
+		add_core_of = SOV
+		victory_points = {
+			13369 1
+		}
+	}
+	state_category = enclave
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
