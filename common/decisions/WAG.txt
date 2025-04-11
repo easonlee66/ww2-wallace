@@ -432,6 +432,15 @@ WAG_first_two_year_half_plan = {
 						state = PREV
 					}
 				}
+				random_list = {
+					20={
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					80={}
+				}
 			}
 		}
 	}
