@@ -2,15 +2,13 @@ state={
 	id=990
 	name="STATE_990"
 	history={
-		owner = AMI
+		owner = WAG
 		victory_points = {
 			12387 3
 		}
 		add_core_of = AMI
-		add_core_of = TUR
 #		add_core_of = WAG
 		add_core_of = KUR
-		add_claim_by = WAG
 	}
 	provinces={
 		12387 4512

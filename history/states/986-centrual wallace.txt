@@ -15,8 +15,6 @@ state={
 #			supply_node = 1
 		}
 		add_core_of = WAG
-		add_core_of = SYR
-		add_core_of = IRQ
 		add_core_of = KUR
 	}
 	provinces={
@@ -25,5 +23,5 @@ state={
 	manpower=98274
 	buildings_max_level_factor=1.000
 	state_category=city
-	local_supplies=4.000
+	local_supplies=0.000
 }

@@ -3,12 +3,11 @@ state={
 	name="STATE_985"
 
 	history={
-		owner = IRQ
+		owner = WAG
 		victory_points = {
 			1600 1 
 		}
-		add_core_of = IRQ
-		add_claim_by = WAG
+		add_core_of = WAG
 #		add_core_of = KUR
 	}
 
@@ -18,5 +17,5 @@ state={
 	manpower=539720
 	buildings_max_level_factor=1.000
 	state_category=rural
-	local_supplies=4.000
+	local_supplies=1.000
 }

@@ -2,12 +2,11 @@ state={
 	id=983
 	name="STATE_983"
 	history={
-		owner = FRA
+		owner = WAG
 		victory_points = {
 			2013 1
 		}
-		add_core_of = SYR
-		add_claim_by = WAG
+		add_core_of = WAG
 	}
 	provinces={
 		2013 901

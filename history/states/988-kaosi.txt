@@ -3,14 +3,12 @@ state={
 	name="STATE_988"
 
 	history={
-		owner = AMI
+		owner = WAG
 		victory_points = {
 			12416 1 
 		}
-		add_core_of = SYR
 		add_core_of = KUR
 		add_core_of = AMI
-		add_claim_by = WAG
 	}
 
 	provinces={
