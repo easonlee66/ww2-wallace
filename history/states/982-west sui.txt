@@ -5,7 +5,7 @@ state={
 	history={
 		owner = FRA
 		victory_points = {
-			3942 2 
+			1634 2 
 		}
 		add_core_of = SYR
 		add_claim_by = WAG
@@ -14,7 +14,7 @@ state={
 	provinces={
 		1606 3942 1634 
 	}
-	manpower=164820
+	manpower=364820
 	buildings_max_level_factor=1.000
 	state_category=large_city
 	local_supplies=4.000

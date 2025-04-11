@@ -5,21 +5,21 @@ state={
 	history={
 		owner = IRQ
 		victory_points = {
-			10106 1
+			13366 2
 		}
 		victory_points = {
-			1600 2 
+			1600 1 
 		}
 		add_core_of = IRQ
 		add_claim_by = WAG
-		add_core_of = KUR
+#		add_core_of = KUR
 	}
 
 	provinces={
-		1600 10106 
+		1600 13366 
 	}
 	manpower=9720
 	buildings_max_level_factor=1.000
 	state_category=town
-	local_supplies=0.000
+	local_supplies=4.000
 }

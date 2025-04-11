@@ -1,0 +1,19 @@
+state={
+	id=992
+	name="STATE_992"
+	provinces={
+		10106 
+	}
+	manpower=538900
+	history = {
+		owner = IRQ
+		add_core_of = IRQ
+		add_claim_by = WAG
+		victory_points = {
+			10106 1
+		}
+	}
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=1.000
+}

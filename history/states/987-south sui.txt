@@ -4,7 +4,7 @@ state={
 	history={
 		owner = WAG
 		victory_points = {
-			10882 3
+			13367 3
 		}
 #		buildings = {
 #			industrial_complex = 3
@@ -15,7 +15,7 @@ state={
 		add_core_of = SYR
 	}
 	provinces={
-		10882 
+		10882 13367
 	}
 	manpower=102410
 	buildings_max_level_factor=1.000

@@ -4,7 +4,8 @@ state={
 	history={
 		owner = WAG
 		victory_points = {
-			10804 5
+			13368 5
+			10804 3
 		}
 		buildings = {
 #			infrastructure = 3
@@ -19,9 +20,9 @@ state={
 		add_core_of = KUR
 	}
 	provinces={
-		10804 
+		10804 13368
 	}
-	manpower=618274
+	manpower=118274
 	buildings_max_level_factor=1.000
 	state_category=large_city
 	local_supplies=4.000
