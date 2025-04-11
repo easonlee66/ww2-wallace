@@ -13,7 +13,7 @@ state={
 			13366 2
 		}
 	}
-	state_category = town
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=1.500
 }
