@@ -7,6 +7,10 @@ state={
 		victory_points = {
 			1634 2 
 		}
+		buildings = {
+			industrial_complex = 4
+			infrastructure = 3
+		}
 		add_core_of = WAG
 	}
 

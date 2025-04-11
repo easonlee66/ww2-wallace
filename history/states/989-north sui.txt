@@ -6,6 +6,9 @@ state={
 		victory_points = {
 			1549 2
 		}
+		buildings = {
+			industrial_complex = 1
+		}
 		add_claim_by = AMI
 		add_core_of = WAG
 		add_core_of = KUR
