@@ -78,6 +78,13 @@ WAG_attack_balkan = {
 	}
 }
 
+WAG_restore_arbic = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		original_tag = WAG
+	}
+}
+
 WAG_2024 = {
 	icon = decision_cat_picture_chi_political_support
 	allowed = {
