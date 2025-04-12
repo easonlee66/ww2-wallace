@@ -859,6 +859,298 @@ WAG_attack_balkan = {
 		}
 	}
 }
+WAG_restore_arbic = {
+	WAG_form_arbic_country = {
+		visible = {
+			has_country_flag = WAG_restore_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = IRQ
+					is_core_of = SAU
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = IRQ
+						is_core_of = SAU
+					}
+				}
+				add_core_of = WAG
+			}
+			set_cosmetic_tag = WAG_arbic
+		}
+	}
+	WAG_control_iran = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				is_core_of = PER
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = PER
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_afgain = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				is_core_of = AFG
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = AFG
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_PAKI = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				is_core_of = PAK
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = PAK
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_CYP = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				is_core_of = CYP
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = CYP
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_arbic_halfisland = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = SYR
+					is_core_of = JOR
+					is_core_of = ISR
+					is_core_of = LEB
+					is_core_of = KUW
+					is_core_of = QAT
+					is_core_of = UAE
+					is_core_of = OMA
+					is_core_of = YEM
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SYR
+					is_core_of = JOR
+					is_core_of = ISR
+					is_core_of = LEB
+					is_core_of = KUW
+					is_core_of = QAT
+					is_core_of = UAE
+					is_core_of = OMA
+					is_core_of = YEM
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_north_africa = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = EGY
+					is_core_of = LBA
+					is_core_of = TUN
+					is_core_of = ALG
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = EGY
+					is_core_of = LBA
+					is_core_of = TUN
+					is_core_of = ALG
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_iblia = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = MOR
+					is_core_of = SPR
+					is_core_of = POR
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = MOR
+					is_core_of = SPR
+					is_core_of = POR
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_middle_asia = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = TAJ
+					is_core_of = KYR
+					is_core_of = TMS
+					is_core_of = UZB
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = TAJ
+					is_core_of = KYR
+					is_core_of = TMS
+					is_core_of = UZB
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_small_asia = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = KUR
+					state = 344
+					state = 354
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = KUR
+					state = 344
+					state = 354
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+	WAG_control_outer_kaoj = {
+		visible = {
+			has_cosmetic_tag = WAG_arbic
+		}
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = AZR
+					is_core_of = ARM
+					is_core_of = GEO
+				}
+				is_controlled_by = WAG
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_core_of = AZR
+					is_core_of = ARM
+					is_core_of = GEO
+				}
+				add_core_of = WAG
+			}
+		}
+	}
+}
 
 DBG = {
 }
