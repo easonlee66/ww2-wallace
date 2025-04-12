@@ -885,6 +885,47 @@ WAG_restore_arbic = {
 				}
 				add_core_of = WAG
 			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = PER
+						is_core_of = AFG
+						is_core_of = PAK
+						is_core_of = CYP
+						is_core_of = SYR
+						is_core_of = JOR
+						is_core_of = ISR
+						is_core_of = LEB
+						is_core_of = KUW
+						is_core_of = QAT
+						is_core_of = UAE
+						is_core_of = OMA
+						is_core_of = YEM
+						is_core_of = EGY
+						is_core_of = LBA
+						is_core_of = TUN
+						is_core_of = ALG
+						is_core_of = MOR
+						is_core_of = SPR
+						is_core_of = POR
+						is_core_of = TAJ
+						is_core_of = KYR
+						is_core_of = TMS
+						is_core_of = UZB
+						is_core_of = KUR
+						state = 344
+						state = 354
+						is_core_of = AZR
+						is_core_of = ARM
+						is_core_of = GEO
+						is_core_of = KBK
+						is_core_of = CIN
+						is_core_of = NOA
+						is_core_of = DAG
+					}
+				}
+				add_claim_by = WAG
+			}
 			set_cosmetic_tag = WAG_arbic
 		}
 	}
@@ -1022,6 +1063,7 @@ WAG_restore_arbic = {
 					is_core_of = LBA
 					is_core_of = TUN
 					is_core_of = ALG
+					is_core_of = MOR
 				}
 				is_controlled_by = WAG
 			}
@@ -1035,6 +1077,7 @@ WAG_restore_arbic = {
 					is_core_of = LBA
 					is_core_of = TUN
 					is_core_of = ALG
+					is_core_of = MOR
 				}
 				add_core_of = WAG
 			}
@@ -1047,7 +1090,6 @@ WAG_restore_arbic = {
 		available = {
 			any_state = {
 				OR = {
-					is_core_of = MOR
 					is_core_of = SPR
 					is_core_of = POR
 				}
@@ -1059,7 +1101,6 @@ WAG_restore_arbic = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					is_core_of = MOR
 					is_core_of = SPR
 					is_core_of = POR
 				}
