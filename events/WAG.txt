@@ -573,3 +573,14 @@ country_event = {
 		load_focus_tree = wallace_2024_focus
 	}
 }
+country_event = {
+	id = WAG.6666
+	title = WAG.6666.t
+	desc = WAG.6666.d
+	is_triggered_only = yes
+	option = {
+		name = WAG.6666.a
+		unlock_decision_category_tooltip = WAG_restore_arbic
+		set_country_flag = WAG_restore_arbic
+	}
+}
