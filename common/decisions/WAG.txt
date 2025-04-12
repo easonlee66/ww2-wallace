@@ -1133,6 +1133,10 @@ WAG_restore_arbic = {
 					is_core_of = AZR
 					is_core_of = ARM
 					is_core_of = GEO
+					is_core_of = KBK
+					is_core_of = CIN
+					is_core_of = NOA
+					is_core_of = DAG
 				}
 				is_controlled_by = WAG
 			}
@@ -1145,6 +1149,10 @@ WAG_restore_arbic = {
 					is_core_of = AZR
 					is_core_of = ARM
 					is_core_of = GEO
+					is_core_of = KBK
+					is_core_of = CIN
+					is_core_of = NOA
+					is_core_of = DAG
 				}
 				add_core_of = WAG
 			}
