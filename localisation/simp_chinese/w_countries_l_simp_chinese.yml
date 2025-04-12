@@ -22,6 +22,10 @@
  WAG_French_DEF:0 "瓦雷斯国"
  WAG_army_government_ct:0 "瓦雷斯军政府"
  WAG_army_government_ct_DEF:0 "瓦雷斯军政府"
+ WAG_arbic_fascism:0 "大阿拉伯民族国"
+ WAG_arbic_democratic:0 "阿拉伯合众国"
+ WAG_arbic_communism:0 "阿拉伯工人联邦"
+ WAG_arbic_neutrality:0 "阿拉伯帝国"
 
  WAG_fascism_ADJ:0 "瓦雷斯"
  WAG_democratic_ADJ:0 "瓦雷斯"
