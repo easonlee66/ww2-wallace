@@ -474,6 +474,10 @@ focus_tree={
 			}
 			add_political_power = -40
 			add_ideas = WAG_ban_social_democracy
+			if = {
+				limit = { has_idea = WAG_a_mess_country }
+				remove_ideas = WAG_a_mess_country
+			}
 		}
 	}
 	focus={
@@ -3618,7 +3622,9 @@ focus_tree={
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward={
-			add_to_faction = SOV
+			SOV = {
+				add_to_faction = WAG
+			}
 			add_war_support = 0.1
 			add_stability = 0.1
 			add_political_power = 10
@@ -3997,3 +4003,4 @@ focus_tree={
 #		}
 #	}
 }
+#eval_effect WAG={create_wargoal={target=IRQ type=annex_everything}}
