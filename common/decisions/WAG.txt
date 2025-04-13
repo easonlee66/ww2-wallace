@@ -867,10 +867,12 @@ WAG_restore_arbic = {
 		available = {
 			all_state = {
 				OR = {
-					is_core_of = IRQ
-					is_core_of = SAU
+					NOT = {
+						is_core_of = IRQ
+						is_core_of = SAU
+					}
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
 			}
 		}
 		cost = 30
@@ -934,9 +936,10 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			all_state = {
-				is_core_of = PER
-				is_controlled_by = WAG
+			PER = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
 			}
 		}
 		cost = 30
@@ -955,9 +958,10 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			all_state = {
-				is_core_of = AFG
-				is_controlled_by = WAG
+			AFG = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
 			}
 		}
 		cost = 30
@@ -976,9 +980,10 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			all_state = {
-				is_core_of = PAK
-				is_controlled_by = WAG
+			PAK = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
 			}
 		}
 		cost = 30
@@ -997,9 +1002,10 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			all_state = {
-				is_core_of = CYP
-				is_controlled_by = WAG
+			CYP = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
 			}
 		}
 		cost = 30
@@ -1020,17 +1026,20 @@ WAG_restore_arbic = {
 		available = {
 			all_state = {
 				OR = {
-					is_core_of = SYR
-					is_core_of = JOR
-					is_core_of = ISR
-					is_core_of = LEB
-					is_core_of = KUW
-					is_core_of = QAT
-					is_core_of = UAE
-					is_core_of = OMA
-					is_core_of = YEM
+					NOT = {
+						is_core_of = SYR
+						is_core_of = JOR
+						is_core_of = ISR
+						is_core_of = LEB
+						is_core_of = KUW
+						is_core_of = QAT
+						is_core_of = UAE
+						is_core_of = OMA
+						is_core_of = YEM
+					}
+					state = 799
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
 			}
 		}
 		cost = 30
@@ -1050,8 +1059,17 @@ WAG_restore_arbic = {
 						is_core_of = OMA
 						is_core_of = YEM
 					}
+					NOT = {
+						state = 799
+					}
 				}
 				add_core_of = WAG
+			}
+			if = {
+				limit = { controls_state = 799 }
+				799 = {
+					add_core_of = WAG
+				}
 			}
 		}
 	}
@@ -1062,13 +1080,15 @@ WAG_restore_arbic = {
 		available = {
 			all_state = {
 				OR = {
-					is_core_of = EGY
-					is_core_of = LBA
-					is_core_of = TUN
-					is_core_of = ALG
-					is_core_of = MOR
+					NOT = {
+						is_core_of = EGY
+						is_core_of = LBA
+						is_core_of = TUN
+						is_core_of = ALG
+						is_core_of = MOR
+					}
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
 			}
 		}
 		cost = 30
@@ -1093,12 +1113,15 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			all_state = {
-				OR = {
-					is_core_of = SPR
-					is_core_of = POR
+			POR = {
+				all_core_state = {
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
+			}
+			SPR = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
 			}
 		}
 		cost = 30
@@ -1120,14 +1143,25 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			all_state = {
-				OR = {
-					is_core_of = TAJ
-					is_core_of = KYR
-					is_core_of = TMS
-					is_core_of = UZB
+			TAJ = {
+				all_core_state = {
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
+			}
+			UZB = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
+			}
+			KYR = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
+			}
+			TMS = {
+				all_core_state = {
+					is_controlled_by = WAG
+				}
 			}
 		}
 		cost = 30
@@ -1153,11 +1187,14 @@ WAG_restore_arbic = {
 		available = {
 			all_state = {
 				OR = {
-					is_core_of = KUR
-					state = 344
-					state = 354
+					NOT = {
+						is_core_of = KUR
+						state = 344
+						state = 354
+						state = 799
+					}
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
 			}
 		}
 		cost = 30
@@ -1169,6 +1206,7 @@ WAG_restore_arbic = {
 						is_core_of = KUR
 						state = 344
 						state = 354
+						state = 799
 					}
 				}
 				add_core_of = WAG
@@ -1182,15 +1220,17 @@ WAG_restore_arbic = {
 		available = {
 			all_state = {
 				OR = {
-					is_core_of = AZR
-					is_core_of = ARM
-					is_core_of = GEO
-					is_core_of = KBK
-					is_core_of = CIN
-					is_core_of = NOA
-					is_core_of = DAG
+					NOT = {
+						is_core_of = AZR
+						is_core_of = ARM
+						is_core_of = GEO
+						is_core_of = KBK
+						is_core_of = CIN
+						is_core_of = NOA
+						is_core_of = DAG
+					}
+					is_controlled_by = WAG
 				}
-				is_controlled_by = WAG
 			}
 		}
 		cost = 30
