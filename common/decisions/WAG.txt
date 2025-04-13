@@ -865,7 +865,7 @@ WAG_restore_arbic = {
 			has_country_flag = WAG_restore_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = IRQ
 					is_core_of = SAU
@@ -934,7 +934,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				is_core_of = PER
 				is_controlled_by = WAG
 			}
@@ -955,7 +955,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				is_core_of = AFG
 				is_controlled_by = WAG
 			}
@@ -976,7 +976,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				is_core_of = PAK
 				is_controlled_by = WAG
 			}
@@ -997,7 +997,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				is_core_of = CYP
 				is_controlled_by = WAG
 			}
@@ -1018,7 +1018,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = SYR
 					is_core_of = JOR
@@ -1036,17 +1036,20 @@ WAG_restore_arbic = {
 		cost = 30
 		fire_only_once = yes
 		remove_effect = {
+			
 			every_state = {
 				limit = {
-					is_core_of = SYR
-					is_core_of = JOR
-					is_core_of = ISR
-					is_core_of = LEB
-					is_core_of = KUW
-					is_core_of = QAT
-					is_core_of = UAE
-					is_core_of = OMA
-					is_core_of = YEM
+					OR = {
+						is_core_of = SYR
+						is_core_of = JOR
+						is_core_of = PAL
+						is_core_of = LEB
+						is_core_of = KUW
+						is_core_of = QAT
+						is_core_of = UAE
+						is_core_of = OMA
+						is_core_of = YEM
+					}
 				}
 				add_core_of = WAG
 			}
@@ -1057,7 +1060,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = EGY
 					is_core_of = LBA
@@ -1073,11 +1076,13 @@ WAG_restore_arbic = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					is_core_of = EGY
-					is_core_of = LBA
-					is_core_of = TUN
-					is_core_of = ALG
-					is_core_of = MOR
+					OR = {
+						is_core_of = EGY
+						is_core_of = LBA
+						is_core_of = TUN
+						is_core_of = ALG
+						is_core_of = MOR
+					}
 				}
 				add_core_of = WAG
 			}
@@ -1088,7 +1093,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = SPR
 					is_core_of = POR
@@ -1101,8 +1106,10 @@ WAG_restore_arbic = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					is_core_of = SPR
-					is_core_of = POR
+					OR = {
+						is_core_of = SPR
+						is_core_of = POR
+					}
 				}
 				add_core_of = WAG
 			}
@@ -1113,7 +1120,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = TAJ
 					is_core_of = KYR
@@ -1128,10 +1135,12 @@ WAG_restore_arbic = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					is_core_of = TAJ
-					is_core_of = KYR
-					is_core_of = TMS
-					is_core_of = UZB
+					OR = {
+						is_core_of = TAJ
+						is_core_of = KYR
+						is_core_of = TMS
+						is_core_of = UZB
+					}
 				}
 				add_core_of = WAG
 			}
@@ -1142,7 +1151,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = KUR
 					state = 344
@@ -1156,9 +1165,11 @@ WAG_restore_arbic = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					is_core_of = KUR
-					state = 344
-					state = 354
+					OR = {
+						is_core_of = KUR
+						state = 344
+						state = 354
+					}
 				}
 				add_core_of = WAG
 			}
@@ -1169,7 +1180,7 @@ WAG_restore_arbic = {
 			has_cosmetic_tag = WAG_arbic
 		}
 		available = {
-			any_state = {
+			all_state = {
 				OR = {
 					is_core_of = AZR
 					is_core_of = ARM
@@ -1187,13 +1198,15 @@ WAG_restore_arbic = {
 		remove_effect = {
 			every_state = {
 				limit = {
-					is_core_of = AZR
-					is_core_of = ARM
-					is_core_of = GEO
-					is_core_of = KBK
-					is_core_of = CIN
-					is_core_of = NOA
-					is_core_of = DAG
+					OR = {
+						is_core_of = AZR
+						is_core_of = ARM
+						is_core_of = GEO
+						is_core_of = KBK
+						is_core_of = CIN
+						is_core_of = NOA
+						is_core_of = DAG
+					}
 				}
 				add_core_of = WAG
 			}
