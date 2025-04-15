@@ -32,6 +32,8 @@
  WAG_DEF:0 "瓦雷斯国"
  WAG_ADJ:0 "瓦雷斯"
 
+ WAG_GATHERING_STORM_DESC:0 "上次世界大战后，随《圣克鲁条约》的签订，瓦雷斯国丧失了近一半的领土，国内状况也满目疮痍，几近沦为西方列强的殖民地。\n\n但是，随着欧洲政局的风云突变，能让瓦雷斯国摆脱西方国家控制，并重拾昔日荣光的时刻，或许已经到来。"
+
  AMI_fascism:0 "阿弥诺斯帝国"
  AMI_fascism_DEF:0 "阿弥诺斯帝国"
  AMI_neutrality:0 "阿弥诺斯帝国"
@@ -41,10 +43,4 @@
  AMI_communism:0 "阿弥诺斯国"
  AMI_communism_DEF:0 "阿弥诺斯人民共和国"
 
- AMI_fascism_ADJ:0 "阿弥诺斯"
- AMI_democratic_ADJ:0 "阿弥诺斯"
- AMI_neutrality_ADJ:0 "阿弥诺斯"
- AMI_communism_ADJ:0 "阿弥诺斯"
-
- AMI_with_wag:0 "阿-瓦国"
- AMI_with_wag_DEF:0 "阿弥诺斯-瓦雷斯联合国"
+ AMI_ADJ:0 "阿弥诺斯"
