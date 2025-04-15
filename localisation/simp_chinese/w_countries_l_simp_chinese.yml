@@ -26,11 +26,7 @@
  WAG_arbic_democratic:0 "阿拉伯合众国"
  WAG_arbic_communism:0 "阿拉伯工人联邦"
  WAG_arbic_neutrality:0 "阿拉伯帝国"
-
- WAG_fascism_ADJ:0 "瓦雷斯"
- WAG_democratic_ADJ:0 "瓦雷斯"
- WAG_neutrality_ADJ:0 "瓦雷斯"
- WAG_communism_ADJ:0 "瓦雷斯"
+ WAG_arbic_ADJ:0 "阿拉伯"
 
  WAG:0 "瓦雷斯国"
  WAG_DEF:0 "瓦雷斯国"
