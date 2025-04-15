@@ -3273,7 +3273,6 @@ focus_tree={
 			}
 			army_experience = 5
 			set_cosmetic_tag = WAG_army_government_ct
-			news_event = WAG_news.8
 		}
 	}
 	focus={
@@ -3982,25 +3981,4 @@ focus_tree={
 			add_ideas = WAG_mobilize_our_people
 		}
 	}
-#	focus={
-#		id=WAG_ask_for_our_land
-#		icon = GFX_focus_attack_france
-#		x=1
-#		y=1
-#		relative_position_id = WAG_millitarty_industry_effort
-#		prerequisite={focus=WAG_millitarty_industry_effort}
-#		prerequisite={focus=WAG_mobilize_our_people}
-#		cost=3
-#		ai_will_do={
-#			factor=1
-#		}
-#		available_if_capitulated=yes
-#		search_filters={
-#			FOCUS_FILTER_ANNEXATION
-#		}
-#		completion_reward={
-#			add_war_support = 0.1
-#		}
-#	}
 }
-#eval_effect WAG={create_wargoal={target=IRQ type=annex_everything}}
