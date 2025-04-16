@@ -6,8 +6,8 @@ state={
 	}
 	manpower=100
 	history = {
-		owner = PRC
-		add_core_of = PRC
+		owner = PRW
+		add_core_of = PRW
 		add_core_of = SOV
 		victory_points = {
 			13369 1
