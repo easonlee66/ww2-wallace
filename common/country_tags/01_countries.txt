@@ -1,3 +1,3 @@
 WAG = "countries/Wallace_army_Goverment.txt"
 AMI = "countries/Aminoac.txt"
-PRC = "countries/People_republic_of_Wallace.txt"
+PRW = "countries/People_republic_of_Wallace.txt"
