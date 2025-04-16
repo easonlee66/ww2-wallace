@@ -7,6 +7,7 @@ state={
 			2013 1
 		}
 		add_core_of = WAG
+		add_claim_by = PRW
 	}
 	provinces={
 		2013 901
