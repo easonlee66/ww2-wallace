@@ -5,6 +5,8 @@ state={
 		owner = WAG
 		victory_points = {
 			13368 5
+		}
+		victory_points = {
 			10804 3
 		}
 		buildings = {
@@ -16,6 +18,7 @@ state={
 		}
 		add_core_of = WAG
 		add_core_of = KUR
+		add_claim_by = PRW
 	}
 	provinces={
 		10804 13368

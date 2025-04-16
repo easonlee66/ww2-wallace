@@ -9,6 +9,7 @@ state={
 		}
 		add_core_of = KUR
 		add_core_of = AMI
+		add_claim_by = PRW
 	}
 
 	provinces={

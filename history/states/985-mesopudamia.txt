@@ -8,6 +8,7 @@ state={
 			1600 1 
 		}
 		add_core_of = WAG
+		add_claim_by = PRW
 #		add_core_of = KUR
 	}
 

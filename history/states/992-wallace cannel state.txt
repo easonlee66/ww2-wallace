@@ -8,6 +8,7 @@ state={
 	history = {
 		owner = WAG
 		add_core_of = WAG
+		add_claim_by = PRW
 		buildings = {
 			industrial_complex = 1
 			infrastructure = 2
