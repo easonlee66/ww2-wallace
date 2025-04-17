@@ -17,7 +17,7 @@ state={
 #			supply_node = 1
 		}
 		add_core_of = WAG
-		add_core_of = KUR
+		add_claim_by = KUR
 		add_claim_by = PRW
 	}
 	provinces={
