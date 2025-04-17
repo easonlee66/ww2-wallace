@@ -984,7 +984,10 @@ WAG_restore_arbic = {
 		available = {
 			PAK = {
 				all_core_state = {
-					is_controlled_by = WAG
+					OR = {
+						is_controlled_by = WAG
+						state = 430
+					}
 				}
 			}
 		}
@@ -994,6 +997,9 @@ WAG_restore_arbic = {
 			every_state = {
 				limit = {
 					is_core_of = PAK
+					NOT = {
+						state = 430
+					}
 				}
 				add_core_of = WAG
 				remove_claim_by = WAG
