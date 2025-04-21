@@ -11,6 +11,7 @@
   WAG_find_oil_in_south:0 "勘探石油"
   WAG_build_factory:0 "建设工厂"
   WAG_develop:0 "开发地块"
+  WAG_kaosi_cr_mining:0 "考试州铬矿勘探"
 
   WAG_nazi_reform_mission:0 "军事密谋"
   WAG_nazi_reform_custom_tooltip:0 "瓦雷斯国将会发生叛乱"

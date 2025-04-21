@@ -32,8 +32,6 @@
 
   WAG_communism_road:0 "共产主义道路"
 
-  WAG_a_red_SYR:0 "解放昔日领土"
-
   WAG_befriend_SOV:0 "交好苏联"
 
   WAG_soviet_technological_advancements:0 "苏联专家"
@@ -157,23 +155,6 @@
   WAG_end_saint_Kolu_trait:0 "撕毁圣克卢条约"
   WAG_millitarty_industry_effort:0 "重视军工"
   WAG_mobilize_our_people:0 "动员人民"
-
-# 造核线
-  WAG_solve_the_nation_problem:0 "着手解决民族问题"
-
-  WAG_give_autonomy:0 "给予自治权"
-  WAG_union_solution:0 "联盟方案"
-  WAG_federal_solution:0 "联邦方案"
-  WAG_united_country:0 "联合国家"
-  WAG_our_homeland:0 "我们共同的祖国"
-
-  WAG_remove_terrorist:0 "根除恐怖组织"
-
-  WAG_remove_resistance:0 "镇压抵抗"
-  WAG_wallace_education:0 "教育同化"
-  WAG_strict_police:0 "秘密警察"
-  WAG_wallacian_over_country:0 "瓦雷斯移民"
-  WAG_wallician_only_people:0 "一个国家，一个民族"
 
 
 #工业线
